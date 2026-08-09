@@ -1,0 +1,1743 @@
+{
+  "compiled_from": "stage3-analysis",
+  "errors": [],
+  "gold_id": "archon",
+  "ok": true,
+  "package": {
+    "capabilities": [
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/adapters/src/forge/github/index.ts",
+            "scope": "entry point exporting GitHub adapter functions"
+          },
+          {
+            "file": "packages/adapters/src/forge/github/adapter.ts",
+            "scope": "implementation of GitHub API operations (create PR, comment, etc.)"
+          },
+          {
+            "file": "packages/adapters/src/forge/github/auth.ts",
+            "scope": "GitHub authentication handling (OAuth, token management)"
+          }
+        ],
+        "id": "c1",
+        "name": "GitHub Adapter",
+        "ontology_type": "ADAPTER",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/providers/src/community/opencode/index.ts",
+            "scope": "entry point for OpenCode provider"
+          },
+          {
+            "file": "packages/providers/src/community/opencode/provider.ts",
+            "scope": "OpenCode API integration (agent-based coding assistance)"
+          },
+          {
+            "file": "packages/providers/src/community/opencode/agent-fs.ts",
+            "scope": "File system operations for OpenCode agents"
+          }
+        ],
+        "id": "c10",
+        "name": "OpenCode Provider (Community)",
+        "ontology_type": "ADAPTER",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/providers/src/community/pi/index.ts",
+            "scope": "entry point for Pi provider"
+          },
+          {
+            "file": "packages/providers/src/community/pi/provider.ts",
+            "scope": "Pi AI API integration (conversational AI)"
+          },
+          {
+            "file": "packages/providers/src/community/pi/options-translator.ts",
+            "scope": "Translation of options for Pi provider compatibility"
+          }
+        ],
+        "id": "c11",
+        "name": "Pi Provider (Community)",
+        "ontology_type": "ADAPTER",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/workflows/src/executor.ts",
+            "scope": "core workflow execution logic (step processing, error handling)"
+          },
+          {
+            "file": "packages/workflows/src/dag-executor.ts",
+            "scope": "DAG-based workflow execution (dependency resolution, parallel execution)"
+          },
+          {
+            "file": "packages/workflows/src/executor-shared.ts",
+            "scope": "shared utilities for workflow execution (state management, logging)"
+          }
+        ],
+        "id": "c12",
+        "name": "Workflow Executor Engine",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": ".archon/workflows/defaults/archon-assist.yaml",
+            "scope": "complete workflow definition for AI-assisted development"
+          },
+          {
+            "file": ".archon/workflows/defaults/archon-feature-development.yaml",
+            "scope": "workflow definition for feature development lifecycle"
+          },
+          {
+            "file": "packages/workflows/src/schemas/workflow.ts",
+            "scope": "TypeScript schema defining workflow structure and validation"
+          }
+        ],
+        "id": "c13",
+        "name": "Workflow Definition System",
+        "ontology_type": "WORKFLOW",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/cli/src/cli.ts",
+            "scope": "main CLI entry point (command parsing, routing)"
+          },
+          {
+            "file": "packages/cli/src/commands/setup.ts",
+            "scope": "implementation of 'setup' command (environment initialization)"
+          },
+          {
+            "file": "packages/cli/src/commands/workflow.ts",
+            "scope": "implementation of 'workflow' command (workflow execution triggering)"
+          }
+        ],
+        "id": "c14",
+        "name": "Command Line Interface (CLI)",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/server/src/index.ts",
+            "scope": "main server entry point (HTTP server initialization, middleware)"
+          },
+          {
+            "file": "packages/server/src/routes/api.ts",
+            "scope": "API route definitions (workflows, providers, authentication endpoints)"
+          },
+          {
+            "file": "packages/server/src/auth/index.ts",
+            "scope": "authentication middleware and session management"
+          }
+        ],
+        "id": "c15",
+        "name": "HTTP API Server",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/web/src/main.tsx",
+            "scope": "React application entry point (root component, providers)"
+          },
+          {
+            "file": "packages/web/src/App.tsx",
+            "scope": "main application layout (routing, state management)"
+          },
+          {
+            "file": "packages/web/src/components/workflows/WorkflowBuilder.tsx",
+            "scope": "visual workflow builder component (drag-and-drop DAG construction)"
+          }
+        ],
+        "id": "c16",
+        "name": "Web Interface (React Application)",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/git/src/index.ts",
+            "scope": "entry point for Git operations (repository cloning, fetching)"
+          },
+          {
+            "file": "packages/git/src/forge.ts",
+            "scope": "Git forge abstraction (GitHub, GitLab, Gitea operations)"
+          },
+          {
+            "file": "packages/git/src/worktree.ts",
+            "scope": "Git worktree management (isolated development environments)"
+          }
+        ],
+        "id": "c17",
+        "name": "Git Operations Library",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/isolation/src/index.ts",
+            "scope": "entry point for isolation system (environment management)"
+          },
+          {
+            "file": "packages/isolation/src/providers/worktree.ts",
+            "scope": "worktree-based isolation provider (git worktree operations)"
+          },
+          {
+            "file": "packages/isolation/src/container/docker-exec.ts",
+            "scope": "container-based isolation provider (Docker container execution)"
+          }
+        ],
+        "id": "c18",
+        "name": "Isolation System (Worktrees & Containers)",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/paths/src/index.ts",
+            "scope": "entry point for path utilities (environment variable resolution)"
+          },
+          {
+            "file": "packages/paths/src/archon-paths.ts",
+            "scope": "Archon-specific path resolution (workspace, home directory handling)"
+          },
+          {
+            "file": "packages/paths/src/env-loader.ts",
+            "scope": "environment variable loading and validation"
+          }
+        ],
+        "id": "c19",
+        "name": "Path Handling Utilities",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/adapters/src/chat/slack/index.ts",
+            "scope": "entry point for Slack adapter integration"
+          },
+          {
+            "file": "packages/adapters/src/chat/slack/adapter.ts",
+            "scope": "Slack API operations (message posting, channel management)"
+          },
+          {
+            "file": "packages/adapters/src/chat/slack/auth.ts",
+            "scope": "Slack authentication (OAuth token handling)"
+          }
+        ],
+        "id": "c2",
+        "name": "Slack Adapter",
+        "ontology_type": "ADAPTER",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/core/src/index.ts",
+            "scope": "entry point for core services (service initialization)"
+          },
+          {
+            "file": "packages/core/src/db/index.ts",
+            "scope": "database abstraction layer (connection management, querying)"
+          },
+          {
+            "file": "packages/core/src/credentials/index.ts",
+            "scope": "credentials management (secure storage, retrieval, rotation)"
+          }
+        ],
+        "id": "c20",
+        "name": "Core Services (Database, Credentials)",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/docs-web/src/pages/index.astro",
+            "scope": "main documentation page (Astro component)"
+          },
+          {
+            "file": "packages/docs-web/astro.config.mjs",
+            "scope": "Astro configuration for documentation site build"
+          },
+          {
+            "file": "packages/docs-web/src/content/docs/getting-started/quick-start.md",
+            "scope": "documentation content (getting started guide)"
+          }
+        ],
+        "id": "c21",
+        "name": "Documentation Website",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": ".claude/agents/code-reviewer.md",
+            "scope": "template defining code reviewer agent behavior and prompts"
+          },
+          {
+            "file": ".claude/agents/triage-agent.md",
+            "scope": "template defining triage agent behavior and prompts"
+          },
+          {
+            "file": ".claude/agents/web-researcher.md",
+            "scope": "template defining web researcher agent behavior and prompts"
+          }
+        ],
+        "id": "c22",
+        "name": "Claude Agent Templates",
+        "ontology_type": "AGENT TEMPLATE",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": ".github/agents/codebase-analyst.agent.md",
+            "scope": "GitHub agent template for codebase analysis tasks"
+          },
+          {
+            "file": ".github/agents/web-researcher.agent.md",
+            "scope": "GitHub agent template for web research tasks"
+          },
+          {
+            "file": ".github/agents/codebase-explorer.agent.md",
+            "scope": "GitHub agent template for codebase exploration tasks"
+          }
+        ],
+        "id": "c23",
+        "name": "GitHub Agent Templates",
+        "ontology_type": "AGENT TEMPLATE",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": ".claude/skills/archon/SKILL.md",
+            "scope": "core Archon skill definition (capabilities, instructions)"
+          },
+          {
+            "file": ".claude/skills/archon/guides/setup.md",
+            "scope": "setup guide as part of the Archon skill"
+          },
+          {
+            "file": ".claude/skills/archon/references/cli-commands.md",
+            "scope": "CLI command reference as part of the Archon skill"
+          }
+        ],
+        "id": "c24",
+        "name": "Claude Skills System",
+        "ontology_type": "SKILL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/workflows/src/validator.ts",
+            "scope": "workflow definition validation (schema checking, consistency)"
+          },
+          {
+            "file": "packages/workflows/src/condition-evaluator.ts",
+            "scope": "workflow condition evaluation (expression parsing, boolean logic)"
+          },
+          {
+            "file": "packages/workflows/src/script-discovery.ts",
+            "scope": "script node validation and dependency resolution"
+          }
+        ],
+        "id": "c25",
+        "name": "Workflow Validation System",
+        "ontology_type": "EVALUATOR",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": ".archon/commands/defaults/archon-implement-issue.md",
+            "scope": "definition of 'archon-implement-issue' command (steps, inputs, outputs)"
+          },
+          {
+            "file": ".archon/commands/defaults/archon-create-pr.md",
+            "scope": "definition of 'archon-create-pr' command (PR creation workflow)"
+          }
+        ],
+        "id": "c26",
+        "name": "Archon Command Definitions",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/adapters/src/chat/telegram/index.ts",
+            "scope": "entry point for Telegram adapter"
+          },
+          {
+            "file": "packages/adapters/src/chat/telegram/adapter.ts",
+            "scope": "Telegram Bot API implementation (send messages, handle updates)"
+          },
+          {
+            "file": "packages/adapters/src/chat/telegram/auth.ts",
+            "scope": "Telegram bot token authentication"
+          }
+        ],
+        "id": "c3",
+        "name": "Telegram Adapter",
+        "ontology_type": "ADAPTER",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/adapters/src/community/chat/discord/index.ts",
+            "scope": "entry point for Discord community adapter"
+          },
+          {
+            "file": "packages/adapters/src/community/chat/discord/adapter.ts",
+            "scope": "Discord API operations (message sending, reaction handling)"
+          },
+          {
+            "file": "packages/adapters/src/community/chat/discord/auth.ts",
+            "scope": "Discord bot token authentication"
+          }
+        ],
+        "id": "c4",
+        "name": "Discord Adapter (Community)",
+        "ontology_type": "ADAPTER",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/adapters/src/community/forge/gitea/index.ts",
+            "scope": "entry point for Gitea forge adapter"
+          },
+          {
+            "file": "packages/adapters/src/community/forge/gitea/adapter.ts",
+            "scope": "Gitea API implementation (repository operations, PR handling)"
+          },
+          {
+            "file": "packages/adapters/src/community/forge/gitea/auth.ts",
+            "scope": "Gitea authentication (token-based)"
+          }
+        ],
+        "id": "c5",
+        "name": "Gitea Forge Adapter",
+        "ontology_type": "ADAPTER",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/adapters/src/community/forge/gitlab/index.ts",
+            "scope": "entry point for GitLab forge adapter"
+          },
+          {
+            "file": "packages/adapters/src/community/forge/gitlab/adapter.ts",
+            "scope": "GitLab API implementation (merge requests, repository operations)"
+          },
+          {
+            "file": "packages/adapters/src/community/forge/gitlab/auth.ts",
+            "scope": "GitLab authentication (personal access tokens)"
+          }
+        ],
+        "id": "c6",
+        "name": "GitLab Forge Adapter",
+        "ontology_type": "ADAPTER",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/providers/src/claude/index.ts",
+            "scope": "entry point for Claude AI provider"
+          },
+          {
+            "file": "packages/providers/src/claude/provider.ts",
+            "scope": "Claude API integration (message handling, tool use)"
+          },
+          {
+            "file": "packages/providers/src/claude/binary-resolver.ts",
+            "scope": "Claude binary resolution and execution"
+          }
+        ],
+        "id": "c7",
+        "name": "Claude Provider",
+        "ontology_type": "ADAPTER",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/providers/src/codex/index.ts",
+            "scope": "entry point for Codex AI provider"
+          },
+          {
+            "file": "packages/providers/src/codex/provider.ts",
+            "scope": "Codex API integration (code completion, editing)"
+          },
+          {
+            "file": "packages/providers/src/codex/binary-resolver.ts",
+            "scope": "Codex binary resolution and execution"
+          }
+        ],
+        "id": "c8",
+        "name": "Codex Provider",
+        "ontology_type": "ADAPTER",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/providers/src/community/copilot/index.ts",
+            "scope": "entry point for Copilot provider"
+          },
+          {
+            "file": "packages/providers/src/community/copilot/provider.ts",
+            "scope": "GitHub Copilot API integration (code suggestions)"
+          },
+          {
+            "file": "packages/providers/src/community/copilot/registration.ts",
+            "scope": "Copilot provider registration with the system"
+          }
+        ],
+        "id": "c9",
+        "name": "Copilot Provider (Community)",
+        "ontology_type": "ADAPTER",
+        "requirements": []
+      }
+    ],
+    "compiler_version": "1.0.0",
+    "dependency_manifests": [
+      "auth-service/package.json",
+      "package.json",
+      "packages/adapters/package.json",
+      "packages/cli/package.json",
+      "packages/core/package.json",
+      "packages/docs-web/package.json",
+      "packages/git/package.json",
+      "packages/isolation/package.json",
+      "packages/paths/package.json",
+      "packages/providers/package.json",
+      "packages/server/package.json",
+      "packages/web/package.json",
+      "packages/workflows/package.json"
+    ],
+    "permissions_summary": [],
+    "provenance": {
+      "file_count": 1351,
+      "languages": [
+        "css",
+        "html",
+        "javascript",
+        "json",
+        "markdown",
+        "python",
+        "ruby",
+        "shell",
+        "sql",
+        "toml",
+        "typescript",
+        "yaml"
+      ],
+      "repository": "/REPO/Archon"
+    },
+    "registry": {
+      "status": "candidate"
+    },
+    "schema": "hurcules.capability-package-v1",
+    "security": {
+      "execution_denied_by_default": true,
+      "hostile_by_default": true,
+      "risk_flags": [
+        {
+          "file": ".archon/scripts/__tests__/fixtures/malicious/exfil.sh",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": ".archon/scripts/__tests__/fixtures/malicious/obfuscated.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": ".archon/scripts/__tests__/fixtures/malicious/path_escape.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".archon/scripts/__tests__/fixtures/malicious/rce.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": ".archon/scripts/__tests__/fixtures/malicious/shell_exec.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": ".archon/scripts/__tests__/fixtures/malicious/suspicious_network.sh",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": ".archon/scripts/maintainer-standup-gh-data.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": ".archon/workflows/e2e-opencode-smoke.yaml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".archon/workflows/matt-pocock-workflow.yaml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".archon/workflows/test-workflows/e2e-claude-smoke.yaml",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": ".archon/workflows/test-workflows/e2e-minimax-smoke.yaml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".archon/workflows/test-workflows/e2e-pi-all-nodes-smoke.yaml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".archon/workflows/test-workflows/e2e-pi-smoke.yaml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".claude/PRPs/issues/issue-260-263-264.md",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": ".claude/PRPs/issues/issue-393-394.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".claude/PRPs/issues/issues-392-395.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".claude/agents/sdk-verifier.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".claude/commands/commit.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": ".claude/commands/validation/code-review.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".claude/commands/validation/validate-2.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".claude/docs/architecture-deep-dive.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": ".claude/docs/workflow-yaml-reference.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": ".claude/skills/archon/guides/github.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".claude/skills/archon/guides/setup.md",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": ".claude/skills/archon/guides/setup.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".claude/skills/archon/references/cli-commands.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".claude/skills/archon/references/cli-commands.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": ".claude/skills/archon/references/dag-advanced.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".claude/skills/archon/references/dag-advanced.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": ".claude/skills/archon/references/good-practices.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".claude/skills/archon/references/interactive-workflows.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": ".claude/skills/archon/references/repo-init.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".claude/skills/archon/references/repo-init.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": ".claude/skills/archon/references/troubleshooting.md",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": ".claude/skills/archon/references/troubleshooting.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": ".claude/skills/archon/references/workflow-dag.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": ".claude/skills/playwright-cli/references/running-code.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".claude/skills/remotion-best-practices/rules/voiceover.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".claude/skills/rulecheck/rules-guide.md",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": ".claude/skills/rulecheck/rules-guide.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".claude/skills/test-release/SKILL.md",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": ".claude/skills/test-release/SKILL.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".claude/skills/test-release/SKILL.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": ".claude/workshop/part1-guide.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".github/ISSUE_TEMPLATE/bug_report.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".github/ISSUE_TEMPLATE/feature_request.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".github/pull_request_template.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".github/workflows/e2e-smoke.yml",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": ".github/workflows/e2e-smoke.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".github/workflows/marketplace-auto-review.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".github/workflows/release.yml",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": ".github/workflows/release.yml",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "AGENTS.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "AGENTS.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "CHANGELOG.md",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "CHANGELOG.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "CHANGELOG.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "CLAUDE.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "CLAUDE.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "CONTRIBUTING.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "README.md",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "auth-service/server.js",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "auth-service/test.js",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "deploy/cloud-init.yml",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "deploy/cloud-init.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docker-compose.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docker-entrypoint.sh",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/adapters/src/chat/slack/workflow-bridge.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/adapters/src/community/forge/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/adapters/src/community/forge/gitea/adapter.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/adapters/src/community/forge/gitea/adapter.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/adapters/src/community/forge/gitea/adapter.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/adapters/src/community/forge/gitlab/adapter.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/adapters/src/community/forge/gitlab/adapter.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/adapters/src/community/forge/gitlab/adapter.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/adapters/src/community/forge/gitlab/auth.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/adapters/src/community/forge/gitlab/auth.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/adapters/src/forge/github/adapter.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/adapters/src/forge/github/adapter.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/adapters/src/forge/github/adapter.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/adapters/src/forge/github/context.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/cli/src/cli.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/cli/src/commands/ai.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/cli/src/commands/ai.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/cli/src/commands/doctor.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/cli/src/commands/doctor.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/cli/src/commands/serve.test.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/cli/src/commands/setup.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/cli/src/commands/setup.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/cli/src/commands/setup.ts",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "packages/cli/src/commands/setup.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/cli/src/commands/telemetry.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/cli/src/commands/telemetry.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/cli/src/commands/workflow.test.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/cli/src/commands/workflow.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/core/src/config/config-types.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/config/config-types.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/core/src/credentials/catalog.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/credentials/catalog.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/credentials/connect-service.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/credentials/connect-service.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/credentials/delivery.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/credentials/delivery.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/credentials/index.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/credentials/oauth-bridge.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/credentials/oauth-providers.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/credentials/openai-oauth.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/credentials/openai-oauth.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/db/adapters/sqlite.test.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/core/src/db/adapters/sqlite.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/db/adapters/sqlite.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/db/bundled-schema.generated.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/db/user-ai-prefs-store.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/db/user-github-token-store.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/db/user-github-token-store.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/db/user-provider-key-store.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/db/user-provider-key-store.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/github-auth/auth.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/github-auth/auth.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/github-auth/connect-service.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/github-auth/connect-service.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/github-auth/device-flow.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/github-auth/device-flow.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/github-auth/private-key.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/github-auth/types.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/core/src/handlers/clone.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/handlers/clone.test.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/core/src/handlers/clone.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/core/src/operations/workflow-operations.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/core/src/orchestrator/orchestrator-agent.test.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/core/src/orchestrator/orchestrator-agent.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/orchestrator/orchestrator-agent.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/core/src/orchestrator/orchestrator-isolation.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/orchestrator/orchestrator.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/orchestrator/post-message-reminder.test.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/core/src/schemas/index.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/schemas/user-ai-prefs-row.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/schemas/user-github-token-row.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/schemas/user-provider-key-row.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/services/title-generator.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/utils/credential-sanitizer.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/utils/error-formatter.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/utils/error-formatter.test.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/core/src/utils/error-formatter.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/core/src/utils/error-formatter.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/utils/error-formatter.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/core/src/utils/token-crypto.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/workflows/store-adapter.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/core/src/workflows/store-adapter.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/adapters/community/gitea.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/adapters/community/gitlab.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/adapters/github-app-setup.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/adapters/github.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/adapters/index.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/book/quick-reference.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/contributing/adding-a-community-provider.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/contributing/releasing.md",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/deployment/cloud.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/deployment/docker.md",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/deployment/docker.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/deployment/windows.md",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/docs.mdx",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/getting-started/ai-assistants.md",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/getting-started/ai-assistants.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/getting-started/configuration.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/getting-started/installation.md",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/getting-started/overview.md",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/guides/authoring-workflows.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/guides/authoring-workflows.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/guides/container-isolation.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/guides/mcp-servers.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/guides/script-nodes.md",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/guides/script-nodes.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/guides/skills.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/reference/api.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/reference/architecture.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/reference/architecture.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/reference/archon-directories.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/reference/cli.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/reference/cli.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/reference/configuration.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/reference/configuration.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/reference/database.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/reference/database.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/reference/provider-capabilities.md",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/reference/security.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/reference/security.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/reference/troubleshooting.md",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/reference/troubleshooting.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/docs-web/src/content/docs/reference/variables.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/docs-web/src/data/roadmap.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/git/src/forge.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/git/src/git.test.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/git/src/worktree.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/isolation/docker/SECURITY.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/isolation/src/container/overlay.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/isolation/src/providers/worktree.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/isolation/src/types.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/paths/src/env-integration.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/paths/src/env-integration.test.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/paths/src/strip-cwd-env.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/paths/src/strip-cwd-env.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/paths/src/telemetry.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/paths/src/telemetry.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/providers/src/claude/binary-resolver.ts",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "packages/providers/src/claude/binary-resolver.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/providers/src/claude/container-env.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/providers/src/claude/container-spawn.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/providers/src/claude/provider.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/providers/src/claude/provider.test.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/providers/src/claude/provider.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/providers/src/claude/provider.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/providers/src/codex/binary-resolver.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/providers/src/codex/provider.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/providers/src/codex/provider.test.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/providers/src/codex/provider.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/providers/src/community/copilot/provider-lazy-load.test.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/providers/src/community/copilot/provider.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/providers/src/community/copilot/registration.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/providers/src/community/pi/capabilities.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/providers/src/community/pi/options-translator.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/providers/src/community/pi/pi-vendor-map.generated.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/providers/src/community/pi/provider.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/providers/src/community/pi/provider.test.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/providers/src/community/pi/provider.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/providers/src/community/pi/provider.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/providers/src/registry.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/providers/src/types.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/providers/src/types.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/server/src/auth/config.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/server/src/auth/config.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/server/src/auth/index.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/server/src/auth/instance.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/server/src/boot/claude-auth-posture.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/server/src/boot/claude-auth-posture.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/server/src/github-auth-bootstrap.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/server/src/github-auth-bootstrap.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/server/src/index.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/server/src/index.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/server/src/routes/api.provider-keys.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/server/src/routes/api.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/server/src/routes/api.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/server/src/routes/api.workflow-runs.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/server/src/routes/api.workflows.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/server/src/routes/schemas/config.schemas.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/server/src/routes/schemas/provider-key.schemas.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/server/src/routes/schemas/user-ai-prefs.schemas.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/server/src/scripts/setup-auth.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/web/src/experiments/console/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/web/src/experiments/console/agent-chat-spike.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/web/src/experiments/console/builder/validation/when-grammar.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/web/src/experiments/console/lib/agent-status.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/web/src/experiments/console/lib/agent-status.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/web/src/experiments/console/lib/format.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/web/src/experiments/console/lib/model-options.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/web/src/experiments/console/skills/envVars.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/web/src/experiments/console/skills/providerKeys.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/web/src/hooks/useBuilderValidation.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/web/src/lib/api.generated.d.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/web/src/lib/workflow-metadata.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/workflows/src/command-validation.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/workflows/src/condition-evaluator.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/workflows/src/dag-executor.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/workflows/src/deps.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/workflows/src/executor-shared.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "packages/workflows/src/executor-shared.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/workflows/src/executor-shared.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/workflows/src/executor.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/workflows/src/executor.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/workflows/src/include-expander.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/workflows/src/loader.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/workflows/src/output-ref.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/workflows/src/router.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "packages/workflows/src/utils/github-token-policy.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/workflows/src/utils/idle-timeout.test.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/workflows/src/utils/idle-timeout.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "packages/workflows/src/validator.ts",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "packages/workflows/src/validator.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "scripts/generate-capability-matrix.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "scripts/generate-pi-vendor-map.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "scripts/generate-pi-vendor-map.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "scripts/install.sh",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "scripts/test-install.sh",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "scripts/validate-setup.sh",
+          "reason": "secret-reference"
+        }
+      ],
+      "secret_file_locations": []
+    }
+  },
+  "warnings": []
+}

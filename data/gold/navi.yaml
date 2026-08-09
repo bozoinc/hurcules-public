@@ -1,0 +1,70 @@
+gold_case_id: navi
+reviewer: the product owner + Hermes
+status: HUMAN-VERIFIED-GOLD
+date: 2026-08-05
+
+# Gold-Standard: navi (denisidoro/navi)
+# HURCULES Stage 1 - Gold case #20 (cheatsheet-command-palette category)
+
+provenance:
+  repository: denisidoro/navi
+  commit_sha: f7330b9ad5bd95b7d1a3c96d00e0a77deb589147
+  version: 2.25.0-beta1 (Cargo.toml)
+  license: Apache-2.0 (LICENSE)
+  languages: [Rust]
+  runtime: compiled Rust binary + fzf (optional)
+
+purpose: |
+  navi is an interactive cheatsheet tool for the command-line: browse/search
+  markdown cheatsheets and insert commands, with variable interpolation.
+
+architecture_map: |
+  Rust project: src/ (lib.rs, parser.rs cheatsheet markdown parser, filesystem.rs
+  sheet discovery, env_var.rs variable substitution, main), cheatsheets/ default
+  sheets, Cargo.toml. Apache-2.0.
+
+capabilities:
+  - id: n1
+    name: Cheatsheet markdown parsing
+    ontology_type: TOOL
+    evidence:
+      - file: src/parser.rs
+        scope: cheatsheet format parsing
+    confidence: 0.90
+    requirements: []
+  - id: n2
+    name: Interactive command selection (fzf/terminal UI)
+    ontology_type: TOOL
+    evidence:
+      - file: src/lib.rs
+        scope: selection flow
+    confidence: 0.86
+    requirements: [fzf-optional]
+  - id: n3
+    name: Variable interpolation in commands
+    ontology_type: TOOL
+    evidence:
+      - file: src/env_var.rs
+        scope: env var / variable substitution
+    confidence: 0.85
+    requirements: []
+
+dependencies_permissions:
+  dependencies: [fzf-optional, skim-optional]
+  permissions:
+    filesystem: read-cheatsheets
+    network: none
+    shell: inserts-commands-for-user-to-run
+  security_posture: reads markdown sheets; commands are user-invoked, not auto-run
+
+non_capabilities:
+  - not-a-command-runner (inserts, does not auto-execute)
+  - not-a-zsh-plugin (standalone)
+
+risks_findings:
+  - cheatsheet content is data; a malicious sheet could suggest dangerous commands
+  - fzf dependency optional but recommended
+
+evaluation_plan: |
+  Parity: non-technical user browses a cheatsheet and selects a command via the
+  template. Checks: sheets parse, selection works, interpolated command correct.

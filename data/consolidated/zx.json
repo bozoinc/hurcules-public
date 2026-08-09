@@ -1,0 +1,172 @@
+[
+  {
+    "confidence": 0.95,
+    "evidence": [
+      {
+        "file": "src/index.ts",
+        "scope": "implementation"
+      },
+      {
+        "file": "src/cli.ts",
+        "scope": "implementation"
+      },
+      {
+        "file": "src/core.ts",
+        "scope": "implementation"
+      },
+      {
+        "file": "man/zx.1",
+        "scope": "documentation"
+      },
+      {
+        "file": "docs/cli.md",
+        "scope": "documentation"
+      },
+      {
+        "file": "examples/hello.mjs",
+        "scope": "example"
+      },
+      {
+        "file": "src/deps.ts",
+        "scope": "implementation"
+      },
+      {
+        "file": "test/core.test.js",
+        "scope": "test"
+      },
+      {
+        "file": "test/fixtures/interactive.mjs",
+        "scope": "fixture"
+      },
+      {
+        "file": "docs/process-promise.md",
+        "scope": "documentation"
+      },
+      {
+        "file": "src/globals.ts",
+        "scope": "implementation"
+      },
+      {
+        "file": "src/repl.ts",
+        "scope": "implementation"
+      },
+      {
+        "file": "src/util.ts",
+        "scope": "implementation"
+      },
+      {
+        "file": "test/fixtures/ts-project/package.json",
+        "scope": "fixture"
+      },
+      {
+        "file": "docs/typescript.md",
+        "scope": "documentation"
+      },
+      {
+        "file": "examples/fetch-weather.mjs",
+        "scope": "example"
+      }
+    ],
+    "id": "c1",
+    "members": [
+      "c1",
+      "c2",
+      "c3"
+    ],
+    "name": "CLI for executing shell commands from JavaScript/TypeScript scripts",
+    "ontology_type": "TOOL",
+    "requirements": []
+  },
+  {
+    "confidence": 0.95,
+    "evidence": [
+      {
+        "file": "src/md.ts",
+        "scope": "implementation"
+      },
+      {
+        "file": "docs/markdown.md",
+        "scope": "documentation"
+      },
+      {
+        "file": "test/md.test.ts",
+        "scope": "test"
+      },
+      {
+        "file": "test/fixtures/markdown.md",
+        "scope": "fixture"
+      }
+    ],
+    "id": "c4",
+    "members": [
+      "c4"
+    ],
+    "name": "Markdown processing and rendering",
+    "ontology_type": "TOOL",
+    "requirements": []
+  },
+  {
+    "confidence": 0.95,
+    "evidence": [
+      {
+        "file": "scripts/build-clean.mjs",
+        "scope": "implementation"
+      },
+      {
+        "file": "scripts/build-dts.mjs",
+        "scope": "implementation"
+      },
+      {
+        "file": "scripts/build-js.mjs",
+        "scope": "implementation"
+      },
+      {
+        "file": "scripts/build-jsr.mjs",
+        "scope": "implementation"
+      },
+      {
+        "file": "scripts/build-pkgjson-lite.mjs",
+        "scope": "implementation"
+      },
+      {
+        "file": "scripts/build-pkgjson-main.mjs",
+        "scope": "implementation"
+      },
+      {
+        "file": "scripts/build-size-limit.mjs",
+        "scope": "implementation"
+      },
+      {
+        "file": "scripts/build-tests.mjs",
+        "scope": "implementation"
+      },
+      {
+        "file": "scripts/build-versions.mjs",
+        "scope": "implementation"
+      },
+      {
+        "file": ".github/workflows/publish.yml",
+        "scope": "configuration"
+      },
+      {
+        "file": ".github/workflows/dev-publish.yml",
+        "scope": "configuration"
+      },
+      {
+        "file": "docs/versions.md",
+        "scope": "documentation"
+      },
+      {
+        "file": "src/versions.ts",
+        "scope": "implementation"
+      }
+    ],
+    "id": "c5",
+    "members": [
+      "c5"
+    ],
+    "name": "Build and release automation workflows",
+    "ontology_type": "WORKFLOW",
+    "requirements": []
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "gold_id": "ripgrep",
+  "matches": [
+    {
+      "analyst": null,
+      "gold": "Recursive regex search (respects gitignore)",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "Multi-crate grep engine with matcher",
+      "matched": false
+    },
+    {
+      "analyst": "Multiple output formats (color, JSON, etc.)",
+      "gold": "Search output printer (match formatting)",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "Comprehensive test suite (unit + integration)",
+      "matched": false
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "gold_id": "archon",
+  "matches": [
+    {
+      "analyst": "Workflow Executor Engine",
+      "gold": "YAML Workflow Engine (DAG)",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "Multi-Agent Provider Registry",
+      "matched": false
+    },
+    {
+      "analyst": "Isolation System (Worktrees & Containers)",
+      "gold": "Sandboxed Execution / Isolation",
+      "matched": true
+    },
+    {
+      "analyst": "Workflow Validation System",
+      "gold": "Deterministic Workflow Validation",
+      "matched": true
+    },
+    {
+      "analyst": "GitHub Adapter",
+      "gold": "Cross-Platform Adapters",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "Human Approval Gates in Workflows",
+      "matched": false
+    }
+  ]
+}

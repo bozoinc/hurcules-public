@@ -1,0 +1,43 @@
+{
+  "compiled_from": "stage3-analysis",
+  "errors": [],
+  "gold_id": "nolicense",
+  "ok": true,
+  "package": {
+    "capabilities": [],
+    "compiler_version": "1.0.0",
+    "dependency_manifests": [
+      "pyproject.toml"
+    ],
+    "permissions_summary": [],
+    "provenance": {
+      "file_count": 10,
+      "languages": [
+        "markdown",
+        "python",
+        "toml"
+      ],
+      "repository": "/REPO/gold-nolicense"
+    },
+    "registry": {
+      "status": "candidate"
+    },
+    "schema": "hurcules.capability-package-v1",
+    "security": {
+      "execution_denied_by_default": true,
+      "hostile_by_default": true,
+      "risk_flags": [
+        {
+          "file": "README.md",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "train.py",
+          "reason": "dynamic-execution"
+        }
+      ],
+      "secret_file_locations": []
+    }
+  },
+  "warnings": []
+}

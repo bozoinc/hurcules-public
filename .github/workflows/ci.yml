@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  core:
+    name: Lint + tests + determinism
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest pytest-cov ruff pyyaml
+
+      - name: Lint (ruff fatal set)
+        run: ruff check src/ scripts/ tests/ --select E9,F63,F7,F82 --output-format=concise
+
+      - name: Full test suite + coverage gate (>=80% on src/hurcules)
+        run: PYTHONPATH=src pytest tests/ -q --tb=short --cov=src/hurcules --cov-report=term-missing --cov-fail-under=80
+        env:
+          HURCULES_BASE: "http://127.0.0.1:20128/v1"
+          HURCULES_MODEL: "openrouter/nvidia/nemotron-3-super-120b-a12b:free"
+
+      - name: Determinism check (stored golden diff)
+        run: PYTHONPATH=src python3 scripts/check_determinism.py
+
+  sandbox:
+    name: Sandbox integration (Docker)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest pyyaml
+
+      - name: Sandbox tests (live Docker)
+        run: PYTHONPATH=src pytest tests/test_sandbox.py -q --tb=short

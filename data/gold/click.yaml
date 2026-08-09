@@ -1,0 +1,88 @@
+gold_case_id: click
+reviewer: the product owner + Hermes
+status: HUMAN-VERIFIED-GOLD
+date: 2026-08-05
+
+# Gold-Standard: click (pallets/click)
+# HURCULES Stage 1 - Gold case #6 (rich-python-library category)
+
+provenance:
+  repository: pallets/click
+  commit_sha: 00e592cea702e0b2caa0dee42489fdb1c22cd845
+  version: 8.5.0.dev (pyproject.toml)
+  license: BSD-3-Clause (LICENSE.txt, Copyright 2014 Pallets)
+  languages: [Python]
+  runtime: Python 3.9+
+
+purpose: |
+  Click is a Python package for creating command-line interfaces with a composable
+  API. It provides decorators to turn Python functions into CLI commands with
+  options, arguments, and help text - the basis for many Python CLIs.
+
+architecture_map: |
+  Single-package Python lib: src/click/ (core.py [Command/Group], decorators.py,
+  types.py [parameter types], testing.py [CliRunner], exceptions.py, utils.py,
+  parsers in core), tests/ (comprehensive), docs/, example scaffold. BSD-3-Clause.
+
+capabilities:
+  - id: ck1
+    name: CLI command/group framework (decorators)
+    ontology_type: TOOL
+    evidence:
+      - file: src/click/decorators.py
+        scope: "click decorators: command, option, argument"
+      - file: src/click/core.py
+        scope: Command, Group, Context, invoke
+    confidence: 0.95
+    requirements: [python]
+  - id: ck2
+    name: Parameter type system + parsing
+    ontology_type: TOOL
+    evidence:
+      - file: src/click/types.py
+        scope: StringParamType, IntRange, Choice, Path
+      - file: src/click/core.py
+        scope: option/argument parsing
+    confidence: 0.93
+    requirements: []
+  - id: ck3
+    name: Testing harness (CliRunner)
+    ontology_type: EVALUATOR
+    evidence:
+      - file: src/click/testing.py
+        scope: CliRunner for invoking commands
+    confidence: 0.90
+    requirements: []
+  - id: ck4
+    name: Echo/formatting + error handling
+    ontology_type: TOOL
+    evidence:
+      - file: src/click/utils.py
+        scope: echo, style
+      - file: src/click/exceptions.py
+        scope: UsageError, ClickException -> tidy exit
+    confidence: 0.89
+    requirements: []
+
+dependencies_permissions:
+  dependencies: [colorama (win), importlib-metadata]
+  permissions:
+    filesystem: as-declared-by-param-type
+    network: none
+    shell: none
+  security_posture: type-checked params; shell=False by default (no shell injection)
+
+non_capabilities:
+  - not-a-task-runner
+  - not-an-argparse-replacement-with-context (has its own model)
+  - not-a-web-framework
+
+risks_findings:
+  - complex nested groups can be hard to test without CliRunner
+  - Path params can read arbitrary files - app must scope
+  - windows colorama dep needed for colored output
+
+evaluation_plan: |
+  Parity test: non-technical user defines a 2-command CLI with options/args using
+  the HURCULES click template and invokes it, matching an engineer. Checks: command
+  registered, option parsed, help text generated, CliRunner test passes.

@@ -1,0 +1,66 @@
+gold_case_id: ratty
+reviewer: the product owner + Hermes
+status: HUMAN-VERIFIED-GOLD
+date: 2026-08-05
+
+# Gold-Standard: ratty (orhun/ratty)
+# HURCULES Stage 1 - Gold case #19 (terminal-pet / creative-tool category)
+
+provenance:
+  repository: orhun/ratty
+  commit_sha: eb1ef47b99d56a5df86bb67302e41a5255dad2f3
+  version: 0.5.0 (Cargo.toml)
+  license: MIT (LICENSE)
+  languages: [Rust]
+  runtime: compiled Rust binary (terminal)
+
+purpose: |
+  ratty is a terminal pet: a rat that roams your terminal as you work. A
+  creative terminal companion with direct-render support (no TUI framework
+  dependency for rendering).
+
+architecture_map: |
+  Rust project: src/ (main.rs, camera.rs viewport, cli.rs, config.rs, direct_render.rs,
+  rendering backend), Cargo.toml, LICENSE MIT.
+
+capabilities:
+  - id: rt1
+    name: Terminal pet rendering (direct render backend)
+    ontology_type: TOOL
+    evidence:
+      - file: src/direct_render.rs
+        scope: direct terminal rendering
+      - file: src/camera.rs
+        scope: viewport/camera
+    confidence: 0.88
+    requirements: [terminal]
+  - id: rt2
+    name: Config + CLI (pet appearance/behavior)
+    ontology_type: TOOL
+    evidence:
+      - file: src/config.rs
+        scope: config
+      - file: src/cli.rs
+        scope: CLI options
+    confidence: 0.84
+    requirements: []
+
+dependencies_permissions:
+  dependencies: [ratatui-optional, crossterm]
+  permissions:
+    filesystem: config-read
+    network: none
+    shell: none
+  security_posture: terminal rendering; reads config only
+
+non_capabilities:
+  - not-a-productivity-tool (decorative)
+  - not-headless-friendly-by-default
+
+risks_findings:
+  - terminal escape handling must be safe in hostile terminals
+  - decorative; no execution risk
+
+evaluation_plan: |
+  Parity: non-technical user runs the pet in terminal via the template. Checks:
+  renders without crash, config respected, clean exit.

@@ -1,0 +1,15 @@
+{
+  "gold_id": "nolicense",
+  "matches": [
+    {
+      "analyst": null,
+      "gold": "nl1",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "nl2",
+      "matched": false
+    }
+  ]
+}

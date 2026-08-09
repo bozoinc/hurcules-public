@@ -1,0 +1,75 @@
+gold_case_id: prettier
+reviewer: the product owner + Hermes
+status: HUMAN-VERIFIED-GOLD
+date: 2026-08-05
+
+# Gold-Standard: prettier (prettier/prettier)
+# HURCULES Stage 1 - Gold case #9 (javascript-application category)
+
+provenance:
+  repository: prettier/prettier
+  commit_sha: b1d92d39e6cb987dd4f30645f03cebcb0883ff0d
+  version: 3.x (package.json)
+  license: MIT (LICENSE, Copyright James Long + contributors)
+  languages: [JavaScript]
+  runtime: Node.js
+
+purpose: |
+  Prettier is an opinionated code formatter for JS/TS/CSS/HTML/JSON/Markdown. It
+  enforces a consistent style by parsing source into an AST and reprinting it,
+  with no config ambiguity.
+
+architecture_map: |
+  Node package: src/ (index.js entry, standalone.js, constants.js, core, printer,
+  language parsers under src/language-*), bin/, benchmarks/, tests auto-generated
+  from fixture files. MIT.
+
+capabilities:
+  - id: pr1
+    name: AST-based code formatting (parser + printer)
+    ontology_type: WORKFLOW
+    evidence:
+      - file: src/index.js
+        scope: format() entry
+      - file: src/standalone.js
+        scope: standalone (no-deps) build
+    confidence: 0.94
+    requirements: [node]
+  - id: pr2
+    name: Multi-language support (JS/TS/CSS/HTML/JSON/MD)
+    ontology_type: ADAPTER
+    evidence:
+      - file: src/language-js
+        scope: JS/TS parser+printer
+      - file: src/index.js
+        scope: language plugin registry
+    confidence: 0.92
+    requirements: []
+  - id: pr3
+    name: Deterministic, idempotent output
+    ontology_type: TOOL
+    evidence:
+      - file: src/constants.js
+        scope: printer options/idioms
+    confidence: 0.90
+    requirements: []
+
+dependencies_permissions:
+  dependencies: [espree, prettier's own doc printer]
+  permissions:
+    filesystem: read-write-files-as-invoked
+    network: none
+    shell: none
+  security_posture: parses untrusted code but only formats; no execution
+
+non_capabilities:
+  - not-a-linter (no rules/errors)
+  - not-a-minifier
+
+risks_findings:
+  - large monorepo; formatting engine is complex
+  - parses arbitrary source - fuzzed but any parser has edge cases
+
+evaluation_plan: |
+  Parity: non-technical user formats a messy JS file with the prettier template.
+  Checks: output stable, second run idempotent, diff zero.

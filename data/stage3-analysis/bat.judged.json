@@ -1,0 +1,20 @@
+{
+  "gold_id": "bat",
+  "matches": [
+    {
+      "analyst": "Syntax Highlighting",
+      "gold": "Syntax-highlighted file printing",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "Config + themes + paging",
+      "matched": false
+    },
+    {
+      "analyst": "Git Integration",
+      "gold": "Git integration (diff indicators)",
+      "matched": true
+    }
+  ]
+}

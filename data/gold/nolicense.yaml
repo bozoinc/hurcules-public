@@ -1,0 +1,68 @@
+gold_case_id: nolicense
+reviewer: the product owner + Hermes
+status: HUMAN-VERIFIED-GOLD
+date: 2026-08-05
+
+# Gold-Standard: karpathy/autoresearch
+# HURCULES Stage 1 - Gold case #16 (no-licence category)
+
+provenance:
+  repository: karpathy/autoresearch
+  commit_sha: 228791fb499afffb54b46200aca536f79142f117
+  version: research prototype
+  license: NONE (no LICENSE file - all rights reserved)
+  languages: [Python]
+  runtime: Python
+
+purpose: |
+  A research prototype by Andrej Karpathy for autonomous web research agents
+  (local Llama-based). Famously has NO LICENSE FILE - legally all rights
+  reserved; reading/analyzing is fine, redistribution/adaptation requires
+  permission. THE canonical no-licence gold case.
+
+architecture_map: |
+  Small Python repo (530KB): single research script + prompts + docs. No license
+  file at all. Demonstrates the legal grey zone HURCULES must flag.
+
+capabilities:
+  - id: nl1
+    name: Autonomous LLM training research harness (agent-edited train.py)
+    ontology_type: WORKFLOW
+    evidence:
+      - file: train.py
+        scope: GPT model, optimizer (Muon+AdamW), training loop the agent edits
+      - file: prepare.py
+        scope: data prep, BPE tokenizer, dataloader, evaluation utilities
+      - file: program.md
+        scope: agent instructions / research org baseline
+    confidence: 0.9
+    requirements: [llama-local-or-gpu]
+  - id: nl2
+    name: NO-LICENSE legal state (the point of this case)
+    ontology_type: POLICY
+    evidence:
+      - file: README.md
+        scope: "repo root contains NO LICENSE file (verified absent)"
+    confidence: 0.99
+    requirements: []
+
+dependencies_permissions:
+  dependencies: [llama.cpp local]
+  permissions:
+    filesystem: read-write-scratch
+    network: web-search
+    shell: subprocess-llama
+  security_posture: n/a - analysis only
+
+non_capabilities:
+  - not-redistributable-without-permission
+  - not-production-software
+
+risks_findings:
+  - "LEGAL - no license means all rights reserved; capability package marked NOT-FOR-DISTRIBUTION; template may be built locally but not shipped"
+  - "reads web - SSRF-adjacent risk if executed"
+
+evaluation_plan: |
+  Parity: HURCULES must correctly FLAG this as no-license and mark the derived
+  package non-distributable. Checks: license detection = none, provenance
+  warning emitted, package status = CONDITIONAL/blocked for distribution.

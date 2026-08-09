@@ -1,0 +1,20 @@
+{
+  "gold_id": "zx",
+  "matches": [
+    {
+      "analyst": "Shell command execution with Promise-based API",
+      "gold": "Child-process shell runner (dollar-sign command)",
+      "matched": true
+    },
+    {
+      "analyst": "Command-line Interface (CLI) for zx",
+      "gold": "Script CLI entry (shebang-friendly runner)",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "Built-in helpers (fetch, glob, banner)",
+      "matched": false
+    }
+  ]
+}

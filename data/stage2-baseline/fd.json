@@ -1,0 +1,107 @@
+{
+  "dependency_manifests": [],
+  "documentation_files": [
+    "README.md",
+    "doc/.gitattributes",
+    "doc/fd.1",
+    "doc/logo.png",
+    "doc/logo.svg",
+    "doc/release-checklist.md",
+    "doc/screencast.sh",
+    "doc/screencast.svg",
+    "doc/sponsors.md"
+  ],
+  "entry_points": [
+    "src/main.rs"
+  ],
+  "file_count": 59,
+  "file_tree": [
+    ".cargo/config.toml",
+    ".github/FUNDING.yml",
+    ".github/ISSUE_TEMPLATE/bug_report.yaml",
+    ".github/ISSUE_TEMPLATE/config.yml",
+    ".github/ISSUE_TEMPLATE/feature_request.md",
+    ".github/ISSUE_TEMPLATE/question.md",
+    ".github/dependabot.yml",
+    ".github/workflows/CICD.yml",
+    ".gitignore",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "Cargo.lock",
+    "Cargo.toml",
+    "Cross.toml",
+    "LICENSE-APACHE",
+    "LICENSE-MIT",
+    "Makefile",
+    "README.md",
+    "SECURITY.md",
+    "contrib/completion/_fd",
+    "contrib/completion/_fdfind",
+    "contrib/completion/fdfind.bash",
+    "contrib/completion/fdfind.fish",
+    "doc/.gitattributes",
+    "doc/fd.1",
+    "doc/logo.png",
+    "doc/logo.svg",
+    "doc/release-checklist.md",
+    "doc/screencast.sh",
+    "doc/screencast.svg",
+    "doc/sponsors.md",
+    "rustfmt.toml",
+    "scripts/create-deb.sh",
+    "scripts/update-help.awk",
+    "scripts/version-bump.sh",
+    "src/cli.rs",
+    "src/config.rs",
+    "src/dir_entry.rs",
+    "src/error.rs",
+    "src/exec/command.rs",
+    "src/exec/job.rs",
+    "src/exec/mod.rs",
+    "src/exit_codes.rs",
+    "src/filesystem.rs",
+    "src/filetypes.rs",
+    "src/filter/mod.rs",
+    "src/filter/owner.rs",
+    "src/filter/size.rs",
+    "src/filter/time.rs",
+    "src/fmt/input.rs",
+    "src/fmt/mod.rs",
+    "src/hyperlink.rs",
+    "src/main.rs",
+    "src/output.rs",
+    "src/regex_helper.rs",
+    "src/sanitize.rs",
+    "src/walk.rs",
+    "tests/testenv/mod.rs",
+    "tests/tests.rs"
+  ],
+  "languages": {
+    "markdown": 8,
+    "rust": 24,
+    "shell": 4,
+    "toml": 4,
+    "yaml": 5
+  },
+  "license_files": [
+    "LICENSE-MIT"
+  ],
+  "repository": "/REPO/gold-fd",
+  "risk_flags": [
+    {
+      "file": ".github/workflows/CICD.yml",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "reason": "dynamic-execution"
+    }
+  ],
+  "schema": "hurcules.repo-map",
+  "schema_version": "1.0.0",
+  "secret_file_locations": [],
+  "test_files": [
+    "tests/testenv/mod.rs",
+    "tests/tests.rs"
+  ]
+}

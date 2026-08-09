@@ -1,0 +1,114 @@
+{
+  "capability_count": 6,
+  "gold_id": "ratty",
+  "gold_match_rate": 0.5,
+  "gold_matched": 1,
+  "gold_total": 2,
+  "reproducible": true,
+  "status": "PASS",
+  "unsupported_capability_rate": 0.0,
+  "verdicts": [
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "6 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c1",
+      "name": "Terminal Emulation Core",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "4 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c2",
+      "name": "GPU/WebGPU Accelerated Rendering",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "2 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c3",
+      "name": "Input Handling System",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "2 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c4",
+      "name": "Configuration Management",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "1 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c5",
+      "name": "Plugin System",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "6 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c6",
+      "name": "Widget Toolkit for 2D GUI",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    }
+  ]
+}

@@ -1,0 +1,401 @@
+{
+  "compiled_from": "stage3-analysis",
+  "errors": [],
+  "gold_id": "pytest",
+  "ok": true,
+  "package": {
+    "capabilities": [
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "src/_pytest/fixtures.py",
+            "scope": "Core fixture implementation including setup, teardown, and dependency resolution"
+          },
+          {
+            "file": "doc/en/example/fixtures/test_fixtures_order_autouse.py",
+            "scope": "Example demonstrating fixture usage and autouse behavior"
+          },
+          {
+            "file": "testing/python/fixtures.py",
+            "scope": "Test fixtures for fixture-related functionality"
+          }
+        ],
+        "id": "c3",
+        "name": "Fixture Management",
+        "ontology_type": "SKILL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "src/_pytest/assertion/rewrite.py",
+            "scope": "AST transformer that rewrites assert statements for detailed error reporting"
+          },
+          {
+            "file": "testing/test_assertrewrite.py",
+            "scope": "Tests verifying assertion rewriting functionality"
+          }
+        ],
+        "id": "c4",
+        "name": "Assertion Rewriting",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "src/_pytest/python.py",
+            "scope": "Implementation of parametrization in Function class and related collection logic"
+          },
+          {
+            "file": "doc/en/example/parametrize.rst",
+            "scope": "Examples demonstrating parametrization usage"
+          },
+          {
+            "file": "testing/test_mark.py",
+            "scope": "Tests using parametrization via @pytest.mark.parametrize"
+          }
+        ],
+        "id": "c5",
+        "name": "Test Parametrization",
+        "ontology_type": "SKILL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "src/_pytest/config/findpaths.py",
+            "scope": "Logic for discovering test files and directories"
+          },
+          {
+            "file": "src/_pytest/python.py",
+            "scope": "Test collection from modules, classes, and functions"
+          },
+          {
+            "file": "testing/test_collection.py",
+            "scope": "Tests for test collection mechanisms"
+          }
+        ],
+        "id": "c6",
+        "name": "Test Collection and Discovery",
+        "ontology_type": "SKILL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "src/_pytest/tmpdir.py",
+            "scope": "Implementation of tmpdir and tmp_path fixtures for temporary storage"
+          },
+          {
+            "file": "doc/en/how-to/tmp_path.rst",
+            "scope": "Documentation on using tmp_path fixture"
+          },
+          {
+            "file": "testing/test_tmpdir.py",
+            "scope": "Tests for tmpdir fixture functionality"
+          }
+        ],
+        "id": "c7",
+        "name": "Temporary Directory Handling",
+        "ontology_type": "SKILL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "src/_pytest/capture.py",
+            "scope": "Mechanism for capturing stdout/stderr during test execution"
+          },
+          {
+            "file": "doc/en/how-to/capture-stdout-stderr.rst",
+            "scope": "Documentation on output capture usage"
+          },
+          {
+            "file": "testing/test_capture.py",
+            "scope": "Tests verifying output capture functionality"
+          }
+        ],
+        "id": "c8",
+        "name": "Output Capture",
+        "ontology_type": "TOOL",
+        "requirements": []
+      }
+    ],
+    "compiler_version": "1.0.0",
+    "dependency_manifests": [
+      "doc/en/requirements.txt",
+      "pyproject.toml",
+      "testing/plugins_integration/requirements.txt"
+    ],
+    "permissions_summary": [],
+    "provenance": {
+      "file_count": 660,
+      "languages": [
+        "css",
+        "html",
+        "json",
+        "markdown",
+        "python",
+        "restructuredtext",
+        "toml",
+        "yaml"
+      ],
+      "repository": "/REPO/gold-pytest"
+    },
+    "registry": {
+      "status": "candidate"
+    },
+    "schema": "hurcules.capability-package-v1",
+    "security": {
+      "execution_denied_by_default": true,
+      "hostile_by_default": true,
+      "risk_flags": [
+        {
+          "file": ".github/workflows/deploy.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "bench/empty.py",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "bench/unit_test.py",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "bench/xunit.py",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "doc/en/announce/release-2.8.2.rst",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "doc/en/builtin.rst",
+          "reason": "shell-exec"
+        },
+        {
+          "file": "doc/en/deprecations.rst",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "doc/en/example/assertion/failure_demo.py",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "doc/en/example/assertion/test_setup_flow_example.py",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "doc/en/example/attic.rst",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "doc/en/example/multipython.py",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "doc/en/example/multipython.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "doc/en/example/parametrize.rst",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "doc/en/example/parametrize.rst",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "doc/en/example/reportingdemo.rst",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "doc/en/historical-notes.rst",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "doc/en/how-to/capture-stdout-stderr.rst",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "doc/en/how-to/parametrize.rst",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "pyproject.toml",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "scripts/prepare-release-pr.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "scripts/release.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "src/_pytest/_code/code.py",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "src/_pytest/_py/path.py",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "src/_pytest/_py/path.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "src/_pytest/assertion/rewrite.py",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "src/_pytest/capture.py",
+          "reason": "shell-exec"
+        },
+        {
+          "file": "src/_pytest/legacypath.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "src/_pytest/mark/__init__.py",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "src/_pytest/mark/expression.py",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "src/_pytest/pytester.py",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "src/_pytest/pytester.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "src/_pytest/skipping.py",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "testing/acceptance_test.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "testing/code/test_excinfo.py",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "testing/code/test_excinfo.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "testing/code/test_source.py",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "testing/freeze/create_executable.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "testing/freeze/tox_run.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "testing/plugins_integration/django_settings.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "testing/python/collect.py",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "testing/python/raises_group.py",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "testing/test_argcomplete.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "testing/test_assertrewrite.py",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "testing/test_assertrewrite.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "testing/test_capture.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "testing/test_config.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "testing/test_link_resolve.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "testing/test_meta.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "testing/test_monkeypatch.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "testing/test_parseopt.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "testing/test_pathlib.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "testing/test_pytester.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "testing/test_pytester.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "testing/test_reports.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "testing/test_runner.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "testing/test_terminal.py",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "testing/test_unittest.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "testing/test_unraisableexception.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "testing/test_warnings.py",
+          "reason": "subprocess-usage"
+        }
+      ],
+      "secret_file_locations": []
+    }
+  },
+  "warnings": []
+}

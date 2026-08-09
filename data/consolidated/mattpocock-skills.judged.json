@@ -1,0 +1,20 @@
+{
+  "gold_id": "mattpocock-skills",
+  "matches": [
+    {
+      "analyst": "Skill Definition Collection",
+      "gold": "mp1",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "mp2",
+      "matched": false
+    },
+    {
+      "analyst": "Documentation and Guidance Hub",
+      "gold": "mp3",
+      "matched": true
+    }
+  ]
+}

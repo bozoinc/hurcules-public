@@ -1,0 +1,97 @@
+{
+  "capability_count": 5,
+  "gold_id": "mem0",
+  "gold_match_rate": 0.625,
+  "gold_matched": 5,
+  "gold_total": 8,
+  "reproducible": true,
+  "status": "PASS",
+  "unsupported_capability_rate": 0.0,
+  "verdicts": [
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "6 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c1",
+      "name": "Core Memory SDK",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "6 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c2",
+      "name": "Command-Line Interface (CLI)",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "6 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c3",
+      "name": "REST API Server",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "5 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c4",
+      "name": "Dashboard Web UI",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "16 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c5",
+      "name": "Pluggable AI Component Architecture",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    }
+  ]
+}

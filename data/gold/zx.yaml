@@ -1,0 +1,69 @@
+gold_case_id: zx
+reviewer: the product owner + Hermes
+status: HUMAN-VERIFIED-GOLD
+date: 2026-08-05
+
+# Gold-Standard: zx (google/zx)
+# HURCULES Stage 1 - Gold case #10 (shell/scripting-tool category)
+
+provenance:
+  repository: google/zx
+  commit_sha: 00a2c484e219c2e84bfc3a199febf7fbce2cfbf4
+  version: 8.x (package.json)
+  license: Apache-2.0 (LICENSE)
+  languages: [TypeScript, JavaScript]
+  runtime: Node.js
+
+purpose: |
+  zx is a tool for writing better scripts. It brings bash-like ergonomics to
+  Node.js (child_process wrappers, fetch, fancy CLI) for shell scripting.
+
+architecture_map: |
+  Node/TS: src/ (cli.ts entry, core.ts $ command runner, glob/banner helpers),
+  package.json, build/. Apache-2.0.
+
+capabilities:
+  - id: z1
+    name: Child-process shell runner (dollar-sign command)
+    ontology_type: TOOL
+    evidence:
+      - file: src/core.ts
+        scope: "shell command execution, capture, templates"
+    confidence: 0.93
+    requirements: [node]
+  - id: z2
+    name: Script CLI entry (shebang-friendly runner)
+    ontology_type: TOOL
+    evidence:
+      - file: src/cli.ts
+        scope: CLI parsing + script exec
+    confidence: 0.88
+    requirements: []
+  - id: z3
+    name: Built-in helpers (fetch, glob, banner)
+    ontology_type: TOOL
+    evidence:
+      - file: src/core.ts
+        scope: fetch/glob/stdio helpers
+    confidence: 0.85
+    requirements: []
+
+dependencies_permissions:
+  dependencies: [node, optional-deps]
+  permissions:
+    filesystem: as-script-does
+    network: per-script
+    shell: yes (child_process - the whole point)
+  security_posture: runs arbitrary commands named in script - only trusted scripts
+
+non_capabilities:
+  - not-a-task-runner
+  - not-a-shell-repl-by-default
+
+risks_findings:
+  - executes commands - untrusted scripts are dangerous
+  - must treat script content as trusted code
+
+evaluation_plan: |
+  Parity: non-technical user runs a multi-step shell script via the zx template.
+  Checks: command runs, output captured, exit handling.

@@ -1,0 +1,25 @@
+{
+  "gold_id": "click",
+  "matches": [
+    {
+      "analyst": "Command Definition and Grouping",
+      "gold": "CLI command/group framework (decorators)",
+      "matched": true
+    },
+    {
+      "analyst": "Parameter Type System and Conversion",
+      "gold": "Parameter type system + parsing",
+      "matched": true
+    },
+    {
+      "analyst": "CLI Testing Utilities",
+      "gold": "Testing harness (CliRunner)",
+      "matched": true
+    },
+    {
+      "analyst": "Terminal UI Utilities (echo, style, prompt, progress bar)",
+      "gold": "Echo/formatting + error handling",
+      "matched": true
+    }
+  ]
+}

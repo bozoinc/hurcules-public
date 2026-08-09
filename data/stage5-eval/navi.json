@@ -1,0 +1,80 @@
+{
+  "capability_count": 4,
+  "gold_id": "navi",
+  "gold_match_rate": 0.3333333333333333,
+  "gold_matched": 1,
+  "gold_total": 3,
+  "reproducible": true,
+  "status": "PASS",
+  "unsupported_capability_rate": 0.0,
+  "verdicts": [
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "11 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c1",
+      "name": "Navi command-line interface (CLI) for cheat sheet navigation",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "8 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c2",
+      "name": "Shell plugin adapter for integrating navi with Bash, Fish, Zsh, and other shells",
+      "ontology_type": "ADAPTER",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "7 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c3",
+      "name": "Cheat sheet knowledge pack (example cheat sheets)",
+      "ontology_type": "KNOWLEDGE PACK",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "7 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c5",
+      "name": "Test harness for verifying navi functionality",
+      "ontology_type": "EVALUATOR",
+      "status": "PASS",
+      "supported": true
+    }
+  ]
+}

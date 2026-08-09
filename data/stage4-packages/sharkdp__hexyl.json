@@ -1,0 +1,37 @@
+{
+  "repo": "sharkdp/hexyl",
+  "ok": true,
+  "errors": [],
+  "warnings": [],
+  "package": {
+    "schema": "hurcules.capability-package-v1",
+    "compiler_version": "1.0.0",
+    "provenance": {
+      "repository": "/tmp/hurcules-discovery/sharkdp__hexyl",
+      "file_count": 22,
+      "languages": [
+        "rust",
+        "markdown",
+        "toml",
+        "yaml"
+      ]
+    },
+    "registry": {
+      "status": "candidate"
+    },
+    "capabilities": [],
+    "dependency_manifests": [],
+    "permissions_summary": [],
+    "security": {
+      "secret_file_locations": [],
+      "risk_flags": [
+        {
+          "file": ".github/workflows/CICD.yml",
+          "reason": "secret-reference"
+        }
+      ],
+      "hostile_by_default": true,
+      "execution_denied_by_default": true
+    }
+  }
+}

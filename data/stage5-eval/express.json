@@ -1,0 +1,148 @@
+{
+  "capability_count": 8,
+  "gold_id": "express",
+  "gold_match_rate": 0.75,
+  "gold_matched": 3,
+  "gold_total": 4,
+  "reproducible": true,
+  "status": "PASS",
+  "unsupported_capability_rate": 0.0,
+  "verdicts": [
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "3 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c1",
+      "name": "HTTP Server Framework",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "5 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c2",
+      "name": "Routing System",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "4 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c3",
+      "name": "Middleware Pipeline",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "6 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c4",
+      "name": "Request/Response Abstraction",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "2 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c5",
+      "name": "Static File Serving",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "5 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c6",
+      "name": "Template Rendering",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "7 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c7",
+      "name": "Session & Cookie Management",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "8 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c8",
+      "name": "Content Negotiation & Parameter Parsing",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    }
+  ]
+}

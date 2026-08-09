@@ -1,0 +1,73 @@
+gold_case_id: tokei
+reviewer: the product owner + Hermes
+status: HUMAN-VERIFIED-GOLD
+date: 2026-08-05
+
+# Gold-Standard: tokei (XAMPPRocky/tokei)
+# HURCULES Stage 1 - Gold case #13 (command-line-tool category)
+
+provenance:
+  repository: XAMPPRocky/tokei
+  commit_sha: fa44e5194060305576514d59b850353643afbfc8
+  version: 14.0.0 (Cargo.toml)
+  license: MIT (LICENSE)
+  languages: [Rust]
+  runtime: compiled Rust binary
+
+purpose: |
+  tokei is a fast code line-counting tool that reports SLOC (source lines of
+  code), comments, and blanks across many languages, respecting gitignore.
+
+architecture_map: |
+  Rust project: src/ (cli.rs, cli_utils.rs, config.rs, consts.rs language
+  definitions, main), data/ for per-language config, Cargo.toml. MIT.
+
+capabilities:
+  - id: t1
+    name: Language-aware line counting (SLOC)
+    ontology_type: TOOL
+    evidence:
+      - file: src/consts.rs
+        scope: language/extension definitions
+      - file: src/main.rs
+        scope: counting orchestration
+    confidence: 0.94
+    requirements: []
+  - id: t2
+    name: CLI + output formatting
+    ontology_type: TOOL
+    evidence:
+      - file: src/cli.rs
+        scope: arg parsing
+      - file: src/cli_utils.rs
+        scope: output formatting helpers
+    confidence: 0.88
+    requirements: []
+  - id: t3
+    name: Gitignore-aware scanning
+    ontology_type: TOOL
+    evidence:
+      - file: src/config.rs
+        scope: ignore handling
+    confidence: 0.85
+    requirements: []
+
+dependencies_permissions:
+  dependencies: [ignore, rayon, serde]
+  permissions:
+    filesystem: read-recursive
+    network: none
+    shell: none
+  security_posture: read-only counts; rust memory-safe
+
+non_capabilities:
+  - not-a-static-analysis-quality tool (counts only)
+  - not-a-binary-size tool
+
+risks_findings:
+  - language coverage dependent on data/ definitions
+  - read-only, low risk
+
+evaluation_plan: |
+  Parity: non-technical user counts lines in a codebase with the tokei template.
+  Checks: correct SLOC/comments/blanks, ignore respect.

@@ -1,0 +1,80 @@
+{
+  "capability_count": 4,
+  "gold_id": "pytest",
+  "gold_match_rate": 0.75,
+  "gold_matched": 3,
+  "gold_total": 4,
+  "reproducible": true,
+  "status": "PASS",
+  "unsupported_capability_rate": 0.0,
+  "verdicts": [
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "12 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c1",
+      "name": "Test Discovery and Execution",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "4 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c2",
+      "name": "Fixture Management and Parametrization",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "5 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c3",
+      "name": "Assertion Rewriting and Introspection",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    },
+    {
+      "checks": {
+        "citation_accuracy": {
+          "detail": "5 evidence entries cite existing files",
+          "status": "PASS"
+        },
+        "schema": {
+          "detail": "schema valid",
+          "status": "PASS"
+        }
+      },
+      "id": "c4",
+      "name": "Plugin Architecture and Extensibility",
+      "ontology_type": "TOOL",
+      "status": "PASS",
+      "supported": true
+    }
+  ]
+}

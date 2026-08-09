@@ -1,0 +1,62 @@
+{
+  "dependency_manifests": [],
+  "documentation_files": [
+    "README.md",
+    "doc/hexyl.1.md",
+    "doc/logo.svg"
+  ],
+  "entry_points": [
+    "src/main.rs"
+  ],
+  "file_count": 22,
+  "file_tree": [
+    ".github/workflows/CICD.yml",
+    ".gitignore",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "Cargo.lock",
+    "Cargo.toml",
+    "LICENSE-APACHE",
+    "LICENSE-MIT",
+    "README.md",
+    "doc/hexyl.1.md",
+    "doc/logo.svg",
+    "examples/simple.rs",
+    "src/colors.rs",
+    "src/input.rs",
+    "src/lib.rs",
+    "src/main.rs",
+    "src/tests.rs",
+    "tests/examples/.gitattributes",
+    "tests/examples/ascii",
+    "tests/examples/empty",
+    "tests/examples/hello_world_elf64",
+    "tests/integration_tests.rs"
+  ],
+  "languages": {
+    "markdown": 4,
+    "rust": 7,
+    "toml": 1,
+    "yaml": 1
+  },
+  "license_files": [
+    "LICENSE-MIT"
+  ],
+  "repository": "/REPO/gold-hexyl",
+  "risk_flags": [
+    {
+      "file": ".github/workflows/CICD.yml",
+      "reason": "secret-reference"
+    }
+  ],
+  "schema": "hurcules.repo-map",
+  "schema_version": "1.0.0",
+  "secret_file_locations": [],
+  "test_files": [
+    "tests/examples/.gitattributes",
+    "tests/examples/ascii",
+    "tests/examples/empty",
+    "tests/examples/hello_world_elf64",
+    "tests/integration_tests.rs"
+  ]
+}

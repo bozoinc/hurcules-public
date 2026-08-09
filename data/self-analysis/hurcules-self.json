@@ -1,0 +1,224 @@
+{
+  "conclusion": "ok",
+  "capabilities": [
+    {
+      "id": "c1",
+      "name": "Repository Discovery & Mapping",
+      "ontology_type": "TOOL",
+      "evidence": [
+        {
+          "file": "src/hurcules/discovery.py",
+          "scope": "implements discovery logic for external repositories"
+        },
+        {
+          "file": "src/hurcules/mapper.py",
+          "scope": "maps discovered repository data to internal capability models"
+        },
+        {
+          "file": "src/hurcules/consolidate.py",
+          "scope": "consolidates and deduplicates mapped capability data"
+        },
+        {
+          "file": "scripts/discovery_to_pipeline.py",
+          "scope": "orchestrates discovery and mapping pipeline"
+        }
+      ],
+      "confidence": 0.95,
+      "requirements": []
+    },
+    {
+      "id": "c2",
+      "name": "Capability Analysis & Evaluation",
+      "ontology_type": "TOOL",
+      "evidence": [
+        {
+          "file": "src/hurcules/analyst.py",
+          "scope": "analyzes capability data and produces insights"
+        },
+        {
+          "file": "src/hurcules/evaluator.py",
+          "scope": "evaluates capabilities against criteria"
+        },
+        {
+          "file": "src/hurcules/compiler.py",
+          "scope": "compiles capability definitions into executable artifacts"
+        },
+        {
+          "file": "src/hurcules/cross_validate.py",
+          "scope": "validates capability consistency across sources"
+        },
+        {
+          "file": "tests/test_analyst.py",
+          "scope": "unit tests for analyst functionality"
+        },
+        {
+          "file": "tests/test_evaluator.py",
+          "scope": "unit tests for evaluator functionality"
+        }
+      ],
+      "confidence": 0.93,
+      "requirements": []
+    },
+    {
+      "id": "c3",
+      "name": "Sandboxed Execution & Secrets Hygiene",
+      "ontology_type": "TOOL",
+      "evidence": [
+        {
+          "file": "src/hurcules/sandbox.py",
+          "scope": "provides isolated execution environment for capability testing"
+        },
+        {
+          "file": "src/hurcules/secrets_hygiene.py",
+          "scope": "detects and mitigates secrets in code and data"
+        },
+        {
+          "file": "tests/test_sandbox.py",
+          "scope": "unit tests for sandbox isolation"
+        },
+        {
+          "file": "tests/test_secrets_hygiene.py",
+          "scope": "unit tests for secrets detection"
+        }
+      ],
+      "confidence": 0.9,
+      "requirements": []
+    },
+    {
+      "id": "c4",
+      "name": "CLI & Workflow Orchestration",
+      "ontology_type": "TOOL",
+      "evidence": [
+        {
+          "file": "src/hurcules/cli.py",
+          "scope": "defines command-line interface entry points"
+        },
+        {
+          "file": "src/hurcules/routes.py",
+          "scope": "maps CLI commands to internal workflow functions"
+        },
+        {
+          "file": "scripts/pipeline_chained.py",
+          "scope": "chains multiple pipeline stages into a workflow"
+        },
+        {
+          "file": "scripts/run_stage2_baseline.py",
+          "scope": "executes stage\u20112 baseline pipeline"
+        },
+        {
+          "file": "scripts/run_stage3.py",
+          "scope": "executes stage\u20113 analysis pipeline"
+        },
+        {
+          "file": "scripts/run_stage5_eval.py",
+          "scope": "executes stage\u20115 evaluation pipeline"
+        },
+        {
+          "file": "tests/test_cli.py",
+          "scope": "unit tests for CLI commands"
+        }
+      ],
+      "confidence": 0.94,
+      "requirements": []
+    },
+    {
+      "id": "c5",
+      "name": "Registry, Ledger & Profile Management",
+      "ontology_type": "TOOL",
+      "evidence": [
+        {
+          "file": "src/hurcules/registry.py",
+          "scope": "stores and retrieves capability registry entries"
+        },
+        {
+          "file": "src/hurcules/ledger.py",
+          "scope": "records changes and provenance of capability data"
+        },
+        {
+          "file": "src/hurcules/profiles.py",
+          "scope": "manages capability profiles and configurations"
+        },
+        {
+          "file": "data/registry/registry.json",
+          "scope": "persisted registry data used by the system"
+        },
+        {
+          "file": "tests/test_registry.py",
+          "scope": "unit tests for registry functionality"
+        },
+        {
+          "file": "tests/test_ledger.py",
+          "scope": "unit tests for ledger functionality"
+        }
+      ],
+      "confidence": 0.91,
+      "requirements": []
+    },
+    {
+      "id": "c6",
+      "name": "Composition & Productization",
+      "ontology_type": "TOOL",
+      "evidence": [
+        {
+          "file": "src/hurcules/composition.py",
+          "scope": "combines individual capabilities into composite solutions"
+        },
+        {
+          "file": "src/hurcules/product.py",
+          "scope": "defines product\u2011level artifacts from composed capabilities"
+        },
+        {
+          "file": "src/hurcules/marcus.py",
+          "scope": "implements product\u2011specific logic (e.g., Marcus adapter)"
+        },
+        {
+          "file": "src/hurcules/moat.py",
+          "scope": "provides protective wrappers for product deployment"
+        },
+        {
+          "file": "tests/test_composition.py",
+          "scope": "unit tests for composition logic"
+        },
+        {
+          "file": "tests/test_product.py",
+          "scope": "unit tests for product creation"
+        }
+      ],
+      "confidence": 0.89,
+      "requirements": []
+    },
+    {
+      "id": "c7",
+      "name": "Feedback, Approval & Lifecycle Management",
+      "ontology_type": "WORKFLOW",
+      "evidence": [
+        {
+          "file": "src/hurcules/feedback.py",
+          "scope": "collects and processes feedback on capability outputs"
+        },
+        {
+          "file": "src/hurcules/approval.py",
+          "scope": "implements approval gates for capability promotion"
+        },
+        {
+          "file": "src/hurcules/lifecycle.py",
+          "scope": "manages capability lifecycle states and transitions"
+        },
+        {
+          "file": "tests/test_feedback.py",
+          "scope": "unit tests for feedback handling"
+        },
+        {
+          "file": "tests/test_approval.py",
+          "scope": "unit tests for approval workflow"
+        },
+        {
+          "file": "tests/test_lifecycle.py",
+          "scope": "unit tests for lifecycle management"
+        }
+      ],
+      "confidence": 0.88,
+      "requirements": []
+    }
+  ]
+}

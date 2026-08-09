@@ -1,0 +1,15 @@
+{
+  "gold_id": "yq",
+  "matches": [
+    {
+      "analyst": "YAML query command-line tool",
+      "gold": "YAML->jq->YAML/JSON pipeline",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "jq filter passthrough",
+      "matched": false
+    }
+  ]
+}

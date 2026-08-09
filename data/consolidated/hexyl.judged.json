@@ -1,0 +1,15 @@
+{
+  "gold_id": "hexyl",
+  "matches": [
+    {
+      "analyst": "Hex viewer application",
+      "gold": "h1",
+      "matched": true
+    },
+    {
+      "analyst": "Hex viewer application",
+      "gold": "h2",
+      "matched": true
+    }
+  ]
+}

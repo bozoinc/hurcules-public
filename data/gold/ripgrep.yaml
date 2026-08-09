@@ -1,0 +1,97 @@
+gold_case_id: ripgrep
+reviewer: the product owner + Hermes
+status: HUMAN-VERIFIED-GOLD
+date: 2026-08-05
+
+# Gold-Standard: ripgrep (BurntSushi/ripgrep)
+# HURCULES Stage 1 - Gold case #4 (excellent-tests category)
+
+provenance:
+  repository: BurntSushi/ripgrep
+  commit_sha: 3fce3b5bb0236da2df6d99672afb8a719642eca7
+  local_clone: ~/projects/gold-ripgrep
+  version: 15.2.0 (Cargo.toml)
+  license: MIT (LICENSE-MIT) + unlicense dual, permissive
+  languages: [Rust]
+  runtime: compiled Rust binary (cargo)
+
+purpose: |
+  ripgrep (rg) is a line-oriented search tool that recursively searches the
+  current directory for a regex pattern. Respects .gitignore, shows matches with
+  precise line numbers, and is a benchmark-famous fast search tool written in
+  Rust with a strong emphasis on correctness and testing.
+
+architecture_map: |
+  Rust workspace (cargo): crates/ (cli, core, globset, grep, ignore, index,
+  matcher, pcre2, printer, regex). Ignore-file handling in crates/ignore/,
+  grep engine in crates/grep/ + matcher/, CLI in crates/cli/ + core/, search
+  printer in crates/printer/. Known for exceptionally thorough unit + integration
+  tests across crates.
+
+capabilities:
+  - id: r1
+    name: Recursive regex search (respects gitignore)
+    ontology_type: TOOL
+    evidence:
+      - file: crates/core/main.rs
+        scope: search orchestration
+      - file: crates/ignore/src/walk.rs
+        scope: .gitignore-aware directory walking
+      - file: crates/grep/src/lib.rs
+        scope: line-oriented regex search engine
+    confidence: 0.95
+    requirements: []
+  - id: r2
+    name: Multi-crate grep engine with matcher
+    ontology_type: TOOL
+    evidence:
+      - file: crates/matcher
+        scope: regex matcher abstractions
+      - file: crates/regex
+        scope: regex engine integration
+      - file: crates/pcre2
+        scope: optional PCRE2 backend
+    confidence: 0.93
+    requirements: [optional-pcre2, rust]
+  - id: r3
+    name: Search output printer (match formatting)
+    ontology_type: TOOL
+    evidence:
+      - file: crates/printer/src
+        scope: match output formatting
+    confidence: 0.90
+    requirements: []
+  - id: r4
+    name: Comprehensive test suite (unit + integration)
+    ontology_type: EVALUATOR
+    evidence:
+      - file: crates/ignore/tests
+        scope: integration tests
+      - file: crates/matcher/tests
+        scope: matcher integration tests
+    confidence: 0.92
+    requirements: []
+
+dependencies_permissions:
+  dependencies: [rust, optional-pcre2]
+  permissions:
+    filesystem: read-recursive-directory
+    network: none
+    shell: none
+  security_posture: rust memory-safety; large test suite guards correctness
+
+non_capabilities:
+  - not-a-binary-search-tool
+  - not-a-full-indexer
+  - not-an-agent
+
+risks_findings:
+  - PCRE2 optional; default regex engine limited on complex features
+  - recursive search on huge trees resource-intensive (no hard cap)
+  - test suite large; env-dependent maintainability
+
+evaluation_plan: |
+  Parity test: a non-technical user, using only HURCULES' ripgrep capability
+  template, searches a codebase for a pattern and gets accurate line-numbered
+  matches that respect .gitignore — as well as an engineer using rg directly.
+  Checks: recursive search, ignore-file respect, literal + regex modes, exit codes.

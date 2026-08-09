@@ -1,0 +1,131 @@
+gold_case_id: gold-set-index
+status: IN-PROGRESS
+date: 2026-08-05
+total_planned: 20
+purpose: 'The evaluation corpus: ~20 deliberately varied repositories, each pinned
+  to a
+
+  commit, with HUMAN-VERIFIED correct findings (purpose, architecture, real
+
+  capabilities with evidence, deps, permissions, licence, security notes).
+
+  This is what the engine is scored against.
+
+  '
+scoring_rubric:
+  evidence_validity: percentage of cited file+line ranges that support the claim (target
+    >= 95%)
+  capability_precision: percentage of generated capabilities judged materially present
+    (target >= 85%)
+  unsupported_capability_rate: percentage of approved capabilities with no implementation
+    evidence (target < 5%)
+  reproducibility: same commit -> structurally equivalent output (target 100%)
+repos:
+- case_id: archon
+  file: data/gold/archon.yaml
+  category: large-monorepo + workflow-engine
+  status: DONE
+  holdout: false
+- case_id: mem0
+  file: data/gold/mem0.yaml
+  category: agent-framework + python-library
+  status: DONE
+  holdout: false
+- case_id: jq
+  file: data/gold/jq.yaml
+  category: simple-command-line-tool
+  status: DONE
+  holdout: false
+- case_id: ripgrep
+  file: data/gold/ripgrep.yaml
+  category: excellent-tests
+  status: DONE
+  holdout: false
+- case_id: express
+  file: data/gold/express.yaml
+  category: javascript-application
+  status: DONE
+  holdout: false
+- case_id: click
+  file: data/gold/click.yaml
+  category: rich-python-library
+  status: DONE
+  holdout: false
+- case_id: fd
+  file: data/gold/fd.yaml
+  category: command-line-tool
+  status: DONE
+  holdout: false
+- case_id: pytest
+  file: data/gold/pytest.yaml
+  category: test-framework
+  status: DONE
+  holdout: false
+- case_id: prettier
+  file: data/gold/prettier.yaml
+  category: javascript-application
+  status: DONE
+  holdout: false
+- case_id: zx
+  file: data/gold/zx.yaml
+  category: shell-scripting-tool
+  status: DONE
+  holdout: false
+- case_id: yq
+  file: data/gold/yq.yaml
+  category: command-line-tool
+  status: DONE
+  holdout: false
+- case_id: bat
+  file: data/gold/bat.yaml
+  category: command-line-tool
+  status: DONE
+  holdout: false
+- case_id: tokei
+  file: data/gold/tokei.yaml
+  category: command-line-tool
+  status: DONE
+  holdout: false
+- case_id: mattpocock-skills
+  file: data/gold/mattpocock-skills.yaml
+  category: skill-repository
+  status: DONE
+  holdout: false
+- case_id: awesome-graph-eng
+  file: data/gold/awesome-graph-eng.yaml
+  category: graph-engineering-resource
+  status: DONE
+  holdout: false
+- case_id: nolicense
+  file: data/gold/nolicense.yaml
+  category: no-licence (benign)
+  status: DONE
+  holdout: false
+- case_id: suspicious
+  file: data/gold/suspicious.yaml
+  category: suspicious-scripts (quarantined)
+  status: DONE
+  holdout: true
+- case_id: hexyl
+  file: data/gold/hexyl.yaml
+  category: command-line-tool
+  status: DONE
+  holdout: false
+- case_id: ratty
+  file: data/gold/ratty.yaml
+  category: terminal-pet / creative
+  status: DONE
+  holdout: true
+- case_id: navi
+  file: data/gold/navi.yaml
+  category: cheatsheet-tool
+  status: DONE
+  holdout: true
+- case_id: claimgap
+  file: data/gold/claimgap.yaml
+  category: claims-without-implementation (discipline case)
+  status: DONE
+  holdout: false
+progress: 21/21 complete
+next_candidates:
+- none (set complete)

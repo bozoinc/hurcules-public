@@ -1,0 +1,74 @@
+gold_case_id: mattpocock-skills
+reviewer: the product owner + Hermes
+status: HUMAN-VERIFIED-GOLD
+date: 2026-08-05
+
+# Gold-Standard: mattpocock/skills
+# HURCULES Stage 1 - Gold case #14 (skill-repository category)
+
+provenance:
+  repository: mattpocock/skills
+  commit_sha: 0986ebaf5d29e812162702b2633a2942c30200d2
+  version: skills collection
+  license: (see repo LICENSE)
+  languages: [Markdown]
+  runtime: read-only skill definitions
+
+purpose: |
+  A collection of skills for AI coding agents (Claude Code etc.) - structured
+  markdown procedures (engineering, wayfinder, grilling, TDD, code review,
+  domain modeling) for senior-engineer workflows. The source of the wayfinder
+  and grill-session skills already in use.
+
+architecture_map: |
+  Markdown skill collection: skills/ (engineering/, wayfinder/SKILL.md, etc.),
+  docs, README. Pure content - procedures encoded as structured markdown with
+  YAML frontmatter (name, description, invocation mode).
+
+capabilities:
+  - id: mp1
+    name: Structured skill definitions (YAML frontmatter + markdown body)
+    ontology_type: SKILL
+    evidence:
+      - file: skills/engineering/wayfinder/SKILL.md
+        scope: wayfinder planning methodology
+      - file: skills/engineering/code-review/SKILL.md
+        scope: engineering skill collection (grill, TDD, review dirs)
+    confidence: 0.93
+    requirements: []
+  - id: mp2
+    name: Invocation-mode taxonomy (user vs model invoked)
+    ontology_type: POLICY
+    evidence:
+      - file: skills/engineering/wayfinder/SKILL.md
+        scope: "disable-model-invocation frontmatter flag"
+    confidence: 0.90
+    requirements: []
+  - id: mp3
+    name: Procedural methodology documentation
+    ontology_type: KNOWLEDGE PACK
+    evidence:
+      - file: README.md
+        scope: overview + how to use
+    confidence: 0.88
+    requirements: []
+
+dependencies_permissions:
+  dependencies: [none-runtime]
+  permissions:
+    filesystem: none
+    network: none
+    shell: none
+  security_posture: pure documentation, no executable code
+
+non_capabilities:
+  - not-executable-code
+  - not-a-package (content only)
+
+risks_findings:
+  - instructions are advisory; agent must follow them correctly
+  - low risk, documentation only
+
+evaluation_plan: |
+  Parity: non-technical user adopts a skill procedure from the template.
+  Checks: frontmatter valid, procedure executable by an agent.

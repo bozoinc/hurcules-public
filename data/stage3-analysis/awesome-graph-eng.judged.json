@@ -1,0 +1,20 @@
+{
+  "gold_id": "awesome-graph-eng",
+  "matches": [
+    {
+      "analyst": null,
+      "gold": "Curated resource dataset (CSV, 561 entries, CC0)",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "Graph-engineering taxonomy (9 design layers)",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "Interactive atlas (web)",
+      "matched": false
+    }
+  ]
+}

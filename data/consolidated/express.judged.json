@@ -1,0 +1,25 @@
+{
+  "gold_id": "express",
+  "matches": [
+    {
+      "analyst": "c1",
+      "gold": "e1",
+      "matched": true
+    },
+    {
+      "analyst": "c2",
+      "gold": "e2",
+      "matched": true
+    },
+    {
+      "analyst": "c3",
+      "gold": "e3",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "e4",
+      "matched": false
+    }
+  ]
+}

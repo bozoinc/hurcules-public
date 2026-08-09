@@ -1,0 +1,313 @@
+{
+  "analyst": {
+    "analyst_version": "1.0.0",
+    "capabilities": [
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "src/_pytest/main.py",
+            "scope": "main entry point for pytest test execution"
+          },
+          {
+            "file": "src/pytest/__main__.py",
+            "scope": "alternative entry point for pytest"
+          },
+          {
+            "file": "src/_pytest/python.py",
+            "scope": "test collection and item execution logic"
+          },
+          {
+            "file": "src/_pytest/runner.py",
+            "scope": "test protocol implementation and test execution"
+          },
+          {
+            "file": "testing/test_collection.py",
+            "scope": "tests for test collection mechanisms"
+          },
+          {
+            "file": "testing/test_runner.py",
+            "scope": "tests for test execution and reporting"
+          }
+        ],
+        "id": "c1",
+        "name": "Test Discovery and Execution",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "src/_pytest/fixtures.py",
+            "scope": "core fixture implementation and dependency resolution"
+          },
+          {
+            "file": "doc/en/example/fixtures/test_fixtures_order_autouse.py",
+            "scope": "example demonstrating fixture usage and ordering"
+          },
+          {
+            "file": "doc/en/example/parametrize.rst",
+            "scope": "documentation on test parametrization features"
+          },
+          {
+            "file": "testing/python/fixtures.py",
+            "scope": "test fixtures for fixture system validation"
+          }
+        ],
+        "id": "c2",
+        "name": "Fixture Management and Parametrization",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "src/_pytest/assertion/rewrite.py",
+            "scope": "AST transformation for assertion rewriting"
+          },
+          {
+            "file": "src/_pytest/assertion/util.py",
+            "scope": "utility functions for assertion introspection"
+          },
+          {
+            "file": "doc/en/example/assertion/test_failures.py",
+            "scope": "examples showing assertion failure reporting"
+          },
+          {
+            "file": "testing/test_assertrewrite.py",
+            "scope": "tests for assertion rewrite functionality"
+          },
+          {
+            "file": "testing/test_assertion.py",
+            "scope": "tests for assertion handling and introspection"
+          }
+        ],
+        "id": "c3",
+        "name": "Assertion Rewriting and Introspection",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "src/_pytest/hookspec.py",
+            "scope": "definition of plugin hook specifications"
+          },
+          {
+            "file": "doc/en/how-to/writing_plugins.rst",
+            "scope": "documentation on creating pytest plugins"
+          },
+          {
+            "file": "doc/en/how-to/writing_hook_functions.rst",
+            "scope": "guidance on implementing hook functions"
+          },
+          {
+            "file": "testing/test_pluginmanager.py",
+            "scope": "tests for plugin manager functionality"
+          },
+          {
+            "file": "testing/plugins_integration/README.rst",
+            "scope": "description of plugin integration test suite"
+          }
+        ],
+        "id": "c4",
+        "name": "Plugin Architecture and Extensibility",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "src/_pytest/unittest.py",
+            "scope": "unittest test framework integration"
+          },
+          {
+            "file": "src/_pytest/doctest.py",
+            "scope": "doctest test framework integration"
+          },
+          {
+            "file": "doc/en/how-to/unittest.rst",
+            "scope": "documentation on using unittest with pytest"
+          },
+          {
+            "file": "doc/en/how-to/doctest.rst",
+            "scope": "documentation on using doctest with pytest"
+          },
+          {
+            "file": "testing/test_unittest.py",
+            "scope": "tests for unittest framework compatibility"
+          },
+          {
+            "file": "testing/test_doctest.py",
+            "scope": "tests for doctest framework compatibility"
+          }
+        ],
+        "id": "c5",
+        "name": "Multi-framework Test Support",
+        "ontology_type": "TOOL",
+        "requirements": []
+      }
+    ],
+    "raw_candidate_count": 5,
+    "repository": "/REPO/gold-pytest",
+    "schema": "hurcules.capability-analysis",
+    "validation_errors": []
+  },
+  "gold_id": "pytest",
+  "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+  "survivors": [
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "src/_pytest/main.py",
+          "scope": "main entry point for pytest test execution"
+        },
+        {
+          "file": "src/pytest/__main__.py",
+          "scope": "alternative entry point for pytest"
+        },
+        {
+          "file": "src/_pytest/python.py",
+          "scope": "test collection and item execution logic"
+        },
+        {
+          "file": "src/_pytest/runner.py",
+          "scope": "test protocol implementation and test execution"
+        },
+        {
+          "file": "testing/test_collection.py",
+          "scope": "tests for test collection mechanisms"
+        },
+        {
+          "file": "testing/test_runner.py",
+          "scope": "tests for test execution and reporting"
+        }
+      ],
+      "id": "c1",
+      "name": "Test Discovery and Execution",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "src/_pytest/fixtures.py",
+          "scope": "core fixture implementation and dependency resolution"
+        },
+        {
+          "file": "doc/en/example/fixtures/test_fixtures_order_autouse.py",
+          "scope": "example demonstrating fixture usage and ordering"
+        },
+        {
+          "file": "doc/en/example/parametrize.rst",
+          "scope": "documentation on test parametrization features"
+        },
+        {
+          "file": "testing/python/fixtures.py",
+          "scope": "test fixtures for fixture system validation"
+        }
+      ],
+      "id": "c2",
+      "name": "Fixture Management and Parametrization",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "src/_pytest/assertion/rewrite.py",
+          "scope": "AST transformation for assertion rewriting"
+        },
+        {
+          "file": "src/_pytest/assertion/util.py",
+          "scope": "utility functions for assertion introspection"
+        },
+        {
+          "file": "doc/en/example/assertion/test_failures.py",
+          "scope": "examples showing assertion failure reporting"
+        },
+        {
+          "file": "testing/test_assertrewrite.py",
+          "scope": "tests for assertion rewrite functionality"
+        },
+        {
+          "file": "testing/test_assertion.py",
+          "scope": "tests for assertion handling and introspection"
+        }
+      ],
+      "id": "c3",
+      "name": "Assertion Rewriting and Introspection",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "src/_pytest/hookspec.py",
+          "scope": "definition of plugin hook specifications"
+        },
+        {
+          "file": "doc/en/how-to/writing_plugins.rst",
+          "scope": "documentation on creating pytest plugins"
+        },
+        {
+          "file": "doc/en/how-to/writing_hook_functions.rst",
+          "scope": "guidance on implementing hook functions"
+        },
+        {
+          "file": "testing/test_pluginmanager.py",
+          "scope": "tests for plugin manager functionality"
+        },
+        {
+          "file": "testing/plugins_integration/README.rst",
+          "scope": "description of plugin integration test suite"
+        }
+      ],
+      "id": "c4",
+      "name": "Plugin Architecture and Extensibility",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "src/_pytest/unittest.py",
+          "scope": "unittest test framework integration"
+        },
+        {
+          "file": "src/_pytest/doctest.py",
+          "scope": "doctest test framework integration"
+        },
+        {
+          "file": "doc/en/how-to/unittest.rst",
+          "scope": "documentation on using unittest with pytest"
+        },
+        {
+          "file": "doc/en/how-to/doctest.rst",
+          "scope": "documentation on using doctest with pytest"
+        },
+        {
+          "file": "testing/test_unittest.py",
+          "scope": "tests for unittest framework compatibility"
+        },
+        {
+          "file": "testing/test_doctest.py",
+          "scope": "tests for doctest framework compatibility"
+        }
+      ],
+      "id": "c5",
+      "name": "Multi-framework Test Support",
+      "ontology_type": "TOOL",
+      "requirements": []
+    }
+  ]
+}

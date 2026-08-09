@@ -1,0 +1,25 @@
+{
+  "gold_id": "jq",
+  "matches": [
+    {
+      "analyst": "JSON parsing and generation library",
+      "gold": "JSON parsing and value model (jv runtime)",
+      "matched": true
+    },
+    {
+      "analyst": "JSON query language interpreter",
+      "gold": "jq DSL compiler + bytecode VM",
+      "matched": true
+    },
+    {
+      "analyst": "Command-line JSON processor",
+      "gold": "Filter application on piped JSON (CLI)",
+      "matched": true
+    },
+    {
+      "analyst": "Testing harness",
+      "gold": "Test suite + fuzz harnesses",
+      "matched": true
+    }
+  ]
+}

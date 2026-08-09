@@ -1,0 +1,91 @@
+gold_case_id: claimgap
+reviewer: the product owner + Hermes
+status: HUMAN-VERIFIED-GOLD
+date: 2026-08-05
+
+# Gold-Standard: mikekelly/AgentK
+# HURCULES Stage 1 - Gold case #17 (claims-without-implementation category)
+# NOTE: this is the DISCIPLINE case - it teaches HURCULES to separate README
+# marketing from implemented behavior. Findings are factual (claim vs code).
+
+provenance:
+  repository: mikekelly/AgentK
+  commit_sha: e9ec892bddeb0b9afd77fbb130f0a89c5b715cb7
+  version: kernel snapshot
+  license: MIT (LICENSE)
+  languages: [Python]
+  runtime: Python + LangChain/LangGraph + Docker optional
+
+purpose: |
+  AgentK bills itself as "the autoagentic AGI - a self-evolving AGI made of
+  agents that collaborate, and build new agents as needed - gradually builds
+  its own mind." The GOLD question this case answers is whether that is
+  actually implemented in the code.
+
+architecture_map: |
+  Small Python project (39KB, 792 LoC non-test): agents/ (5 hand-written:
+  hermes, agent_smith, tool_maker, web_researcher, software_engineer),
+  tools/ (16 LangChain tools incl. write_to_file, run_shell_command,
+  duck_duck_go search), agent_kernel.py (7-line entry), config.py, utils.py,
+  tests/, Dockerfile, docker-compose.yml, bash_shell (61-byte docker wrapper).
+
+capabilities:
+  - id: g1
+    name: Multi-agent ReAct harness on LangGraph/LangChain
+    ontology_type: WORKFLOW
+    evidence:
+      - file: agents/agent_smith.py
+        scope: StateGraph + ToolNode + ReAct prompt assembly
+      - file: agents/hermes.py
+        scope: orchestrator agent loop
+    confidence: 0.92
+    requirements: [langgraph, langchain, llm-api]
+  - id: g2
+    name: Agent/tool creation by prompt (the self-evolving mechanism)
+    ontology_type: WORKFLOW
+    evidence:
+      - file: agents/agent_smith.py
+        scope: system prompt instructs LLM to write agent code via write_to_file
+      - file: tools/write_to_file.py
+        scope: file-write tool the LLM uses
+    confidence: 0.90
+    requirements: [llm-api]
+  - id: g3
+    name: Tool suite for research, file and shell ops
+    ontology_type: TOOL
+    evidence:
+      - file: tools/duck_duck_go_web_search.py
+        scope: web search
+      - file: tools/run_shell_command.py
+        scope: shell execution
+      - file: tools/read_file.py
+        scope: file reads
+    confidence: 0.88
+    requirements: []
+
+dependencies_permissions:
+  dependencies: [langgraph, langchain, langchain-openai, python-dotenv, docker-compose]
+  permissions:
+    filesystem: read-write (write_to_file, overwrite_file, delete_file tools)
+    network: duckduckgo-search, llm-api
+    shell: run_shell_command tool (host shell execution)
+  security_posture: run_shell_command executes arbitrary commands; write/delete
+    tools modify files - hostile-by-default needed if run
+
+non_capabilities:
+  - "NOT a self-evolving AGI as marketed - the growth loop is the LLM writing new .py files via prompt + write tool; no self-modification engine, memory system, or architecture evolution in the code"
+  - "NOT an AGI (no general-intelligence claim is code-verifiable)"
+  - "NOT a production framework (792 LoC, 5 agents, minimal tests)"
+
+risks_findings:
+  - "MARKETING-GAP (the gold point): README claims autoagentic AGI, builds its own mind, bootstraps itself - implemented surface is a LangGraph ReAct wrapper with 5 predefined agents; the claim is aspirational, not evidenced"
+  - "SECURITY: run_shell_command + write/delete tools give arbitrary code execution if invoked; must be sandboxed"
+  - "README itself states misbehaving-agent detection is work in progress"
+
+evaluation_plan: |
+  Parity test: HURCULES must NOT report this as an AGI or self-evolving system.
+  It must report (1) the implemented capability (multi-agent ReAct harness on
+  LangGraph), (2) the creation mechanism (prompt-driven file writing), and
+  (3) a LOW confidence or aspirational flag on any AGI/self-evolving claim,
+  citing the gap between README and code. This is the precision test: does
+  HURCULES separate marketing from implementation? (capability_precision metric)

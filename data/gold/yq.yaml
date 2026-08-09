@@ -1,0 +1,66 @@
+gold_case_id: yq
+reviewer: the product owner + Hermes
+status: HUMAN-VERIFIED-GOLD
+date: 2026-08-05
+
+# Gold-Standard: yq (kislyuk/yq)
+# HURCULES Stage 1 - Gold case #11 (command-line-tool / YAML category)
+
+provenance:
+  repository: kislyuk/yq
+  commit_sha: ff9fc4b18d0bcbfb7758ff82bf1f36b60020b48a
+  version: 3.x (pyproject; version in yq/version.py)
+  license: Apache-2.0 (LICENSE)
+  languages: [Python]
+  runtime: Python
+
+purpose: |
+  yq is a command-line YAML processor - a jq wrapper for YAML. It reads YAML,
+  feeds it through jq (or a jq-like filter), and emits YAML/JSON. Bridges YAML
+  and jq workflows.
+
+architecture_map: |
+  Python package: yq/ (__init__.py, __main__.py CLI, loader.py YAML load, dumper.py
+  YAML dump), pyproject.toml, LICENSE. Apache-2.0.
+
+capabilities:
+  - id: y1
+    name: YAML->jq->YAML/JSON pipeline
+    ontology_type: WORKFLOW
+    evidence:
+      - file: yq/loader.py
+        scope: YAML parsing to jq input
+      - file: yq/dumper.py
+        scope: output serialization
+      - file: yq/__main__.py
+        scope: CLI entry
+    confidence: 0.92
+    requirements: [jq, pyyaml]
+  - id: y2
+    name: jq filter passthrough
+    ontology_type: TOOL
+    evidence:
+      - file: yq/__main__.py
+        scope: filter arg to jq invocation
+    confidence: 0.88
+    requirements: [jq]
+
+dependencies_permissions:
+  dependencies: [jq, PyYAML, tomli]
+  permissions:
+    filesystem: read-output
+    network: none
+    shell: calls-jq-subprocess
+  security_posture: delegates to jq binary; input parsed as YAML
+
+non_capabilities:
+  - not-reimplementing-jq-in-py (wraps jq)
+  - not-a-yaml-validator-with-schema
+
+risks_findings:
+  - requires jq binary installed
+  - complex YAML anchors can expand unexpectedly
+
+evaluation_plan: |
+  Parity: non-technical user reads a YAML file and filters a field with the yq
+  template. Checks: YAML in, filtered output, round-trip validity.

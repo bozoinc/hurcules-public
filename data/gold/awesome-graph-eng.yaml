@@ -1,0 +1,71 @@
+gold_case_id: awesome-graph-eng
+reviewer: the product owner + Hermes
+status: HUMAN-VERIFIED-GOLD
+date: 2026-08-05
+
+# Gold-Standard: ChaoYue0307/awesome-graph-engineering
+# HURCULES Stage 1 - Gold case #15 (graph-engineering-resource category)
+
+provenance:
+  repository: ChaoYue0307/awesome-graph-engineering
+  commit_sha: 87b54d1cea57603e06c57d1af4cc9a5d4ef435d2
+  version: interactive-atlas v1
+  license: CC0-1.0 (public domain)
+  languages: [Markdown, Python, CSV]
+  runtime: read-only dataset + web atlas
+
+purpose: |
+  A field guide + open dataset + interactive atlas for graph-structured
+  multi-agent systems ("programmable AI-agent organizations"). 561 curated
+  resources, 9 design layers, taxonomy. CC0 public domain.
+
+architecture_map: |
+  Content + data: data/resources.csv (561 records, 12 cols), TAXONOMY.md,
+  README, i18n, interactive atlas (web). Machine-readable CSV + HuggingFace
+  dataset. See also mem0 group 'graph-engineering' (563 imported).
+
+capabilities:
+  - id: ag1
+    name: Curated resource dataset (CSV, 561 entries, CC0)
+    ontology_type: KNOWLEDGE PACK
+    evidence:
+      - file: data/resources.csv
+        scope: sections, layers, rtype, descriptions, URLs
+    confidence: 0.94
+    requirements: []
+  - id: ag2
+    name: Graph-engineering taxonomy (9 design layers)
+    ontology_type: KNOWLEDGE PACK
+    evidence:
+      - file: TAXONOMY.md
+        scope: design layer definitions
+    confidence: 0.88
+    requirements: []
+  - id: ag3
+    name: Interactive atlas (web)
+    ontology_type: TOOL
+    evidence:
+      - file: README.md
+        scope: links to atlas + dataset
+    confidence: 0.80
+    requirements: [browser]
+
+dependencies_permissions:
+  dependencies: [none]
+  permissions:
+    filesystem: none (dataset read)
+    network: optional-atlas
+    shell: none
+  security_posture: CC0 public domain, zero legal friction; dataset is references only
+
+non_capabilities:
+  - not-executable-software
+  - not-an-agent-framework
+
+risks_findings:
+  - dataset is curated third-party links - verify before deep trust
+  - CC0 safe to ingest (already imported to mem0)
+
+evaluation_plan: |
+  Parity: non-technical user looks up graph-engineering design patterns via the
+  template. Checks: dataset queries return relevant resources.

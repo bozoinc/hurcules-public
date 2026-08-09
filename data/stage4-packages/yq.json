@@ -1,0 +1,101 @@
+{
+  "compiled_from": "stage3-analysis",
+  "errors": [],
+  "gold_id": "yq",
+  "ok": true,
+  "package": {
+    "capabilities": [
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "yq/__main__.py",
+            "scope": "entry point for yq command"
+          },
+          {
+            "file": "yq/parser.py",
+            "scope": "parses jq-like filter expressions"
+          },
+          {
+            "file": "yq/loader.py",
+            "scope": "loads YAML data"
+          },
+          {
+            "file": "yq/dumper.py",
+            "scope": "dumps YAML output"
+          },
+          {
+            "file": "yq/yaml_support.py",
+            "scope": "YAML-specific support"
+          }
+        ],
+        "id": "c1",
+        "name": "YAML query command-line tool",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "yq/tomlq/__main__.py",
+            "scope": "entry point for tomlq command"
+          },
+          {
+            "file": "yq/toml_support.py",
+            "scope": "TOML parsing and dumping support"
+          },
+          {
+            "file": "yq/parser.py",
+            "scope": "shared filter parser"
+          }
+        ],
+        "id": "c2",
+        "name": "TOML query command-line tool",
+        "ontology_type": "TOOL",
+        "requirements": []
+      }
+    ],
+    "compiler_version": "1.0.0",
+    "dependency_manifests": [
+      "pyproject.toml"
+    ],
+    "permissions_summary": [],
+    "provenance": {
+      "file_count": 35,
+      "languages": [
+        "html",
+        "markdown",
+        "python",
+        "restructuredtext",
+        "toml",
+        "yaml"
+      ],
+      "repository": "/REPO/gold-yq"
+    },
+    "registry": {
+      "status": "candidate"
+    },
+    "schema": "hurcules.capability-package-v1",
+    "security": {
+      "execution_denied_by_default": true,
+      "hostile_by_default": true,
+      "risk_flags": [
+        {
+          "file": "test/test.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "yq/__init__.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "yq/parser.py",
+          "reason": "subprocess-usage"
+        }
+      ],
+      "secret_file_locations": []
+    }
+  },
+  "warnings": []
+}

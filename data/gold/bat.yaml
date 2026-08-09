@@ -1,0 +1,73 @@
+gold_case_id: bat
+reviewer: the product owner + Hermes
+status: HUMAN-VERIFIED-GOLD
+date: 2026-08-05
+
+# Gold-Standard: bat (sharkdp/bat)
+# HURCULES Stage 1 - Gold case #12 (command-line-tool category)
+
+provenance:
+  repository: sharkdp/bat
+  commit_sha: 2ba8db9c14e5794572f5ea338c2b90404c9769cb
+  version: 0.26.1 (Cargo.toml)
+  license: Apache-2.0 / MIT dual (LICENSE-APACHE)
+  languages: [Rust]
+  runtime: compiled Rust binary
+
+purpose: |
+  bat is a cat(1) clone with wings: syntax highlighting for many languages,
+  Git integration, paging, and themes. A drop-in cat replacement for readable
+  file viewing.
+
+architecture_map: |
+  Rust project: src/ (controller.rs output flow, config.rs, assets.rs default
+  theme/highlight data, main.rs), Cargo.toml, CHANGELOG. Uses syntect for syntax
+  highlighting. Apache/MIT.
+
+capabilities:
+  - id: b1
+    name: Syntax-highlighted file printing
+    ontology_type: TOOL
+    evidence:
+      - file: src/controller.rs
+        scope: output controller, line handling
+      - file: src/assets.rs
+        scope: embedded syntax themes
+    confidence: 0.93
+    requirements: []
+  - id: b2
+    name: Config + themes + paging
+    ontology_type: TOOL
+    evidence:
+      - file: src/config.rs
+        scope: config resolution, theme selection
+    confidence: 0.88
+    requirements: [less-or-pager]
+  - id: b3
+    name: Git integration (diff indicators)
+    ontology_type: TOOL
+    evidence:
+      - file: src/controller.rs
+        scope: git blame/diff decoration
+    confidence: 0.82
+    requirements: [git]
+
+dependencies_permissions:
+  dependencies: [syntect, ansi_term, git2-ish]
+  permissions:
+    filesystem: read-files
+    network: none
+    shell: pager-subprocess
+  security_posture: reads arbitrary files - display only, no execution
+
+non_capabilities:
+  - not-a-file-editor
+  - not-a-searcher (fd/rg handle that)
+
+risks_findings:
+  - syntect highlight of hostile input is parser-bound (fuzz-guarded)
+  - pager invocation via shell (less) - env dependent
+
+evaluation_plan: |
+  Parity: non-technical user views a code file with syntax highlighting via the
+  bat template. Checks: content shown, highlighting active, no pager hang.

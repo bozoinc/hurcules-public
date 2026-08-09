@@ -1,0 +1,20 @@
+{
+  "gold_id": "tokei",
+  "matches": [
+    {
+      "analyst": null,
+      "gold": "Language-aware line counting (SLOC)",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "CLI + output formatting",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "Gitignore-aware scanning",
+      "matched": false
+    }
+  ]
+}

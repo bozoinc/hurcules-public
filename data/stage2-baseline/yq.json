@@ -1,0 +1,93 @@
+{
+  "dependency_manifests": [
+    "pyproject.toml"
+  ],
+  "documentation_files": [
+    "README.rst",
+    "docs/changelog.rst",
+    "docs/cli-doc-tomlq.txt",
+    "docs/cli-doc-xq.txt",
+    "docs/cli-doc.txt",
+    "docs/conf.py",
+    "docs/index.rst",
+    "docs/toc.html"
+  ],
+  "entry_points": [
+    "yq/__main__.py",
+    "yq/tomlq/__main__.py",
+    "yq/xq/__main__.py"
+  ],
+  "file_count": 35,
+  "file_tree": [
+    ".github/FUNDING.yml",
+    ".github/workflows/ci.yml",
+    ".github/workflows/release.yml",
+    ".gitignore",
+    "AGENTS.md",
+    "Changes.rst",
+    "LICENSE",
+    "MANIFEST.in",
+    "Makefile",
+    "README.rst",
+    "SECURITY.md",
+    "common.mk",
+    "docs/changelog.rst",
+    "docs/cli-doc-tomlq.txt",
+    "docs/cli-doc-xq.txt",
+    "docs/cli-doc.txt",
+    "docs/conf.py",
+    "docs/index.rst",
+    "docs/toc.html",
+    "pyproject.toml",
+    "test/cfn.yml",
+    "test/doc.yml",
+    "test/filter.jq",
+    "test/test.py",
+    "yq/__init__.py",
+    "yq/__main__.py",
+    "yq/dumper.py",
+    "yq/loader.py",
+    "yq/parser.py",
+    "yq/toml_support.py",
+    "yq/tomlq/__init__.py",
+    "yq/tomlq/__main__.py",
+    "yq/xq/__init__.py",
+    "yq/xq/__main__.py",
+    "yq/yaml_support.py"
+  ],
+  "languages": {
+    "html": 1,
+    "markdown": 2,
+    "python": 13,
+    "restructuredtext": 4,
+    "toml": 1,
+    "yaml": 5
+  },
+  "license_files": [
+    "LICENSE"
+  ],
+  "repository": "/REPO/gold-yq",
+  "risk_flags": [
+    {
+      "file": "test/test.py",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "yq/__init__.py",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "yq/parser.py",
+      "reason": "subprocess-usage"
+    }
+  ],
+  "schema": "hurcules.repo-map",
+  "schema_version": "1.0.0",
+  "secret_file_locations": [],
+  "test_files": [
+    "test/cfn.yml",
+    "test/doc.yml",
+    "test/filter.jq",
+    "test/test.py"
+  ]
+}

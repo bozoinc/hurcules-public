@@ -1,0 +1,219 @@
+{
+  "analyst": {
+    "analyst_version": "1.0.0",
+    "capabilities": [
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "SQL Injection/README.md",
+            "scope": "documentation of SQL injection techniques"
+          },
+          {
+            "file": "XSS Injection/README.md",
+            "scope": "documentation of XSS attack vectors"
+          },
+          {
+            "file": "Command Injection/README.md",
+            "scope": "overview of command injection"
+          },
+          {
+            "file": "File Inclusion/README.md",
+            "scope": "details on LFI/RFI"
+          }
+        ],
+        "id": "c1",
+        "name": "Vulnerability Knowledge Base",
+        "ontology_type": "KNOWLEDGE PACK",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "SQL Injection/Intruder/FUZZDB_MSSQL.txt",
+            "scope": "MSSQL fuzzing wordlist"
+          },
+          {
+            "file": "Directory Traversal/Intruder/directory_traversal.txt",
+            "scope": "path traversal payloads"
+          },
+          {
+            "file": "Upload Insecure Files/Extension PHP/shell.php",
+            "scope": "PHP web shell example"
+          },
+          {
+            "file": "Command Injection/Intruder/command-execution-unix.txt",
+            "scope": "Unix command injection payloads"
+          }
+        ],
+        "id": "c2",
+        "name": "Exploit Payload and Wordlist Collection",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "Upload Insecure Files/Configuration Python __init__.py/python-generate-init.py",
+            "scope": "Python script to generate malicious __init__.py files"
+          },
+          {
+            "file": "Upload Insecure Files/Picture Compression/createBulletproofJPG.py",
+            "scope": "script to create JPEG with embedded payload"
+          },
+          {
+            "file": "File Inclusion/Files/LFI2RCE.py",
+            "scope": "Python script demonstrating LFI to RCE"
+          },
+          {
+            "file": "Web Sockets/Files/ws-harness.py",
+            "scope": "WebSocket testing harness"
+          }
+        ],
+        "id": "c3",
+        "name": "Exploit Generation and Automation Scripts",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "python3"
+        ]
+      },
+      {
+        "confidence": 0.85,
+        "evidence": [
+          {
+            "file": "Upload Insecure Files/Configuration Apache .htaccess/.htaccess",
+            "scope": "Apache .htaccess config showing misuse"
+          },
+          {
+            "file": "Upload Insecure Files/Configuration IIS web.config/web.config",
+            "scope": "IIS web.config example"
+          },
+          {
+            "file": "Upload Insecure Files/Configuration uwsgi.ini/uwsgi.ini",
+            "scope": "uWSGI configuration"
+          },
+          {
+            "file": "Upload Insecure Files/Configuration Python __init__.py/python-admin-__init__.py.zip",
+            "scope": "ZIP of poisoned Python package"
+          }
+        ],
+        "id": "c4",
+        "name": "Configuration Artifacts for Exploit Deployment",
+        "ontology_type": "TOOL",
+        "requirements": []
+      }
+    ],
+    "raw_candidate_count": 4,
+    "repository": "/REPO/gold-suspicious",
+    "schema": "hurcules.capability-analysis",
+    "validation_errors": []
+  },
+  "gold_id": "suspicious",
+  "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+  "survivors": [
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "SQL Injection/README.md",
+          "scope": "documentation of SQL injection techniques"
+        },
+        {
+          "file": "XSS Injection/README.md",
+          "scope": "documentation of XSS attack vectors"
+        },
+        {
+          "file": "Command Injection/README.md",
+          "scope": "overview of command injection"
+        },
+        {
+          "file": "File Inclusion/README.md",
+          "scope": "details on LFI/RFI"
+        }
+      ],
+      "id": "c1",
+      "name": "Vulnerability Knowledge Base",
+      "ontology_type": "KNOWLEDGE PACK",
+      "requirements": []
+    },
+    {
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "SQL Injection/Intruder/FUZZDB_MSSQL.txt",
+          "scope": "MSSQL fuzzing wordlist"
+        },
+        {
+          "file": "Directory Traversal/Intruder/directory_traversal.txt",
+          "scope": "path traversal payloads"
+        },
+        {
+          "file": "Upload Insecure Files/Extension PHP/shell.php",
+          "scope": "PHP web shell example"
+        },
+        {
+          "file": "Command Injection/Intruder/command-execution-unix.txt",
+          "scope": "Unix command injection payloads"
+        }
+      ],
+      "id": "c2",
+      "name": "Exploit Payload and Wordlist Collection",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "Upload Insecure Files/Configuration Python __init__.py/python-generate-init.py",
+          "scope": "Python script to generate malicious __init__.py files"
+        },
+        {
+          "file": "Upload Insecure Files/Picture Compression/createBulletproofJPG.py",
+          "scope": "script to create JPEG with embedded payload"
+        },
+        {
+          "file": "File Inclusion/Files/LFI2RCE.py",
+          "scope": "Python script demonstrating LFI to RCE"
+        },
+        {
+          "file": "Web Sockets/Files/ws-harness.py",
+          "scope": "WebSocket testing harness"
+        }
+      ],
+      "id": "c3",
+      "name": "Exploit Generation and Automation Scripts",
+      "ontology_type": "TOOL",
+      "requirements": [
+        "python3"
+      ]
+    },
+    {
+      "confidence": 0.85,
+      "evidence": [
+        {
+          "file": "Upload Insecure Files/Configuration Apache .htaccess/.htaccess",
+          "scope": "Apache .htaccess config showing misuse"
+        },
+        {
+          "file": "Upload Insecure Files/Configuration IIS web.config/web.config",
+          "scope": "IIS web.config example"
+        },
+        {
+          "file": "Upload Insecure Files/Configuration uwsgi.ini/uwsgi.ini",
+          "scope": "uWSGI configuration"
+        },
+        {
+          "file": "Upload Insecure Files/Configuration Python __init__.py/python-admin-__init__.py.zip",
+          "scope": "ZIP of poisoned Python package"
+        }
+      ],
+      "id": "c4",
+      "name": "Configuration Artifacts for Exploit Deployment",
+      "ontology_type": "TOOL",
+      "requirements": []
+    }
+  ]
+}

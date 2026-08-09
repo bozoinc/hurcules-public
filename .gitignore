@@ -1,0 +1,16 @@
+# HURCULES — git ignore
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+*.log
+.DS_Store
+data/gold/.tmp/
+.env
+*.secret
+*.egg-info/
+dist/
+build/
+.coverage
+htmlcov/

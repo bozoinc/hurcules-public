@@ -1,0 +1,20 @@
+{
+  "gold_id": "prettier",
+  "matches": [
+    {
+      "analyst": "Code Formatter",
+      "gold": "AST-based code formatting (parser + printer)",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "Multi-language support (JS/TS/CSS/HTML/JSON/MD)",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "Deterministic, idempotent output",
+      "matched": false
+    }
+  ]
+}

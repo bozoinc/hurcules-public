@@ -1,0 +1,2684 @@
+{
+  "dependency_manifests": [
+    "auth-service/package.json",
+    "package.json",
+    "packages/adapters/package.json",
+    "packages/cli/package.json",
+    "packages/core/package.json",
+    "packages/docs-web/package.json",
+    "packages/git/package.json",
+    "packages/isolation/package.json",
+    "packages/paths/package.json",
+    "packages/providers/package.json",
+    "packages/server/package.json",
+    "packages/web/package.json",
+    "packages/workflows/package.json"
+  ],
+  "documentation_files": [
+    ".archon/maintainer-standup/README.md",
+    ".claude/docs/adapter-implementation-guide.md",
+    ".claude/docs/architecture-deep-dive.md",
+    ".claude/docs/isolation-and-worktree-guide.md",
+    ".claude/docs/workflow-yaml-reference.md",
+    "README.md",
+    "examples/workflows/README.md",
+    "packages/adapters/src/community/chat/README.md",
+    "packages/adapters/src/community/forge/README.md",
+    "packages/docs-web/public/brand/README.md",
+    "packages/docs-web/src/content/docs/adapters/community/discord.md",
+    "packages/docs-web/src/content/docs/adapters/community/gitea.md",
+    "packages/docs-web/src/content/docs/adapters/community/gitlab.md",
+    "packages/docs-web/src/content/docs/adapters/github-app-setup.md",
+    "packages/docs-web/src/content/docs/adapters/github.md",
+    "packages/docs-web/src/content/docs/adapters/index.md",
+    "packages/docs-web/src/content/docs/adapters/slack.md",
+    "packages/docs-web/src/content/docs/adapters/telegram.md",
+    "packages/docs-web/src/content/docs/adapters/web.md",
+    "packages/docs-web/src/content/docs/book/dag-workflows.md",
+    "packages/docs-web/src/content/docs/book/essential-workflows.md",
+    "packages/docs-web/src/content/docs/book/first-command.md",
+    "packages/docs-web/src/content/docs/book/first-five-minutes.md",
+    "packages/docs-web/src/content/docs/book/first-workflow.md",
+    "packages/docs-web/src/content/docs/book/hooks-and-quality.md",
+    "packages/docs-web/src/content/docs/book/how-it-works.md",
+    "packages/docs-web/src/content/docs/book/index.md",
+    "packages/docs-web/src/content/docs/book/isolation.md",
+    "packages/docs-web/src/content/docs/book/quick-reference.md",
+    "packages/docs-web/src/content/docs/book/what-is-archon.md",
+    "packages/docs-web/src/content/docs/brand/index.md",
+    "packages/docs-web/src/content/docs/contributing/adding-a-community-provider.md",
+    "packages/docs-web/src/content/docs/contributing/cli-internals.md",
+    "packages/docs-web/src/content/docs/contributing/dx-quirks.md",
+    "packages/docs-web/src/content/docs/contributing/index.md",
+    "packages/docs-web/src/content/docs/contributing/new-developer-guide.md",
+    "packages/docs-web/src/content/docs/contributing/releasing.md",
+    "packages/docs-web/src/content/docs/deployment/cloud.md",
+    "packages/docs-web/src/content/docs/deployment/docker.md",
+    "packages/docs-web/src/content/docs/deployment/e2e-testing-wsl.md",
+    "packages/docs-web/src/content/docs/deployment/e2e-testing.md",
+    "packages/docs-web/src/content/docs/deployment/index.md",
+    "packages/docs-web/src/content/docs/deployment/local.md",
+    "packages/docs-web/src/content/docs/deployment/windows.md",
+    "packages/docs-web/src/content/docs/docs.mdx",
+    "packages/docs-web/src/content/docs/getting-started/ai-assistants.md",
+    "packages/docs-web/src/content/docs/getting-started/concepts.md",
+    "packages/docs-web/src/content/docs/getting-started/configuration.md",
+    "packages/docs-web/src/content/docs/getting-started/installation.md",
+    "packages/docs-web/src/content/docs/getting-started/overview.md",
+    "packages/docs-web/src/content/docs/getting-started/quick-start.md",
+    "packages/docs-web/src/content/docs/guides/approval-nodes.md",
+    "packages/docs-web/src/content/docs/guides/authoring-commands.md",
+    "packages/docs-web/src/content/docs/guides/authoring-workflows.md",
+    "packages/docs-web/src/content/docs/guides/container-isolation.md",
+    "packages/docs-web/src/content/docs/guides/global-workflows.md",
+    "packages/docs-web/src/content/docs/guides/hooks.md",
+    "packages/docs-web/src/content/docs/guides/index.md",
+    "packages/docs-web/src/content/docs/guides/loop-nodes.md",
+    "packages/docs-web/src/content/docs/guides/mcp-servers.md",
+    "packages/docs-web/src/content/docs/guides/multi-repo-projects.md",
+    "packages/docs-web/src/content/docs/guides/remotion-workflow.md",
+    "packages/docs-web/src/content/docs/guides/script-nodes.md",
+    "packages/docs-web/src/content/docs/guides/skills.md",
+    "packages/docs-web/src/content/docs/reference/api.md",
+    "packages/docs-web/src/content/docs/reference/architecture.md",
+    "packages/docs-web/src/content/docs/reference/archon-directories.md",
+    "packages/docs-web/src/content/docs/reference/cli.md",
+    "packages/docs-web/src/content/docs/reference/commands.md",
+    "packages/docs-web/src/content/docs/reference/configuration.md",
+    "packages/docs-web/src/content/docs/reference/database.md",
+    "packages/docs-web/src/content/docs/reference/index.md",
+    "packages/docs-web/src/content/docs/reference/provider-capabilities.md",
+    "packages/docs-web/src/content/docs/reference/security.md",
+    "packages/docs-web/src/content/docs/reference/troubleshooting.md",
+    "packages/docs-web/src/content/docs/reference/variables.md",
+    "packages/docs-web/src/content/docs/reference/workflow-language-constitution.md",
+    "packages/web/src/experiments/README.md",
+    "packages/web/src/experiments/console/README.md",
+    "packages/web/src/experiments/console/builder/README.md"
+  ],
+  "entry_points": [
+    "packages/adapters/src/chat/slack/index.ts",
+    "packages/adapters/src/chat/telegram/index.ts",
+    "packages/adapters/src/community/chat/discord/index.ts",
+    "packages/adapters/src/community/forge/gitea/index.ts",
+    "packages/adapters/src/community/forge/gitlab/index.ts",
+    "packages/adapters/src/forge/github/index.ts",
+    "packages/adapters/src/index.ts",
+    "packages/core/src/config/index.ts",
+    "packages/core/src/credentials/index.ts",
+    "packages/core/src/db/adapters/index.ts",
+    "packages/core/src/db/index.ts",
+    "packages/core/src/github-auth/index.ts",
+    "packages/core/src/index.ts",
+    "packages/core/src/operations/index.ts",
+    "packages/core/src/schemas/index.ts",
+    "packages/core/src/types/index.ts",
+    "packages/core/src/workflows/index.ts",
+    "packages/git/src/index.ts",
+    "packages/isolation/src/index.ts",
+    "packages/paths/src/index.ts",
+    "packages/providers/src/claude/index.ts",
+    "packages/providers/src/codex/index.ts",
+    "packages/providers/src/community/copilot/index.ts",
+    "packages/providers/src/community/opencode/index.ts",
+    "packages/providers/src/community/pi/index.ts",
+    "packages/providers/src/index.ts",
+    "packages/server/src/auth/index.ts",
+    "packages/server/src/index.ts",
+    "packages/web/src/experiments/console/builder/fixtures/index.ts",
+    "packages/web/src/experiments/console/builder/flow/index.ts",
+    "packages/web/src/experiments/console/builder/model/index.ts",
+    "packages/web/src/experiments/console/builder/types/index.ts",
+    "packages/web/src/experiments/console/builder/validation/index.ts",
+    "packages/web/src/experiments/console/builder/variants/index.ts",
+    "packages/web/src/experiments/console/builder/yaml/index.ts",
+    "packages/web/src/experiments/console/skills/index.ts",
+    "packages/workflows/src/schemas/index.ts"
+  ],
+  "file_count": 1351,
+  "file_tree": [
+    ".archon/commands/defaults/archon-assist.md",
+    ".archon/commands/defaults/archon-auto-fix-review.md",
+    ".archon/commands/defaults/archon-code-review-agent.md",
+    ".archon/commands/defaults/archon-comment-quality-agent.md",
+    ".archon/commands/defaults/archon-confirm-plan.md",
+    ".archon/commands/defaults/archon-create-plan.md",
+    ".archon/commands/defaults/archon-create-pr.md",
+    ".archon/commands/defaults/archon-docs-impact-agent.md",
+    ".archon/commands/defaults/archon-error-handling-agent.md",
+    ".archon/commands/defaults/archon-finalize-pr.md",
+    ".archon/commands/defaults/archon-fix-issue.md",
+    ".archon/commands/defaults/archon-implement-issue.md",
+    ".archon/commands/defaults/archon-implement-review-fixes.md",
+    ".archon/commands/defaults/archon-implement-tasks.md",
+    ".archon/commands/defaults/archon-implement.md",
+    ".archon/commands/defaults/archon-investigate-issue.md",
+    ".archon/commands/defaults/archon-issue-completion-report.md",
+    ".archon/commands/defaults/archon-parse-user-request.md",
+    ".archon/commands/defaults/archon-plan-setup.md",
+    ".archon/commands/defaults/archon-post-review-to-pr.md",
+    ".archon/commands/defaults/archon-pr-review-scope.md",
+    ".archon/commands/defaults/archon-ralph-generate.md",
+    ".archon/commands/defaults/archon-ralph-prd.md",
+    ".archon/commands/defaults/archon-resolve-merge-conflicts.md",
+    ".archon/commands/defaults/archon-self-fix-all.md",
+    ".archon/commands/defaults/archon-simplify-changes.md",
+    ".archon/commands/defaults/archon-sync-pr-with-main.md",
+    ".archon/commands/defaults/archon-synthesize-review.md",
+    ".archon/commands/defaults/archon-test-coverage-agent.md",
+    ".archon/commands/defaults/archon-validate-pr-code-review-feature.md",
+    ".archon/commands/defaults/archon-validate-pr-code-review-main.md",
+    ".archon/commands/defaults/archon-validate-pr-e2e-feature.md",
+    ".archon/commands/defaults/archon-validate-pr-e2e-main.md",
+    ".archon/commands/defaults/archon-validate-pr-report.md",
+    ".archon/commands/defaults/archon-validate.md",
+    ".archon/commands/defaults/archon-web-research.md",
+    ".archon/commands/defaults/archon-workflow-summary.md",
+    ".archon/commands/e2e-echo-command.md",
+    ".archon/commands/maintainer-review-code-review.md",
+    ".archon/commands/maintainer-review-comment-quality.md",
+    ".archon/commands/maintainer-review-docs-impact.md",
+    ".archon/commands/maintainer-review-error-handling.md",
+    ".archon/commands/maintainer-review-report.md",
+    ".archon/commands/maintainer-review-synthesize.md",
+    ".archon/commands/maintainer-review-test-coverage.md",
+    ".archon/commands/maintainer-standup.md",
+    ".archon/config.yaml",
+    ".archon/maintainer-standup/README.md",
+    ".archon/maintainer-standup/direction.md",
+    ".archon/maintainer-standup/profile.md.example",
+    ".archon/scripts/__tests__/fixtures/benign/clean-fetch.ts",
+    ".archon/scripts/__tests__/fixtures/benign/clean-script.ts",
+    ".archon/scripts/__tests__/fixtures/benign/clean-workflow.yaml",
+    ".archon/scripts/__tests__/fixtures/malicious/cred_leak.ts",
+    ".archon/scripts/__tests__/fixtures/malicious/exfil.sh",
+    ".archon/scripts/__tests__/fixtures/malicious/obfuscated.ts",
+    ".archon/scripts/__tests__/fixtures/malicious/path_escape.ts",
+    ".archon/scripts/__tests__/fixtures/malicious/rce.ts",
+    ".archon/scripts/__tests__/fixtures/malicious/reverse_shell.sh",
+    ".archon/scripts/__tests__/fixtures/malicious/shell_exec.ts",
+    ".archon/scripts/__tests__/fixtures/malicious/suspicious_network.sh",
+    ".archon/scripts/__tests__/fixtures/malicious/unsafe_permissions.yaml",
+    ".archon/scripts/__tests__/marketplace-fetch-source.test.ts",
+    ".archon/scripts/__tests__/marketplace-security-scan.test.ts",
+    ".archon/scripts/echo-args.js",
+    ".archon/scripts/echo-py.py",
+    ".archon/scripts/maintainer-standup-backfill-reviews.ts",
+    ".archon/scripts/maintainer-standup-gh-data.ts",
+    ".archon/scripts/maintainer-standup-git-status.ts",
+    ".archon/scripts/maintainer-standup-persist.test.ts",
+    ".archon/scripts/maintainer-standup-persist.ts",
+    ".archon/scripts/maintainer-standup-read-context.ts",
+    ".archon/scripts/marketplace-fetch-source.ts",
+    ".archon/scripts/marketplace-security-scan.ts",
+    ".archon/scripts/marketplace-validate-schema.ts",
+    ".archon/test-loop-counter.txt",
+    ".archon/workflows/defaults/archon-adversarial-dev.yaml",
+    ".archon/workflows/defaults/archon-architect.yaml",
+    ".archon/workflows/defaults/archon-assist.yaml",
+    ".archon/workflows/defaults/archon-comprehensive-pr-review.yaml",
+    ".archon/workflows/defaults/archon-create-issue.yaml",
+    ".archon/workflows/defaults/archon-feature-development.yaml",
+    ".archon/workflows/defaults/archon-fix-github-issue.yaml",
+    ".archon/workflows/defaults/archon-idea-to-pr.yaml",
+    ".archon/workflows/defaults/archon-interactive-prd.yaml",
+    ".archon/workflows/defaults/archon-issue-review-full.yaml",
+    ".archon/workflows/defaults/archon-piv-loop.yaml",
+    ".archon/workflows/defaults/archon-plan-to-pr.yaml",
+    ".archon/workflows/defaults/archon-ralph-dag.yaml",
+    ".archon/workflows/defaults/archon-refactor-safely.yaml",
+    ".archon/workflows/defaults/archon-remotion-generate.yaml",
+    ".archon/workflows/defaults/archon-resolve-conflicts.yaml",
+    ".archon/workflows/defaults/archon-review-block.yaml",
+    ".archon/workflows/defaults/archon-smart-pr-review.yaml",
+    ".archon/workflows/defaults/archon-test-loop-dag.yaml",
+    ".archon/workflows/defaults/archon-validate-pr.yaml",
+    ".archon/workflows/defaults/archon-workflow-builder.yaml",
+    ".archon/workflows/e2e-opencode-all-nodes-smoke.yaml",
+    ".archon/workflows/e2e-opencode-inline-multi-agents.yaml",
+    ".archon/workflows/e2e-opencode-smoke.yaml",
+    ".archon/workflows/experimental/archon-fix-github-issue-codex.yaml",
+    ".archon/workflows/experimental/archon-fix-github-issue-experimental.yaml",
+    ".archon/workflows/experimental/archon-fix-github-issue-minimax.yaml",
+    ".archon/workflows/experimental/archon-release.yaml",
+    ".archon/workflows/maintainer/maintainer-review-pr.yaml",
+    ".archon/workflows/maintainer/maintainer-standup-minimax.yaml",
+    ".archon/workflows/maintainer/maintainer-standup.yaml",
+    ".archon/workflows/maintainer/marketplace-pr-review-and-merge.yaml",
+    ".archon/workflows/maintainer/repo-triage-minimax.yaml",
+    ".archon/workflows/maintainer/repo-triage.yaml",
+    ".archon/workflows/matt-pocock-workflow.yaml",
+    ".archon/workflows/test-workflows/archon-test-pi.yaml",
+    ".archon/workflows/test-workflows/e2e-claude-smoke.yaml",
+    ".archon/workflows/test-workflows/e2e-codex-smoke.yaml",
+    ".archon/workflows/test-workflows/e2e-container-smoke.yaml",
+    ".archon/workflows/test-workflows/e2e-copilot-abort.yaml",
+    ".archon/workflows/test-workflows/e2e-copilot-all-nodes-smoke.yaml",
+    ".archon/workflows/test-workflows/e2e-deterministic.yaml",
+    ".archon/workflows/test-workflows/e2e-minimax-smoke.yaml",
+    ".archon/workflows/test-workflows/e2e-mixed-providers.yaml",
+    ".archon/workflows/test-workflows/e2e-pi-all-nodes-smoke.yaml",
+    ".archon/workflows/test-workflows/e2e-pi-smoke.yaml",
+    ".archon/workflows/test-workflows/e2e-structured-output-failfast.yaml",
+    ".archon/workflows/test-workflows/e2e-structured-output.yaml",
+    ".archon/workflows/test-workflows/e2e-worktree-disabled.yaml",
+    ".archon/workflows/test-workflows/minimax-isolate.yaml",
+    ".archon/workflows/test-workflows/minimax-seq.yaml",
+    ".archon/workflows/test-workflows/minimax-smoke.yaml",
+    ".claude/PRPs/issues/completed/issue-1168.md",
+    ".claude/PRPs/issues/completed/issue-497.md",
+    ".claude/PRPs/issues/completed/issue-509.md",
+    ".claude/PRPs/issues/completed/issue-986.md",
+    ".claude/PRPs/issues/issue-1001-1002-1003.md",
+    ".claude/PRPs/issues/issue-252-378.md",
+    ".claude/PRPs/issues/issue-260-263-264.md",
+    ".claude/PRPs/issues/issue-393-394.md",
+    ".claude/PRPs/issues/issue-396.md",
+    ".claude/PRPs/issues/issue-488.md",
+    ".claude/PRPs/issues/issue-497.md",
+    ".claude/PRPs/issues/issue-978.md",
+    ".claude/PRPs/issues/issues-392-395.md",
+    ".claude/agents/code-reviewer.md",
+    ".claude/agents/code-simplifier.md",
+    ".claude/agents/codebase-analyst.md",
+    ".claude/agents/codebase-explorer.md",
+    ".claude/agents/comment-analyzer.md",
+    ".claude/agents/docs-impact.md",
+    ".claude/agents/pr-test-analyzer.md",
+    ".claude/agents/rulecheck-agent.md",
+    ".claude/agents/sdk-verifier.md",
+    ".claude/agents/silent-failure-hunter.md",
+    ".claude/agents/triage-agent.md",
+    ".claude/agents/type-design-analyzer.md",
+    ".claude/agents/web-researcher.md",
+    ".claude/commands/commit.md",
+    ".claude/commands/create-command.md",
+    ".claude/commands/execute.md",
+    ".claude/commands/github_bug_fix/implement-fix.md",
+    ".claude/commands/github_bug_fix/rca.md",
+    ".claude/commands/handoff.md",
+    ".claude/commands/plan-feature.md",
+    ".claude/commands/prime-backend.md",
+    ".claude/commands/prime-frontend.md",
+    ".claude/commands/prime-isolation.md",
+    ".claude/commands/prime-workflows.md",
+    ".claude/commands/prime.md",
+    ".claude/commands/review-doc.md",
+    ".claude/commands/validate.md",
+    ".claude/commands/validation/code-review-fix.md",
+    ".claude/commands/validation/code-review.md",
+    ".claude/commands/validation/execution-report.md",
+    ".claude/commands/validation/system-review.md",
+    ".claude/commands/validation/validate-2.md",
+    ".claude/docs/adapter-implementation-guide.md",
+    ".claude/docs/architecture-deep-dive.md",
+    ".claude/docs/isolation-and-worktree-guide.md",
+    ".claude/docs/workflow-yaml-reference.md",
+    ".claude/settings.json",
+    ".claude/skills/agent-browser/SKILL.md",
+    ".claude/skills/archon-dev/SKILL.md",
+    ".claude/skills/archon-dev/cookbooks/commit.md",
+    ".claude/skills/archon-dev/cookbooks/debug.md",
+    ".claude/skills/archon-dev/cookbooks/implement.md",
+    ".claude/skills/archon-dev/cookbooks/investigate.md",
+    ".claude/skills/archon-dev/cookbooks/issue.md",
+    ".claude/skills/archon-dev/cookbooks/plan.md",
+    ".claude/skills/archon-dev/cookbooks/pr.md",
+    ".claude/skills/archon-dev/cookbooks/prd.md",
+    ".claude/skills/archon-dev/cookbooks/research.md",
+    ".claude/skills/archon-dev/cookbooks/review.md",
+    ".claude/skills/archon/SKILL.md",
+    ".claude/skills/archon/examples/command-template.md",
+    ".claude/skills/archon/examples/dag-workflow.yaml",
+    ".claude/skills/archon/guides/cli.md",
+    ".claude/skills/archon/guides/config.md",
+    ".claude/skills/archon/guides/discord.md",
+    ".claude/skills/archon/guides/github.md",
+    ".claude/skills/archon/guides/server.md",
+    ".claude/skills/archon/guides/setup.md",
+    ".claude/skills/archon/guides/slack.md",
+    ".claude/skills/archon/guides/telegram.md",
+    ".claude/skills/archon/references/authoring-commands.md",
+    ".claude/skills/archon/references/cli-commands.md",
+    ".claude/skills/archon/references/dag-advanced.md",
+    ".claude/skills/archon/references/good-practices.md",
+    ".claude/skills/archon/references/interactive-workflows.md",
+    ".claude/skills/archon/references/parameter-matrix.md",
+    ".claude/skills/archon/references/repo-init.md",
+    ".claude/skills/archon/references/troubleshooting.md",
+    ".claude/skills/archon/references/variables.md",
+    ".claude/skills/archon/references/workflow-dag.md",
+    ".claude/skills/docker-extend/SKILL.md",
+    ".claude/skills/manage-run/SKILL.md",
+    ".claude/skills/manage-run/references/commands.md",
+    ".claude/skills/playwright-cli/SKILL.md",
+    ".claude/skills/playwright-cli/references/request-mocking.md",
+    ".claude/skills/playwright-cli/references/running-code.md",
+    ".claude/skills/playwright-cli/references/session-management.md",
+    ".claude/skills/playwright-cli/references/storage-state.md",
+    ".claude/skills/playwright-cli/references/test-generation.md",
+    ".claude/skills/playwright-cli/references/tracing.md",
+    ".claude/skills/playwright-cli/references/video-recording.md",
+    ".claude/skills/release/SKILL.md",
+    ".claude/skills/remotion-best-practices/SKILL.md",
+    ".claude/skills/remotion-best-practices/rules/3d.md",
+    ".claude/skills/remotion-best-practices/rules/animations.md",
+    ".claude/skills/remotion-best-practices/rules/assets.md",
+    ".claude/skills/remotion-best-practices/rules/assets/charts-bar-chart.tsx",
+    ".claude/skills/remotion-best-practices/rules/assets/text-animations-typewriter.tsx",
+    ".claude/skills/remotion-best-practices/rules/assets/text-animations-word-highlight.tsx",
+    ".claude/skills/remotion-best-practices/rules/audio-visualization.md",
+    ".claude/skills/remotion-best-practices/rules/audio.md",
+    ".claude/skills/remotion-best-practices/rules/calculate-metadata.md",
+    ".claude/skills/remotion-best-practices/rules/can-decode.md",
+    ".claude/skills/remotion-best-practices/rules/charts.md",
+    ".claude/skills/remotion-best-practices/rules/compositions.md",
+    ".claude/skills/remotion-best-practices/rules/display-captions.md",
+    ".claude/skills/remotion-best-practices/rules/extract-frames.md",
+    ".claude/skills/remotion-best-practices/rules/ffmpeg.md",
+    ".claude/skills/remotion-best-practices/rules/fonts.md",
+    ".claude/skills/remotion-best-practices/rules/get-audio-duration.md",
+    ".claude/skills/remotion-best-practices/rules/get-video-dimensions.md",
+    ".claude/skills/remotion-best-practices/rules/get-video-duration.md",
+    ".claude/skills/remotion-best-practices/rules/gifs.md",
+    ".claude/skills/remotion-best-practices/rules/images.md",
+    ".claude/skills/remotion-best-practices/rules/import-srt-captions.md",
+    ".claude/skills/remotion-best-practices/rules/light-leaks.md",
+    ".claude/skills/remotion-best-practices/rules/lottie.md",
+    ".claude/skills/remotion-best-practices/rules/maps.md",
+    ".claude/skills/remotion-best-practices/rules/measuring-dom-nodes.md",
+    ".claude/skills/remotion-best-practices/rules/measuring-text.md",
+    ".claude/skills/remotion-best-practices/rules/parameters.md",
+    ".claude/skills/remotion-best-practices/rules/sequencing.md",
+    ".claude/skills/remotion-best-practices/rules/sfx.md",
+    ".claude/skills/remotion-best-practices/rules/subtitles.md",
+    ".claude/skills/remotion-best-practices/rules/tailwind.md",
+    ".claude/skills/remotion-best-practices/rules/text-animations.md",
+    ".claude/skills/remotion-best-practices/rules/timing.md",
+    ".claude/skills/remotion-best-practices/rules/transcribe-captions.md",
+    ".claude/skills/remotion-best-practices/rules/transitions.md",
+    ".claude/skills/remotion-best-practices/rules/transparent-videos.md",
+    ".claude/skills/remotion-best-practices/rules/trimming.md",
+    ".claude/skills/remotion-best-practices/rules/videos.md",
+    ".claude/skills/remotion-best-practices/rules/voiceover.md",
+    ".claude/skills/replicate-issue/SKILL.md",
+    ".claude/skills/rulecheck/SKILL.md",
+    ".claude/skills/rulecheck/hooks/block-dangerous.sh",
+    ".claude/skills/rulecheck/hooks/slack-notify.sh",
+    ".claude/skills/rulecheck/rules-guide.md",
+    ".claude/skills/rulecheck/workshop-guide.md",
+    ".claude/skills/save-task-list/SKILL.md",
+    ".claude/skills/save-task-list/hooks/verify-task-list.sh",
+    ".claude/skills/save-task-list/workshop-guide.md",
+    ".claude/skills/test-release/SKILL.md",
+    ".claude/skills/triage/SKILL.md",
+    ".claude/skills/triage/workshop-guide.md",
+    ".claude/skills/validate-ui/SKILL.md",
+    ".claude/workshop/combined-workshop-rundown.md",
+    ".claude/workshop/feature-coverage-matrix.md",
+    ".claude/workshop/part1-guide.md",
+    ".claude/workshop/part2-guide.md",
+    ".dockerignore",
+    ".env.example",
+    ".gitattributes",
+    ".github/ISSUE_TEMPLATE/bug_report.md",
+    ".github/ISSUE_TEMPLATE/feature_request.md",
+    ".github/agents/codebase-analyst.agent.md",
+    ".github/agents/codebase-explorer.agent.md",
+    ".github/agents/web-researcher.agent.md",
+    ".github/prompts/create-rules.prompt.md",
+    ".github/prompts/implement-fix.prompt.md",
+    ".github/prompts/implement.prompt.md",
+    ".github/prompts/install.prompt.md",
+    ".github/prompts/investigate-debug.prompt.md",
+    ".github/prompts/plan.prompt.md",
+    ".github/prompts/prd.prompt.md",
+    ".github/prompts/prime-client.prompt.md",
+    ".github/prompts/prime-components.prompt.md",
+    ".github/prompts/prime-endpoint.prompt.md",
+    ".github/prompts/prime-server.prompt.md",
+    ".github/prompts/prime.prompt.md",
+    ".github/prompts/review.prompt.md",
+    ".github/prompts/validate.prompt.md",
+    ".github/pull_request_template.md",
+    ".github/workflows/deploy-docs.yml",
+    ".github/workflows/docs-build.yml",
+    ".github/workflows/e2e-smoke.yml",
+    ".github/workflows/marketplace-auto-review.yml",
+    ".github/workflows/marketplace-lint.yml",
+    ".github/workflows/publish.yml",
+    ".github/workflows/release.yml",
+    ".github/workflows/test.yml",
+    ".gitignore",
+    ".husky/_/.gitignore",
+    ".husky/_/applypatch-msg",
+    ".husky/_/commit-msg",
+    ".husky/_/h",
+    ".husky/_/husky.sh",
+    ".husky/_/post-applypatch",
+    ".husky/_/post-checkout",
+    ".husky/_/post-commit",
+    ".husky/_/post-merge",
+    ".husky/_/post-rewrite",
+    ".husky/_/pre-applypatch",
+    ".husky/_/pre-auto-gc",
+    ".husky/_/pre-commit",
+    ".husky/_/pre-merge-commit",
+    ".husky/_/pre-push",
+    ".husky/_/pre-rebase",
+    ".husky/_/prepare-commit-msg",
+    ".husky/pre-commit",
+    ".lintstagedrc.json",
+    ".prettierignore",
+    ".prettierrc",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CLAUDE.md",
+    "CONTRIBUTING.md",
+    "Caddyfile.example",
+    "Dockerfile",
+    "Dockerfile.user.example",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md",
+    "assets/logo.png",
+    "auth-service/Dockerfile",
+    "auth-service/package.json",
+    "auth-service/server.js",
+    "auth-service/test.js",
+    "bunfig.toml",
+    "deploy/.env.example",
+    "deploy/Dockerfile.user.example",
+    "deploy/cloud-init.yml",
+    "deploy/docker-compose.override.example.yml",
+    "deploy/docker-compose.yml",
+    "docker-compose.override.example.yml",
+    "docker-compose.yml",
+    "docker-entrypoint.sh",
+    "eslint.config.mjs",
+    "examples/workflows/README.md",
+    "examples/workflows/archon-test-pi.yaml",
+    "homebrew/archon.rb",
+    "migrations/000_combined.sql",
+    "migrations/001_initial_schema.sql",
+    "migrations/002_command_templates.sql",
+    "migrations/003_add_worktree.sql",
+    "migrations/004_worktree_sharing.sql",
+    "migrations/005_isolation_abstraction.sql",
+    "migrations/006_isolation_environments.sql",
+    "migrations/007_drop_legacy_columns.sql",
+    "migrations/008_workflow_runs.sql",
+    "migrations/009_workflow_last_activity.sql",
+    "migrations/010_immutable_sessions.sql",
+    "migrations/011_partial_unique_constraint.sql",
+    "migrations/012_workflow_events.sql",
+    "migrations/013_conversation_titles.sql",
+    "migrations/014_message_history.sql",
+    "migrations/015_background_dispatch.sql",
+    "migrations/016_session_ended_reason.sql",
+    "migrations/017_drop_command_templates.sql",
+    "migrations/018_fix_workflow_status_default.sql",
+    "migrations/019_workflow_resume_path.sql",
+    "migrations/020_codebase_env_vars.sql",
+    "migrations/021_add_allow_env_keys_to_codebases.sql",
+    "migrations/022_workflow_node_sessions.sql",
+    "migrations/023_add_default_branch_to_codebases.sql",
+    "package.json",
+    "packages/adapters/bunfig.toml",
+    "packages/adapters/package.json",
+    "packages/adapters/src/chat/slack/adapter.test.ts",
+    "packages/adapters/src/chat/slack/adapter.ts",
+    "packages/adapters/src/chat/slack/auth.test.ts",
+    "packages/adapters/src/chat/slack/auth.ts",
+    "packages/adapters/src/chat/slack/blocks.test.ts",
+    "packages/adapters/src/chat/slack/blocks.ts",
+    "packages/adapters/src/chat/slack/index.ts",
+    "packages/adapters/src/chat/slack/types.ts",
+    "packages/adapters/src/chat/slack/workflow-bridge.test.ts",
+    "packages/adapters/src/chat/slack/workflow-bridge.ts",
+    "packages/adapters/src/chat/telegram/adapter.test.ts",
+    "packages/adapters/src/chat/telegram/adapter.ts",
+    "packages/adapters/src/chat/telegram/auth.test.ts",
+    "packages/adapters/src/chat/telegram/auth.ts",
+    "packages/adapters/src/chat/telegram/index.ts",
+    "packages/adapters/src/chat/telegram/markdown.test.ts",
+    "packages/adapters/src/chat/telegram/markdown.ts",
+    "packages/adapters/src/chat/telegram/types.ts",
+    "packages/adapters/src/community/chat/README.md",
+    "packages/adapters/src/community/chat/discord/adapter.test.ts",
+    "packages/adapters/src/community/chat/discord/adapter.ts",
+    "packages/adapters/src/community/chat/discord/auth.test.ts",
+    "packages/adapters/src/community/chat/discord/auth.ts",
+    "packages/adapters/src/community/chat/discord/index.ts",
+    "packages/adapters/src/community/chat/discord/types.ts",
+    "packages/adapters/src/community/forge/README.md",
+    "packages/adapters/src/community/forge/gitea/adapter.test.ts",
+    "packages/adapters/src/community/forge/gitea/adapter.ts",
+    "packages/adapters/src/community/forge/gitea/auth.ts",
+    "packages/adapters/src/community/forge/gitea/index.ts",
+    "packages/adapters/src/community/forge/gitea/types.ts",
+    "packages/adapters/src/community/forge/gitlab/adapter.test.ts",
+    "packages/adapters/src/community/forge/gitlab/adapter.ts",
+    "packages/adapters/src/community/forge/gitlab/auth.test.ts",
+    "packages/adapters/src/community/forge/gitlab/auth.ts",
+    "packages/adapters/src/community/forge/gitlab/index.ts",
+    "packages/adapters/src/community/forge/gitlab/types.ts",
+    "packages/adapters/src/forge/github/adapter.test.ts",
+    "packages/adapters/src/forge/github/adapter.ts",
+    "packages/adapters/src/forge/github/auth.test.ts",
+    "packages/adapters/src/forge/github/auth.ts",
+    "packages/adapters/src/forge/github/context.test.ts",
+    "packages/adapters/src/forge/github/index.ts",
+    "packages/adapters/src/forge/github/types.ts",
+    "packages/adapters/src/index.ts",
+    "packages/adapters/src/test/no-network.ts",
+    "packages/adapters/src/utils/message-splitting.test.ts",
+    "packages/adapters/src/utils/message-splitting.ts",
+    "packages/adapters/tsconfig.json",
+    "packages/cli/package.json",
+    "packages/cli/src/adapters/cli-adapter.test.ts",
+    "packages/cli/src/adapters/cli-adapter.ts",
+    "packages/cli/src/bundled-skill.ts",
+    "packages/cli/src/cli.test.ts",
+    "packages/cli/src/cli.ts",
+    "packages/cli/src/commands/ai.test.ts",
+    "packages/cli/src/commands/ai.ts",
+    "packages/cli/src/commands/auth.ts",
+    "packages/cli/src/commands/chat.test.ts",
+    "packages/cli/src/commands/chat.ts",
+    "packages/cli/src/commands/continue.ts",
+    "packages/cli/src/commands/doctor.test.ts",
+    "packages/cli/src/commands/doctor.ts",
+    "packages/cli/src/commands/isolation.test.ts",
+    "packages/cli/src/commands/isolation.ts",
+    "packages/cli/src/commands/serve.test.ts",
+    "packages/cli/src/commands/serve.ts",
+    "packages/cli/src/commands/setup.test.ts",
+    "packages/cli/src/commands/setup.ts",
+    "packages/cli/src/commands/skill.test.ts",
+    "packages/cli/src/commands/skill.ts",
+    "packages/cli/src/commands/telemetry.test.ts",
+    "packages/cli/src/commands/telemetry.ts",
+    "packages/cli/src/commands/validate.test.ts",
+    "packages/cli/src/commands/validate.ts",
+    "packages/cli/src/commands/version.test.ts",
+    "packages/cli/src/commands/version.ts",
+    "packages/cli/src/commands/workflow.test.ts",
+    "packages/cli/src/commands/workflow.ts",
+    "packages/cli/src/utils/stdout.test.ts",
+    "packages/cli/src/utils/stdout.ts",
+    "packages/cli/tsconfig.json",
+    "packages/core/package.json",
+    "packages/core/src/config/config-loader.test.ts",
+    "packages/core/src/config/config-loader.ts",
+    "packages/core/src/config/config-types.ts",
+    "packages/core/src/config/index.ts",
+    "packages/core/src/config/resolve-assistant.test.ts",
+    "packages/core/src/config/resolve-assistant.ts",
+    "packages/core/src/credentials/catalog.test.ts",
+    "packages/core/src/credentials/catalog.ts",
+    "packages/core/src/credentials/config.test.ts",
+    "packages/core/src/credentials/config.ts",
+    "packages/core/src/credentials/connect-service.test.ts",
+    "packages/core/src/credentials/connect-service.ts",
+    "packages/core/src/credentials/delivery.test.ts",
+    "packages/core/src/credentials/delivery.ts",
+    "packages/core/src/credentials/index.ts",
+    "packages/core/src/credentials/oauth-bridge.test.ts",
+    "packages/core/src/credentials/oauth-bridge.ts",
+    "packages/core/src/credentials/oauth-providers.ts",
+    "packages/core/src/credentials/openai-oauth.test.ts",
+    "packages/core/src/credentials/openai-oauth.ts",
+    "packages/core/src/db/adapters/index.ts",
+    "packages/core/src/db/adapters/postgres.test.ts",
+    "packages/core/src/db/adapters/postgres.ts",
+    "packages/core/src/db/adapters/sqlite.test.ts",
+    "packages/core/src/db/adapters/sqlite.ts",
+    "packages/core/src/db/adapters/types.ts",
+    "packages/core/src/db/bundled-schema.generated.ts",
+    "packages/core/src/db/bundled-schema.test.ts",
+    "packages/core/src/db/bundled-schema.ts",
+    "packages/core/src/db/codebases.test.ts",
+    "packages/core/src/db/codebases.ts",
+    "packages/core/src/db/connection.test.ts",
+    "packages/core/src/db/connection.ts",
+    "packages/core/src/db/conversations.test.ts",
+    "packages/core/src/db/conversations.ts",
+    "packages/core/src/db/env-vars.test.ts",
+    "packages/core/src/db/env-vars.ts",
+    "packages/core/src/db/index.ts",
+    "packages/core/src/db/isolation-environments.metadata.integration.test.ts",
+    "packages/core/src/db/isolation-environments.test.ts",
+    "packages/core/src/db/isolation-environments.ts",
+    "packages/core/src/db/messages.order.integration.test.ts",
+    "packages/core/src/db/messages.test.ts",
+    "packages/core/src/db/messages.ts",
+    "packages/core/src/db/schema-version.ts",
+    "packages/core/src/db/sessions.test.ts",
+    "packages/core/src/db/sessions.ts",
+    "packages/core/src/db/user-ai-prefs-store.test.ts",
+    "packages/core/src/db/user-ai-prefs-store.ts",
+    "packages/core/src/db/user-github-token-store.test.ts",
+    "packages/core/src/db/user-github-token-store.ts",
+    "packages/core/src/db/user-provider-key-store.test.ts",
+    "packages/core/src/db/user-provider-key-store.ts",
+    "packages/core/src/db/users.test.ts",
+    "packages/core/src/db/users.ts",
+    "packages/core/src/db/workflow-events.since.integration.test.ts",
+    "packages/core/src/db/workflow-events.test.ts",
+    "packages/core/src/db/workflow-events.ts",
+    "packages/core/src/db/workflow-node-sessions.test.ts",
+    "packages/core/src/db/workflow-node-sessions.ts",
+    "packages/core/src/db/workflows.resume-cas.integration.test.ts",
+    "packages/core/src/db/workflows.test.ts",
+    "packages/core/src/db/workflows.ts",
+    "packages/core/src/github-auth/auth.test.ts",
+    "packages/core/src/github-auth/auth.ts",
+    "packages/core/src/github-auth/config.test.ts",
+    "packages/core/src/github-auth/config.ts",
+    "packages/core/src/github-auth/connect-service.test.ts",
+    "packages/core/src/github-auth/connect-service.ts",
+    "packages/core/src/github-auth/credential-helper-install.test.ts",
+    "packages/core/src/github-auth/credential-helper-install.ts",
+    "packages/core/src/github-auth/device-flow.test.ts",
+    "packages/core/src/github-auth/device-flow.ts",
+    "packages/core/src/github-auth/errors.ts",
+    "packages/core/src/github-auth/index.ts",
+    "packages/core/src/github-auth/private-key.ts",
+    "packages/core/src/github-auth/types.ts",
+    "packages/core/src/handlers/clone.test.ts",
+    "packages/core/src/handlers/clone.ts",
+    "packages/core/src/handlers/command-handler.test.ts",
+    "packages/core/src/handlers/command-handler.ts",
+    "packages/core/src/index.ts",
+    "packages/core/src/operations/index.ts",
+    "packages/core/src/operations/isolation-operations.test.ts",
+    "packages/core/src/operations/isolation-operations.ts",
+    "packages/core/src/operations/workflow-operations.test.ts",
+    "packages/core/src/operations/workflow-operations.ts",
+    "packages/core/src/orchestrator/manage-run-tool.test.ts",
+    "packages/core/src/orchestrator/manage-run-tool.ts",
+    "packages/core/src/orchestrator/orchestrator-agent.test.ts",
+    "packages/core/src/orchestrator/orchestrator-agent.ts",
+    "packages/core/src/orchestrator/orchestrator-isolation.test.ts",
+    "packages/core/src/orchestrator/orchestrator.test.ts",
+    "packages/core/src/orchestrator/orchestrator.ts",
+    "packages/core/src/orchestrator/post-message-reminder.test.ts",
+    "packages/core/src/orchestrator/post-message-reminder.ts",
+    "packages/core/src/orchestrator/prompt-builder.test.ts",
+    "packages/core/src/orchestrator/prompt-builder.ts",
+    "packages/core/src/schemas/codebase.ts",
+    "packages/core/src/schemas/conversation.ts",
+    "packages/core/src/schemas/env-var.ts",
+    "packages/core/src/schemas/index.test.ts",
+    "packages/core/src/schemas/index.ts",
+    "packages/core/src/schemas/message.ts",
+    "packages/core/src/schemas/session.ts",
+    "packages/core/src/schemas/user-ai-prefs-row.ts",
+    "packages/core/src/schemas/user-github-token-row.ts",
+    "packages/core/src/schemas/user-provider-key-row.ts",
+    "packages/core/src/schemas/user.ts",
+    "packages/core/src/schemas/workflow-event.ts",
+    "packages/core/src/schemas/workflow-run.ts",
+    "packages/core/src/services/cleanup-service.test.ts",
+    "packages/core/src/services/cleanup-service.ts",
+    "packages/core/src/services/title-generator.test.ts",
+    "packages/core/src/services/title-generator.ts",
+    "packages/core/src/state/session-transitions.test.ts",
+    "packages/core/src/state/session-transitions.ts",
+    "packages/core/src/test/mocks/database.ts",
+    "packages/core/src/test/mocks/logger.ts",
+    "packages/core/src/test/mocks/platform.ts",
+    "packages/core/src/test/setup.ts",
+    "packages/core/src/types/index.ts",
+    "packages/core/src/utils/commands.ts",
+    "packages/core/src/utils/conversation-lock.test.ts",
+    "packages/core/src/utils/conversation-lock.ts",
+    "packages/core/src/utils/credential-sanitizer.test.ts",
+    "packages/core/src/utils/credential-sanitizer.ts",
+    "packages/core/src/utils/delivery-dedup.test.ts",
+    "packages/core/src/utils/delivery-dedup.ts",
+    "packages/core/src/utils/error-formatter.test.ts",
+    "packages/core/src/utils/error-formatter.ts",
+    "packages/core/src/utils/error.test.ts",
+    "packages/core/src/utils/error.ts",
+    "packages/core/src/utils/github-graphql.test.ts",
+    "packages/core/src/utils/github-graphql.ts",
+    "packages/core/src/utils/path-validation.test.ts",
+    "packages/core/src/utils/path-validation.ts",
+    "packages/core/src/utils/port-allocation.test.ts",
+    "packages/core/src/utils/port-allocation.ts",
+    "packages/core/src/utils/token-crypto.test.ts",
+    "packages/core/src/utils/token-crypto.ts",
+    "packages/core/src/utils/worktree-sync.test.ts",
+    "packages/core/src/utils/worktree-sync.ts",
+    "packages/core/src/workflows/child-isolation-resolver.test.ts",
+    "packages/core/src/workflows/child-isolation-resolver.ts",
+    "packages/core/src/workflows/index.ts",
+    "packages/core/src/workflows/store-adapter.test.ts",
+    "packages/core/src/workflows/store-adapter.ts",
+    "packages/core/tsconfig.json",
+    "packages/core/tsconfig.tsbuildinfo",
+    "packages/docs-web/.gitignore",
+    "packages/docs-web/astro.config.mjs",
+    "packages/docs-web/package.json",
+    "packages/docs-web/public/CNAME",
+    "packages/docs-web/public/brand/README.md",
+    "packages/docs-web/public/brand/app.css",
+    "packages/docs-web/public/brand/assets/archon-logo.png",
+    "packages/docs-web/public/brand/brand-app.jsx",
+    "packages/docs-web/public/brand/foundation.html",
+    "packages/docs-web/public/brand/logo.jsx",
+    "packages/docs-web/public/brand/standalone-tweaks-toggle.jsx",
+    "packages/docs-web/public/brand/tweaks-panel.jsx",
+    "packages/docs-web/public/favicon.png",
+    "packages/docs-web/public/install",
+    "packages/docs-web/public/install.ps1",
+    "packages/docs-web/scripts/lint-marketplace.ts",
+    "packages/docs-web/scripts/normalize-llms-txt.js",
+    "packages/docs-web/src/assets/logo.png",
+    "packages/docs-web/src/content.config.ts",
+    "packages/docs-web/src/content/docs/adapters/community/discord.md",
+    "packages/docs-web/src/content/docs/adapters/community/gitea.md",
+    "packages/docs-web/src/content/docs/adapters/community/gitlab.md",
+    "packages/docs-web/src/content/docs/adapters/github-app-setup.md",
+    "packages/docs-web/src/content/docs/adapters/github.md",
+    "packages/docs-web/src/content/docs/adapters/index.md",
+    "packages/docs-web/src/content/docs/adapters/slack.md",
+    "packages/docs-web/src/content/docs/adapters/telegram.md",
+    "packages/docs-web/src/content/docs/adapters/web.md",
+    "packages/docs-web/src/content/docs/book/dag-workflows.md",
+    "packages/docs-web/src/content/docs/book/essential-workflows.md",
+    "packages/docs-web/src/content/docs/book/first-command.md",
+    "packages/docs-web/src/content/docs/book/first-five-minutes.md",
+    "packages/docs-web/src/content/docs/book/first-workflow.md",
+    "packages/docs-web/src/content/docs/book/hooks-and-quality.md",
+    "packages/docs-web/src/content/docs/book/how-it-works.md",
+    "packages/docs-web/src/content/docs/book/index.md",
+    "packages/docs-web/src/content/docs/book/isolation.md",
+    "packages/docs-web/src/content/docs/book/quick-reference.md",
+    "packages/docs-web/src/content/docs/book/what-is-archon.md",
+    "packages/docs-web/src/content/docs/brand/index.md",
+    "packages/docs-web/src/content/docs/contributing/adding-a-community-provider.md",
+    "packages/docs-web/src/content/docs/contributing/cli-internals.md",
+    "packages/docs-web/src/content/docs/contributing/dx-quirks.md",
+    "packages/docs-web/src/content/docs/contributing/index.md",
+    "packages/docs-web/src/content/docs/contributing/new-developer-guide.md",
+    "packages/docs-web/src/content/docs/contributing/releasing.md",
+    "packages/docs-web/src/content/docs/deployment/cloud.md",
+    "packages/docs-web/src/content/docs/deployment/docker.md",
+    "packages/docs-web/src/content/docs/deployment/e2e-testing-wsl.md",
+    "packages/docs-web/src/content/docs/deployment/e2e-testing.md",
+    "packages/docs-web/src/content/docs/deployment/index.md",
+    "packages/docs-web/src/content/docs/deployment/local.md",
+    "packages/docs-web/src/content/docs/deployment/windows.md",
+    "packages/docs-web/src/content/docs/docs.mdx",
+    "packages/docs-web/src/content/docs/getting-started/ai-assistants.md",
+    "packages/docs-web/src/content/docs/getting-started/concepts.md",
+    "packages/docs-web/src/content/docs/getting-started/configuration.md",
+    "packages/docs-web/src/content/docs/getting-started/installation.md",
+    "packages/docs-web/src/content/docs/getting-started/overview.md",
+    "packages/docs-web/src/content/docs/getting-started/quick-start.md",
+    "packages/docs-web/src/content/docs/guides/approval-nodes.md",
+    "packages/docs-web/src/content/docs/guides/authoring-commands.md",
+    "packages/docs-web/src/content/docs/guides/authoring-workflows.md",
+    "packages/docs-web/src/content/docs/guides/container-isolation.md",
+    "packages/docs-web/src/content/docs/guides/global-workflows.md",
+    "packages/docs-web/src/content/docs/guides/hooks.md",
+    "packages/docs-web/src/content/docs/guides/index.md",
+    "packages/docs-web/src/content/docs/guides/loop-nodes.md",
+    "packages/docs-web/src/content/docs/guides/mcp-servers.md",
+    "packages/docs-web/src/content/docs/guides/multi-repo-projects.md",
+    "packages/docs-web/src/content/docs/guides/remotion-workflow.md",
+    "packages/docs-web/src/content/docs/guides/script-nodes.md",
+    "packages/docs-web/src/content/docs/guides/skills.md",
+    "packages/docs-web/src/content/docs/reference/api.md",
+    "packages/docs-web/src/content/docs/reference/architecture.md",
+    "packages/docs-web/src/content/docs/reference/archon-directories.md",
+    "packages/docs-web/src/content/docs/reference/cli.md",
+    "packages/docs-web/src/content/docs/reference/commands.md",
+    "packages/docs-web/src/content/docs/reference/configuration.md",
+    "packages/docs-web/src/content/docs/reference/database.md",
+    "packages/docs-web/src/content/docs/reference/index.md",
+    "packages/docs-web/src/content/docs/reference/provider-capabilities.md",
+    "packages/docs-web/src/content/docs/reference/security.md",
+    "packages/docs-web/src/content/docs/reference/troubleshooting.md",
+    "packages/docs-web/src/content/docs/reference/variables.md",
+    "packages/docs-web/src/content/docs/reference/workflow-language-constitution.md",
+    "packages/docs-web/src/data/marketplace.ts",
+    "packages/docs-web/src/data/roadmap.ts",
+    "packages/docs-web/src/pages/index.astro",
+    "packages/docs-web/src/pages/roadmap.astro",
+    "packages/docs-web/src/pages/workflows.json.ts",
+    "packages/docs-web/src/pages/workflows/[slug].astro",
+    "packages/docs-web/src/pages/workflows/index.astro",
+    "packages/docs-web/src/styles/custom.css",
+    "packages/docs-web/tsconfig.json",
+    "packages/git/package.json",
+    "packages/git/src/branch.ts",
+    "packages/git/src/exec.ts",
+    "packages/git/src/forge.test.ts",
+    "packages/git/src/forge.ts",
+    "packages/git/src/git.test.ts",
+    "packages/git/src/index.ts",
+    "packages/git/src/repo.ts",
+    "packages/git/src/types.ts",
+    "packages/git/src/worktree.ts",
+    "packages/git/tsconfig.json",
+    "packages/isolation/docker/SECURITY.md",
+    "packages/isolation/docker/entrypoint.sh",
+    "packages/isolation/docker/runner.Dockerfile",
+    "packages/isolation/package.json",
+    "packages/isolation/src/backend-router.test.ts",
+    "packages/isolation/src/backend-router.ts",
+    "packages/isolation/src/backends/container.test.ts",
+    "packages/isolation/src/backends/container.ts",
+    "packages/isolation/src/backends/in-place.test.ts",
+    "packages/isolation/src/backends/in-place.ts",
+    "packages/isolation/src/container/docker-exec.test.ts",
+    "packages/isolation/src/container/docker-exec.ts",
+    "packages/isolation/src/container/overlay-scripts.test.ts",
+    "packages/isolation/src/container/overlay.test.ts",
+    "packages/isolation/src/container/overlay.ts",
+    "packages/isolation/src/errors.test.ts",
+    "packages/isolation/src/errors.ts",
+    "packages/isolation/src/factory.test.ts",
+    "packages/isolation/src/factory.ts",
+    "packages/isolation/src/index.ts",
+    "packages/isolation/src/pr-state.test.ts",
+    "packages/isolation/src/pr-state.ts",
+    "packages/isolation/src/providers/worktree.test.ts",
+    "packages/isolation/src/providers/worktree.ts",
+    "packages/isolation/src/resolver.test.ts",
+    "packages/isolation/src/resolver.ts",
+    "packages/isolation/src/store.ts",
+    "packages/isolation/src/types.ts",
+    "packages/isolation/src/worktree-copy.test.ts",
+    "packages/isolation/src/worktree-copy.ts",
+    "packages/isolation/tsconfig.json",
+    "packages/paths/package.json",
+    "packages/paths/src/archon-paths.test.ts",
+    "packages/paths/src/archon-paths.ts",
+    "packages/paths/src/bundled-build.test.ts",
+    "packages/paths/src/bundled-build.ts",
+    "packages/paths/src/env-integration.test.ts",
+    "packages/paths/src/env-loader.test.ts",
+    "packages/paths/src/env-loader.ts",
+    "packages/paths/src/index.ts",
+    "packages/paths/src/logger.test.ts",
+    "packages/paths/src/logger.ts",
+    "packages/paths/src/strip-cwd-env-boot.ts",
+    "packages/paths/src/strip-cwd-env.test.ts",
+    "packages/paths/src/strip-cwd-env.ts",
+    "packages/paths/src/telemetry.test.ts",
+    "packages/paths/src/telemetry.ts",
+    "packages/paths/src/tier-notice.test.ts",
+    "packages/paths/src/tier-notice.ts",
+    "packages/paths/src/update-check.test.ts",
+    "packages/paths/src/update-check.ts",
+    "packages/paths/tsconfig.json",
+    "packages/providers/package.json",
+    "packages/providers/src/claude/binary-resolver-dev.test.ts",
+    "packages/providers/src/claude/binary-resolver.test.ts",
+    "packages/providers/src/claude/binary-resolver.ts",
+    "packages/providers/src/claude/capabilities.ts",
+    "packages/providers/src/claude/config.ts",
+    "packages/providers/src/claude/container-env.test.ts",
+    "packages/providers/src/claude/container-spawn.test.ts",
+    "packages/providers/src/claude/container-spawn.ts",
+    "packages/providers/src/claude/index.ts",
+    "packages/providers/src/claude/native-tools.test.ts",
+    "packages/providers/src/claude/native-tools.ts",
+    "packages/providers/src/claude/provider.test.ts",
+    "packages/providers/src/claude/provider.ts",
+    "packages/providers/src/codex/binary-guard.test.ts",
+    "packages/providers/src/codex/binary-resolver-dev.test.ts",
+    "packages/providers/src/codex/binary-resolver.test.ts",
+    "packages/providers/src/codex/binary-resolver.ts",
+    "packages/providers/src/codex/capabilities.ts",
+    "packages/providers/src/codex/config.ts",
+    "packages/providers/src/codex/index.ts",
+    "packages/providers/src/codex/provider.test.ts",
+    "packages/providers/src/codex/provider.ts",
+    "packages/providers/src/community/copilot/binary-resolver-dev.test.ts",
+    "packages/providers/src/community/copilot/binary-resolver.test.ts",
+    "packages/providers/src/community/copilot/binary-resolver.ts",
+    "packages/providers/src/community/copilot/capabilities.ts",
+    "packages/providers/src/community/copilot/config.test.ts",
+    "packages/providers/src/community/copilot/config.ts",
+    "packages/providers/src/community/copilot/event-bridge.test.ts",
+    "packages/providers/src/community/copilot/event-bridge.ts",
+    "packages/providers/src/community/copilot/index.ts",
+    "packages/providers/src/community/copilot/provider-hardening.test.ts",
+    "packages/providers/src/community/copilot/provider-lazy-load.test.ts",
+    "packages/providers/src/community/copilot/provider.test.ts",
+    "packages/providers/src/community/copilot/provider.ts",
+    "packages/providers/src/community/copilot/registration.ts",
+    "packages/providers/src/community/opencode/agent-config.ts",
+    "packages/providers/src/community/opencode/agent-fs.ts",
+    "packages/providers/src/community/opencode/capabilities.ts",
+    "packages/providers/src/community/opencode/config.ts",
+    "packages/providers/src/community/opencode/errors.ts",
+    "packages/providers/src/community/opencode/index.ts",
+    "packages/providers/src/community/opencode/introspection.ts",
+    "packages/providers/src/community/opencode/multi-agent.ts",
+    "packages/providers/src/community/opencode/provider.test.ts",
+    "packages/providers/src/community/opencode/provider.ts",
+    "packages/providers/src/community/opencode/registration.ts",
+    "packages/providers/src/community/opencode/runtime.ts",
+    "packages/providers/src/community/opencode/session.ts",
+    "packages/providers/src/community/opencode/tokens.ts",
+    "packages/providers/src/community/pi/capabilities.ts",
+    "packages/providers/src/community/pi/config.test.ts",
+    "packages/providers/src/community/pi/config.ts",
+    "packages/providers/src/community/pi/event-bridge.test.ts",
+    "packages/providers/src/community/pi/event-bridge.ts",
+    "packages/providers/src/community/pi/index.ts",
+    "packages/providers/src/community/pi/model-catalog.ts",
+    "packages/providers/src/community/pi/model-ref.test.ts",
+    "packages/providers/src/community/pi/model-ref.ts",
+    "packages/providers/src/community/pi/native-tools.test.ts",
+    "packages/providers/src/community/pi/native-tools.ts",
+    "packages/providers/src/community/pi/options-translator.test.ts",
+    "packages/providers/src/community/pi/options-translator.ts",
+    "packages/providers/src/community/pi/pi-vendor-map.generated.ts",
+    "packages/providers/src/community/pi/provider-bedrock-register.test.ts",
+    "packages/providers/src/community/pi/provider-lazy-load.test.ts",
+    "packages/providers/src/community/pi/provider.test.ts",
+    "packages/providers/src/community/pi/provider.ts",
+    "packages/providers/src/community/pi/registration.ts",
+    "packages/providers/src/community/pi/resource-loader.ts",
+    "packages/providers/src/community/pi/session-resolver.test.ts",
+    "packages/providers/src/community/pi/session-resolver.ts",
+    "packages/providers/src/community/pi/ui-context-stub.test.ts",
+    "packages/providers/src/community/pi/ui-context-stub.ts",
+    "packages/providers/src/errors.ts",
+    "packages/providers/src/index.ts",
+    "packages/providers/src/mcp/config.ts",
+    "packages/providers/src/oauth.ts",
+    "packages/providers/src/registry.test.ts",
+    "packages/providers/src/registry.ts",
+    "packages/providers/src/shared/resumed.test.ts",
+    "packages/providers/src/shared/resumed.ts",
+    "packages/providers/src/shared/skills.test.ts",
+    "packages/providers/src/shared/skills.ts",
+    "packages/providers/src/shared/structured-output.test.ts",
+    "packages/providers/src/shared/structured-output.ts",
+    "packages/providers/src/test/mocks/logger.ts",
+    "packages/providers/src/types.ts",
+    "packages/providers/tsconfig.json",
+    "packages/server/package.json",
+    "packages/server/src/adapters/web.test.ts",
+    "packages/server/src/adapters/web.ts",
+    "packages/server/src/adapters/web/dashboard-event-poller.test.ts",
+    "packages/server/src/adapters/web/dashboard-event-poller.ts",
+    "packages/server/src/adapters/web/persistence.test.ts",
+    "packages/server/src/adapters/web/persistence.ts",
+    "packages/server/src/adapters/web/pg-notify-listener.test.ts",
+    "packages/server/src/adapters/web/pg-notify-listener.ts",
+    "packages/server/src/adapters/web/transport.test.ts",
+    "packages/server/src/adapters/web/transport.ts",
+    "packages/server/src/adapters/web/truncate.test.ts",
+    "packages/server/src/adapters/web/truncate.ts",
+    "packages/server/src/adapters/web/workflow-bridge.test.ts",
+    "packages/server/src/adapters/web/workflow-bridge.ts",
+    "packages/server/src/auth/config.test.ts",
+    "packages/server/src/auth/config.ts",
+    "packages/server/src/auth/index.ts",
+    "packages/server/src/auth/instance.ts",
+    "packages/server/src/boot/claude-auth-posture.test.ts",
+    "packages/server/src/boot/claude-auth-posture.ts",
+    "packages/server/src/discord-mention.test.ts",
+    "packages/server/src/discord-mention.ts",
+    "packages/server/src/github-auth-bootstrap.test.ts",
+    "packages/server/src/github-auth-bootstrap.ts",
+    "packages/server/src/index.ts",
+    "packages/server/src/resolve-user-id.test.ts",
+    "packages/server/src/routes/api.auth.test.ts",
+    "packages/server/src/routes/api.codebases.test.ts",
+    "packages/server/src/routes/api.conversations.test.ts",
+    "packages/server/src/routes/api.health.test.ts",
+    "packages/server/src/routes/api.messages.test.ts",
+    "packages/server/src/routes/api.provider-keys.test.ts",
+    "packages/server/src/routes/api.providers.test.ts",
+    "packages/server/src/routes/api.ts",
+    "packages/server/src/routes/api.user-ai-prefs.test.ts",
+    "packages/server/src/routes/api.workflow-runs.test.ts",
+    "packages/server/src/routes/api.workflows.test.ts",
+    "packages/server/src/routes/auth-poll-status.test.ts",
+    "packages/server/src/routes/auth-poll-status.ts",
+    "packages/server/src/routes/openapi-defaults.ts",
+    "packages/server/src/routes/schemas/auth.schemas.ts",
+    "packages/server/src/routes/schemas/codebase.schemas.ts",
+    "packages/server/src/routes/schemas/common.schemas.ts",
+    "packages/server/src/routes/schemas/config.schemas.ts",
+    "packages/server/src/routes/schemas/conversation.schemas.ts",
+    "packages/server/src/routes/schemas/provider-key.schemas.ts",
+    "packages/server/src/routes/schemas/provider.schemas.ts",
+    "packages/server/src/routes/schemas/system.schemas.ts",
+    "packages/server/src/routes/schemas/user-ai-prefs.schemas.ts",
+    "packages/server/src/routes/schemas/workflow.schemas.ts",
+    "packages/server/src/routes/webhooks.test.ts",
+    "packages/server/src/routes/webhooks.ts",
+    "packages/server/src/scripts/setup-auth.ts",
+    "packages/server/src/test/workflow-mock-factories.ts",
+    "packages/server/tsconfig.json",
+    "packages/server/tsconfig.tsbuildinfo",
+    "packages/web/components.json",
+    "packages/web/index.html",
+    "packages/web/package.json",
+    "packages/web/public/favicon.png",
+    "packages/web/src/App.tsx",
+    "packages/web/src/components/auth/SessionGate.tsx",
+    "packages/web/src/components/chat/ChatInterface.tsx",
+    "packages/web/src/components/chat/ErrorCard.tsx",
+    "packages/web/src/components/chat/LockIndicator.tsx",
+    "packages/web/src/components/chat/MessageBubble.tsx",
+    "packages/web/src/components/chat/MessageInput.tsx",
+    "packages/web/src/components/chat/MessageList.tsx",
+    "packages/web/src/components/chat/ToolCallCard.tsx",
+    "packages/web/src/components/chat/WorkflowProgressCard.tsx",
+    "packages/web/src/components/conversations/ConversationItem.tsx",
+    "packages/web/src/components/dashboard/ConfirmRunActionDialog.tsx",
+    "packages/web/src/components/dashboard/StatusSummaryBar.tsx",
+    "packages/web/src/components/dashboard/WorkflowHistoryTable.tsx",
+    "packages/web/src/components/dashboard/WorkflowRunCard.tsx",
+    "packages/web/src/components/dashboard/WorkflowRunGroup.tsx",
+    "packages/web/src/components/layout/Header.tsx",
+    "packages/web/src/components/layout/Layout.tsx",
+    "packages/web/src/components/layout/Sidebar.tsx",
+    "packages/web/src/components/layout/TopNav.tsx",
+    "packages/web/src/components/sidebar/AllConversationsView.tsx",
+    "packages/web/src/components/sidebar/ProjectDetail.tsx",
+    "packages/web/src/components/sidebar/ProjectSelector.tsx",
+    "packages/web/src/components/sidebar/SearchBar.tsx",
+    "packages/web/src/components/sidebar/WorkflowInvoker.tsx",
+    "packages/web/src/components/ui/alert-dialog.tsx",
+    "packages/web/src/components/ui/badge.tsx",
+    "packages/web/src/components/ui/button.tsx",
+    "packages/web/src/components/ui/card.tsx",
+    "packages/web/src/components/ui/collapsible.tsx",
+    "packages/web/src/components/ui/dialog.tsx",
+    "packages/web/src/components/ui/input.tsx",
+    "packages/web/src/components/ui/resizable.tsx",
+    "packages/web/src/components/ui/scroll-area.tsx",
+    "packages/web/src/components/ui/separator.tsx",
+    "packages/web/src/components/ui/tabs.tsx",
+    "packages/web/src/components/ui/textarea.tsx",
+    "packages/web/src/components/ui/tooltip.tsx",
+    "packages/web/src/components/workflows/ArtifactSummary.tsx",
+    "packages/web/src/components/workflows/ArtifactViewerModal.tsx",
+    "packages/web/src/components/workflows/BuilderToolbar.tsx",
+    "packages/web/src/components/workflows/CommandPicker.tsx",
+    "packages/web/src/components/workflows/DagNodeComponent.test.ts",
+    "packages/web/src/components/workflows/DagNodeComponent.tsx",
+    "packages/web/src/components/workflows/DagNodeProgress.tsx",
+    "packages/web/src/components/workflows/ExecutionDagNode.tsx",
+    "packages/web/src/components/workflows/NodeInspector.tsx",
+    "packages/web/src/components/workflows/NodeLibrary.tsx",
+    "packages/web/src/components/workflows/NodePalette.tsx",
+    "packages/web/src/components/workflows/QuickAddPicker.tsx",
+    "packages/web/src/components/workflows/StatusBar.tsx",
+    "packages/web/src/components/workflows/StatusIcon.tsx",
+    "packages/web/src/components/workflows/StepLogs.tsx",
+    "packages/web/src/components/workflows/ValidationPanel.tsx",
+    "packages/web/src/components/workflows/WorkflowBuilder.tsx",
+    "packages/web/src/components/workflows/WorkflowCanvas.tsx",
+    "packages/web/src/components/workflows/WorkflowCard.tsx",
+    "packages/web/src/components/workflows/WorkflowDagViewer.tsx",
+    "packages/web/src/components/workflows/WorkflowExecution.tsx",
+    "packages/web/src/components/workflows/WorkflowList.tsx",
+    "packages/web/src/components/workflows/WorkflowLogs.tsx",
+    "packages/web/src/components/workflows/YamlCodeView.tsx",
+    "packages/web/src/components/workflows/partition-workflows.test.ts",
+    "packages/web/src/components/workflows/partition-workflows.ts",
+    "packages/web/src/contexts/ProjectContext.tsx",
+    "packages/web/src/experiments/README.md",
+    "packages/web/src/experiments/console/ConsoleApp.tsx",
+    "packages/web/src/experiments/console/README.md",
+    "packages/web/src/experiments/console/agent-chat-spike.md",
+    "packages/web/src/experiments/console/builder/BuilderConnected.tsx",
+    "packages/web/src/experiments/console/builder/BuilderPage.tsx",
+    "packages/web/src/experiments/console/builder/CONTEXT.md",
+    "packages/web/src/experiments/console/builder/README.md",
+    "packages/web/src/experiments/console/builder/components/BuilderCanvas.tsx",
+    "packages/web/src/experiments/console/builder/components/BuilderContextMenu.tsx",
+    "packages/web/src/experiments/console/builder/components/BuilderNodeView.tsx",
+    "packages/web/src/experiments/console/builder/components/Inspector.tsx",
+    "packages/web/src/experiments/console/builder/components/IssueList.tsx",
+    "packages/web/src/experiments/console/builder/components/NodePalette.tsx",
+    "packages/web/src/experiments/console/builder/components/SmartGuides.tsx",
+    "packages/web/src/experiments/console/builder/components/Toolbar.tsx",
+    "packages/web/src/experiments/console/builder/components/WhenBuilder.tsx",
+    "packages/web/src/experiments/console/builder/components/YamlPreview.tsx",
+    "packages/web/src/experiments/console/builder/components/inspector/ApprovalFields.tsx",
+    "packages/web/src/experiments/console/builder/components/inspector/BashFields.tsx",
+    "packages/web/src/experiments/console/builder/components/inspector/CancelFields.tsx",
+    "packages/web/src/experiments/console/builder/components/inspector/CommandFields.tsx",
+    "packages/web/src/experiments/console/builder/components/inspector/LoopFields.tsx",
+    "packages/web/src/experiments/console/builder/components/inspector/PromptFields.tsx",
+    "packages/web/src/experiments/console/builder/components/inspector/ScriptFields.tsx",
+    "packages/web/src/experiments/console/builder/components/inspector/fields.tsx",
+    "packages/web/src/experiments/console/builder/connect/save-logic.test.ts",
+    "packages/web/src/experiments/console/builder/connect/save-logic.ts",
+    "packages/web/src/experiments/console/builder/connect/use-builder-project.ts",
+    "packages/web/src/experiments/console/builder/editor/align.test.ts",
+    "packages/web/src/experiments/console/builder/editor/align.ts",
+    "packages/web/src/experiments/console/builder/editor/clipboard.test.ts",
+    "packages/web/src/experiments/console/builder/editor/clipboard.ts",
+    "packages/web/src/experiments/console/builder/editor/history.test.ts",
+    "packages/web/src/experiments/console/builder/editor/history.ts",
+    "packages/web/src/experiments/console/builder/editor/keymap.ts",
+    "packages/web/src/experiments/console/builder/editor/smart-guides.test.ts",
+    "packages/web/src/experiments/console/builder/editor/smart-guides.ts",
+    "packages/web/src/experiments/console/builder/editor/state.test.ts",
+    "packages/web/src/experiments/console/builder/editor/state.ts",
+    "packages/web/src/experiments/console/builder/fixtures/approval.fixture.ts",
+    "packages/web/src/experiments/console/builder/fixtures/cancel.fixture.ts",
+    "packages/web/src/experiments/console/builder/fixtures/index.ts",
+    "packages/web/src/experiments/console/builder/fixtures/loop.fixture.ts",
+    "packages/web/src/experiments/console/builder/fixtures/mixed.fixture.ts",
+    "packages/web/src/experiments/console/builder/fixtures/script.fixture.ts",
+    "packages/web/src/experiments/console/builder/flow/flow.test.ts",
+    "packages/web/src/experiments/console/builder/flow/from-flow.ts",
+    "packages/web/src/experiments/console/builder/flow/index.ts",
+    "packages/web/src/experiments/console/builder/flow/layout.ts",
+    "packages/web/src/experiments/console/builder/flow/to-flow.ts",
+    "packages/web/src/experiments/console/builder/flow/types.ts",
+    "packages/web/src/experiments/console/builder/model/from-workflow.ts",
+    "packages/web/src/experiments/console/builder/model/index.ts",
+    "packages/web/src/experiments/console/builder/model/round-trip.test.ts",
+    "packages/web/src/experiments/console/builder/model/to-workflow.ts",
+    "packages/web/src/experiments/console/builder/types/index.ts",
+    "packages/web/src/experiments/console/builder/types/issue.ts",
+    "packages/web/src/experiments/console/builder/types/variant.ts",
+    "packages/web/src/experiments/console/builder/types/when.ts",
+    "packages/web/src/experiments/console/builder/types/wire.ts",
+    "packages/web/src/experiments/console/builder/validation/content.test.ts",
+    "packages/web/src/experiments/console/builder/validation/content.ts",
+    "packages/web/src/experiments/console/builder/validation/graph.test.ts",
+    "packages/web/src/experiments/console/builder/validation/graph.ts",
+    "packages/web/src/experiments/console/builder/validation/index.ts",
+    "packages/web/src/experiments/console/builder/validation/make-issue.ts",
+    "packages/web/src/experiments/console/builder/validation/structural.test.ts",
+    "packages/web/src/experiments/console/builder/validation/structural.ts",
+    "packages/web/src/experiments/console/builder/validation/test-helpers.ts",
+    "packages/web/src/experiments/console/builder/validation/validate.test.ts",
+    "packages/web/src/experiments/console/builder/validation/validate.ts",
+    "packages/web/src/experiments/console/builder/validation/when-grammar.test.ts",
+    "packages/web/src/experiments/console/builder/validation/when-grammar.ts",
+    "packages/web/src/experiments/console/builder/variants/approval.ts",
+    "packages/web/src/experiments/console/builder/variants/base-fields.test.ts",
+    "packages/web/src/experiments/console/builder/variants/base-fields.ts",
+    "packages/web/src/experiments/console/builder/variants/bash.ts",
+    "packages/web/src/experiments/console/builder/variants/cancel.ts",
+    "packages/web/src/experiments/console/builder/variants/capabilities.ts",
+    "packages/web/src/experiments/console/builder/variants/command.ts",
+    "packages/web/src/experiments/console/builder/variants/detect.test.ts",
+    "packages/web/src/experiments/console/builder/variants/detect.ts",
+    "packages/web/src/experiments/console/builder/variants/if-defined.ts",
+    "packages/web/src/experiments/console/builder/variants/index.ts",
+    "packages/web/src/experiments/console/builder/variants/loop.ts",
+    "packages/web/src/experiments/console/builder/variants/prompt.ts",
+    "packages/web/src/experiments/console/builder/variants/registry.test.ts",
+    "packages/web/src/experiments/console/builder/variants/registry.ts",
+    "packages/web/src/experiments/console/builder/variants/script.ts",
+    "packages/web/src/experiments/console/builder/yaml/index.ts",
+    "packages/web/src/experiments/console/builder/yaml/serialize.test.ts",
+    "packages/web/src/experiments/console/builder/yaml/serialize.ts",
+    "packages/web/src/experiments/console/components/ActiveRunCard.tsx",
+    "packages/web/src/experiments/console/components/AddProjectDialog.tsx",
+    "packages/web/src/experiments/console/components/AgentAvatar.tsx",
+    "packages/web/src/experiments/console/components/AgentCredentialCard.tsx",
+    "packages/web/src/experiments/console/components/AgentsPanel.tsx",
+    "packages/web/src/experiments/console/components/AliasesPanel.tsx",
+    "packages/web/src/experiments/console/components/ApprovalContext.tsx",
+    "packages/web/src/experiments/console/components/ApprovalPanel.tsx",
+    "packages/web/src/experiments/console/components/ArtifactItem.tsx",
+    "packages/web/src/experiments/console/components/ArtifactPanel.tsx",
+    "packages/web/src/experiments/console/components/AssistantConfigPanel.tsx",
+    "packages/web/src/experiments/console/components/ChatComposer.tsx",
+    "packages/web/src/experiments/console/components/ChatStream.tsx",
+    "packages/web/src/experiments/console/components/ConsoleWorkflowResultCard.tsx",
+    "packages/web/src/experiments/console/components/DraftRunCard.tsx",
+    "packages/web/src/experiments/console/components/EmptyState.tsx",
+    "packages/web/src/experiments/console/components/EnvVarsDialog.tsx",
+    "packages/web/src/experiments/console/components/FilterChips.tsx",
+    "packages/web/src/experiments/console/components/GithubIdentityPanel.tsx",
+    "packages/web/src/experiments/console/components/KeymapHelp.tsx",
+    "packages/web/src/experiments/console/components/LiveDot.tsx",
+    "packages/web/src/experiments/console/components/MessageItem.tsx",
+    "packages/web/src/experiments/console/components/ModelPickerField.tsx",
+    "packages/web/src/experiments/console/components/ModelTiersPanel.tsx",
+    "packages/web/src/experiments/console/components/NodeDivider.tsx",
+    "packages/web/src/experiments/console/components/OriginBadge.tsx",
+    "packages/web/src/experiments/console/components/PendingInputBanner.tsx",
+    "packages/web/src/experiments/console/components/ProjectPalette.tsx",
+    "packages/web/src/experiments/console/components/ProjectRail.tsx",
+    "packages/web/src/experiments/console/components/ProjectRow.tsx",
+    "packages/web/src/experiments/console/components/ProjectTile.tsx",
+    "packages/web/src/experiments/console/components/ProjectViewTabs.tsx",
+    "packages/web/src/experiments/console/components/RecentRunRow.tsx",
+    "packages/web/src/experiments/console/components/RunActionBar.tsx",
+    "packages/web/src/experiments/console/components/RunCard.tsx",
+    "packages/web/src/experiments/console/components/RunDetailHeader.tsx",
+    "packages/web/src/experiments/console/components/RunGraphPanel.tsx",
+    "packages/web/src/experiments/console/components/RunLifecycle.tsx",
+    "packages/web/src/experiments/console/components/RunStream.test.tsx",
+    "packages/web/src/experiments/console/components/RunStream.tsx",
+    "packages/web/src/experiments/console/components/ScopeToggle.tsx",
+    "packages/web/src/experiments/console/components/SettingsFormPrimitives.tsx",
+    "packages/web/src/experiments/console/components/SettingsSection.tsx",
+    "packages/web/src/experiments/console/components/StatusDot.tsx",
+    "packages/web/src/experiments/console/components/StatusStrip.tsx",
+    "packages/web/src/experiments/console/components/StreamCard.tsx",
+    "packages/web/src/experiments/console/components/StreamToolbar.tsx",
+    "packages/web/src/experiments/console/components/SubscriptionLoginFlow.tsx",
+    "packages/web/src/experiments/console/components/SystemPanel.tsx",
+    "packages/web/src/experiments/console/components/ToolCallItem.tsx",
+    "packages/web/src/experiments/console/components/WorkflowDock.tsx",
+    "packages/web/src/experiments/console/components/WorkflowPicker.tsx",
+    "packages/web/src/experiments/console/components/WorkingIndicator.tsx",
+    "packages/web/src/experiments/console/console-open-questions.md",
+    "packages/web/src/experiments/console/lib/agent-status.test.ts",
+    "packages/web/src/experiments/console/lib/agent-status.ts",
+    "packages/web/src/experiments/console/lib/display-name.ts",
+    "packages/web/src/experiments/console/lib/format.test.ts",
+    "packages/web/src/experiments/console/lib/format.ts",
+    "packages/web/src/experiments/console/lib/health.ts",
+    "packages/web/src/experiments/console/lib/http.ts",
+    "packages/web/src/experiments/console/lib/icon-color.ts",
+    "packages/web/src/experiments/console/lib/keymap.ts",
+    "packages/web/src/experiments/console/lib/model-options.test.ts",
+    "packages/web/src/experiments/console/lib/model-options.ts",
+    "packages/web/src/experiments/console/lib/oauth-code.test.ts",
+    "packages/web/src/experiments/console/lib/oauth-code.ts",
+    "packages/web/src/experiments/console/lib/oauth-flow.test.ts",
+    "packages/web/src/experiments/console/lib/oauth-flow.ts",
+    "packages/web/src/experiments/console/lib/recommended.test.ts",
+    "packages/web/src/experiments/console/lib/recommended.ts",
+    "packages/web/src/experiments/console/lib/run-status.ts",
+    "packages/web/src/experiments/console/lib/shortcuts.ts",
+    "packages/web/src/experiments/console/lib/sse.ts",
+    "packages/web/src/experiments/console/lib/stream-context.tsx",
+    "packages/web/src/experiments/console/lib/use-cancelled-ref.ts",
+    "packages/web/src/experiments/console/primitives/conversation.ts",
+    "packages/web/src/experiments/console/primitives/event.test.ts",
+    "packages/web/src/experiments/console/primitives/event.ts",
+    "packages/web/src/experiments/console/primitives/file.test.ts",
+    "packages/web/src/experiments/console/primitives/file.ts",
+    "packages/web/src/experiments/console/primitives/message.test.ts",
+    "packages/web/src/experiments/console/primitives/message.ts",
+    "packages/web/src/experiments/console/primitives/project.ts",
+    "packages/web/src/experiments/console/primitives/run.test.ts",
+    "packages/web/src/experiments/console/primitives/run.ts",
+    "packages/web/src/experiments/console/primitives/workflow-graph.ts",
+    "packages/web/src/experiments/console/primitives/workflow.ts",
+    "packages/web/src/experiments/console/primitives/worktree.ts",
+    "packages/web/src/experiments/console/routes/ChatPage.tsx",
+    "packages/web/src/experiments/console/routes/PreviewPage.tsx",
+    "packages/web/src/experiments/console/routes/RunDetailPage.tsx",
+    "packages/web/src/experiments/console/routes/RunsPage.tsx",
+    "packages/web/src/experiments/console/routes/SettingsPage.tsx",
+    "packages/web/src/experiments/console/skills/conversations.ts",
+    "packages/web/src/experiments/console/skills/envVars.ts",
+    "packages/web/src/experiments/console/skills/github.test.ts",
+    "packages/web/src/experiments/console/skills/github.ts",
+    "packages/web/src/experiments/console/skills/index.ts",
+    "packages/web/src/experiments/console/skills/messages.ts",
+    "packages/web/src/experiments/console/skills/projects.ts",
+    "packages/web/src/experiments/console/skills/providerKeys.ts",
+    "packages/web/src/experiments/console/skills/providers.ts",
+    "packages/web/src/experiments/console/skills/runs.ts",
+    "packages/web/src/experiments/console/skills/settings.test.ts",
+    "packages/web/src/experiments/console/skills/settings.ts",
+    "packages/web/src/experiments/console/skills/startRun.ts",
+    "packages/web/src/experiments/console/skills/workflows.test.ts",
+    "packages/web/src/experiments/console/skills/workflows.ts",
+    "packages/web/src/experiments/console/skills/worktrees.ts",
+    "packages/web/src/experiments/console/store/cache.test.ts",
+    "packages/web/src/experiments/console/store/cache.ts",
+    "packages/web/src/experiments/console/store/keys.ts",
+    "packages/web/src/experiments/console/theme.css",
+    "packages/web/src/hooks/useAutoScroll.ts",
+    "packages/web/src/hooks/useBuilderKeyboard.test.ts",
+    "packages/web/src/hooks/useBuilderKeyboard.ts",
+    "packages/web/src/hooks/useBuilderUndo.ts",
+    "packages/web/src/hooks/useBuilderValidation.ts",
+    "packages/web/src/hooks/useClickOutside.ts",
+    "packages/web/src/hooks/useDashboardSSE.ts",
+    "packages/web/src/hooks/useKeyboardShortcuts.ts",
+    "packages/web/src/hooks/useProviders.ts",
+    "packages/web/src/hooks/useSSE.ts",
+    "packages/web/src/index.css",
+    "packages/web/src/lib/api.conversations.test.ts",
+    "packages/web/src/lib/api.generated.d.ts",
+    "packages/web/src/lib/api.ts",
+    "packages/web/src/lib/auth-client.ts",
+    "packages/web/src/lib/chat-header.test.ts",
+    "packages/web/src/lib/chat-header.ts",
+    "packages/web/src/lib/chat-message-reducer.test.ts",
+    "packages/web/src/lib/chat-message-reducer.ts",
+    "packages/web/src/lib/codebase-input.test.ts",
+    "packages/web/src/lib/codebase-input.ts",
+    "packages/web/src/lib/command-categories.ts",
+    "packages/web/src/lib/dag-layout.test.ts",
+    "packages/web/src/lib/dag-layout.ts",
+    "packages/web/src/lib/format.test.ts",
+    "packages/web/src/lib/format.ts",
+    "packages/web/src/lib/ide-uri.test.ts",
+    "packages/web/src/lib/ide-uri.ts",
+    "packages/web/src/lib/message-cache.test.ts",
+    "packages/web/src/lib/message-cache.ts",
+    "packages/web/src/lib/query-client.ts",
+    "packages/web/src/lib/select-initial-node.test.ts",
+    "packages/web/src/lib/select-initial-node.ts",
+    "packages/web/src/lib/system-status-reducer.test.ts",
+    "packages/web/src/lib/system-status-reducer.ts",
+    "packages/web/src/lib/types.ts",
+    "packages/web/src/lib/utils.ts",
+    "packages/web/src/lib/workflow-metadata.test.ts",
+    "packages/web/src/lib/workflow-metadata.ts",
+    "packages/web/src/lib/workflow-utils.test.ts",
+    "packages/web/src/lib/workflow-utils.ts",
+    "packages/web/src/main.tsx",
+    "packages/web/src/routes/ChatPage.tsx",
+    "packages/web/src/routes/DashboardPage.tsx",
+    "packages/web/src/routes/LoginPage.tsx",
+    "packages/web/src/routes/SettingsPage.tsx",
+    "packages/web/src/routes/WorkflowBuilderPage.tsx",
+    "packages/web/src/routes/WorkflowExecutionPage.tsx",
+    "packages/web/src/routes/WorkflowsPage.tsx",
+    "packages/web/src/stores/workflow-store.test.ts",
+    "packages/web/src/stores/workflow-store.ts",
+    "packages/web/tsconfig.json",
+    "packages/web/vite.config.ts",
+    "packages/workflows/package.json",
+    "packages/workflows/src/artifacts-index.test.ts",
+    "packages/workflows/src/artifacts-index.ts",
+    "packages/workflows/src/child-isolation.ts",
+    "packages/workflows/src/command-validation.test.ts",
+    "packages/workflows/src/command-validation.ts",
+    "packages/workflows/src/condition-evaluator.test.ts",
+    "packages/workflows/src/condition-evaluator.ts",
+    "packages/workflows/src/container-context.ts",
+    "packages/workflows/src/dag-executor.test.ts",
+    "packages/workflows/src/dag-executor.ts",
+    "packages/workflows/src/defaults/bundled-defaults.generated.ts",
+    "packages/workflows/src/defaults/bundled-defaults.test.ts",
+    "packages/workflows/src/defaults/bundled-defaults.ts",
+    "packages/workflows/src/defaults/generate-bundled-defaults.test.ts",
+    "packages/workflows/src/defaults/text-imports.d.ts",
+    "packages/workflows/src/defaults/tier-defaults.json",
+    "packages/workflows/src/deps.ts",
+    "packages/workflows/src/event-emitter.test.ts",
+    "packages/workflows/src/event-emitter.ts",
+    "packages/workflows/src/executor-preamble.test.ts",
+    "packages/workflows/src/executor-shared.test.ts",
+    "packages/workflows/src/executor-shared.ts",
+    "packages/workflows/src/executor.test.ts",
+    "packages/workflows/src/executor.ts",
+    "packages/workflows/src/hooks.test.ts",
+    "packages/workflows/src/include-expander.test.ts",
+    "packages/workflows/src/include-expander.ts",
+    "packages/workflows/src/load-command-prompt.test.ts",
+    "packages/workflows/src/loader.test.ts",
+    "packages/workflows/src/loader.ts",
+    "packages/workflows/src/logger.test.ts",
+    "packages/workflows/src/logger.ts",
+    "packages/workflows/src/model-validation.test.ts",
+    "packages/workflows/src/model-validation.ts",
+    "packages/workflows/src/output-ref.test.ts",
+    "packages/workflows/src/output-ref.ts",
+    "packages/workflows/src/router.test.ts",
+    "packages/workflows/src/router.ts",
+    "packages/workflows/src/runtime-check.test.ts",
+    "packages/workflows/src/schemas.test.ts",
+    "packages/workflows/src/schemas/dag-node.ts",
+    "packages/workflows/src/schemas/hooks.ts",
+    "packages/workflows/src/schemas/index.ts",
+    "packages/workflows/src/schemas/loop.ts",
+    "packages/workflows/src/schemas/node-artifact.ts",
+    "packages/workflows/src/schemas/retry.ts",
+    "packages/workflows/src/schemas/workflow-node-session.ts",
+    "packages/workflows/src/schemas/workflow-run.ts",
+    "packages/workflows/src/schemas/workflow.ts",
+    "packages/workflows/src/script-discovery.test.ts",
+    "packages/workflows/src/script-discovery.ts",
+    "packages/workflows/src/script-node-deps.test.ts",
+    "packages/workflows/src/store.ts",
+    "packages/workflows/src/subrun.test.ts",
+    "packages/workflows/src/test-utils.ts",
+    "packages/workflows/src/utils/duration.test.ts",
+    "packages/workflows/src/utils/duration.ts",
+    "packages/workflows/src/utils/fuzzy-match.ts",
+    "packages/workflows/src/utils/github-token-policy.test.ts",
+    "packages/workflows/src/utils/github-token-policy.ts",
+    "packages/workflows/src/utils/idle-timeout.test.ts",
+    "packages/workflows/src/utils/idle-timeout.ts",
+    "packages/workflows/src/utils/keep-awake.test.ts",
+    "packages/workflows/src/utils/keep-awake.ts",
+    "packages/workflows/src/utils/map-with-limit.test.ts",
+    "packages/workflows/src/utils/map-with-limit.ts",
+    "packages/workflows/src/utils/output-truncation.ts",
+    "packages/workflows/src/utils/tool-formatter.test.ts",
+    "packages/workflows/src/utils/tool-formatter.ts",
+    "packages/workflows/src/utils/workflow-requirements.test.ts",
+    "packages/workflows/src/utils/workflow-requirements.ts",
+    "packages/workflows/src/validation-parser.test.ts",
+    "packages/workflows/src/validation-parser.ts",
+    "packages/workflows/src/validator.test.ts",
+    "packages/workflows/src/validator.ts",
+    "packages/workflows/src/workflow-discovery.ts",
+    "packages/workflows/tsconfig.json",
+    "scripts/build-binaries.sh",
+    "scripts/build-runner-image.sh",
+    "scripts/check-bundled-skill.ts",
+    "scripts/checksums.sh",
+    "scripts/generate-bundled-defaults.ts",
+    "scripts/generate-bundled-schema.ts",
+    "scripts/generate-capability-matrix.ts",
+    "scripts/generate-pi-vendor-map.ts",
+    "scripts/git-credential-archon.sh",
+    "scripts/install.ps1",
+    "scripts/install.sh",
+    "scripts/sync-versions.sh",
+    "scripts/test-install.sh",
+    "scripts/tsconfig.json",
+    "scripts/update-homebrew.sh",
+    "scripts/validate-setup.sh",
+    "tsconfig.json"
+  ],
+  "languages": {
+    "css": 4,
+    "html": 2,
+    "javascript": 10,
+    "json": 30,
+    "markdown": 296,
+    "python": 1,
+    "ruby": 1,
+    "shell": 18,
+    "sql": 24,
+    "toml": 2,
+    "typescript": 843,
+    "yaml": 70
+  },
+  "license_files": [
+    "LICENSE"
+  ],
+  "repository": "/REPO/Archon",
+  "risk_flags": [
+    {
+      "file": ".archon/scripts/__tests__/fixtures/malicious/exfil.sh",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": ".archon/scripts/__tests__/fixtures/malicious/obfuscated.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": ".archon/scripts/__tests__/fixtures/malicious/path_escape.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".archon/scripts/__tests__/fixtures/malicious/rce.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": ".archon/scripts/__tests__/fixtures/malicious/shell_exec.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": ".archon/scripts/__tests__/fixtures/malicious/suspicious_network.sh",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": ".archon/scripts/maintainer-standup-gh-data.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": ".archon/workflows/e2e-opencode-smoke.yaml",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".archon/workflows/matt-pocock-workflow.yaml",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".archon/workflows/test-workflows/e2e-claude-smoke.yaml",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": ".archon/workflows/test-workflows/e2e-minimax-smoke.yaml",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".archon/workflows/test-workflows/e2e-pi-all-nodes-smoke.yaml",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".archon/workflows/test-workflows/e2e-pi-smoke.yaml",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".claude/PRPs/issues/issue-260-263-264.md",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": ".claude/PRPs/issues/issue-393-394.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".claude/PRPs/issues/issues-392-395.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".claude/agents/sdk-verifier.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".claude/commands/commit.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": ".claude/commands/validation/code-review.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".claude/commands/validation/validate-2.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".claude/docs/architecture-deep-dive.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": ".claude/docs/workflow-yaml-reference.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": ".claude/skills/archon/guides/github.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".claude/skills/archon/guides/setup.md",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": ".claude/skills/archon/guides/setup.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".claude/skills/archon/references/cli-commands.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".claude/skills/archon/references/cli-commands.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": ".claude/skills/archon/references/dag-advanced.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".claude/skills/archon/references/dag-advanced.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": ".claude/skills/archon/references/good-practices.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".claude/skills/archon/references/interactive-workflows.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": ".claude/skills/archon/references/repo-init.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".claude/skills/archon/references/repo-init.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": ".claude/skills/archon/references/troubleshooting.md",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": ".claude/skills/archon/references/troubleshooting.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": ".claude/skills/archon/references/workflow-dag.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": ".claude/skills/playwright-cli/references/running-code.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".claude/skills/remotion-best-practices/rules/voiceover.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".claude/skills/rulecheck/rules-guide.md",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": ".claude/skills/rulecheck/rules-guide.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".claude/skills/test-release/SKILL.md",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": ".claude/skills/test-release/SKILL.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".claude/skills/test-release/SKILL.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": ".claude/workshop/part1-guide.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".github/pull_request_template.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".github/workflows/e2e-smoke.yml",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": ".github/workflows/e2e-smoke.yml",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".github/workflows/marketplace-auto-review.yml",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".github/workflows/publish.yml",
+      "reason": "secret-reference"
+    },
+    {
+      "file": ".github/workflows/release.yml",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": ".github/workflows/release.yml",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "AGENTS.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "AGENTS.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "CLAUDE.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "CLAUDE.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "CONTRIBUTING.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "README.md",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": "README.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "auth-service/server.js",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "auth-service/test.js",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "deploy/cloud-init.yml",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": "deploy/cloud-init.yml",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "docker-compose.yml",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "docker-entrypoint.sh",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/adapters/src/chat/slack/workflow-bridge.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/adapters/src/community/forge/README.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/adapters/src/community/forge/gitea/adapter.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/adapters/src/community/forge/gitea/adapter.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/adapters/src/community/forge/gitea/adapter.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/adapters/src/community/forge/gitlab/adapter.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/adapters/src/community/forge/gitlab/adapter.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/adapters/src/community/forge/gitlab/adapter.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/adapters/src/community/forge/gitlab/auth.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/adapters/src/community/forge/gitlab/auth.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/adapters/src/forge/github/adapter.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/adapters/src/forge/github/adapter.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/adapters/src/forge/github/adapter.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/adapters/src/forge/github/context.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/cli/src/cli.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/cli/src/commands/ai.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/cli/src/commands/ai.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/cli/src/commands/doctor.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/cli/src/commands/doctor.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/cli/src/commands/serve.test.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/cli/src/commands/setup.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/cli/src/commands/setup.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/cli/src/commands/setup.ts",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": "packages/cli/src/commands/setup.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/cli/src/commands/telemetry.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/cli/src/commands/telemetry.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/cli/src/commands/workflow.test.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/cli/src/commands/workflow.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/core/src/config/config-types.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/config/config-types.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/core/src/credentials/catalog.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/credentials/catalog.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/credentials/connect-service.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/credentials/connect-service.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/credentials/delivery.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/credentials/delivery.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/credentials/index.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/credentials/oauth-bridge.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/credentials/oauth-providers.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/credentials/openai-oauth.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/credentials/openai-oauth.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/db/adapters/sqlite.test.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/core/src/db/adapters/sqlite.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/db/adapters/sqlite.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/db/bundled-schema.generated.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/db/user-ai-prefs-store.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/db/user-github-token-store.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/db/user-github-token-store.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/db/user-provider-key-store.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/db/user-provider-key-store.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/github-auth/auth.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/github-auth/auth.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/github-auth/connect-service.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/github-auth/connect-service.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/github-auth/device-flow.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/github-auth/device-flow.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/github-auth/private-key.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/github-auth/types.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/core/src/handlers/clone.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/handlers/clone.test.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/core/src/handlers/clone.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/core/src/operations/workflow-operations.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/core/src/orchestrator/orchestrator-agent.test.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/core/src/orchestrator/orchestrator-agent.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/orchestrator/orchestrator-agent.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/core/src/orchestrator/orchestrator-isolation.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/orchestrator/orchestrator.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/orchestrator/post-message-reminder.test.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/core/src/schemas/index.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/schemas/user-ai-prefs-row.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/schemas/user-github-token-row.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/schemas/user-provider-key-row.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/services/title-generator.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/utils/credential-sanitizer.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/utils/error-formatter.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/utils/error-formatter.test.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/core/src/utils/error-formatter.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/core/src/utils/error-formatter.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/utils/error-formatter.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/core/src/utils/token-crypto.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/workflows/store-adapter.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/core/src/workflows/store-adapter.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/adapters/community/gitea.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/adapters/community/gitlab.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/adapters/github-app-setup.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/adapters/github.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/adapters/index.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/book/quick-reference.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/contributing/adding-a-community-provider.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/contributing/releasing.md",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/deployment/cloud.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/deployment/docker.md",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/deployment/docker.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/deployment/windows.md",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/docs.mdx",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/getting-started/ai-assistants.md",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/getting-started/ai-assistants.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/getting-started/configuration.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/getting-started/installation.md",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/getting-started/overview.md",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/guides/authoring-workflows.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/guides/authoring-workflows.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/guides/container-isolation.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/guides/mcp-servers.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/guides/script-nodes.md",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/guides/script-nodes.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/guides/skills.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/reference/api.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/reference/architecture.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/reference/architecture.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/reference/archon-directories.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/reference/cli.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/reference/cli.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/reference/configuration.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/reference/configuration.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/reference/database.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/reference/database.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/reference/provider-capabilities.md",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/reference/security.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/reference/security.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/reference/troubleshooting.md",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/reference/troubleshooting.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/docs-web/src/content/docs/reference/variables.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/docs-web/src/data/roadmap.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/git/src/forge.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/git/src/git.test.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/git/src/worktree.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/isolation/docker/SECURITY.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/isolation/src/container/overlay.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/isolation/src/providers/worktree.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/isolation/src/types.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/paths/src/env-integration.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/paths/src/env-integration.test.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/paths/src/strip-cwd-env.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/paths/src/strip-cwd-env.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/paths/src/telemetry.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/paths/src/telemetry.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/providers/src/claude/binary-resolver.ts",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": "packages/providers/src/claude/binary-resolver.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/providers/src/claude/container-env.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/providers/src/claude/container-spawn.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/providers/src/claude/provider.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/providers/src/claude/provider.test.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/providers/src/claude/provider.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/providers/src/claude/provider.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/providers/src/codex/binary-resolver.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/providers/src/codex/provider.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/providers/src/codex/provider.test.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/providers/src/codex/provider.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/providers/src/community/copilot/provider-lazy-load.test.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/providers/src/community/copilot/provider.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/providers/src/community/copilot/registration.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/providers/src/community/pi/capabilities.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/providers/src/community/pi/options-translator.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/providers/src/community/pi/pi-vendor-map.generated.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/providers/src/community/pi/provider.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/providers/src/community/pi/provider.test.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/providers/src/community/pi/provider.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/providers/src/community/pi/provider.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/providers/src/registry.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/providers/src/types.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/providers/src/types.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/server/src/auth/config.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/server/src/auth/config.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/server/src/auth/index.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/server/src/auth/instance.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/server/src/boot/claude-auth-posture.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/server/src/boot/claude-auth-posture.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/server/src/github-auth-bootstrap.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/server/src/github-auth-bootstrap.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/server/src/index.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/server/src/index.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/server/src/routes/api.provider-keys.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/server/src/routes/api.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/server/src/routes/api.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/server/src/routes/api.workflow-runs.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/server/src/routes/api.workflows.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/server/src/routes/schemas/config.schemas.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/server/src/routes/schemas/provider-key.schemas.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/server/src/routes/schemas/user-ai-prefs.schemas.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/server/src/scripts/setup-auth.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/web/src/experiments/console/README.md",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/web/src/experiments/console/agent-chat-spike.md",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/web/src/experiments/console/builder/validation/when-grammar.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/web/src/experiments/console/lib/agent-status.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/web/src/experiments/console/lib/agent-status.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/web/src/experiments/console/lib/format.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/web/src/experiments/console/lib/model-options.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/web/src/experiments/console/skills/envVars.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/web/src/experiments/console/skills/providerKeys.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/web/src/hooks/useBuilderValidation.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/web/src/lib/api.generated.d.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/web/src/lib/workflow-metadata.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/workflows/src/command-validation.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/workflows/src/condition-evaluator.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/workflows/src/dag-executor.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/workflows/src/deps.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/workflows/src/executor-shared.test.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "packages/workflows/src/executor-shared.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/workflows/src/executor-shared.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/workflows/src/executor.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/workflows/src/executor.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/workflows/src/include-expander.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/workflows/src/loader.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/workflows/src/output-ref.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/workflows/src/router.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "packages/workflows/src/utils/github-token-policy.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/workflows/src/utils/idle-timeout.test.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/workflows/src/utils/idle-timeout.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "packages/workflows/src/validator.ts",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": "packages/workflows/src/validator.ts",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "scripts/generate-capability-matrix.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "scripts/generate-pi-vendor-map.ts",
+      "reason": "dynamic-execution"
+    },
+    {
+      "file": "scripts/generate-pi-vendor-map.ts",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "scripts/install.sh",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": "scripts/test-install.sh",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": "scripts/validate-setup.sh",
+      "reason": "secret-reference"
+    }
+  ],
+  "schema": "hurcules.repo-map",
+  "schema_version": "1.0.0",
+  "secret_file_locations": [],
+  "test_files": [
+    ".archon/scripts/__tests__/fixtures/benign/clean-fetch.ts",
+    ".archon/scripts/__tests__/fixtures/benign/clean-script.ts",
+    ".archon/scripts/__tests__/fixtures/benign/clean-workflow.yaml",
+    ".archon/scripts/__tests__/fixtures/malicious/cred_leak.ts",
+    ".archon/scripts/__tests__/fixtures/malicious/exfil.sh",
+    ".archon/scripts/__tests__/fixtures/malicious/obfuscated.ts",
+    ".archon/scripts/__tests__/fixtures/malicious/path_escape.ts",
+    ".archon/scripts/__tests__/fixtures/malicious/rce.ts",
+    ".archon/scripts/__tests__/fixtures/malicious/reverse_shell.sh",
+    ".archon/scripts/__tests__/fixtures/malicious/shell_exec.ts",
+    ".archon/scripts/__tests__/fixtures/malicious/suspicious_network.sh",
+    ".archon/scripts/__tests__/fixtures/malicious/unsafe_permissions.yaml",
+    ".archon/scripts/__tests__/marketplace-fetch-source.test.ts",
+    ".archon/scripts/__tests__/marketplace-security-scan.test.ts",
+    "packages/adapters/src/test/no-network.ts",
+    "packages/core/src/test/mocks/database.ts",
+    "packages/core/src/test/mocks/logger.ts",
+    "packages/core/src/test/mocks/platform.ts",
+    "packages/core/src/test/setup.ts",
+    "packages/providers/src/test/mocks/logger.ts",
+    "packages/server/src/test/workflow-mock-factories.ts",
+    "packages/web/src/experiments/console/builder/validation/test-helpers.ts",
+    "packages/workflows/src/test-utils.ts"
+  ]
+}

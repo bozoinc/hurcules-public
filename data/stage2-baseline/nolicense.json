@@ -1,0 +1,43 @@
+{
+  "dependency_manifests": [
+    "pyproject.toml"
+  ],
+  "documentation_files": [
+    "README.md"
+  ],
+  "entry_points": [],
+  "file_count": 10,
+  "file_tree": [
+    ".gitignore",
+    ".python-version",
+    "README.md",
+    "analysis.ipynb",
+    "prepare.py",
+    "program.md",
+    "progress.png",
+    "pyproject.toml",
+    "train.py",
+    "uv.lock"
+  ],
+  "languages": {
+    "markdown": 2,
+    "python": 2,
+    "toml": 1
+  },
+  "license_files": [],
+  "repository": "/REPO/gold-nolicense",
+  "risk_flags": [
+    {
+      "file": "README.md",
+      "reason": "pipe-to-shell"
+    },
+    {
+      "file": "train.py",
+      "reason": "dynamic-execution"
+    }
+  ],
+  "schema": "hurcules.repo-map",
+  "schema_version": "1.0.0",
+  "secret_file_locations": [],
+  "test_files": []
+}

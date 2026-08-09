@@ -1,0 +1,329 @@
+{
+  "compiled_from": "stage3-analysis",
+  "errors": [],
+  "gold_id": "express",
+  "ok": true,
+  "package": {
+    "capabilities": [
+      {
+        "confidence": 0.96,
+        "evidence": [
+          {
+            "file": "lib/request.js",
+            "scope": "defines the Request prototype with properties for query, params, body, headers, cookies, etc."
+          },
+          {
+            "file": "test/req.query.js",
+            "scope": "tests parsing of query string into req.query"
+          },
+          {
+            "file": "test/req.signedCookies.js",
+            "scope": "tests signed cookie parsing"
+          }
+        ],
+        "id": "c1",
+        "name": "HTTP request handling",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.91,
+        "evidence": [
+          {
+            "file": "examples/vhost/index.js",
+            "scope": "demonstrates using vhost middleware to mount apps on subdomains"
+          },
+          {
+            "file": "test/acceptance/vhost.js",
+            "scope": "tests vhost routing behavior"
+          }
+        ],
+        "id": "c10",
+        "name": "Virtual hosting (vhost)",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.96,
+        "evidence": [
+          {
+            "file": "lib/response.js",
+            "scope": "defines Response prototype with methods for status, header, send, json, redirect, download, sendFile, etc."
+          },
+          {
+            "file": "test/res.status.js",
+            "scope": "tests setting response status code"
+          },
+          {
+            "file": "test/res.json.js",
+            "scope": "tests JSON response sending"
+          },
+          {
+            "file": "test/res.sendFile.js",
+            "scope": "tests file transfer response"
+          },
+          {
+            "file": "test/res.redirect.js",
+            "scope": "tests redirect response"
+          }
+        ],
+        "id": "c2",
+        "name": "HTTP response handling",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.97,
+        "evidence": [
+          {
+            "file": "lib/application.js",
+            "scope": "implements app.use, app.route, app.VERB methods for middleware and routing"
+          },
+          {
+            "file": "test/app.use.js",
+            "scope": "tests mounting middleware via app.use"
+          },
+          {
+            "file": "test/app.route.js",
+            "scope": "tests route definition and handling"
+          },
+          {
+            "file": "examples/route-middleware/index.js",
+            "scope": "demonstrates custom middleware usage"
+          },
+          {
+            "file": "examples/mvc/index.js",
+            "scope": "shows controller-based routing"
+          }
+        ],
+        "id": "c3",
+        "name": "Routing and middleware system",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "examples/static-files/index.js",
+            "scope": "uses express.static middleware to serve files from a directory"
+          },
+          {
+            "file": "test/express.static.js",
+            "scope": "tests static file serving behavior"
+          },
+          {
+            "file": "examples/static-files/public/hello.txt",
+            "scope": "sample static file served"
+          }
+        ],
+        "id": "c4",
+        "name": "Static file serving",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.94,
+        "evidence": [
+          {
+            "file": "lib/view.js",
+            "scope": "provides render method and template lookup logic"
+          },
+          {
+            "file": "examples/ejs/index.js",
+            "scope": "shows rendering EJS templates with res.render"
+          },
+          {
+            "file": "test/acceptance/ejs.js",
+            "scope": "tests EJS view rendering"
+          },
+          {
+            "file": "examples/view-locals/views/index.ejs",
+            "scope": "example EJS template used by the app"
+          }
+        ],
+        "id": "c5",
+        "name": "View rendering and template engine support",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.93,
+        "evidence": [
+          {
+            "file": "examples/cookies/index.js",
+            "scope": "demonstrates reading and setting cookies, including signed cookies"
+          },
+          {
+            "file": "test/req.signedCookies.js",
+            "scope": "tests verification of signed cookies"
+          },
+          {
+            "file": "test/res.cookie.js",
+            "scope": "tests setting cookies via res.cookie"
+          },
+          {
+            "file": "lib/utils.js",
+            "scope": "contains cookie parsing utilities (signature verification)"
+          }
+        ],
+        "id": "c6",
+        "name": "Cookie parsing and signing",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "examples/session/index.js",
+            "scope": "uses express-session middleware to store session data"
+          },
+          {
+            "file": "examples/session/redis.js",
+            "scope": "shows session store backed by Redis"
+          },
+          {
+            "file": "test/acceptance/cookie-sessions.js",
+            "scope": "tests cookie-based session behavior"
+          }
+        ],
+        "id": "c7",
+        "name": "Session management",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.92,
+        "evidence": [
+          {
+            "file": "examples/content-negotiation/index.js",
+            "scope": "uses req.accepts to negotiate response format"
+          },
+          {
+            "file": "test/acceptance/content-negotiation.js",
+            "scope": "tests acceptance header handling"
+          },
+          {
+            "file": "lib/utils.js",
+            "scope": "includes parseAccept utility used by req.accepts"
+          }
+        ],
+        "id": "c8",
+        "name": "Content negotiation",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.94,
+        "evidence": [
+          {
+            "file": "test/express.json.js",
+            "scope": "tests JSON body parsing middleware"
+          },
+          {
+            "file": "test/express.urlencoded.js",
+            "scope": "tests URL-encoded body parsing middleware"
+          },
+          {
+            "file": "test/express.raw.js",
+            "scope": "tests raw body parsing middleware"
+          },
+          {
+            "file": "test/express.text.js",
+            "scope": "tests plain text body parsing middleware"
+          }
+        ],
+        "id": "c9",
+        "name": "Body parsing middleware (JSON, URL-encoded, raw, text)",
+        "ontology_type": "TOOL",
+        "requirements": []
+      }
+    ],
+    "compiler_version": "1.0.0",
+    "dependency_manifests": [
+      "package.json"
+    ],
+    "permissions_summary": [],
+    "provenance": {
+      "file_count": 213,
+      "languages": [
+        "css",
+        "html",
+        "javascript",
+        "json",
+        "markdown",
+        "yaml"
+      ],
+      "repository": "/REPO/gold-express"
+    },
+    "registry": {
+      "status": "candidate"
+    },
+    "schema": "hurcules.capability-package-v1",
+    "security": {
+      "execution_denied_by_default": true,
+      "hostile_by_default": true,
+      "risk_flags": [
+        {
+          "file": ".github/workflows/scorecard.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "History.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/auth/index.js",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/cookie-sessions/index.js",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/cookies/index.js",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/mvc/index.js",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/session/index.js",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/session/redis.js",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/web-service/index.js",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "lib/response.js",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "test/acceptance/web-service.js",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "test/req.signedCookies.js",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "test/res.cookie.js",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "test/res.redirect.js",
+          "reason": "dynamic-execution"
+        }
+      ],
+      "secret_file_locations": []
+    }
+  },
+  "warnings": []
+}

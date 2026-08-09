@@ -1,0 +1,199 @@
+{
+  "analyst": {
+    "analyst_version": "1.0.0",
+    "capabilities": [
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "src/main.rs",
+            "scope": "entry point, CLI parsing, orchestration"
+          },
+          {
+            "file": "src/lib.rs",
+            "scope": "core hex formatting and output logic"
+          },
+          {
+            "file": "src/input.rs",
+            "scope": "reading from stdin and files"
+          },
+          {
+            "file": "src/colors.rs",
+            "scope": "applying color themes to output"
+          }
+        ],
+        "id": "c1",
+        "name": "Hex viewer application",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "src/colors.rs",
+            "scope": "definition of color palettes and application functions"
+          },
+          {
+            "file": "doc/hexyl.1.md",
+            "scope": "description of color options in man page"
+          }
+        ],
+        "id": "c2",
+        "name": "Color theming subsystem",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.93,
+        "evidence": [
+          {
+            "file": "src/tests.rs",
+            "scope": "unit tests for core functions"
+          },
+          {
+            "file": "tests/integration_tests.rs",
+            "scope": "integration tests using example binaries"
+          },
+          {
+            "file": "tests/examples/hello_world_elf64",
+            "scope": "sample binary used in tests"
+          },
+          {
+            "file": "tests/examples/ascii",
+            "scope": "ASCII test data"
+          },
+          {
+            "file": "tests/examples/empty",
+            "scope": "empty file test data"
+          }
+        ],
+        "id": "c3",
+        "name": "Automated test suite",
+        "ontology_type": "EVALUATOR",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "README.md",
+            "scope": "overview, usage instructions, examples"
+          },
+          {
+            "file": "doc/hexyl.1.md",
+            "scope": "manual page detailing command-line options"
+          },
+          {
+            "file": "examples/simple.rs",
+            "scope": "example code demonstrating library usage"
+          }
+        ],
+        "id": "c4",
+        "name": "Documentation and usage examples",
+        "ontology_type": "KNOWLEDGE PACK",
+        "requirements": []
+      }
+    ],
+    "raw_candidate_count": 4,
+    "repository": "/REPO/gold-hexyl",
+    "schema": "hurcules.capability-analysis",
+    "validation_errors": []
+  },
+  "gold_id": "hexyl",
+  "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+  "survivors": [
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "src/main.rs",
+          "scope": "entry point, CLI parsing, orchestration"
+        },
+        {
+          "file": "src/lib.rs",
+          "scope": "core hex formatting and output logic"
+        },
+        {
+          "file": "src/input.rs",
+          "scope": "reading from stdin and files"
+        },
+        {
+          "file": "src/colors.rs",
+          "scope": "applying color themes to output"
+        }
+      ],
+      "id": "c1",
+      "name": "Hex viewer application",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "src/colors.rs",
+          "scope": "definition of color palettes and application functions"
+        },
+        {
+          "file": "doc/hexyl.1.md",
+          "scope": "description of color options in man page"
+        }
+      ],
+      "id": "c2",
+      "name": "Color theming subsystem",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.93,
+      "evidence": [
+        {
+          "file": "src/tests.rs",
+          "scope": "unit tests for core functions"
+        },
+        {
+          "file": "tests/integration_tests.rs",
+          "scope": "integration tests using example binaries"
+        },
+        {
+          "file": "tests/examples/hello_world_elf64",
+          "scope": "sample binary used in tests"
+        },
+        {
+          "file": "tests/examples/ascii",
+          "scope": "ASCII test data"
+        },
+        {
+          "file": "tests/examples/empty",
+          "scope": "empty file test data"
+        }
+      ],
+      "id": "c3",
+      "name": "Automated test suite",
+      "ontology_type": "EVALUATOR",
+      "requirements": []
+    },
+    {
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "README.md",
+          "scope": "overview, usage instructions, examples"
+        },
+        {
+          "file": "doc/hexyl.1.md",
+          "scope": "manual page detailing command-line options"
+        },
+        {
+          "file": "examples/simple.rs",
+          "scope": "example code demonstrating library usage"
+        }
+      ],
+      "id": "c4",
+      "name": "Documentation and usage examples",
+      "ontology_type": "KNOWLEDGE PACK",
+      "requirements": []
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "analyst": {
+    "analyst_version": "1.0.0",
+    "capabilities": [
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "src/bin/bat/main.rs",
+            "scope": "main entry point of bat executable"
+          },
+          {
+            "file": "tests/syntax-tests/highlighted/Go/main.go",
+            "scope": "sample source file used for syntax highlighting tests"
+          },
+          {
+            "file": "assets/syntaxes/02_Extra/syntax_test_csv.csv",
+            "scope": "asset file for CSV syntax highlighting test"
+          },
+          {
+            "file": "src/syntax_mapping/builtins/README.md",
+            "scope": "documentation of built-in syntax mappings"
+          }
+        ],
+        "id": "c1",
+        "name": "Syntax Highlighting Engine",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "src/bin/bat/main.rs",
+            "scope": "main entry point implementing bat's CLI"
+          },
+          {
+            "file": "doc/short-help.txt",
+            "scope": "short help message shown by bat --help"
+          },
+          {
+            "file": "doc/long-help.txt",
+            "scope": "detailed help and usage documentation"
+          },
+          {
+            "file": "tests/examples/bat.conf",
+            "scope": "example configuration file for bat"
+          },
+          {
+            "file": "tests/examples/bat-theme.conf",
+            "scope": "example theme configuration"
+          }
+        ],
+        "id": "c2",
+        "name": "Command-Line Interface (CLI) and User Interaction",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "tests/examples/git/.gitconfig",
+            "scope": "sample git config demonstrating git integration"
+          },
+          {
+            "file": "tests/examples/git/.config/git/config",
+            "scope": "another git config file used in tests"
+          },
+          {
+            "file": "tests/examples/git-commit.man",
+            "scope": "man page for git commit, showing integration with git"
+          },
+          {
+            "file": "src/bin/bat/main.rs",
+            "scope": "main entry point where git detection logic resides"
+          }
+        ],
+        "id": "c3",
+        "name": "Git Integration and Diff Display",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "doc/assets.md",
+            "scope": "documentation about assets, themes, and styling"
+          },
+          {
+            "file": "tests/examples/bat-theme.conf",
+            "scope": "example theme configuration"
+          },
+          {
+            "file": "tests/examples/bat.conf",
+            "scope": "example configuration referencing themes"
+          }
+        ],
+        "id": "c4",
+        "name": "Theming and Styling System",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "tests/mocked-pagers/more",
+            "scope": "mock pager program used to test paging behavior"
+          },
+          {
+            "file": "tests/mocked-pagers/more.bat",
+            "scope": "Windows batch mock pager"
+          },
+          {
+            "file": "tests/mocked-pagers/most",
+            "scope": "mock pager program"
+          },
+          {
+            "file": "tests/mocked-pagers/most.bat",
+            "scope": "Windows batch mock pager"
+          },
+          {
+            "file": "tests/mocked-pagers/echo.bat",
+            "scope": "simple echo mock pager"
+          }
+        ],
+        "id": "c5",
+        "name": "Automatic Paging and Output Redirection",
+        "ontology_type": "TOOL",
+        "requirements": []
+      }
+    ],
+    "raw_candidate_count": 5,
+    "repository": "/REPO/gold-bat",
+    "schema": "hurcules.capability-analysis",
+    "validation_errors": []
+  },
+  "gold_id": "bat",
+  "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+  "survivors": [
+    {
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "src/bin/bat/main.rs",
+          "scope": "main entry point of bat executable"
+        },
+        {
+          "file": "tests/syntax-tests/highlighted/Go/main.go",
+          "scope": "sample source file used for syntax highlighting tests"
+        },
+        {
+          "file": "assets/syntaxes/02_Extra/syntax_test_csv.csv",
+          "scope": "asset file for CSV syntax highlighting test"
+        },
+        {
+          "file": "src/syntax_mapping/builtins/README.md",
+          "scope": "documentation of built-in syntax mappings"
+        }
+      ],
+      "id": "c1",
+      "name": "Syntax Highlighting Engine",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "src/bin/bat/main.rs",
+          "scope": "main entry point implementing bat's CLI"
+        },
+        {
+          "file": "doc/short-help.txt",
+          "scope": "short help message shown by bat --help"
+        },
+        {
+          "file": "doc/long-help.txt",
+          "scope": "detailed help and usage documentation"
+        },
+        {
+          "file": "tests/examples/bat.conf",
+          "scope": "example configuration file for bat"
+        },
+        {
+          "file": "tests/examples/bat-theme.conf",
+          "scope": "example theme configuration"
+        }
+      ],
+      "id": "c2",
+      "name": "Command-Line Interface (CLI) and User Interaction",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "tests/examples/git/.gitconfig",
+          "scope": "sample git config demonstrating git integration"
+        },
+        {
+          "file": "tests/examples/git/.config/git/config",
+          "scope": "another git config file used in tests"
+        },
+        {
+          "file": "tests/examples/git-commit.man",
+          "scope": "man page for git commit, showing integration with git"
+        },
+        {
+          "file": "src/bin/bat/main.rs",
+          "scope": "main entry point where git detection logic resides"
+        }
+      ],
+      "id": "c3",
+      "name": "Git Integration and Diff Display",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "doc/assets.md",
+          "scope": "documentation about assets, themes, and styling"
+        },
+        {
+          "file": "tests/examples/bat-theme.conf",
+          "scope": "example theme configuration"
+        },
+        {
+          "file": "tests/examples/bat.conf",
+          "scope": "example configuration referencing themes"
+        }
+      ],
+      "id": "c4",
+      "name": "Theming and Styling System",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "tests/mocked-pagers/more",
+          "scope": "mock pager program used to test paging behavior"
+        },
+        {
+          "file": "tests/mocked-pagers/more.bat",
+          "scope": "Windows batch mock pager"
+        },
+        {
+          "file": "tests/mocked-pagers/most",
+          "scope": "mock pager program"
+        },
+        {
+          "file": "tests/mocked-pagers/most.bat",
+          "scope": "Windows batch mock pager"
+        },
+        {
+          "file": "tests/mocked-pagers/echo.bat",
+          "scope": "simple echo mock pager"
+        }
+      ],
+      "id": "c5",
+      "name": "Automatic Paging and Output Redirection",
+      "ontology_type": "TOOL",
+      "requirements": []
+    }
+  ]
+}

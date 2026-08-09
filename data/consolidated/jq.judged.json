@@ -1,0 +1,25 @@
+{
+  "gold_id": "jq",
+  "matches": [
+    {
+      "analyst": "Embeddable JSON Processing Library (libjq)",
+      "gold": "j1",
+      "matched": true
+    },
+    {
+      "analyst": "Embeddable JSON Processing Library (libjq)",
+      "gold": "j2",
+      "matched": true
+    },
+    {
+      "analyst": "Embeddable JSON Processing Library (libjq)",
+      "gold": "j3",
+      "matched": true
+    },
+    {
+      "analyst": "Comprehensive Test Suite Including Fuzzing",
+      "gold": "j4",
+      "matched": true
+    }
+  ]
+}

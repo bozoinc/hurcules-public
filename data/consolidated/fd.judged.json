@@ -1,0 +1,20 @@
+{
+  "gold_id": "fd",
+  "matches": [
+    {
+      "analyst": null,
+      "gold": "f1",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "f2",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "f3",
+      "matched": false
+    }
+  ]
+}

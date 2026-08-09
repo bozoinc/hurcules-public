@@ -1,0 +1,15 @@
+{
+  "gold_id": "suspicious",
+  "matches": [
+    {
+      "analyst": "Exploit Payload Generation",
+      "gold": "Attack payload catalog (injection, bypass, exploitation)",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "Prompt-injection / hostile-content training data",
+      "matched": false
+    }
+  ]
+}

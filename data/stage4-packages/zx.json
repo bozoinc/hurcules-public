@@ -1,0 +1,197 @@
+{
+  "compiled_from": "stage3-analysis",
+  "errors": [],
+  "gold_id": "zx",
+  "ok": true,
+  "package": {
+    "capabilities": [
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "src/index.ts",
+            "scope": "main entry point exporting the zx CLI"
+          },
+          {
+            "file": "src/cli.ts",
+            "scope": "defines command parsing and command implementations"
+          }
+        ],
+        "id": "c1",
+        "name": "Command-line Interface (CLI) for zx",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "commander",
+          "nodejs"
+        ]
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "src/core.ts",
+            "scope": "implements $ tag function that spawns child processes and returns Promises"
+          },
+          {
+            "file": "src/deps.ts",
+            "scope": "resolves executable paths for commands"
+          }
+        ],
+        "id": "c2",
+        "name": "Shell command execution with Promise-based API",
+        "ontology_type": "SKILL",
+        "requirements": [
+          "nodejs"
+        ]
+      },
+      {
+        "confidence": 0.85,
+        "evidence": [
+          {
+            "file": "src/globals.ts",
+            "scope": "declares global TypeScript interfaces for $ and related utilities"
+          },
+          {
+            "file": "src/globals-jsr.ts",
+            "scope": "provides JSR-specific global declarations"
+          },
+          {
+            "file": "test/fixtures/ts-project/script.ts",
+            "scope": "example TypeScript script using zx"
+          }
+        ],
+        "id": "c3",
+        "name": "TypeScript support for shell scripting",
+        "ontology_type": "SKILL",
+        "requirements": [
+          "typescript",
+          "nodejs"
+        ]
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "src/log.ts",
+            "scope": "exports verbose, info, warn, error logging functions used across the codebase"
+          }
+        ],
+        "id": "c4",
+        "name": "Logging utility for script output",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "nodejs"
+        ]
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "test/all.test.js",
+            "scope": "aggregates unit tests for core, cli, deps, etc."
+          },
+          {
+            "file": "test/cli.test.js",
+            "scope": "tests CLI command parsing and execution"
+          },
+          {
+            "file": "test/core.test.js",
+            "scope": "tests $ function and process handling"
+          }
+        ],
+        "id": "c5",
+        "name": "Test suite for verifying functionality",
+        "ontology_type": "WORKFLOW",
+        "requirements": [
+          "nodejs",
+          "mocha"
+        ]
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "docs/.vitepress/config.mts",
+            "scope": "VitePress configuration for building the documentation site"
+          },
+          {
+            "file": "docs/.vitepress/theme/index.js",
+            "scope": "custom theme layout for the docs"
+          },
+          {
+            "file": "docs/index.md",
+            "scope": "home page of the generated documentation"
+          }
+        ],
+        "id": "c6",
+        "name": "Documentation generation with VitePress",
+        "ontology_type": "WORKFLOW",
+        "requirements": [
+          "vitepress",
+          "vue",
+          "nodejs"
+        ]
+      }
+    ],
+    "compiler_version": "1.0.0",
+    "dependency_manifests": [
+      "package.json",
+      "test/fixtures/js-project/package.json",
+      "test/fixtures/ts-project/package.json"
+    ],
+    "permissions_summary": [],
+    "provenance": {
+      "file_count": 147,
+      "languages": [
+        "css",
+        "html",
+        "javascript",
+        "json",
+        "markdown",
+        "typescript",
+        "yaml"
+      ],
+      "repository": "/REPO/gold-zx"
+    },
+    "registry": {
+      "status": "candidate"
+    },
+    "schema": "hurcules.capability-package-v1",
+    "security": {
+      "execution_denied_by_default": true,
+      "hostile_by_default": true,
+      "risk_flags": [
+        {
+          "file": ".github/workflows/dev-publish.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".github/workflows/test.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/known-issues.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "docs/process-promise.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "src/core.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "src/deps.ts",
+          "reason": "dynamic-execution"
+        }
+      ],
+      "secret_file_locations": []
+    }
+  },
+  "warnings": []
+}

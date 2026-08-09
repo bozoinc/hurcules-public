@@ -1,0 +1,95 @@
+gold_case_id: jq
+reviewer: the product owner + Hermes
+status: HUMAN-VERIFIED-GOLD
+date: 2026-08-05
+
+# Gold-Standard: jq (jqlang/jq)
+# HURCULES Stage 1 - Gold case #3 (simple command-line tool category)
+
+provenance:
+  repository: jqlang/jq
+  commit_sha: 603db3f57741d217ba651e61086b550a72148b83
+  local_clone: ~/projects/gold-jq
+  version: jq (jq_version from configure.ac via scripts/version)
+  license: MIT-style (COPYING - copyright 2012 Stephen Dolan, permissive)
+  languages: [C, jq DSL, shell]
+  runtime: compiled C binary (autotools build)
+
+purpose: |
+  jq is a lightweight, command-line JSON processor. It takes JSON input, applies
+  a filter/program written in jq's own DSL, and outputs transformed JSON. The
+  standard tool for JSON manipulation in shell pipelines.
+
+architecture_map: |
+  C project (autotools): src/ (jv* JSON-value runtime, compile/execute bytecode
+  VM, builtin.jq DSL definitions, main entry), tests/ (jq.test, base64.test,
+  fuzz harnesses), docs/, Dockerfile, build config (configure.ac, Makefile.am).
+
+capabilities:
+  - id: j1
+    name: JSON parsing and value model (jv runtime)
+    ontology_type: TOOL
+    evidence:
+      - file: src/jv.c
+        scope: JSON value representation and manipulation
+      - file: src/jv_aux.c
+        scope: auxiliary value operations
+    confidence: 0.95
+    requirements: []
+  - id: j2
+    name: jq DSL compiler + bytecode VM
+    ontology_type: WORKFLOW
+    evidence:
+      - file: src/compile.c
+        scope: filter compilation to bytecode
+      - file: src/execute.c
+        scope: bytecode VM execution
+      - file: src/builtin.jq
+        scope: 98 DSL builtins (244 lines)
+    confidence: 0.94
+    requirements: []
+  - id: j3
+    name: Filter application on piped JSON (CLI)
+    ontology_type: TOOL
+    evidence:
+      - file: src/main.c
+        scope: CLI entry, filter application
+    confidence: 0.92
+    requirements: []
+  - id: j4
+    name: Test suite + fuzz harnesses
+    ontology_type: EVALUATOR
+    evidence:
+      - file: tests/jq.test
+        scope: DSL behavior tests
+      - file: tests/base64.test
+        scope: base64 feature tests
+      - file: tests/jq_fuzz_compile.c
+        scope: compile fuzzing
+    confidence: 0.88
+    requirements: []
+
+dependencies_permissions:
+  dependencies: [oniguruma-regex, libtool, flex-bison-build]
+  permissions:
+    filesystem: read-input-output
+    network: none
+    shell: none
+  security_posture: SECURITY.md present; fuzz harnesses indicate injection-hardening focus
+
+non_capabilities:
+  - not-a-sql-database
+  - not-a-json-schema-validator
+  - not-a-yaml-parser
+  - not-an-agent
+
+risks_findings:
+  - DSL is powerful: untrusted filters can be resource-heavy (no built-in limits)
+  - oniguruma regex can backtrack on complex patterns
+  - fuzz harnesses present but coverage not CI-gated in this snapshot
+
+evaluation_plan: |
+  Parity test: a non-technical user, using only HURCULES' jq capability template,
+  writes a jq filter to extract a field from a JSON file and gets correct output —
+  as well as an engineer using jq directly.
+  Checks: basic field extraction, piped input, array mapping, error on malformed JSON.

@@ -1,0 +1,20 @@
+{
+  "gold_id": "prettier",
+  "matches": [
+    {
+      "analyst": "Code Formatter",
+      "gold": "pr1",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "pr2",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "pr3",
+      "matched": false
+    }
+  ]
+}

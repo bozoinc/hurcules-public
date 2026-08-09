@@ -1,0 +1,260 @@
+{
+  "compiled_from": "stage3-analysis",
+  "errors": [],
+  "gold_id": "ratty",
+  "ok": true,
+  "package": {
+    "capabilities": [
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "src/main.rs",
+            "scope": "defines fn main() and initializes application"
+          },
+          {
+            "file": "Cargo.toml",
+            "scope": "defines binary target for the project"
+          }
+        ],
+        "id": "c1",
+        "name": "Rust binary application",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "src/config.rs",
+            "scope": "loads configuration from file, environment, and defaults"
+          },
+          {
+            "file": "config/ratty.toml",
+            "scope": "default configuration file in TOML format"
+          }
+        ],
+        "id": "c10",
+        "name": "Configuration management",
+        "ontology_type": "SKILL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "widget/Cargo.toml",
+            "scope": "defines a Rust library package named widget"
+          },
+          {
+            "file": "widget/src/lib.rs",
+            "scope": "provides public API for the widget library"
+          },
+          {
+            "file": "widget/examples/document.rs",
+            "scope": "example program demonstrating library usage"
+          }
+        ],
+        "id": "c2",
+        "name": "Rust library (widget)",
+        "ontology_type": "SKILL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "website/index.html",
+            "scope": "HTML markup serving as the project homepage"
+          },
+          {
+            "file": "website/assets/css/site.css",
+            "scope": "stylesheets for the website"
+          },
+          {
+            "file": "website/assets/js/site.js",
+            "scope": "client-side JavaScript for the website"
+          }
+        ],
+        "id": "c3",
+        "name": "Web frontend / project homepage",
+        "ontology_type": "KNOWLEDGE PACK",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "flake.nix",
+            "scope": "Nix flake definition for building the project"
+          },
+          {
+            "file": "flake.lock",
+            "scope": "locked dependencies ensuring reproducible builds"
+          },
+          {
+            "file": "nix/default.nix",
+            "scope": "Nix expression deriving a package from source"
+          }
+        ],
+        "id": "c4",
+        "name": "Nix packaging capability",
+        "ontology_type": "SKILL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": ".github/workflows/ci.yml",
+            "scope": "defines continuous integration jobs (build, test)"
+          },
+          {
+            "file": ".github/workflows/cd.yml",
+            "scope": "defines continuous deployment steps"
+          },
+          {
+            "file": ".github/workflows/release.yml",
+            "scope": "automates release publishing and artifact upload"
+          },
+          {
+            "file": ".github/workflows/website.yml",
+            "scope": "builds and deploys the project website"
+          }
+        ],
+        "id": "c5",
+        "name": "CI/CD workflow",
+        "ontology_type": "WORKFLOW",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "README.md",
+            "scope": "project overview, features, and usage instructions"
+          },
+          {
+            "file": "CHANGELOG.md",
+            "scope": "chronological list of changes per version"
+          },
+          {
+            "file": "CONTRIBUTING.md",
+            "scope": "guidelines for contributing code and documentation"
+          },
+          {
+            "file": "CODE_OF_CONDUCT.md",
+            "scope": "community behavior expectations"
+          },
+          {
+            "file": "SECURITY.md",
+            "scope": "security policy and vulnerability reporting process"
+          }
+        ],
+        "id": "c6",
+        "name": "Documentation",
+        "ontology_type": "KNOWLEDGE PACK",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "src/plugin.rs",
+            "scope": "defines plugin trait and registration/loading mechanism"
+          }
+        ],
+        "id": "c7",
+        "name": "Plugin system",
+        "ontology_type": "SKILL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "src/rendering.rs",
+            "scope": "implements main rendering loop and pipeline setup"
+          },
+          {
+            "file": "src/direct_render.rs",
+            "scope": "provides direct rendering functionality"
+          },
+          {
+            "file": "src/shaders/terminal_present.wgsl",
+            "scope": "WebGPU shader for presenting terminal output"
+          },
+          {
+            "file": "src/camera.rs",
+            "scope": "handles camera controls for 3D scene navigation"
+          },
+          {
+            "file": "src/model.rs",
+            "scope": "loads, stores, and transforms 3D models"
+          }
+        ],
+        "id": "c8",
+        "name": "Rendering engine",
+        "ontology_type": "SKILL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "src/cli.rs",
+            "scope": "parses command-line arguments and subcommands (using clap or similar)"
+          },
+          {
+            "file": "src/main.rs",
+            "scope": "invokes the CLI parser and dispatches to appropriate handlers"
+          }
+        ],
+        "id": "c9",
+        "name": "Command-line interface",
+        "ontology_type": "TOOL",
+        "requirements": []
+      }
+    ],
+    "compiler_version": "1.0.0",
+    "dependency_manifests": [],
+    "permissions_summary": [],
+    "provenance": {
+      "file_count": 88,
+      "languages": [
+        "css",
+        "html",
+        "javascript",
+        "markdown",
+        "rust",
+        "toml",
+        "yaml"
+      ],
+      "repository": "/REPO/gold-ratty"
+    },
+    "registry": {
+      "status": "candidate"
+    },
+    "schema": "hurcules.capability-package-v1",
+    "security": {
+      "execution_denied_by_default": true,
+      "hostile_by_default": true,
+      "risk_flags": [
+        {
+          "file": ".github/workflows/cd.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".github/workflows/release.yml",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": ".github/workflows/release.yml",
+          "reason": "secret-reference"
+        }
+      ],
+      "secret_file_locations": []
+    }
+  },
+  "warnings": []
+}

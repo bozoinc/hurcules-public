@@ -1,0 +1,155 @@
+[
+  {
+    "confidence": 0.95,
+    "evidence": [
+      {
+        "file": "agent_kernel.py",
+        "scope": "defines core agent execution loop and lifecycle management"
+      },
+      {
+        "file": "agents/software_engineer.py",
+        "scope": "implements a software engineer agent"
+      },
+      {
+        "file": "agents/web_researcher.py",
+        "scope": "implements a web researcher agent"
+      },
+      {
+        "file": "tools/list_available_agents.py",
+        "scope": "lists available agents for orchestration"
+      },
+      {
+        "file": "tools/assign_agent_to_task.py",
+        "scope": "assigns agents to specific tasks"
+      }
+    ],
+    "id": "c1",
+    "members": [
+      "c1"
+    ],
+    "name": "Agent Orchestration and Execution",
+    "ontology_type": "WORKFLOW",
+    "requirements": [
+      "python"
+    ]
+  },
+  {
+    "confidence": 0.95,
+    "evidence": [
+      {
+        "file": "tools/delete_file.py",
+        "scope": "provides file deletion functionality"
+      },
+      {
+        "file": "tools/overwrite_file.py",
+        "scope": "provides file overwrite functionality"
+      },
+      {
+        "file": "tools/read_file.py",
+        "scope": "provides file reading functionality"
+      },
+      {
+        "file": "tools/write_to_file.py",
+        "scope": "provides file writing functionality"
+      },
+      {
+        "file": "tools/fetch_web_page_raw_html.py",
+        "scope": "fetches raw HTML from a URL"
+      },
+      {
+        "file": "tools/fetch_web_page_content.py",
+        "scope": "fetches and processes web page content"
+      },
+      {
+        "file": "tools/duck_duck_go_web_search.py",
+        "scope": "performs web searches via DuckDuckGo"
+      },
+      {
+        "file": "tools/duck_duck_go_news_search.py",
+        "scope": "performs news searches via DuckDuckGo"
+      },
+      {
+        "file": "tools/run_shell_command.py",
+        "scope": "executes arbitrary shell commands"
+      },
+      {
+        "file": "tools/request_human_input.py",
+        "scope": "prompts and captures human input"
+      }
+    ],
+    "id": "c2",
+    "members": [
+      "c2"
+    ],
+    "name": "Toolbox for File, Web, Shell, and Human Interaction",
+    "ontology_type": "TOOL",
+    "requirements": [
+      "python"
+    ]
+  },
+  {
+    "confidence": 0.9,
+    "evidence": [
+      {
+        "file": "agents/tool_maker.py",
+        "scope": "facilitates creation of custom tools for agents"
+      },
+      {
+        "file": "agents/agent_smith.py",
+        "scope": "example of a specialized agent implementation"
+      },
+      {
+        "file": "agents/hermes.py",
+        "scope": "another example agent showing extensibility"
+      },
+      {
+        "file": "tools/list_available_agents.py",
+        "scope": "supports discovery of user\u2011defined agents"
+      }
+    ],
+    "id": "c3",
+    "members": [
+      "c3"
+    ],
+    "name": "Extensible Agent and Tool Creation",
+    "ontology_type": "AGENT TEMPLATE",
+    "requirements": [
+      "python"
+    ]
+  },
+  {
+    "confidence": 0.9,
+    "evidence": [
+      {
+        "file": "Dockerfile",
+        "scope": "defines the container image for the application"
+      },
+      {
+        "file": "docker-compose.yml",
+        "scope": "specifies multi\u2011service deployment configuration"
+      },
+      {
+        "file": "config.py",
+        "scope": "holds configuration settings (including secret references)"
+      },
+      {
+        "file": "requirements.txt",
+        "scope": "lists Python dependencies needed for runtime"
+      },
+      {
+        "file": ".env.example",
+        "scope": "provides example environment variable template"
+      }
+    ],
+    "id": "c4",
+    "members": [
+      "c4"
+    ],
+    "name": "Containerized Deployment and Configuration",
+    "ontology_type": "WORKFLOW",
+    "requirements": [
+      "docker",
+      "python"
+    ]
+  }
+]

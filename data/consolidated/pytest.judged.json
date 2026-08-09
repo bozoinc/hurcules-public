@@ -1,0 +1,25 @@
+{
+  "gold_id": "pytest",
+  "matches": [
+    {
+      "analyst": "c1",
+      "gold": "p1",
+      "matched": true
+    },
+    {
+      "analyst": "c2",
+      "gold": "p2",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "p3",
+      "matched": false
+    },
+    {
+      "analyst": "c4",
+      "gold": "p4",
+      "matched": true
+    }
+  ]
+}

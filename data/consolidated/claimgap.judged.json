@@ -1,0 +1,20 @@
+{
+  "gold_id": "claimgap",
+  "matches": [
+    {
+      "analyst": "c1",
+      "gold": "g1",
+      "matched": true
+    },
+    {
+      "analyst": "c3",
+      "gold": "g2",
+      "matched": true
+    },
+    {
+      "analyst": "c2",
+      "gold": "g3",
+      "matched": true
+    }
+  ]
+}

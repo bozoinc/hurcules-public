@@ -1,0 +1,2497 @@
+{
+  "compiled_from": "stage3-analysis",
+  "errors": [],
+  "gold_id": "mem0",
+  "ok": true,
+  "package": {
+    "capabilities": [
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "cli/node/package.json",
+            "scope": "defines Node.js CLI package"
+          },
+          {
+            "file": "cli/node/src/index.ts",
+            "scope": "entry point for Node.js CLI"
+          }
+        ],
+        "id": "c1",
+        "name": "Node.js Command Line Interface",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "node"
+        ]
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "skills/README.md",
+            "scope": "describes skills system overview"
+          },
+          {
+            "file": "skills/mem0/SKILL.md",
+            "scope": "defines core mem0 skill structure"
+          },
+          {
+            "file": "integrations/mem0-plugin/skills/mem0/SKILL.md",
+            "scope": "defines mem0 skill for plugin system"
+          }
+        ],
+        "id": "c11",
+        "name": "Skills System",
+        "ontology_type": "SKILL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.7,
+        "evidence": [
+          {
+            "file": "scripts/oss-to-platform-migrate.sh",
+            "scope": "script for migrating from OSS to platform"
+          },
+          {
+            "file": "skills/mem0-oss-to-platform/README.md",
+            "scope": "describes migration skill purpose"
+          },
+          {
+            "file": "skills/mem0-oss-to-platform/references/plan-template.md",
+            "scope": "provides migration plan template"
+          }
+        ],
+        "id": "c12",
+        "name": "Migration Workflow",
+        "ontology_type": "WORKFLOW",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "cli/python/pyproject.toml",
+            "scope": "defines Python CLI package"
+          },
+          {
+            "file": "cli/python/src/mem0_cli/__main__.py",
+            "scope": "entry point for Python CLI"
+          }
+        ],
+        "id": "c2",
+        "name": "Python Command Line Interface",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "python"
+        ]
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "mem0-ts/package.json",
+            "scope": "defines TypeScript SDK package"
+          },
+          {
+            "file": "mem0-ts/src/client/index.ts",
+            "scope": "entry point for TypeScript SDK"
+          }
+        ],
+        "id": "c3",
+        "name": "TypeScript SDK",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "node"
+        ]
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "mem0/__init__.py",
+            "scope": "defines Python SDK package"
+          },
+          {
+            "file": "mem0/client/main.py",
+            "scope": "entry point for Python SDK"
+          }
+        ],
+        "id": "c4",
+        "name": "Python SDK",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "python"
+        ]
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "openmemory/api/main.py",
+            "scope": "entry point for OpenMemory API"
+          },
+          {
+            "file": "openmemory/api/requirements.txt",
+            "scope": "lists Python dependencies for OpenMemory API"
+          }
+        ],
+        "id": "c5",
+        "name": "OpenMemory Platform API",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "python"
+        ]
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "server/main.py",
+            "scope": "entry point for self-hosted server API"
+          },
+          {
+            "file": "server/requirements.txt",
+            "scope": "lists Python dependencies for self-hosted server"
+          }
+        ],
+        "id": "c6",
+        "name": "Self-Hosted Server API",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "python"
+        ]
+      },
+      {
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "file": "integrations/mem0-plugin/requirements.txt",
+            "scope": "lists Python dependencies for plugin"
+          },
+          {
+            "file": "integrations/mem0-plugin/.opencode-plugin/opencode-mem0.ts",
+            "scope": "implements OpenCode plugin adapter"
+          }
+        ],
+        "id": "c7",
+        "name": "mem0-plugin Integration",
+        "ontology_type": "ADAPTER",
+        "requirements": [
+          "node",
+          "python"
+        ]
+      }
+    ],
+    "compiler_version": "1.0.0",
+    "dependency_manifests": [
+      "cli/node/package.json",
+      "cli/python/pyproject.toml",
+      "examples/mem0-demo/package.json",
+      "examples/multimodal-demo/package.json",
+      "examples/openai-inbuilt-tools/package.json",
+      "examples/vercel-ai-sdk-chat-app/package.json",
+      "examples/yt-assistant-chrome/package.json",
+      "integrations/mem0-plugin/.opencode-plugin/package.json",
+      "integrations/mem0-plugin/requirements.txt",
+      "integrations/openclaw/package.json",
+      "integrations/pi-agent-plugin/package.json",
+      "integrations/vercel-ai-sdk/package.json",
+      "mem0-ts/package.json",
+      "mem0-ts/src/community/package.json",
+      "mem0-ts/src/oss/package.json",
+      "mem0/memory/setup.py",
+      "openmemory/api/requirements.txt",
+      "openmemory/ui/package.json",
+      "pyproject.toml",
+      "server/dashboard/package.json",
+      "server/requirements.txt"
+    ],
+    "permissions_summary": [],
+    "provenance": {
+      "file_count": 1679,
+      "languages": [
+        "css",
+        "html",
+        "javascript",
+        "json",
+        "markdown",
+        "python",
+        "shell",
+        "toml",
+        "typescript",
+        "yaml"
+      ],
+      "repository": "/REPO/mem0"
+    },
+    "registry": {
+      "status": "candidate"
+    },
+    "schema": "hurcules.capability-package-v1",
+    "security": {
+      "execution_denied_by_default": true,
+      "hostile_by_default": true,
+      "risk_flags": [
+        {
+          "file": ".github/workflows/ci-gate.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".github/workflows/issue-labeler.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".github/workflows/openclaw-checks.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".github/workflows/release.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".github/workflows/ts-sdk-ci.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "AGENTS.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "CLAUDE.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "CONTRIBUTING.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "LLM.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/CLI_SPECIFICATION.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/cli-spec.json",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/node/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/node/src/branding.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/node/src/commands/agent-mode.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/node/src/commands/agent-rush.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/node/src/commands/config.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/node/src/commands/init.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/node/src/commands/utils.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/node/src/config.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/node/src/help.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/node/src/index.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/node/src/plugin-sync.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/node/src/telemetry.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/node/src/telemetry.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "cli/node/tests/cli-integration.test.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "cli/node/tests/config.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/node/tests/init-internals.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/node/tests/telemetry.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/node/vitest.config.ts",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "cli/python/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/python/src/mem0_cli/app.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/python/src/mem0_cli/backend/platform.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/python/src/mem0_cli/branding.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/python/src/mem0_cli/commands/agent_mode_cmd.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/python/src/mem0_cli/commands/agent_rush_cmd.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/python/src/mem0_cli/commands/config_cmd.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/python/src/mem0_cli/commands/identify_cmd.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/python/src/mem0_cli/commands/init_cmd.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/python/src/mem0_cli/commands/utils.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/python/src/mem0_cli/config.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/python/src/mem0_cli/plugin_sync.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/python/src/mem0_cli/telemetry.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/python/src/mem0_cli/telemetry.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "cli/python/src/mem0_cli/telemetry_sender.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/python/src/mem0_cli/telemetry_sender.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "cli/python/tests/conftest.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/python/tests/test_agent_mode.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "cli/python/tests/test_cli_integration.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/python/tests/test_cli_integration.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "cli/python/tests/test_commands.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/python/tests/test_config.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/python/tests/test_init_internals.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/python/tests/test_init_internals.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "cli/python/tests/test_telemetry.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "cli/python/tests/test_telemetry.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "docs/api-reference.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/api-reference/memory/add-memories.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/api-reference/organizations-projects.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/changelog/openclaw.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/changelog/sdk.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/embedders/config.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/embedders/models/aws_bedrock.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/embedders/models/azure_openai.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/embedders/models/google_AI.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/embedders/models/huggingface.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/embedders/models/langchain.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/embedders/models/lmstudio.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/embedders/models/ollama.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/embedders/models/openai.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/embedders/models/together.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/embedders/models/vertexai.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/llms/config.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/llms/models/anthropic.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/llms/models/aws_bedrock.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/llms/models/azure_openai.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/llms/models/deepseek.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/llms/models/google_AI.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/llms/models/groq.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/llms/models/langchain.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/llms/models/litellm.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/llms/models/lmstudio.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/llms/models/minimax.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/llms/models/mistral_AI.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/llms/models/ollama.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/llms/models/openai.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/llms/models/sarvam.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/llms/models/together.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/llms/models/vllm.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/llms/models/xAI.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/rerankers/config.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/rerankers/custom-prompts.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/rerankers/models/cohere.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/rerankers/models/llm.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/rerankers/models/llm_reranker.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/rerankers/models/zero_entropy.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/config.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/azure.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/azure_mysql.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/baidu.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/cassandra.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/chroma.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/databricks.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/elasticsearch.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/faiss.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/mongodb.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/neon.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/pgvector.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/pinecone.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/qdrant.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/redis.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/s3_vectors.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/supabase.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/turbopuffer.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/upstash-vector.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/vectorize.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/vertex_ai.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/components/vectordbs/dbs/weaviate.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/companions/ai-tutor.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/companions/nodejs-companion.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/companions/quickstart-demo.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/companions/travel-assistant.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/companions/voice-companion-openai.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/essentials/building-ai-companion.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/essentials/controlling-memory-ingestion.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/essentials/entity-partitioning-playbook.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/essentials/exporting-memories.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/essentials/tagging-and-organizing-memories.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/frameworks/eliza-os-character.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/frameworks/gemini-3-with-mem0-mcp.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/frameworks/llamaindex-multiagent.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/frameworks/llamaindex-react.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/integrations/agents-sdk-tool.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/integrations/aws-bedrock.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/integrations/healthcare-google-adk.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/integrations/mastra-agent.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/integrations/openai-tool-calls.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/integrations/tavily-search.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/operations/content-writing.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/operations/email-automation.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/operations/support-inbox.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/cookbooks/operations/team-task-agent.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/core-concepts/memory-evaluation.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/core-concepts/memory-operations/add.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/core-concepts/memory-operations/delete.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/core-concepts/memory-operations/search.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/core-concepts/memory-operations/update.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/core-concepts/memory-types.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/agentops.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/agno.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/antigravity.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/autogen.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/aws-bedrock.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/camel-ai.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/chatdev.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/claude-code.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/codex.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/crewai.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/cursor.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/elevenlabs.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/flowise.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/google-ai-adk.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/hermes.mdx",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "docs/integrations/hermes.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/langchain-tools.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/langchain.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/langgraph.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/livekit.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/llama-index.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/mastra.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/openai-agents-sdk.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/openclaw.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/opencode.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/pi-agent.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/pipecat.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/respan.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/integrations/vercel-ai-sdk.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/migration/api-changes.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/migration/oss-to-platform.mdx",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "docs/migration/oss-to-platform.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/migration/oss-v2-to-v3.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/migration/platform-v2-to-v3.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/migration/server-pgvector-upgrade.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/open-source/configuration.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/open-source/features/custom-instructions.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/open-source/features/openai_compatibility.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/open-source/features/reranker-search.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/open-source/features/rest-api.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/open-source/node-quickstart.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/open-source/overview.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/open-source/python-quickstart.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/open-source/setup.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/openapi.json",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/platform/advanced-memory-operations.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/platform/cli.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/platform/features/async-client.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/platform/features/criteria-retrieval.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/platform/features/custom-categories.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/platform/features/entity-scoped-memory.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/platform/features/feedback-mechanism.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/platform/features/graph-memory.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/platform/features/group-chat.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/platform/features/memory-decay.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/platform/features/memory-export.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/platform/features/multimodal-support.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/platform/features/temporal-reasoning.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/platform/features/timestamp.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/platform/features/webhooks.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/platform/mem0-mcp.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/platform/quickstart.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/templates/api_reference_template.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/templates/integration_guide_template.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/templates/operation_guide_template.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/templates/quickstart_template.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/vibecoding.mdx",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/misc/diet_assistant_voice_cartesia.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/misc/fitness_checker.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/misc/movie_recommendation_grok3.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/misc/personal_assistant_agno.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/misc/strands_agent_aws_elasticache_neptune.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/misc/study_buddy.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/misc/vllm_example.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/misc/voice_assistant_elevenlabs.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/multiagents/llamaindex_learning_system.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/nemoclaw/install-mem0-plugin.sh",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/nemoclaw/quickstart.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/nemoclaw/setup-mem0-nemoclaw.sh",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "examples/nemoclaw/setup-mem0-nemoclaw.sh",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/openai-inbuilt-tools/index.js",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/yt-assistant-chrome/public/popup.html",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/yt-assistant-chrome/src/popup.js",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/yt-assistant-chrome/styles/options.css",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "examples/yt-assistant-chrome/styles/popup.css",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/.claude-plugin/plugin.json",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/.codex-mcp.json",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/.cursor-mcp.json",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/.mcp.json",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/.opencode-plugin/CHANGELOG.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/.opencode-plugin/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/.opencode-plugin/opencode-mem0.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/.opencode-plugin/opencode-skills/mem0-status/SKILL.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/.opencode-plugin/telemetry.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/CHANGELOG.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/CHANGELOG.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "integrations/mem0-plugin/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/mcp_config.json",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/_identity.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/_identity.sh",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/_project.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/_search.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/auto_capture.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/auto_import.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/auto_import.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/auto_setup_categories.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/capture_compact_summary.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/capture_session_summary.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/file_context.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/import_competing_tools.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/on_bash_output.sh",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/on_file_read.sh",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/on_file_read_cursor.sh",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/on_pre_compact.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/on_session_start.sh",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/on_stop.sh",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/on_stop_cursor.sh",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/on_user_prompt.sh",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/session_timeline.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/setup_coding_categories.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/telemetry.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/scripts/telemetry.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "integrations/mem0-plugin/skills/health/SKILL.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/skills/mem0/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/skills/mem0/SKILL.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/skills/mem0/client/differences.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/skills/mem0/client/node.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/skills/mem0/client/python.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/skills/mem0/references/api-reference.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/skills/mem0/references/integration-patterns.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/skills/mem0/references/quickstart.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/skills/mem0/references/sdk-guide.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/skills/mem0/references/use-cases.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/skills/onboard/SKILL.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/tests/conftest.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "integrations/mem0-plugin/tests/test_auto_setup_categories.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/tests/test_import_competing_tools.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/tests/test_import_competing_tools.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "integrations/mem0-plugin/tests/test_parse_export_file.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "integrations/mem0-plugin/tests/test_parse_mem0_config.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "integrations/mem0-plugin/tests/test_project.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "integrations/mem0-plugin/tests/test_rubric_dedup.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/tests/test_rubric_dedup.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "integrations/mem0-plugin/tests/test_search.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/tests/test_session_stats.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "integrations/mem0-plugin/tests/test_telemetry.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/mem0-plugin/tests/test_telemetry.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "integrations/mem0-plugin/tests/test_write_path.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/cli/commands.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/cli/config-file.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/cli/json-helpers.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/cli/oss-wizard.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/config.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/filtering.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "integrations/openclaw/index.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/index.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/openclaw.plugin.json",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/scripts/configure.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/skill-loader.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/skill-loader.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/skills/memory-dream/SKILL.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/skills/memory-triage/SKILL.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/sqlite-resilience.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/telemetry.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/tests/backend-platform.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/tests/cli-commands.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/tests/config-file.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/tests/config.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/openclaw/tests/json-helpers.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/pi-agent-plugin/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/pi-agent-plugin/skills/status/SKILL.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/pi-agent-plugin/src/config/index.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/pi-agent-plugin/src/entry.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/pi-agent-plugin/src/memory/tools.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "integrations/pi-agent-plugin/src/telemetry.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/pi-agent-plugin/tests/config.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/vercel-ai-sdk/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/vercel-ai-sdk/config/test-config.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/vercel-ai-sdk/src/mem0-generic-language-model.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/vercel-ai-sdk/src/mem0-utils.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/vercel-ai-sdk/tests/mem0-provider-tests/mem0-cohere.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/vercel-ai-sdk/tests/mem0-provider-tests/mem0-google.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/vercel-ai-sdk/tests/mem0-provider-tests/mem0-groq.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/vercel-ai-sdk/tests/mem0-provider-tests/mem0-openai-structured-ouput.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/vercel-ai-sdk/tests/mem0-provider-tests/mem0-openai.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/vercel-ai-sdk/tests/mem0-provider-tests/mem0_anthropic.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/vercel-ai-sdk/tests/mem0-toolcalls.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/vercel-ai-sdk/tests/utils-test/anthropic-integration.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/vercel-ai-sdk/tests/utils-test/cohere-integration.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/vercel-ai-sdk/tests/utils-test/google-integration.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/vercel-ai-sdk/tests/utils-test/groq-integration.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "integrations/vercel-ai-sdk/tests/utils-test/openai-integration.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/client/telemetry.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/client/tests/helpers.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/client/tests/integration/batch.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/client/tests/integration/crud.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/client/tests/integration/global-setup.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/client/tests/integration/global-teardown.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/client/tests/integration/helpers.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/client/tests/integration/initialization.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/client/tests/integration/management.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/client/tests/integration/search.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/client/tests/memoryClient.batch.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/client/tests/memoryClient.crud.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/client/tests/memoryClient.exports.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/client/tests/memoryClient.init.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/client/tests/memoryClient.project.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/client/tests/memoryClient.search.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/client/tests/memoryClient.users.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/client/tests/memoryClient.webhooks.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/client/tests/telemetry-aliasing.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/community/src/integrations/langchain/mem0.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/examples/basic.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/examples/llms/mistral-example.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/examples/vector-stores/azure-ai-search.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/examples/vector-stores/memory.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/examples/vector-stores/pgvector.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/examples/vector-stores/qdrant.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/examples/vector-stores/redis.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/examples/vector-stores/supabase.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/src/config/defaults.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/src/embeddings/google.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/src/embeddings/lmstudio.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/src/llms/anthropic.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/src/llms/deepseek.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/src/llms/groq.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/src/llms/lmstudio.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/src/storage/SQLiteManager.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "mem0-ts/src/oss/src/tests/sqlite-backward-compat.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/src/utils/entity_extraction.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "mem0-ts/src/oss/src/utils/memory.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/src/utils/notices.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/src/utils/telemetry.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/src/vector_stores/azure_ai_search.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0-ts/src/oss/src/vector_stores/memory.ts",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "mem0-ts/src/oss/tests/deepseek.test.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/client/main.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/base.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/embeddings/base.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/llms/anthropic.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/llms/aws_bedrock.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/llms/azure.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/llms/base.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/llms/deepseek.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/llms/gemini.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/llms/lmstudio.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/llms/minimax.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/llms/ollama.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/llms/openai.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/llms/vllm.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/llms/xai.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/rerankers/base.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/rerankers/llm.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/rerankers/zero_entropy.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/vector_stores/azure_ai_search.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/vector_stores/baidu.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/vector_stores/chroma.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/vector_stores/databricks.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/vector_stores/elasticsearch.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/vector_stores/opensearch.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/vector_stores/pinecone.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/vector_stores/qdrant.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/vector_stores/turbopuffer.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/configs/vector_stores/weaviate.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/embeddings/aws_bedrock.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/embeddings/azure_openai.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/embeddings/gemini.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/embeddings/lmstudio.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/embeddings/ollama.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "mem0/embeddings/openai.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/embeddings/together.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/exceptions.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/llms/anthropic.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/llms/aws_bedrock.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/llms/azure_openai.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/llms/azure_openai_structured.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/llms/base.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/llms/deepseek.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/llms/gemini.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/llms/groq.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/llms/lmstudio.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/llms/minimax.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/llms/ollama.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/llms/openai.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/llms/openai_structured.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/llms/sarvam.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/llms/together.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/llms/vllm.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/llms/xai.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/memory/main.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/memory/telemetry.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/proxy/main.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/proxy/main.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "mem0/reranker/cohere_reranker.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/reranker/huggingface_reranker.py",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "mem0/reranker/huggingface_reranker.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/reranker/llm_reranker.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/reranker/sentence_transformer_reranker.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/reranker/zero_entropy_reranker.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/utils/factory.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/utils/gcp_auth.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/vector_stores/azure_ai_search.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/vector_stores/baidu.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/vector_stores/chroma.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/vector_stores/databricks.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/vector_stores/elasticsearch.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/vector_stores/milvus.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/vector_stores/pinecone.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/vector_stores/qdrant.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/vector_stores/turbopuffer.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "mem0/vector_stores/weaviate.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "openmemory/CONTRIBUTING.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "openmemory/README.md",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "openmemory/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "openmemory/api/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "openmemory/api/app/routers/config.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "openmemory/api/app/utils/memory.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "openmemory/api/config.json",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "openmemory/api/default_config.json",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "openmemory/api/tests/test_mcp_server.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "openmemory/compose/milvus.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "openmemory/docker-compose.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "openmemory/run.sh",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "openmemory/ui/store/configSlice.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "scripts/oss-to-platform-migrate.sh",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "server/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "server/alembic/versions/001_create_users_and_api_keys.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "server/auth.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "server/dashboard/src/app/api/auth/refresh/route.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "server/dashboard/src/utils/api-endpoints.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "server/dashboard/src/utils/api.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "server/dashboard/src/utils/self-hosted-config.ts",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "server/docker-compose.yaml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "server/init-db.sh",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "server/main.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "server/models.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "server/routers/api_keys.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "server/routers/auth.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "server/routers/requests.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "server/scripts/seed.sh",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "server/telemetry.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0-cli/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0-cli/SKILL.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0-cli/references/command-reference.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0-cli/references/configuration.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0-cli/references/workflows.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0-integrate/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0-integrate/SKILL.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0-integrate/SKILL.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "skills/mem0-oss-to-platform/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0-oss-to-platform/SKILL.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0-oss-to-platform/references/api-mapping.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0-oss-to-platform/references/gotchas.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0-oss-to-platform/references/plan-template.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0-test-integration/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0-test-integration/SKILL.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0-vercel-ai-sdk/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0-vercel-ai-sdk/SKILL.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0-vercel-ai-sdk/references/memory-utilities.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0-vercel-ai-sdk/references/provider-api.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0-vercel-ai-sdk/references/usage-patterns.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0/SKILL.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0/client/differences.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0/client/node.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0/client/python.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0/references/api-reference.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0/references/integration-patterns.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0/references/quickstart.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0/references/sdk-guide.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/mem0/references/use-cases.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/embeddings/test_aws_bedrock_embeddings.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/embeddings/test_azure_openai_embeddings.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/embeddings/test_gemini_emeddings.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/embeddings/test_openai_embeddings.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/llms/test_anthropic.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/llms/test_azure_openai.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/llms/test_azure_openai_structured.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/llms/test_deepseek.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/llms/test_gemini.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/llms/test_langchain.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/llms/test_minimax.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/llms/test_openai.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/llms/test_sarvam.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/llms/test_xai.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/memory/test_safe_deepcopy_config.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/rerankers/test_llm_reranker_config.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/rerankers/test_llm_reranker_nested_config.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/rerankers/test_reranker_fallback_topk.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/test_api_keys_router.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/test_client.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/test_http_client_proxies.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/test_main.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/test_memory_integration.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/test_oss_to_platform_migrate.py",
+          "reason": "pipe-to-shell"
+        },
+        {
+          "file": "tests/test_oss_to_platform_migrate.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/test_oss_to_platform_migrate.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "tests/test_proxy.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/test_server_auth.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/test_server_params.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/test_telemetry_sampling.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/vector_stores/test_azure_ai_search.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/vector_stores/test_baidu.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/vector_stores/test_databricks.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/vector_stores/test_e2e_threshold.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/vector_stores/test_faiss.py",
+          "reason": "shell-exec"
+        },
+        {
+          "file": "tests/vector_stores/test_faiss.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "tests/vector_stores/test_opensearch.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/vector_stores/test_pinecone.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/vector_stores/test_qdrant_config.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/vector_stores/test_turbopuffer.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/vector_stores/test_weaviate.py",
+          "reason": "secret-reference"
+        }
+      ],
+      "secret_file_locations": [
+        "server/.env"
+      ]
+    }
+  },
+  "warnings": []
+}

@@ -1,0 +1,158 @@
+[
+  {
+    "confidence": 0.95,
+    "evidence": [
+      {
+        "file": "scripts/build_site.py",
+        "scope": "Python script that builds the documentation site"
+      },
+      {
+        "file": "scripts/generate_site_locales.mjs",
+        "scope": "JavaScript module that generates localized site files"
+      },
+      {
+        "file": "docs/index.html",
+        "scope": "Example generated HTML output for the site"
+      },
+      {
+        "file": "i18n/manifest.yml",
+        "scope": "Internationalization manifest defining locales and translations"
+      }
+    ],
+    "id": "c1",
+    "members": [
+      "c1"
+    ],
+    "name": "Website generation and localization",
+    "ontology_type": "TOOL",
+    "requirements": [
+      "nodejs",
+      "python"
+    ]
+  },
+  {
+    "confidence": 0.9,
+    "evidence": [
+      {
+        "file": "data/resource.schema.json",
+        "scope": "JSON Schema defining the structure of resources"
+      },
+      {
+        "file": "scripts/validate.py",
+        "scope": "Python script validating resources against the schema"
+      },
+      {
+        "file": "scripts/validate_i18n.py",
+        "scope": "Python script validating i18n translation files"
+      },
+      {
+        "file": "data/resources.csv",
+        "scope": "CSV file containing resource entries"
+      },
+      {
+        "file": "data/resources.jsonl",
+        "scope": "JSONL file containing resource entries"
+      }
+    ],
+    "id": "c2",
+    "members": [
+      "c2"
+    ],
+    "name": "Resource data validation and schema enforcement",
+    "ontology_type": "TOOL",
+    "requirements": [
+      "python"
+    ]
+  },
+  {
+    "confidence": 0.9,
+    "evidence": [
+      {
+        "file": "scripts/build_release.py",
+        "scope": "Script preparing release artifacts and versioning"
+      },
+      {
+        "file": "scripts/publish_huggingface.sh",
+        "scope": "Shell script publishing the package to Hugging Face"
+      },
+      {
+        "file": ".github/workflows/release.yml",
+        "scope": "GitHub Actions workflow automating release creation"
+      },
+      {
+        "file": "huggingface/README.md",
+        "scope": "Documentation for Hugging Face integration and publishing"
+      }
+    ],
+    "id": "c3",
+    "members": [
+      "c3"
+    ],
+    "name": "Release automation and distribution",
+    "ontology_type": "TOOL",
+    "requirements": [
+      "bash",
+      "git",
+      "python"
+    ]
+  },
+  {
+    "confidence": 0.85,
+    "evidence": [
+      {
+        "file": ".github/workflows/quality.yml",
+        "scope": "GitHub Actions workflow running quality checks (linting, validation, etc.)"
+      },
+      {
+        "file": "lychee.toml",
+        "scope": "Configuration file for the Lychee link checker used in CI"
+      },
+      {
+        "file": "scripts/check.sh",
+        "scope": "Shell script performing various repository health checks"
+      }
+    ],
+    "id": "c4",
+    "members": [
+      "c4"
+    ],
+    "name": "CI/CD quality assurance and link checking",
+    "ontology_type": "TOOL",
+    "requirements": [
+      "bash",
+      "lychee"
+    ]
+  },
+  {
+    "confidence": 0.95,
+    "evidence": [
+      {
+        "file": "CONTRIBUTING.md",
+        "scope": "Guidelines for contributing code, documentation, and resources"
+      },
+      {
+        "file": "CODE_OF_CONDUCT.md",
+        "scope": "Community conduct standards expected from contributors"
+      },
+      {
+        "file": "SECURITY.md",
+        "scope": "Policy for reporting and handling security vulnerabilities"
+      },
+      {
+        "file": ".github/ISSUE_TEMPLATE/add-resource.yml",
+        "scope": "Template for submitting new resource entries via issues"
+      },
+      {
+        "file": ".github/PULL_REQUEST_TEMPLATE.md",
+        "scope": "Template describing required information for pull requests"
+      }
+    ],
+    "id": "c5",
+    "members": [
+      "c5"
+    ],
+    "name": "Contribution governance and community policies",
+    "ontology_type": "POLICY",
+    "requirements": []
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "dependency_manifests": [
+    "requirements.txt"
+  ],
+  "documentation_files": [
+    "README.md"
+  ],
+  "entry_points": [],
+  "file_count": 38,
+  "file_tree": [
+    ".env.example",
+    ".gitignore",
+    "Dockerfile",
+    "LICENSE",
+    "README.md",
+    "agent_kernel.py",
+    "agentk",
+    "agents/agent_smith.py",
+    "agents/hermes.py",
+    "agents/software_engineer.py",
+    "agents/tool_maker.py",
+    "agents/web_researcher.py",
+    "apt-packages-list.txt",
+    "bash_shell",
+    "config.py",
+    "docker-compose.yml",
+    "requirements.txt",
+    "tests/__init__.py",
+    "tests/agents/test_software_engineer.py",
+    "tests/agents/test_web_researcher.py",
+    "tests/tools/test_delete_file.py",
+    "tests/tools/test_fetch_web_page_raw_html.py",
+    "tests/tools/test_overwrite_file.py",
+    "tests/tools/test_read_file.py",
+    "tests/tools/test_request_human_input.py",
+    "tools/assign_agent_to_task.py",
+    "tools/delete_file.py",
+    "tools/duck_duck_go_news_search.py",
+    "tools/duck_duck_go_web_search.py",
+    "tools/fetch_web_page_content.py",
+    "tools/fetch_web_page_raw_html.py",
+    "tools/list_available_agents.py",
+    "tools/overwrite_file.py",
+    "tools/read_file.py",
+    "tools/request_human_input.py",
+    "tools/run_shell_command.py",
+    "tools/write_to_file.py",
+    "utils.py"
+  ],
+  "languages": {
+    "markdown": 1,
+    "python": 28,
+    "yaml": 1
+  },
+  "license_files": [
+    "LICENSE"
+  ],
+  "repository": "/REPO/gold-claimgap5",
+  "risk_flags": [
+    {
+      "file": "config.py",
+      "reason": "secret-reference"
+    },
+    {
+      "file": "tools/run_shell_command.py",
+      "reason": "subprocess-usage"
+    },
+    {
+      "file": "utils.py",
+      "reason": "secret-reference"
+    }
+  ],
+  "schema": "hurcules.repo-map",
+  "schema_version": "1.0.0",
+  "secret_file_locations": [],
+  "test_files": [
+    "tests/__init__.py",
+    "tests/agents/test_software_engineer.py",
+    "tests/agents/test_web_researcher.py",
+    "tests/tools/test_delete_file.py",
+    "tests/tools/test_fetch_web_page_raw_html.py",
+    "tests/tools/test_overwrite_file.py",
+    "tests/tools/test_read_file.py",
+    "tests/tools/test_request_human_input.py"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "gold_id": "fd",
+  "matches": [
+    {
+      "analyst": "regex pattern matching",
+      "gold": "Regex filename search (find alternative)",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "Gitignore-aware walking",
+      "matched": false
+    },
+    {
+      "analyst": "output formatting and coloring",
+      "gold": "Colored output + config",
+      "matched": true
+    }
+  ]
+}

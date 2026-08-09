@@ -1,0 +1,45 @@
+{
+  "gold_id": "mem0",
+  "matches": [
+    {
+      "analyst": "Core Memory SDK",
+      "gold": "m1",
+      "matched": true
+    },
+    {
+      "analyst": "Pluggable AI Component Architecture",
+      "gold": "m2",
+      "matched": true
+    },
+    {
+      "analyst": "Pluggable AI Component Architecture",
+      "gold": "m3",
+      "matched": true
+    },
+    {
+      "analyst": "Pluggable AI Component Architecture",
+      "gold": "m4",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "m5",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "m6",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "m7",
+      "matched": false
+    },
+    {
+      "analyst": "Pluggable AI Component Architecture",
+      "gold": "m8",
+      "matched": true
+    }
+  ]
+}

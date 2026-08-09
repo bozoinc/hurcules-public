@@ -1,0 +1,215 @@
+{
+  "compiled_from": "stage3-analysis",
+  "errors": [],
+  "gold_id": "click",
+  "ok": true,
+  "package": {
+    "capabilities": [
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "src/click/core.py",
+            "scope": "defines Command, Group, MultiCommand classes for creating and nesting commands"
+          },
+          {
+            "file": "src/click/decorators.py",
+            "scope": "provides the @command() and @group() decorators that turn functions into Click commands"
+          }
+        ],
+        "id": "c1",
+        "name": "Command Definition and Grouping",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "python"
+        ]
+      },
+      {
+        "confidence": 0.96,
+        "evidence": [
+          {
+            "file": "src/click/parser.py",
+            "scope": "implements OptionParser and parsing logic for command-line arguments and options"
+          },
+          {
+            "file": "src/click/types.py",
+            "scope": "defines ParamType subclasses (e.g., INT, STRING, BOOL) used to convert and validate inputs"
+          },
+          {
+            "file": "src/click/decorators.py",
+            "scope": "contains @argument() and @option() decorators that declare parameters"
+          }
+        ],
+        "id": "c2",
+        "name": "Argument and Option Parsing",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "python"
+        ]
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "src/click/shell_completion.py",
+            "scope": "provides functions to generate completion scripts for bash, zsh, fish, and powershell"
+          }
+        ],
+        "id": "c3",
+        "name": "Shell Completion Generation",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "python"
+        ]
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "src/click/testing.py",
+            "scope": "defines CliRunner and helpers for invoking commands in isolated environments during tests"
+          }
+        ],
+        "id": "c4",
+        "name": "CLI Testing Utilities",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "python"
+        ]
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "src/click/termui.py",
+            "scope": "implements echo, style, prompt, clear, progressbar, and related terminal interaction helpers"
+          },
+          {
+            "file": "src/click/utils.py",
+            "scope": "includes supporting utilities like make_default_short_help used by UI components"
+          }
+        ],
+        "id": "c5",
+        "name": "Terminal UI Utilities (echo, style, prompt, progress bar)",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "python"
+        ]
+      },
+      {
+        "confidence": 0.93,
+        "evidence": [
+          {
+            "file": "src/click/types.py",
+            "scope": "provides built-in parameter types (IntParamType, FloatParamType, BoolParamType, Choice, File, Path, etc.) and the base ParamType class"
+          },
+          {
+            "file": "src/click/core.py",
+            "scope": "defines the Parameter class that uses types to process and validate input values"
+          }
+        ],
+        "id": "c6",
+        "name": "Parameter Type System and Conversion",
+        "ontology_type": "SKILL",
+        "requirements": [
+          "python"
+        ]
+      }
+    ],
+    "compiler_version": "1.0.0",
+    "dependency_manifests": [
+      "examples/aliases/pyproject.toml",
+      "examples/colors/pyproject.toml",
+      "examples/completion/pyproject.toml",
+      "examples/complex/pyproject.toml",
+      "examples/imagepipe/pyproject.toml",
+      "examples/inout/pyproject.toml",
+      "examples/naval/pyproject.toml",
+      "examples/repo/pyproject.toml",
+      "examples/termui/pyproject.toml",
+      "examples/validation/pyproject.toml",
+      "pyproject.toml"
+    ],
+    "permissions_summary": [],
+    "provenance": {
+      "file_count": 165,
+      "languages": [
+        "json",
+        "markdown",
+        "python",
+        "shell",
+        "toml",
+        "yaml"
+      ],
+      "repository": "/REPO/gold-click"
+    },
+    "registry": {
+      "status": "candidate"
+    },
+    "schema": "hurcules.capability-package-v1",
+    "security": {
+      "execution_denied_by_default": true,
+      "hostile_by_default": true,
+      "risk_flags": [
+        {
+          "file": "CHANGES.md",
+          "reason": "shell-exec"
+        },
+        {
+          "file": "CHANGES.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "docs/advanced.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "docs/option-decorators.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/testing.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "src/click/_termui_impl.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "src/click/shell_completion.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "src/click/testing.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "tests/test_commands.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/test_imports.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "tests/test_termui.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tests/test_termui.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "tests/test_types.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "tests/test_utils/test_echo_via_pager.py",
+          "reason": "subprocess-usage"
+        }
+      ],
+      "secret_file_locations": []
+    }
+  },
+  "warnings": []
+}

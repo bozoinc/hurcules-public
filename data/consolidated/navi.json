@@ -1,0 +1,195 @@
+[
+  {
+    "confidence": 0.95,
+    "evidence": [
+      {
+        "file": "src/bin/main.rs",
+        "scope": "defines the main function, sets up command-line interface using subcommands"
+      },
+      {
+        "file": "src/commands/info.rs",
+        "scope": "implements the `info` subcommand for displaying cheat sheet details"
+      },
+      {
+        "file": "src/commands/repo/add.rs",
+        "scope": "implements the `repo add` subcommand for adding cheat sheet repositories"
+      },
+      {
+        "file": "src/commands/repo/browse.rs",
+        "scope": "implements the `repo browse` subcommand for browsing repositories"
+      },
+      {
+        "file": "src/commands/shell.rs",
+        "scope": "implements the `shell` subcommand for generating shell integration code"
+      },
+      {
+        "file": "src/parser.rs",
+        "scope": "parses cheat sheet syntax and command arguments"
+      },
+      {
+        "file": "src/structures/cheat.rs",
+        "scope": "defines the Cheat structure representing a cheat sheet entry"
+      },
+      {
+        "file": "src/finder/mod.rs",
+        "scope": "provides logic for finding and filtering cheat sheets"
+      },
+      {
+        "file": "src/clients/cheatsh.rs",
+        "scope": "implements HTTP client to fetch cheat sheets from cheat.sh"
+      },
+      {
+        "file": "src/clients/tldr.rs",
+        "scope": "implements HTTP client to fetch tldr pages"
+      },
+      {
+        "file": "src/structures/fetcher.rs",
+        "scope": "defines the Fetcher trait and remote fetching logic"
+      }
+    ],
+    "id": "c1",
+    "members": [
+      "c1",
+      "c4"
+    ],
+    "name": "Navi command-line interface (CLI) for cheat sheet navigation",
+    "ontology_type": "TOOL",
+    "requirements": [
+      "rust"
+    ]
+  },
+  {
+    "confidence": 0.9,
+    "evidence": [
+      {
+        "file": "shell/navi.plugin.bash",
+        "scope": "Bash plugin that loads navi widget and key bindings"
+      },
+      {
+        "file": "shell/navi.plugin.fish",
+        "scope": "Fish shell plugin providing navi integration"
+      },
+      {
+        "file": "shell/navi.plugin.zsh",
+        "scope": "Zsh plugin enabling navi as a widget"
+      },
+      {
+        "file": "shell/navi.plugin.elv",
+        "scope": "Elvish plugin for navi integration"
+      },
+      {
+        "file": "shell/navi.plugin.nu",
+        "scope": "Nushell plugin for navi integration"
+      },
+      {
+        "file": "shell/navi.plugin.ps1",
+        "scope": "PowerShell plugin for navi integration"
+      },
+      {
+        "file": "docs/widgets/howto/TMUX.md",
+        "scope": "describes using navi as a tmux pane widget"
+      },
+      {
+        "file": "docs/widgets/howto/VIM.md",
+        "scope": "describes using navi within Vim/Neovim"
+      }
+    ],
+    "id": "c2",
+    "members": [
+      "c2"
+    ],
+    "name": "Shell plugin adapter for integrating navi with Bash, Fish, Zsh, and other shells",
+    "ontology_type": "ADAPTER",
+    "requirements": [
+      "bash",
+      "elvish",
+      "fish",
+      "nu",
+      "powershell",
+      "zsh"
+    ]
+  },
+  {
+    "confidence": 0.95,
+    "evidence": [
+      {
+        "file": "docs/examples/cheatsheet/example.cheat",
+        "scope": "sample cheat sheet file demonstrating syntax"
+      },
+      {
+        "file": "docs/examples/cheatsheet/navi.cheat",
+        "scope": "cheat sheet for navi itself"
+      },
+      {
+        "file": "tests/cheats/more_cases.cheat",
+        "scope": "test cheat sheet with multiple cases"
+      },
+      {
+        "file": "tests/cheats/ssh.cheat",
+        "scope": "test cheat sheet for ssh commands"
+      },
+      {
+        "file": "tests/no_prompt_cheats/cases.cheat",
+        "scope": "cheat sheet used in no-prompt tests"
+      },
+      {
+        "file": "tests/no_prompt_cheats/one.cheat",
+        "scope": "single-line cheat sheet for testing"
+      },
+      {
+        "file": "tests/shell/cheats/plugin.cheat",
+        "scope": "cheat sheet for testing shell plugin integration"
+      }
+    ],
+    "id": "c3",
+    "members": [
+      "c3"
+    ],
+    "name": "Cheat sheet knowledge pack (example cheat sheets)",
+    "ontology_type": "KNOWLEDGE PACK",
+    "requirements": []
+  },
+  {
+    "confidence": 0.9,
+    "evidence": [
+      {
+        "file": "tests/run",
+        "scope": "script that executes the full test suite"
+      },
+      {
+        "file": "scripts/test",
+        "scope": "wrapper script for running tests in CI"
+      },
+      {
+        "file": "tests/tests.rs",
+        "scope": "unit tests written in Rust using the test framework"
+      },
+      {
+        "file": "tests/core.bash",
+        "scope": "bash-based integration tests for core functionality"
+      },
+      {
+        "file": "tests/helpers.sh",
+        "scope": "helper functions used by bash test scripts"
+      },
+      {
+        "file": "tests/shell/run",
+        "scope": "runs shell-specific tests (plugin, rc files)"
+      },
+      {
+        "file": "tests/shell/lib.bash",
+        "scope": "library of functions for shell test scripts"
+      }
+    ],
+    "id": "c5",
+    "members": [
+      "c5"
+    ],
+    "name": "Test harness for verifying navi functionality",
+    "ontology_type": "EVALUATOR",
+    "requirements": [
+      "bash",
+      "rust"
+    ]
+  }
+]

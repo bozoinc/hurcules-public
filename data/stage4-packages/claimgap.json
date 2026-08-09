@@ -1,0 +1,139 @@
+{
+  "compiled_from": "stage3-analysis",
+  "errors": [],
+  "gold_id": "claimgap",
+  "ok": true,
+  "package": {
+    "capabilities": [
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "agents/software_engineer.py",
+            "scope": "defines an agent capable of performing software engineering tasks such as code generation and debugging"
+          }
+        ],
+        "id": "c12",
+        "name": "Software Engineer Agent",
+        "ontology_type": "AGENT TEMPLATE",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "agents/web_researcher.py",
+            "scope": "implements an agent that conducts web research using search and fetch tools"
+          }
+        ],
+        "id": "c13",
+        "name": "Web Researcher Agent",
+        "ontology_type": "AGENT TEMPLATE",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "tools/fetch_web_page_raw_html.py",
+            "scope": "contains logic to download raw HTML of a given URL"
+          }
+        ],
+        "id": "c2",
+        "name": "Fetch Web Page Raw HTML",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "tools/read_file.py",
+            "scope": "implements reading a file from the filesystem"
+          }
+        ],
+        "id": "c4",
+        "name": "File Read Tool",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "tools/delete_file.py",
+            "scope": "implements deletion of a file"
+          }
+        ],
+        "id": "c6",
+        "name": "File Delete Tool",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "tools/overwrite_file.py",
+            "scope": "overwrites an existing file with new content"
+          }
+        ],
+        "id": "c7",
+        "name": "File Overwrite Tool",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "tools/request_human_input.py",
+            "scope": "prompts a human for input and returns the response"
+          }
+        ],
+        "id": "c9",
+        "name": "Human Input Request",
+        "ontology_type": "TOOL",
+        "requirements": []
+      }
+    ],
+    "compiler_version": "1.0.0",
+    "dependency_manifests": [
+      "requirements.txt"
+    ],
+    "permissions_summary": [],
+    "provenance": {
+      "file_count": 38,
+      "languages": [
+        "markdown",
+        "python",
+        "yaml"
+      ],
+      "repository": "/REPO/gold-claimgap5"
+    },
+    "registry": {
+      "status": "candidate"
+    },
+    "schema": "hurcules.capability-package-v1",
+    "security": {
+      "execution_denied_by_default": true,
+      "hostile_by_default": true,
+      "risk_flags": [
+        {
+          "file": "config.py",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "tools/run_shell_command.py",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "utils.py",
+          "reason": "secret-reference"
+        }
+      ],
+      "secret_file_locations": []
+    }
+  },
+  "warnings": []
+}

@@ -1,0 +1,218 @@
+{
+  "compiled_from": "stage3-analysis",
+  "errors": [],
+  "gold_id": "ripgrep",
+  "ok": true,
+  "package": {
+    "capabilities": [
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "crates/cli/src/lib.rs",
+            "scope": "defines CLI argument parsing and command structure"
+          },
+          {
+            "file": "crates/core/main.rs",
+            "scope": "entry point that invokes the search pipeline"
+          },
+          {
+            "file": "crates/core/flags/parse.rs",
+            "scope": "parses command-line flags into internal representation"
+          }
+        ],
+        "id": "c1",
+        "name": "Command-line interface (CLI) for file searching",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "crates/regex/src/lib.rs",
+            "scope": "core regex implementation using Rust's regex crate"
+          },
+          {
+            "file": "crates/matcher/src/lib.rs",
+            "scope": "matcher abstractions used by searcher"
+          },
+          {
+            "file": "crates/searcher/src/lib.rs",
+            "scope": "coordinates searching over files using regex matcher"
+          }
+        ],
+        "id": "c2",
+        "name": "Regular expression matching engine",
+        "ontology_type": "SKILL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "crates/ignore/src/gitignore.rs",
+            "scope": "parses .gitignore files and matches paths"
+          },
+          {
+            "file": "crates/ignore/src/lib.rs",
+            "scope": "provides GitIgnore trait and default ignore logic"
+          },
+          {
+            "file": "crates/ignore/src/overrides.rs",
+            "scope": "handles override rules for ignore patterns"
+          }
+        ],
+        "id": "c3",
+        "name": "Ignore pattern handling (.gitignore, .ignore, etc.)",
+        "ontology_type": "SKILL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.85,
+        "evidence": [
+          {
+            "file": "crates/core/flags/complete/bash.rs",
+            "scope": "generates bash completion script"
+          },
+          {
+            "file": "crates/core/flags/complete/fish.rs",
+            "scope": "generates fish completion script"
+          },
+          {
+            "file": "crates/core/flags/complete/powershell.rs",
+            "scope": "generates PowerShell completion script"
+          },
+          {
+            "file": "crates/core/flags/complete/zsh.rs",
+            "scope": "generates zsh completion script"
+          }
+        ],
+        "id": "c4",
+        "name": "Shell completion generation for bash, fish, powershell, zsh",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "crates/core/flags/doc/template.rg.1",
+            "scope": "template for Unix man page"
+          },
+          {
+            "file": "crates/core/flags/doc/template.long.help",
+            "scope": "long help text template"
+          },
+          {
+            "file": "crates/core/flags/doc/template.short.help",
+            "scope": "short help text template"
+          },
+          {
+            "file": "crates/core/flags/doc/help.rs",
+            "scope": "renders help text from templates"
+          },
+          {
+            "file": "crates/core/flags/doc/man.rs",
+            "scope": "renders man page from template"
+          },
+          {
+            "file": "crates/core/flags/doc/version.rs",
+            "scope": "provides version info for help/man"
+          }
+        ],
+        "id": "c5",
+        "name": "Man page and help text generation",
+        "ontology_type": "KNOWLEDGE PACK",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "crates/printer/src/lib.rs",
+            "scope": "defines printer trait and output format selection"
+          },
+          {
+            "file": "crates/printer/src/color.rs",
+            "scope": "adds colorized output support"
+          },
+          {
+            "file": "crates/printer/src/json.rs",
+            "scope": "outputs match results as JSON"
+          },
+          {
+            "file": "crates/printer/src/standard.rs",
+            "scope": "default line-oriented output format"
+          }
+        ],
+        "id": "c6",
+        "name": "Multiple output formats (color, JSON, etc.)",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "file": ".github/workflows/ci.yml",
+            "scope": "defines CI steps for building, testing, and uploading artifacts"
+          }
+        ],
+        "id": "c8",
+        "name": "Continuous Integration workflow",
+        "ontology_type": "WORKFLOW",
+        "requirements": []
+      },
+      {
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "file": ".github/workflows/release.yml",
+            "scope": "defines steps for creating and publishing releases"
+          }
+        ],
+        "id": "c9",
+        "name": "Release workflow",
+        "ontology_type": "WORKFLOW",
+        "requirements": []
+      }
+    ],
+    "compiler_version": "1.0.0",
+    "dependency_manifests": [],
+    "permissions_summary": [],
+    "provenance": {
+      "file_count": 236,
+      "languages": [
+        "lua",
+        "markdown",
+        "ruby",
+        "rust",
+        "shell",
+        "toml",
+        "yaml"
+      ],
+      "repository": "/REPO/gold-ripgrep"
+    },
+    "registry": {
+      "status": "candidate"
+    },
+    "schema": "hurcules.capability-package-v1",
+    "security": {
+      "execution_denied_by_default": true,
+      "hostile_by_default": true,
+      "risk_flags": [
+        {
+          "file": ".github/workflows/release.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "FAQ.md",
+          "reason": "secret-reference"
+        }
+      ],
+      "secret_file_locations": []
+    }
+  },
+  "warnings": []
+}

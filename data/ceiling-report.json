@@ -1,0 +1,611 @@
+{
+  "schema": "hurcules.ceiling-report",
+  "kind": "gold-set-extraction-ceiling",
+  "method": "normalized-name 1:1 match; valid evidence = non-empty list",
+  "scored_cases": 21,
+  "skipped_cases": [],
+  "aggregate": {
+    "extracted_total": 144,
+    "gold_total": 71,
+    "matched_total": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "semantic_matched_total": 7,
+    "semantic_precision": 0.0486,
+    "semantic_recall": 0.0986,
+    "unsupported_rate": 0.0
+  },
+  "cases": [
+    {
+      "gold_id": "archon",
+      "source": "stage4-packages",
+      "extracted_count": 26,
+      "gold_count": 6,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 2,
+      "semantic_precision": 0.0769,
+      "semantic_recall": 0.3333,
+      "matching_ids": [],
+      "missing_gold": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6"
+      ],
+      "extra": [
+        "c1",
+        "c10",
+        "c11",
+        "c12",
+        "c13",
+        "c14",
+        "c15",
+        "c16",
+        "c17",
+        "c18",
+        "c19",
+        "c2",
+        "c20",
+        "c21",
+        "c22",
+        "c23",
+        "c24",
+        "c25",
+        "c26",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8",
+        "c9"
+      ]
+    },
+    {
+      "gold_id": "mem0",
+      "source": "stage4-packages",
+      "extracted_count": 9,
+      "gold_count": 8,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 1,
+      "semantic_precision": 0.1111,
+      "semantic_recall": 0.125,
+      "matching_ids": [],
+      "missing_gold": [
+        "m1",
+        "m2",
+        "m3",
+        "m4",
+        "m5",
+        "m6",
+        "m7",
+        "m8"
+      ],
+      "extra": [
+        "c1",
+        "c11",
+        "c12",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7"
+      ]
+    },
+    {
+      "gold_id": "jq",
+      "source": "stage4-packages",
+      "extracted_count": 9,
+      "gold_count": 4,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 0,
+      "semantic_precision": 0.0,
+      "semantic_recall": 0.0,
+      "matching_ids": [],
+      "missing_gold": [
+        "j1",
+        "j2",
+        "j3",
+        "j4"
+      ],
+      "extra": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8",
+        "c9"
+      ]
+    },
+    {
+      "gold_id": "ripgrep",
+      "source": "stage4-packages",
+      "extracted_count": 8,
+      "gold_count": 4,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 0,
+      "semantic_precision": 0.0,
+      "semantic_recall": 0.0,
+      "matching_ids": [],
+      "missing_gold": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "extra": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c8",
+        "c9"
+      ]
+    },
+    {
+      "gold_id": "express",
+      "source": "stage4-packages",
+      "extracted_count": 10,
+      "gold_count": 4,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 1,
+      "semantic_precision": 0.1,
+      "semantic_recall": 0.25,
+      "matching_ids": [],
+      "missing_gold": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "extra": [
+        "c1",
+        "c10",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8",
+        "c9"
+      ]
+    },
+    {
+      "gold_id": "click",
+      "source": "stage4-packages",
+      "extracted_count": 6,
+      "gold_count": 4,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 1,
+      "semantic_precision": 0.1667,
+      "semantic_recall": 0.25,
+      "matching_ids": [],
+      "missing_gold": [
+        "ck1",
+        "ck2",
+        "ck3",
+        "ck4"
+      ],
+      "extra": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6"
+      ]
+    },
+    {
+      "gold_id": "fd",
+      "source": "stage3-analysis",
+      "extracted_count": 10,
+      "gold_count": 3,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 0,
+      "semantic_precision": 0.0,
+      "semantic_recall": 0.0,
+      "matching_ids": [],
+      "missing_gold": [
+        "f1",
+        "f2",
+        "f3"
+      ],
+      "extra": [
+        "c1",
+        "c10",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8",
+        "c9"
+      ]
+    },
+    {
+      "gold_id": "pytest",
+      "source": "stage4-packages",
+      "extracted_count": 6,
+      "gold_count": 4,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 1,
+      "semantic_precision": 0.1667,
+      "semantic_recall": 0.25,
+      "matching_ids": [],
+      "missing_gold": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "extra": [
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8"
+      ]
+    },
+    {
+      "gold_id": "prettier",
+      "source": "stage3-analysis",
+      "extracted_count": 4,
+      "gold_count": 3,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 0,
+      "semantic_precision": 0.0,
+      "semantic_recall": 0.0,
+      "matching_ids": [],
+      "missing_gold": [
+        "pr1",
+        "pr2",
+        "pr3"
+      ],
+      "extra": [
+        "c1",
+        "c3",
+        "c4",
+        "c5"
+      ]
+    },
+    {
+      "gold_id": "zx",
+      "source": "stage4-packages",
+      "extracted_count": 6,
+      "gold_count": 3,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 0,
+      "semantic_precision": 0.0,
+      "semantic_recall": 0.0,
+      "matching_ids": [],
+      "missing_gold": [
+        "z1",
+        "z2",
+        "z3"
+      ],
+      "extra": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6"
+      ]
+    },
+    {
+      "gold_id": "yq",
+      "source": "stage4-packages",
+      "extracted_count": 2,
+      "gold_count": 2,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 0,
+      "semantic_precision": 0.0,
+      "semantic_recall": 0.0,
+      "matching_ids": [],
+      "missing_gold": [
+        "y1",
+        "y2"
+      ],
+      "extra": [
+        "c1",
+        "c2"
+      ]
+    },
+    {
+      "gold_id": "bat",
+      "source": "stage3-analysis",
+      "extracted_count": 5,
+      "gold_count": 3,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 1,
+      "semantic_precision": 0.2,
+      "semantic_recall": 0.3333,
+      "matching_ids": [],
+      "missing_gold": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "extra": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5"
+      ]
+    },
+    {
+      "gold_id": "tokei",
+      "source": "stage4-packages",
+      "extracted_count": 10,
+      "gold_count": 3,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 0,
+      "semantic_precision": 0.0,
+      "semantic_recall": 0.0,
+      "matching_ids": [],
+      "missing_gold": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "extra": [
+        "c1",
+        "c10",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8",
+        "c9"
+      ]
+    },
+    {
+      "gold_id": "mattpocock-skills",
+      "source": "stage4-packages",
+      "extracted_count": 0,
+      "gold_count": 3,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 0,
+      "semantic_precision": 0.0,
+      "semantic_recall": 0.0,
+      "matching_ids": [],
+      "missing_gold": [
+        "mp1",
+        "mp2",
+        "mp3"
+      ],
+      "extra": []
+    },
+    {
+      "gold_id": "awesome-graph-eng",
+      "source": "stage3-analysis",
+      "extracted_count": 5,
+      "gold_count": 3,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 0,
+      "semantic_precision": 0.0,
+      "semantic_recall": 0.0,
+      "matching_ids": [],
+      "missing_gold": [
+        "ag1",
+        "ag2",
+        "ag3"
+      ],
+      "extra": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5"
+      ]
+    },
+    {
+      "gold_id": "nolicense",
+      "source": "stage4-packages",
+      "extracted_count": 0,
+      "gold_count": 2,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 0,
+      "semantic_precision": 0.0,
+      "semantic_recall": 0.0,
+      "matching_ids": [],
+      "missing_gold": [
+        "nl1",
+        "nl2"
+      ],
+      "extra": []
+    },
+    {
+      "gold_id": "suspicious",
+      "source": "stage4-packages",
+      "extracted_count": 2,
+      "gold_count": 2,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 0,
+      "semantic_precision": 0.0,
+      "semantic_recall": 0.0,
+      "matching_ids": [],
+      "missing_gold": [
+        "s1",
+        "s2"
+      ],
+      "extra": [
+        "c1",
+        "c2"
+      ]
+    },
+    {
+      "gold_id": "hexyl",
+      "source": "stage3-analysis",
+      "extracted_count": 4,
+      "gold_count": 2,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 0,
+      "semantic_precision": 0.0,
+      "semantic_recall": 0.0,
+      "matching_ids": [],
+      "missing_gold": [
+        "h1",
+        "h2"
+      ],
+      "extra": [
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ]
+    },
+    {
+      "gold_id": "ratty",
+      "source": "stage4-packages",
+      "extracted_count": 10,
+      "gold_count": 2,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 0,
+      "semantic_precision": 0.0,
+      "semantic_recall": 0.0,
+      "matching_ids": [],
+      "missing_gold": [
+        "rt1",
+        "rt2"
+      ],
+      "extra": [
+        "c1",
+        "c10",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8",
+        "c9"
+      ]
+    },
+    {
+      "gold_id": "navi",
+      "source": "stage4-packages",
+      "extracted_count": 5,
+      "gold_count": 3,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 0,
+      "semantic_precision": 0.0,
+      "semantic_recall": 0.0,
+      "matching_ids": [],
+      "missing_gold": [
+        "n1",
+        "n2",
+        "n3"
+      ],
+      "extra": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5"
+      ]
+    },
+    {
+      "gold_id": "claimgap",
+      "source": "stage4-packages",
+      "extracted_count": 7,
+      "gold_count": 3,
+      "matching_count": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "unsupported_rate": 0.0,
+      "semantic_match_count": 0,
+      "semantic_precision": 0.0,
+      "semantic_recall": 0.0,
+      "matching_ids": [],
+      "missing_gold": [
+        "g1",
+        "g2",
+        "g3"
+      ],
+      "extra": [
+        "c12",
+        "c13",
+        "c2",
+        "c4",
+        "c6",
+        "c7",
+        "c9"
+      ]
+    }
+  ]
+}

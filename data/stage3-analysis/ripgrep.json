@@ -1,0 +1,369 @@
+{
+  "analyst": {
+    "analyst_version": "1.0.0",
+    "capabilities": [
+      {
+        "confidence": 0.96,
+        "evidence": [
+          {
+            "file": "crates/core/main.rs",
+            "scope": "entry point that invokes CLI"
+          },
+          {
+            "file": "crates/core/flags/mod.rs",
+            "scope": "flag definitions and parsing logic"
+          },
+          {
+            "file": "crates/core/flags/parse.rs",
+            "scope": "argument parsing implementation"
+          },
+          {
+            "file": "crates/core/flags/doc/mod.rs",
+            "scope": "help text generation"
+          },
+          {
+            "file": "crates/cli/src/lib.rs",
+            "scope": "CLI library wiring"
+          },
+          {
+            "file": "crates/cli/src/pattern.rs",
+            "scope": "pattern handling from CLI"
+          },
+          {
+            "file": "crates/cli/src/process.rs",
+            "scope": "processing of CLI options"
+          }
+        ],
+        "id": "c1",
+        "name": "Command-line interface and configuration parsing",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "crates/ignore/src/gitignore.rs",
+            "scope": "parsing and matching of .gitignore files"
+          },
+          {
+            "file": "crates/ignore/src/dir.rs",
+            "scope": "directory iteration respecting ignore rules"
+          },
+          {
+            "file": "crates/ignore/src/walk.rs",
+            "scope": "walker that applies ignore filters"
+          },
+          {
+            "file": "crates/ignore/src/lib.rs",
+            "scope": "public API for ignore crate"
+          },
+          {
+            "file": "crates/globset/src/glob.rs",
+            "scope": "glob matching core used by ignore"
+          },
+          {
+            "file": "crates/globset/src/lib.rs",
+            "scope": "globset library for building ignore sets"
+          },
+          {
+            "file": "crates/ignore/README.md",
+            "scope": "description of ignore functionality"
+          }
+        ],
+        "id": "c2",
+        "name": "File system traversal with ignore pattern support (.gitignore, .ignore, etc.)",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.94,
+        "evidence": [
+          {
+            "file": "crates/regex/src/lib.rs",
+            "scope": "Rust regex engine implementation"
+          },
+          {
+            "file": "crates/regex/src/matcher.rs",
+            "scope": "matcher for Rust regex"
+          },
+          {
+            "file": "crates/pcre2/src/lib.rs",
+            "scope": "PCRE2 bindings and engine"
+          },
+          {
+            "file": "crates/pcre2/src/matcher.rs",
+            "scope": "PCRE2 matcher implementation"
+          },
+          {
+            "file": "crates/matcher/src/lib.rs",
+            "scope": "abstraction layer for matchers"
+          },
+          {
+            "file": "crates/core/search.rs",
+            "scope": "search logic that uses matcher abstractions"
+          },
+          {
+            "file": "crates/searcher/src/searcher/core.rs",
+            "scope": "core searcher integrating matcher and haystack"
+          },
+          {
+            "file": "crates/searcher/src/searcher/mmap.rs",
+            "scope": "memory\u2011mapped file searching"
+          }
+        ],
+        "id": "c3",
+        "name": "Regular expression matching and search (including multiple regex engines)",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "crates/core/search.rs",
+            "scope": "parallel search implementation (uses rayon thread pool)"
+          },
+          {
+            "file": "crates/core/haystack.rs",
+            "scope": "haystack abstraction enabling parallel chunks"
+          },
+          {
+            "file": "crates/searcher/src/lib.rs",
+            "scope": "searcher interface supporting concurrent execution"
+          }
+        ],
+        "id": "c4",
+        "name": "Parallel search execution",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.93,
+        "evidence": [
+          {
+            "file": "crates/printer/src/lib.rs",
+            "scope": "printer library entry point"
+          },
+          {
+            "file": "crates/printer/src/color.rs",
+            "scope": "ANSI color support"
+          },
+          {
+            "file": "crates/printer/src/json.rs",
+            "scope": "JSON output formatting"
+          },
+          {
+            "file": "crates/printer/src/standard.rs",
+            "scope": "standard human\u2011readable output"
+          },
+          {
+            "file": "crates/printer/src/summary.rs",
+            "scope": "summary statistics formatting"
+          },
+          {
+            "file": "crates/printer/src/util.rs",
+            "scope": "printing utilities"
+          },
+          {
+            "file": "crates/cli/src/wtr.rs",
+            "scope": "writer abstraction for output"
+          },
+          {
+            "file": "crates/core/messages.rs",
+            "scope": "message formatting for matches and errors"
+          }
+        ],
+        "id": "c5",
+        "name": "Result output formatting (colors, JSON, summary, etc.)",
+        "ontology_type": "TOOL",
+        "requirements": []
+      }
+    ],
+    "raw_candidate_count": 5,
+    "repository": "/REPO/gold-ripgrep",
+    "schema": "hurcules.capability-analysis",
+    "validation_errors": []
+  },
+  "gold_id": "ripgrep",
+  "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+  "survivors": [
+    {
+      "confidence": 0.96,
+      "evidence": [
+        {
+          "file": "crates/core/main.rs",
+          "scope": "entry point that invokes CLI"
+        },
+        {
+          "file": "crates/core/flags/mod.rs",
+          "scope": "flag definitions and parsing logic"
+        },
+        {
+          "file": "crates/core/flags/parse.rs",
+          "scope": "argument parsing implementation"
+        },
+        {
+          "file": "crates/core/flags/doc/mod.rs",
+          "scope": "help text generation"
+        },
+        {
+          "file": "crates/cli/src/lib.rs",
+          "scope": "CLI library wiring"
+        },
+        {
+          "file": "crates/cli/src/pattern.rs",
+          "scope": "pattern handling from CLI"
+        },
+        {
+          "file": "crates/cli/src/process.rs",
+          "scope": "processing of CLI options"
+        }
+      ],
+      "id": "c1",
+      "name": "Command-line interface and configuration parsing",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "crates/ignore/src/gitignore.rs",
+          "scope": "parsing and matching of .gitignore files"
+        },
+        {
+          "file": "crates/ignore/src/dir.rs",
+          "scope": "directory iteration respecting ignore rules"
+        },
+        {
+          "file": "crates/ignore/src/walk.rs",
+          "scope": "walker that applies ignore filters"
+        },
+        {
+          "file": "crates/ignore/src/lib.rs",
+          "scope": "public API for ignore crate"
+        },
+        {
+          "file": "crates/globset/src/glob.rs",
+          "scope": "glob matching core used by ignore"
+        },
+        {
+          "file": "crates/globset/src/lib.rs",
+          "scope": "globset library for building ignore sets"
+        },
+        {
+          "file": "crates/ignore/README.md",
+          "scope": "description of ignore functionality"
+        }
+      ],
+      "id": "c2",
+      "name": "File system traversal with ignore pattern support (.gitignore, .ignore, etc.)",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.94,
+      "evidence": [
+        {
+          "file": "crates/regex/src/lib.rs",
+          "scope": "Rust regex engine implementation"
+        },
+        {
+          "file": "crates/regex/src/matcher.rs",
+          "scope": "matcher for Rust regex"
+        },
+        {
+          "file": "crates/pcre2/src/lib.rs",
+          "scope": "PCRE2 bindings and engine"
+        },
+        {
+          "file": "crates/pcre2/src/matcher.rs",
+          "scope": "PCRE2 matcher implementation"
+        },
+        {
+          "file": "crates/matcher/src/lib.rs",
+          "scope": "abstraction layer for matchers"
+        },
+        {
+          "file": "crates/core/search.rs",
+          "scope": "search logic that uses matcher abstractions"
+        },
+        {
+          "file": "crates/searcher/src/searcher/core.rs",
+          "scope": "core searcher integrating matcher and haystack"
+        },
+        {
+          "file": "crates/searcher/src/searcher/mmap.rs",
+          "scope": "memory\u2011mapped file searching"
+        }
+      ],
+      "id": "c3",
+      "name": "Regular expression matching and search (including multiple regex engines)",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "crates/core/search.rs",
+          "scope": "parallel search implementation (uses rayon thread pool)"
+        },
+        {
+          "file": "crates/core/haystack.rs",
+          "scope": "haystack abstraction enabling parallel chunks"
+        },
+        {
+          "file": "crates/searcher/src/lib.rs",
+          "scope": "searcher interface supporting concurrent execution"
+        }
+      ],
+      "id": "c4",
+      "name": "Parallel search execution",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.93,
+      "evidence": [
+        {
+          "file": "crates/printer/src/lib.rs",
+          "scope": "printer library entry point"
+        },
+        {
+          "file": "crates/printer/src/color.rs",
+          "scope": "ANSI color support"
+        },
+        {
+          "file": "crates/printer/src/json.rs",
+          "scope": "JSON output formatting"
+        },
+        {
+          "file": "crates/printer/src/standard.rs",
+          "scope": "standard human\u2011readable output"
+        },
+        {
+          "file": "crates/printer/src/summary.rs",
+          "scope": "summary statistics formatting"
+        },
+        {
+          "file": "crates/printer/src/util.rs",
+          "scope": "printing utilities"
+        },
+        {
+          "file": "crates/cli/src/wtr.rs",
+          "scope": "writer abstraction for output"
+        },
+        {
+          "file": "crates/core/messages.rs",
+          "scope": "message formatting for matches and errors"
+        }
+      ],
+      "id": "c5",
+      "name": "Result output formatting (colors, JSON, summary, etc.)",
+      "ontology_type": "TOOL",
+      "requirements": []
+    }
+  ]
+}

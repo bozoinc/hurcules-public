@@ -1,0 +1,35 @@
+{
+  "gold_id": "archon",
+  "matches": [
+    {
+      "analyst": null,
+      "gold": "c1",
+      "matched": false
+    },
+    {
+      "analyst": "Extensible Provider and Adapter Framework",
+      "gold": "c2",
+      "matched": true
+    },
+    {
+      "analyst": "Isolated Execution Environment",
+      "gold": "c3",
+      "matched": true
+    },
+    {
+      "analyst": "Web-Based Workflow Builder and Console",
+      "gold": "c4",
+      "matched": true
+    },
+    {
+      "analyst": "Extensible Provider and Adapter Framework",
+      "gold": "c5",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "c6",
+      "matched": false
+    }
+  ]
+}

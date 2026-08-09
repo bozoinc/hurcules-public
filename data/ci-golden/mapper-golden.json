@@ -1,0 +1,44 @@
+{
+  "dependency_manifests": [
+    "setup.py"
+  ],
+  "documentation_files": [
+    "README.md",
+    "docs/guide.md"
+  ],
+  "entry_points": [
+    "src/app.py"
+  ],
+  "file_count": 8,
+  "file_tree": [
+    ".env",
+    "README.md",
+    "bin/run.sh",
+    "docs/guide.md",
+    "setup.py",
+    "src/app.py",
+    "src/util.py",
+    "tests/test_app.py"
+  ],
+  "languages": {
+    "markdown": 2,
+    "python": 4,
+    "shell": 1
+  },
+  "license_files": [],
+  "repository": "/tmp/tmp8malvqck/repo",
+  "risk_flags": [
+    {
+      "file": "bin/run.sh",
+      "reason": "pipe-to-shell"
+    }
+  ],
+  "schema": "hurcules.repo-map",
+  "schema_version": "1.0.0",
+  "secret_file_locations": [
+    ".env"
+  ],
+  "test_files": [
+    "tests/test_app.py"
+  ]
+}

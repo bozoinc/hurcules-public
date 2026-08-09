@@ -1,0 +1,15 @@
+{
+  "gold_id": "yq",
+  "matches": [
+    {
+      "analyst": "c1",
+      "gold": "y1",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "y2",
+      "matched": false
+    }
+  ]
+}

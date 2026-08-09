@@ -1,0 +1,25 @@
+{
+  "gold_id": "pytest",
+  "matches": [
+    {
+      "analyst": null,
+      "gold": "Test collection + execution runner",
+      "matched": false
+    },
+    {
+      "analyst": "Fixture Management",
+      "gold": "Fixture system (setup/teardown, scopes)",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "Assertion rewriting + parametrize",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "Plugin/exit mechanisms",
+      "matched": false
+    }
+  ]
+}

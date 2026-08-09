@@ -1,0 +1,15 @@
+{
+  "gold_id": "suspicious",
+  "matches": [
+    {
+      "analyst": "c1",
+      "gold": "s1",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "s2",
+      "matched": false
+    }
+  ]
+}

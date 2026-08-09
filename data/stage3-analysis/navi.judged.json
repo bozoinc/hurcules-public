@@ -1,0 +1,20 @@
+{
+  "gold_id": "navi",
+  "matches": [
+    {
+      "analyst": null,
+      "gold": "Cheatsheet markdown parsing",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "Interactive command selection (fzf/terminal UI)",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "Variable interpolation in commands",
+      "matched": false
+    }
+  ]
+}

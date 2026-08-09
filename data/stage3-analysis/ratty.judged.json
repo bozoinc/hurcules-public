@@ -1,0 +1,15 @@
+{
+  "gold_id": "ratty",
+  "matches": [
+    {
+      "analyst": "Rendering engine",
+      "gold": "Terminal pet rendering (direct render backend)",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "Config + CLI (pet appearance/behavior)",
+      "matched": false
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "gold_id": "tokei",
+  "matches": [
+    {
+      "analyst": null,
+      "gold": "t1",
+      "matched": false
+    },
+    {
+      "analyst": "c3",
+      "gold": "t2",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "t3",
+      "matched": false
+    }
+  ]
+}

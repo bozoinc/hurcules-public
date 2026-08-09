@@ -1,0 +1,98 @@
+[
+  {
+    "confidence": 0.9,
+    "evidence": [
+      {
+        "file": "yq/__main__.py",
+        "scope": "entry point for yq CLI"
+      },
+      {
+        "file": "yq/yaml_support.py",
+        "scope": "YAML parsing and manipulation helpers"
+      },
+      {
+        "file": "yq/loader.py",
+        "scope": "YAML loading functionality"
+      },
+      {
+        "file": "yq/dumper.py",
+        "scope": "YAML dumping functionality"
+      },
+      {
+        "file": "yq/parser.py",
+        "scope": "parsing of query expressions"
+      }
+    ],
+    "id": "c1",
+    "members": [
+      "c1"
+    ],
+    "name": "YAML query processing (yq)",
+    "ontology_type": "TOOL",
+    "requirements": []
+  },
+  {
+    "confidence": 0.9,
+    "evidence": [
+      {
+        "file": "yq/tomlq/__main__.py",
+        "scope": "entry point for tomlq CLI"
+      },
+      {
+        "file": "yq/toml_support.py",
+        "scope": "TOML parsing and manipulation helpers"
+      }
+    ],
+    "id": "c2",
+    "members": [
+      "c2"
+    ],
+    "name": "TOML query processing (tomlq)",
+    "ontology_type": "TOOL",
+    "requirements": []
+  },
+  {
+    "confidence": 0.8,
+    "evidence": [
+      {
+        "file": "yq/xq/__main__.py",
+        "scope": "entry point for xq CLI"
+      }
+    ],
+    "id": "c3",
+    "members": [
+      "c3"
+    ],
+    "name": "XML/HTML query processing (xq)",
+    "ontology_type": "TOOL",
+    "requirements": []
+  },
+  {
+    "confidence": 0.9,
+    "evidence": [
+      {
+        "file": "test/test.py",
+        "scope": "uses subprocess to invoke yq/tomlq/xq for testing"
+      },
+      {
+        "file": "test/cfn.yml",
+        "scope": "sample YAML test data"
+      },
+      {
+        "file": "test/doc.yml",
+        "scope": "sample YAML test data"
+      },
+      {
+        "file": "test/filter.jq",
+        "scope": "sample jq filter used in tests"
+      }
+    ],
+    "id": "c4",
+    "members": [
+      "c4"
+    ],
+    "name": "CLI testing via subprocess",
+    "ontology_type": "TOOL",
+    "requirements": []
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "gold_id": "ripgrep",
+  "matches": [
+    {
+      "analyst": null,
+      "gold": "r1",
+      "matched": false
+    },
+    {
+      "analyst": "c3",
+      "gold": "r2",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "r3",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "r4",
+      "matched": false
+    }
+  ]
+}

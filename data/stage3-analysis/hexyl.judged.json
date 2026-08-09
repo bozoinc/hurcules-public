@@ -1,0 +1,15 @@
+{
+  "gold_id": "hexyl",
+  "matches": [
+    {
+      "analyst": "Hexyl command-line hex viewer",
+      "gold": "Hexdump rendering (hex + ASCII + colors)",
+      "matched": true
+    },
+    {
+      "analyst": "Hexyl command-line hex viewer",
+      "gold": "File + stdin input handling",
+      "matched": true
+    }
+  ]
+}

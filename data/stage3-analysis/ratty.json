@@ -1,0 +1,291 @@
+{
+  "analyst": {
+    "analyst_version": "1.0.0",
+    "capabilities": [
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "src/main.rs",
+            "scope": "entry point initializing terminal, event loop"
+          },
+          {
+            "file": "src/terminal.rs",
+            "scope": "defines Terminal struct handling PTY, shell interaction"
+          },
+          {
+            "file": "src/keyboard.rs",
+            "scope": "keyboard input processing for terminal"
+          },
+          {
+            "file": "src/mouse.rs",
+            "scope": "mouse input processing for terminal"
+          },
+          {
+            "file": "src/rendering.rs",
+            "scope": "rendering loop and frame preparation"
+          },
+          {
+            "file": "src/present.rs",
+            "scope": "presents rendered frames to output"
+          }
+        ],
+        "id": "c1",
+        "name": "Terminal Emulation Core",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.85,
+        "evidence": [
+          {
+            "file": "src/rendering.rs",
+            "scope": "sets up wgpu device and swapchain"
+          },
+          {
+            "file": "src/direct_render.rs",
+            "scope": "direct rendering commands using wgpu"
+          },
+          {
+            "file": "src/rgp.rs",
+            "scope": "Rust GPU abstraction layer"
+          },
+          {
+            "file": "src/shaders/terminal_present.wgsl",
+            "scope": "shader for presenting terminal texture"
+          }
+        ],
+        "id": "c2",
+        "name": "GPU/WebGPU Accelerated Rendering",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "src/keyboard.rs",
+            "scope": "maps raw key events to terminal input"
+          },
+          {
+            "file": "src/mouse.rs",
+            "scope": "handles mouse motion, clicks, scrolling"
+          }
+        ],
+        "id": "c3",
+        "name": "Input Handling System",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.85,
+        "evidence": [
+          {
+            "file": "src/config.rs",
+            "scope": "parses TOML/YAML config files"
+          },
+          {
+            "file": "config/ratty.toml",
+            "scope": "example user configuration"
+          }
+        ],
+        "id": "c4",
+        "name": "Configuration Management",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "file": "src/plugin.rs",
+            "scope": "defines plugin trait and loading mechanism"
+          }
+        ],
+        "id": "c5",
+        "name": "Plugin System",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.88,
+        "evidence": [
+          {
+            "file": "widget/src/lib.rs",
+            "scope": "core widget library implementation"
+          },
+          {
+            "file": "widget/examples/big_rat.rs",
+            "scope": "example using widgets"
+          },
+          {
+            "file": "widget/examples/document.rs",
+            "scope": "example document viewer"
+          },
+          {
+            "file": "widget/examples/draw.rs",
+            "scope": "example drawing canvas"
+          },
+          {
+            "file": "widget/examples/mobius_chess.rs",
+            "scope": "example game using widgets"
+          },
+          {
+            "file": "widget/examples/rubiks_cube.rs",
+            "scope": "example 3D cube via widgets"
+          }
+        ],
+        "id": "c6",
+        "name": "Widget Toolkit for 2D GUI",
+        "ontology_type": "TOOL",
+        "requirements": []
+      }
+    ],
+    "raw_candidate_count": 6,
+    "repository": "/REPO/gold-ratty",
+    "schema": "hurcules.capability-analysis",
+    "validation_errors": []
+  },
+  "gold_id": "ratty",
+  "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+  "survivors": [
+    {
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "src/main.rs",
+          "scope": "entry point initializing terminal, event loop"
+        },
+        {
+          "file": "src/terminal.rs",
+          "scope": "defines Terminal struct handling PTY, shell interaction"
+        },
+        {
+          "file": "src/keyboard.rs",
+          "scope": "keyboard input processing for terminal"
+        },
+        {
+          "file": "src/mouse.rs",
+          "scope": "mouse input processing for terminal"
+        },
+        {
+          "file": "src/rendering.rs",
+          "scope": "rendering loop and frame preparation"
+        },
+        {
+          "file": "src/present.rs",
+          "scope": "presents rendered frames to output"
+        }
+      ],
+      "id": "c1",
+      "name": "Terminal Emulation Core",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.85,
+      "evidence": [
+        {
+          "file": "src/rendering.rs",
+          "scope": "sets up wgpu device and swapchain"
+        },
+        {
+          "file": "src/direct_render.rs",
+          "scope": "direct rendering commands using wgpu"
+        },
+        {
+          "file": "src/rgp.rs",
+          "scope": "Rust GPU abstraction layer"
+        },
+        {
+          "file": "src/shaders/terminal_present.wgsl",
+          "scope": "shader for presenting terminal texture"
+        }
+      ],
+      "id": "c2",
+      "name": "GPU/WebGPU Accelerated Rendering",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "src/keyboard.rs",
+          "scope": "maps raw key events to terminal input"
+        },
+        {
+          "file": "src/mouse.rs",
+          "scope": "handles mouse motion, clicks, scrolling"
+        }
+      ],
+      "id": "c3",
+      "name": "Input Handling System",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.85,
+      "evidence": [
+        {
+          "file": "src/config.rs",
+          "scope": "parses TOML/YAML config files"
+        },
+        {
+          "file": "config/ratty.toml",
+          "scope": "example user configuration"
+        }
+      ],
+      "id": "c4",
+      "name": "Configuration Management",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "file": "src/plugin.rs",
+          "scope": "defines plugin trait and loading mechanism"
+        }
+      ],
+      "id": "c5",
+      "name": "Plugin System",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.88,
+      "evidence": [
+        {
+          "file": "widget/src/lib.rs",
+          "scope": "core widget library implementation"
+        },
+        {
+          "file": "widget/examples/big_rat.rs",
+          "scope": "example using widgets"
+        },
+        {
+          "file": "widget/examples/document.rs",
+          "scope": "example document viewer"
+        },
+        {
+          "file": "widget/examples/draw.rs",
+          "scope": "example drawing canvas"
+        },
+        {
+          "file": "widget/examples/mobius_chess.rs",
+          "scope": "example game using widgets"
+        },
+        {
+          "file": "widget/examples/rubiks_cube.rs",
+          "scope": "example 3D cube via widgets"
+        }
+      ],
+      "id": "c6",
+      "name": "Widget Toolkit for 2D GUI",
+      "ontology_type": "TOOL",
+      "requirements": []
+    }
+  ]
+}

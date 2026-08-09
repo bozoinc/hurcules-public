@@ -1,0 +1,462 @@
+{
+  "analyst": {
+    "analyst_version": "1.0.0",
+    "capabilities": [
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/core/src/workflows/index.ts",
+            "scope": "entry point for workflow system"
+          },
+          {
+            "file": "packages/core/src/operations/workflow-operations.ts",
+            "scope": "workflow execution operations"
+          },
+          {
+            "file": "packages/core/src/orchestrator/orchestrator-agent.ts",
+            "scope": "orchestrator agent managing workflow runs"
+          },
+          {
+            "file": "packages/workflows/src/dag-executor.ts",
+            "scope": "DAG-based workflow executor"
+          },
+          {
+            "file": "packages/workflows/src/executor.ts",
+            "scope": "workflow node executor"
+          },
+          {
+            "file": "packages/workflows/src/loader.ts",
+            "scope": "workflow definition loader"
+          },
+          {
+            "file": "packages/workflows/src/validator.ts",
+            "scope": "workflow definition validator"
+          }
+        ],
+        "id": "c1",
+        "name": "Workflow Orchestration Engine",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/providers/src/index.ts",
+            "scope": "providers system entry point"
+          },
+          {
+            "file": "packages/providers/src/claude/index.ts",
+            "scope": "Claude AI provider implementation"
+          },
+          {
+            "file": "packages/providers/src/codex/index.ts",
+            "scope": "Codex AI provider implementation"
+          },
+          {
+            "file": "packages/providers/src/community/copilot/index.ts",
+            "scope": "Community Copilot provider implementation"
+          },
+          {
+            "file": "packages/providers/src/community/opencode/index.ts",
+            "scope": "Community OpenCode provider implementation"
+          },
+          {
+            "file": "packages/providers/src/community/pi/index.ts",
+            "scope": "Community Pi provider implementation"
+          },
+          {
+            "file": "packages/adapters/src/index.ts",
+            "scope": "adapters system entry point"
+          },
+          {
+            "file": "packages/adapters/src/forge/github/index.ts",
+            "scope": "GitHub platform adapter"
+          },
+          {
+            "file": "packages/adapters/src/chat/slack/index.ts",
+            "scope": "Slack chat adapter"
+          },
+          {
+            "file": "packages/adapters/src/community/chat/discord/index.ts",
+            "scope": "Discord chat adapter"
+          },
+          {
+            "file": "packages/adapters/src/community/forge/gitea/index.ts",
+            "scope": "Gitea forge adapter"
+          },
+          {
+            "file": "packages/adapters/src/community/forge/gitlab/index.ts",
+            "scope": "GitLab forge adapter"
+          }
+        ],
+        "id": "c2",
+        "name": "Extensible Provider and Adapter Framework",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/cli/src/cli.ts",
+            "scope": "CLI entry point"
+          },
+          {
+            "file": "packages/cli/src/commands/ai.ts",
+            "scope": "AI interaction command"
+          },
+          {
+            "file": "packages/cli/src/commands/chat.ts",
+            "scope": "Chat platform command"
+          },
+          {
+            "file": "packages/cli/src/commands/doctor.ts",
+            "scope": "System health check command"
+          },
+          {
+            "file": "packages/cli/src/commands/isolation.ts",
+            "scope": "Isolation environment command"
+          },
+          {
+            "file": "packages/cli/src/commands/serve.ts",
+            "scope": "Server startup command"
+          },
+          {
+            "file": "packages/cli/src/commands/setup.ts",
+            "scope": "Initial setup command"
+          },
+          {
+            "file": "packages/cli/src/commands/skill.ts",
+            "scope": "Skill management command"
+          },
+          {
+            "file": "packages/cli/src/commands/telemetry.ts",
+            "scope": "Telemetry configuration command"
+          },
+          {
+            "file": "packages/cli/src/commands/validate.ts",
+            "scope": "Validation command"
+          },
+          {
+            "file": "packages/cli/src/commands/version.ts",
+            "scope": "Version information command"
+          },
+          {
+            "file": "packages/cli/src/commands/workflow.ts",
+            "scope": "Workflow management command"
+          }
+        ],
+        "id": "c3",
+        "name": "Command-Line Interface (CLI)",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/server/src/index.ts",
+            "scope": "HTTP server entry point"
+          },
+          {
+            "file": "packages/server/src/auth/index.ts",
+            "scope": "Authentication and authorization system"
+          },
+          {
+            "file": "packages/server/src/routes/api.ts",
+            "scope": "Main API router defining endpoints"
+          }
+        ],
+        "id": "c4",
+        "name": "Backend Server and API",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "packages/isolation/src/index.ts",
+            "scope": "Isolation system entry point"
+          },
+          {
+            "file": "packages/isolation/src/container/overlay.test.ts",
+            "scope": "Test overlay filesystem isolation (implies implementation)"
+          },
+          {
+            "file": "packages/isolation/src/container/docker-exec.test.ts",
+            "scope": "Test Docker container isolation (implies implementation)"
+          },
+          {
+            "file": "packages/isolation/src/backends/container.test.ts",
+            "scope": "Test container backend (implies implementation)"
+          },
+          {
+            "file": "packages/isolation/src/backends/in-place.test.ts",
+            "scope": "Test in-place backend (implies implementation)"
+          },
+          {
+            "file": "packages/isolation/src/providers/worktree.test.ts",
+            "scope": "Test Git worktree provider (implies implementation)"
+          }
+        ],
+        "id": "c5",
+        "name": "Isolated Execution Environment",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "packages/web/src/experiments/console/builder/flow/index.ts",
+            "scope": "Workflow flow definition and rendering"
+          },
+          {
+            "file": "packages/web/src/experiments/console/builder/model/index.ts",
+            "scope": "Workflow data model and serialization"
+          },
+          {
+            "file": "packages/web/src/experiments/console/builder/types/index.ts",
+            "scope": "Type definitions for workflow builder"
+          },
+          {
+            "file": "packages/web/src/experiments/console/builder/validation/index.ts",
+            "scope": "Workflow validation logic"
+          },
+          {
+            "file": "packages/web/src/experiments/console/builder/variants/index.ts",
+            "scope": "UI component variants for workflow nodes"
+          },
+          {
+            "file": "packages/web/src/experiments/console/builder/yaml/index.ts",
+            "scope": "YAML parsing and serialization for workflows"
+          },
+          {
+            "file": "packages/web/src/experiments/console/skills/index.ts",
+            "scope": "Skill execution and management in console"
+          }
+        ],
+        "id": "c6",
+        "name": "Web-Based Workflow Builder and Console",
+        "ontology_type": "TOOL",
+        "requirements": []
+      }
+    ],
+    "raw_candidate_count": 6,
+    "repository": "/REPO/Archon",
+    "schema": "hurcules.capability-analysis",
+    "validation_errors": []
+  },
+  "gold_id": "archon",
+  "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+  "survivors": [
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "packages/providers/src/index.ts",
+          "scope": "providers system entry point"
+        },
+        {
+          "file": "packages/providers/src/claude/index.ts",
+          "scope": "Claude AI provider implementation"
+        },
+        {
+          "file": "packages/providers/src/codex/index.ts",
+          "scope": "Codex AI provider implementation"
+        },
+        {
+          "file": "packages/providers/src/community/copilot/index.ts",
+          "scope": "Community Copilot provider implementation"
+        },
+        {
+          "file": "packages/providers/src/community/opencode/index.ts",
+          "scope": "Community OpenCode provider implementation"
+        },
+        {
+          "file": "packages/providers/src/community/pi/index.ts",
+          "scope": "Community Pi provider implementation"
+        },
+        {
+          "file": "packages/adapters/src/index.ts",
+          "scope": "adapters system entry point"
+        },
+        {
+          "file": "packages/adapters/src/forge/github/index.ts",
+          "scope": "GitHub platform adapter"
+        },
+        {
+          "file": "packages/adapters/src/chat/slack/index.ts",
+          "scope": "Slack chat adapter"
+        },
+        {
+          "file": "packages/adapters/src/community/chat/discord/index.ts",
+          "scope": "Discord chat adapter"
+        },
+        {
+          "file": "packages/adapters/src/community/forge/gitea/index.ts",
+          "scope": "Gitea forge adapter"
+        },
+        {
+          "file": "packages/adapters/src/community/forge/gitlab/index.ts",
+          "scope": "GitLab forge adapter"
+        }
+      ],
+      "id": "c2",
+      "name": "Extensible Provider and Adapter Framework",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "packages/cli/src/cli.ts",
+          "scope": "CLI entry point"
+        },
+        {
+          "file": "packages/cli/src/commands/ai.ts",
+          "scope": "AI interaction command"
+        },
+        {
+          "file": "packages/cli/src/commands/chat.ts",
+          "scope": "Chat platform command"
+        },
+        {
+          "file": "packages/cli/src/commands/doctor.ts",
+          "scope": "System health check command"
+        },
+        {
+          "file": "packages/cli/src/commands/isolation.ts",
+          "scope": "Isolation environment command"
+        },
+        {
+          "file": "packages/cli/src/commands/serve.ts",
+          "scope": "Server startup command"
+        },
+        {
+          "file": "packages/cli/src/commands/setup.ts",
+          "scope": "Initial setup command"
+        },
+        {
+          "file": "packages/cli/src/commands/skill.ts",
+          "scope": "Skill management command"
+        },
+        {
+          "file": "packages/cli/src/commands/telemetry.ts",
+          "scope": "Telemetry configuration command"
+        },
+        {
+          "file": "packages/cli/src/commands/validate.ts",
+          "scope": "Validation command"
+        },
+        {
+          "file": "packages/cli/src/commands/version.ts",
+          "scope": "Version information command"
+        },
+        {
+          "file": "packages/cli/src/commands/workflow.ts",
+          "scope": "Workflow management command"
+        }
+      ],
+      "id": "c3",
+      "name": "Command-Line Interface (CLI)",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "packages/server/src/index.ts",
+          "scope": "HTTP server entry point"
+        },
+        {
+          "file": "packages/server/src/auth/index.ts",
+          "scope": "Authentication and authorization system"
+        },
+        {
+          "file": "packages/server/src/routes/api.ts",
+          "scope": "Main API router defining endpoints"
+        }
+      ],
+      "id": "c4",
+      "name": "Backend Server and API",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "packages/isolation/src/index.ts",
+          "scope": "Isolation system entry point"
+        },
+        {
+          "file": "packages/isolation/src/container/overlay.test.ts",
+          "scope": "Test overlay filesystem isolation (implies implementation)"
+        },
+        {
+          "file": "packages/isolation/src/container/docker-exec.test.ts",
+          "scope": "Test Docker container isolation (implies implementation)"
+        },
+        {
+          "file": "packages/isolation/src/backends/container.test.ts",
+          "scope": "Test container backend (implies implementation)"
+        },
+        {
+          "file": "packages/isolation/src/backends/in-place.test.ts",
+          "scope": "Test in-place backend (implies implementation)"
+        },
+        {
+          "file": "packages/isolation/src/providers/worktree.test.ts",
+          "scope": "Test Git worktree provider (implies implementation)"
+        }
+      ],
+      "id": "c5",
+      "name": "Isolated Execution Environment",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "packages/web/src/experiments/console/builder/flow/index.ts",
+          "scope": "Workflow flow definition and rendering"
+        },
+        {
+          "file": "packages/web/src/experiments/console/builder/model/index.ts",
+          "scope": "Workflow data model and serialization"
+        },
+        {
+          "file": "packages/web/src/experiments/console/builder/types/index.ts",
+          "scope": "Type definitions for workflow builder"
+        },
+        {
+          "file": "packages/web/src/experiments/console/builder/validation/index.ts",
+          "scope": "Workflow validation logic"
+        },
+        {
+          "file": "packages/web/src/experiments/console/builder/variants/index.ts",
+          "scope": "UI component variants for workflow nodes"
+        },
+        {
+          "file": "packages/web/src/experiments/console/builder/yaml/index.ts",
+          "scope": "YAML parsing and serialization for workflows"
+        },
+        {
+          "file": "packages/web/src/experiments/console/skills/index.ts",
+          "scope": "Skill execution and management in console"
+        }
+      ],
+      "id": "c6",
+      "name": "Web-Based Workflow Builder and Console",
+      "ontology_type": "TOOL",
+      "requirements": []
+    }
+  ]
+}

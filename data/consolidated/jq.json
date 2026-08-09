@@ -1,0 +1,215 @@
+[
+  {
+    "confidence": 0.95,
+    "evidence": [
+      {
+        "file": "src/jq.h",
+        "scope": "public interface for jq core"
+      },
+      {
+        "file": "src/parser.y",
+        "scope": "grammar definition for jq language"
+      },
+      {
+        "file": "src/lexer.l",
+        "scope": "lexical analyzer for jq"
+      },
+      {
+        "file": "src/bytecode.c",
+        "scope": "bytecode generation and handling"
+      },
+      {
+        "file": "src/execute.c",
+        "scope": "execution of jq programs"
+      },
+      {
+        "file": "src/jv.c",
+        "scope": "JSON value representation and manipulation"
+      },
+      {
+        "file": "src/builtin.c",
+        "scope": "built\u2011in functions and operators"
+      },
+      {
+        "file": "src/main.c",
+        "scope": "command\u2011line entry point"
+      },
+      {
+        "file": "tests/jq.test",
+        "scope": "functional test suite for jq"
+      },
+      {
+        "file": "tests/modules/data.json",
+        "scope": "sample JSON data used in tests"
+      },
+      {
+        "file": "libjq.pc.in",
+        "scope": "pkg\u2011config file for libjq"
+      },
+      {
+        "file": "src/jq.h",
+        "scope": "public header exposing libjq API"
+      },
+      {
+        "file": "src/jq_test.c",
+        "scope": "unit tests for the libjq API"
+      },
+      {
+        "file": "src/jv.h",
+        "scope": "shared JSON value definitions used by libjq"
+      }
+    ],
+    "id": "c1",
+    "members": [
+      "c1",
+      "c2"
+    ],
+    "name": "Embeddable JSON Processing Library (libjq)",
+    "ontology_type": "TOOL",
+    "requirements": []
+  },
+  {
+    "confidence": 0.93,
+    "evidence": [
+      {
+        "file": "Makefile.am",
+        "scope": "automake build description"
+      },
+      {
+        "file": "configure.ac",
+        "scope": "autoconf configuration script"
+      },
+      {
+        "file": "scripts/crosscompile",
+        "scope": "script for cross\u2011compiling jq"
+      },
+      {
+        "file": "compile-ios.sh",
+        "scope": "iOS specific build script"
+      },
+      {
+        "file": "Dockerfile",
+        "scope": "containerized build environment"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "scope": "continuous integration workflow"
+      },
+      {
+        "file": "config/m4/check-math-func.m4",
+        "scope": "autoconf macro for math functions"
+      }
+    ],
+    "id": "c3",
+    "members": [
+      "c3"
+    ],
+    "name": "Build and Cross\u2011Platform Compilation System",
+    "ontology_type": "WORKFLOW",
+    "requirements": []
+  },
+  {
+    "confidence": 0.94,
+    "evidence": [
+      {
+        "file": "tests/jq.test",
+        "scope": "core functional tests"
+      },
+      {
+        "file": "tests/jq-f-test.sh",
+        "scope": "floating\u2011point specific tests"
+      },
+      {
+        "file": "tests/jq_fuzz_compile.c",
+        "scope": "fuzz target for compilation"
+      },
+      {
+        "file": "tests/jq_fuzz_execute.cpp",
+        "scope": "fuzz target for execution"
+      },
+      {
+        "file": "tests/jq_fuzz_parse.c",
+        "scope": "fuzz target for parsing"
+      },
+      {
+        "file": "tests/optional.test",
+        "scope": "tests for optional features"
+      },
+      {
+        "file": "tests/man.test",
+        "scope": "manual page validation tests"
+      },
+      {
+        "file": "tests/utf8test",
+        "scope": "UTF\u20118 handling tests"
+      },
+      {
+        "file": "tests/shtest",
+        "scope": "shell script test harness"
+      },
+      {
+        "file": "tests/setup",
+        "scope": "test environment setup script"
+      }
+    ],
+    "id": "c4",
+    "members": [
+      "c4"
+    ],
+    "name": "Comprehensive Test Suite Including Fuzzing",
+    "ontology_type": "EVALUATOR",
+    "requirements": []
+  },
+  {
+    "confidence": 0.91,
+    "evidence": [
+      {
+        "file": "docs/build_website.py",
+        "scope": "script to build HTML documentation"
+      },
+      {
+        "file": "docs/build_manpage.py",
+        "scope": "script to generate man pages"
+      },
+      {
+        "file": "docs/build_mantests.py",
+        "scope": "script to validate man pages"
+      },
+      {
+        "file": "docs/content/manual/v1.8/manual.yml",
+        "scope": "manual content for version 1.8"
+      },
+      {
+        "file": "docs/content/tutorial/default.yml",
+        "scope": "tutorial content"
+      },
+      {
+        "file": "docs/templates/manual.html.j2",
+        "scope": "Jinja2 template for manual pages"
+      },
+      {
+        "file": "docs/public/js/manual-search.js",
+        "scope": "search functionality for docs"
+      },
+      {
+        "file": "docs/validate_manual_schema.py",
+        "scope": "validation of documentation schema"
+      },
+      {
+        "file": "docs/README.md",
+        "scope": "documentation about the documentation system"
+      },
+      {
+        "file": "docs/Pipfile",
+        "scope": "Python dependencies for docs generation"
+      }
+    ],
+    "id": "c5",
+    "members": [
+      "c5"
+    ],
+    "name": "Documentation Generation Pipeline",
+    "ontology_type": "WORKFLOW",
+    "requirements": []
+  }
+]

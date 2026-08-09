@@ -1,0 +1,129 @@
+gold_case_id: mem0
+reviewer: the product owner + Hermes
+status: HUMAN-VERIFIED-GOLD
+date: 2026-08-05
+
+# Gold-Standard: mem0 (mem0ai/mem0)
+# HURCULES Stage 1 — Gold case #2 (agent-framework + Python library categories)
+
+provenance:
+  repository: mem0ai/mem0 (local clone of upstream, modified by bozo)
+  commit_sha: 4e448269bcf7136905b45c0ef5ac34c2254a1a3b
+  local_clone: ~/projects/mem0
+  version: 2.0.7 (pyproject; server installs mem0ai 2.0.16)
+  license: Apache-2.0 — permissive, safe to adapt (patent grant included)
+  languages: [Python, TypeScript, MDX]
+  runtime: Python 3.9+; server on FastAPI + PostgreSQL/pgvector
+
+purpose: |
+  Mem0 ("mem-zero") is an intelligent memory layer for AI agents: persistent,
+  personalized memory via a hosted platform API and self-hosted open-source SDKs.
+  It extracts, stores, and retrieves memories (facts about users/agents) using an
+  LLM for extraction + an embedding model + a vector store. (README.md, AGENTS.md)
+
+architecture_map: |
+  Polyglot monorepo: mem0/ (core Python SDK), mem0-ts/ (TypeScript SDK),
+  server/ (FastAPI REST server, Docker: PostgreSQL/pgvector), cli/ (Python+Node
+  CLIs), integrations/ (mem0-plugin, openclaw, pi-agent-plugin, vercel-ai-sdk),
+  openmemory/ (self-hosted platform), docs/, tests/ (95 test files).
+
+capabilities:
+  - id: m1
+    name: Memory CRUD (add/search/get_all/update/delete/reset)
+    ontology_type: TOOL
+    evidence:
+      - file: mem0/memory/main.py
+        scope: add (line 653), search (1243), get_all (1128), update (380), delete_all (1715), reset (1929)
+    confidence: 0.95
+    requirements: [llm-provider, embedding-model, vector-store]
+  - id: m2
+    name: Pluggable LLM provider layer (18 providers)
+    ontology_type: ADAPTER
+    evidence:
+      - file: mem0/llms
+        scope: openai, anthropic, deepseek, gemini, groq, ollama, vllm, litellm, xai, minimax, together, bedrock, azure, lmstudio, langchain, sarvam
+    confidence: 0.93
+    requirements: [provider-specific-keys, or local (ollama/lmstudio/vllm)]
+  - id: m3
+    name: Pluggable embedding provider layer (14 providers)
+    ontology_type: ADAPTER
+    evidence:
+      - file: mem0/embeddings
+        scope: openai, ollama, huggingface, fastembed, gemini, bedrock, azure, together, vertexai, aws, lmstudio, langchain, mock
+    confidence: 0.92
+    requirements: [embedding-model]
+  - id: m4
+    name: Pluggable vector store layer (25 stores)
+    ontology_type: ADAPTER
+    evidence:
+      - file: mem0/vector_stores
+        scope: pgvector, qdrant, chroma, faiss, milvus, weaviate, elasticsearch, mongodb, redis, pinecone, valkey, cassandra, opensearch, supabase, upstash, databricks, azure (4), mysql, s3, neptune, turbopuffer, baidu
+    confidence: 0.90
+    requirements: [store-specific]
+  - id: m5
+    name: LLM-based fact extraction with infer flag
+    ontology_type: WORKFLOW
+    evidence:
+      - file: mem0/memory/main.py
+        scope: add() signature includes infer param (LLM extracts facts; infer=false = direct store)
+    confidence: 0.94
+    requirements: [llm-provider]
+  - id: m6
+    name: Self-hosted FastAPI server + dashboard
+    ontology_type: TOOL
+    evidence:
+      - file: server/main.py
+        scope: FastAPI app, /memories, /search, /configure endpoints
+      - file: server/docker-compose.yaml
+        scope: mem0 + postgres(pgvector) + dashboard services
+    confidence: 0.91
+    requirements: [docker, postgres]
+  - id: m7
+    name: Semantic deduplication by hash
+    ontology_type: EVALUATOR
+    evidence:
+      - file: mem0/memory/main.py
+        scope: hash-based dedup on add (id/hash fields in payload)
+    confidence: 0.85
+    requirements: []
+  - id: m8
+    name: Agent/editor integrations (MCP + plugins)
+    ontology_type: ADAPTER
+    evidence:
+      - file: integrations/mem0-plugin
+        scope: Claude Code/Cursor/Codex MCP plugin
+      - file: integrations/vercel-ai-sdk
+        scope: Vercel AI SDK provider
+    confidence: 0.86
+    requirements: [host-app]
+
+dependencies_permissions:
+  dependencies: [qdrant-client, pydantic, openai, httpx, posthog, pytz, sqlalchemy, protobuf]
+  permissions:
+    filesystem: none-required-for-core
+    network: llm-and-embedding-apis
+    shell: none
+  security_posture: telemetry via posthog (MEM0_TELEMETRY=false to disable);
+    server auth via ADMIN_API_KEY/JWT (AUTH_DISABLED for local dev only)
+
+non_capabilities:
+  - not-an-agent-runtime (memory layer only — no agent loop)
+  - not-a-chatbot
+  - not-a-vector-database-itself (uses external stores)
+  - v2.0.x does-not-do-graph-memory (graphs/ absent in this version)
+  - hosted-platform features differ from OSS SDK surface
+
+risks_findings:
+  - LLM extraction depends on an external paid/free model — cost and quota sensitive
+  - posthog telemetry collects anonymous usage — disable in production
+  - server auth: AUTH_DISABLED=true is for local dev only; production requires admin key
+  - embedding dims must match vector store config (1536 vs 768 mismatch caused
+    insert failures — seen live 2026-08-05, fixed via embedding_model_dims=768)
+
+evaluation_plan: |
+  Parity test: a non-technical user, using only HURCULES' mem0 capability template,
+  configures a self-hosted mem0 instance (LLM via free route, embeddings via local
+  ollama, pgvector store) and successfully stores + semantically searches a memory —
+  as well as an engineer doing the same directly.
+  Checks: add returns extracted memory (infer path), search returns relevant hit,
+  dedup by hash works, server + dashboard healthy.

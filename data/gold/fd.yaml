@@ -1,0 +1,76 @@
+gold_case_id: fd
+reviewer: the product owner + Hermes
+status: HUMAN-VERIFIED-GOLD
+date: 2026-08-05
+
+# Gold-Standard: fd (sharkdp/fd)
+# HURCULES Stage 1 - Gold case #7 (simple-command-line-tool category)
+
+provenance:
+  repository: sharkdp/fd
+  commit_sha: 41532d114e2ba565fb5367d606c111b29b96450c
+  version: 10.4.2 (Cargo.toml)
+  license: Apache-2.0 / MIT dual (LICENSE-APACHE)
+  languages: [Rust]
+  runtime: compiled Rust binary
+
+purpose: |
+  fd is a simple, fast, and user-friendly alternative to the 'find' command. It
+  does not attempt to support all of find's powerful syntax but provides
+  sensible defaults for common use cases (regex search, ignore-file respect,
+  colored output).
+
+architecture_map: |
+  Rust project: src/ (cli.rs arg parsing, config.rs, dir_entry.rs, walk,
+  error.rs), Cargo.toml, CHANGELOG, CONTRIBUTING. Uses ignore crate for
+  gitignore-aware walking.
+
+capabilities:
+  - id: f1
+    name: Regex filename search (find alternative)
+    ontology_type: TOOL
+    evidence:
+      - file: src/cli.rs
+        scope: arg parsing + search dispatch
+      - file: src/walk.rs
+        scope: directory traversal (if present) / dir_entry.rs
+    confidence: 0.94
+    requirements: []
+  - id: f2
+    name: Gitignore-aware walking
+    ontology_type: TOOL
+    evidence:
+      - file: src/dir_entry.rs
+        scope: entry filtering
+      - file: Cargo.toml
+        scope: depends on ignore crate
+    confidence: 0.90
+    requirements: []
+  - id: f3
+    name: Colored output + config
+    ontology_type: TOOL
+    evidence:
+      - file: src/config.rs
+        scope: config resolution
+    confidence: 0.86
+    requirements: []
+
+dependencies_permissions:
+  dependencies: [ignore, regex, color]
+  permissions:
+    filesystem: read-recursive
+    network: none
+    shell: none
+  security_posture: rust memory-safe; safe defaults
+
+non_capabilities:
+  - not-a-full-find-clone
+  - not-an-agent
+
+risks_findings:
+  - depends on regex - pathological patterns can be slow
+  - read-only scan, no write risk
+
+evaluation_plan: |
+  Parity: non-technical user lists files matching a pattern with the fd template.
+  Checks: regex match, ignore respect, exit code.

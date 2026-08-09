@@ -1,0 +1,96 @@
+gold_case_id: express
+reviewer: the product owner + Hermes
+status: HUMAN-VERIFIED-GOLD
+date: 2026-08-05
+
+# Gold-Standard: express (expressjs/express)
+# HURCULES Stage 1 - Gold case #5 (javascript-application category)
+
+provenance:
+  repository: expressjs/express
+  commit_sha: a3714473feb3d2908add734d340e7755fd85e0a3
+  version: 5.2.1 (package.json)
+  license: MIT (LICENSE)
+  languages: [JavaScript]
+  runtime: Node.js
+
+purpose: |
+  Express is a minimal and flexible Node.js web application framework providing a
+  robust set of features for web and mobile applications. It is the de-facto
+  standard HTTP server/route framework for Node.js.
+
+architecture_map: |
+  Single-package Node app: lib/ (application.js, express.js core, router,
+  request.js, response.js, utils.js, view.js), test/ (extensive: Route, Router,
+  acceptance, app.*), examples/, History.md, Readme.md. Deps: 30 middleware
+  packages (body-parser, serve-static, router, etc.).
+
+capabilities:
+  - id: e1
+    name: HTTP server + application factory
+    ontology_type: TOOL
+    evidence:
+      - file: lib/express.js
+        scope: createApplication factory
+      - file: lib/application.js
+        scope: app object, middleware mounting
+    confidence: 0.95
+    requirements: [node]
+  - id: e2
+    name: Routing (methods, params, handlers)
+    ontology_type: WORKFLOW
+    evidence:
+      - file: lib/request.js
+        scope: route params, query parsing
+      - file: lib/request.js
+        scope: route params, query parsing
+      - file: test/Route.js
+        scope: route behavior tests
+        scope: request augmentation (params, query)
+      - file: test/Route.js
+        scope: route tests
+    confidence: 0.94
+    requirements: []
+  - id: e3
+    name: Middleware pipeline
+    ontology_type: WORKFLOW
+    evidence:
+      - file: lib/application.js
+        scope: use() middleware stack
+      - file: lib/application.js
+        scope: layer execution in use() stack
+    confidence: 0.93
+    requirements: []
+  - id: e4
+    name: Response handling + static serving
+    ontology_type: TOOL
+    evidence:
+      - file: lib/response.js
+        scope: res.send/json/redirect
+      - file: lib/utils.js
+        scope: helpers
+    confidence: 0.90
+    requirements: [serve-static]
+
+dependencies_permissions:
+  dependencies: [body-parser, serve-static, router, qs, send, etag, 25 more]
+  permissions:
+    filesystem: optional-static-serving
+    network: inbound-http-server
+    shell: none
+  security_posture: mature framework; injection via user input is app's responsibility
+
+non_capabilities:
+  - not-a-sync-framework (async)
+  - not-built-in-ORM
+  - not-a-full-app-server
+
+risks_findings:
+  - wide attack surface from 30 middleware deps - keep deps updated
+  - user input flows through req/params - app must sanitize
+  - static serving path traversal guarded but config-dependent
+
+evaluation_plan: |
+  Parity test: non-technical user creates a routed web server with the HURCULES
+  express template and serves a request correctly, matching an engineer using
+  express directly. Checks: route matches, middleware runs, response correct.

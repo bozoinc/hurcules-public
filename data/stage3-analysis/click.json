@@ -1,0 +1,353 @@
+{
+  "analyst": {
+    "analyst_version": "1.0.0",
+    "capabilities": [
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "src/click/core.py",
+            "scope": "defines Command, Group, Context classes for building CLI"
+          },
+          {
+            "file": "src/click/decorators.py",
+            "scope": "provides @command, @group, @option, @argument decorators"
+          },
+          {
+            "file": "examples/complex/complex/cli.py",
+            "scope": "entry point showing composed commands and groups"
+          },
+          {
+            "file": "docs/commands.md",
+            "scope": "documentation on defining commands and groups"
+          },
+          {
+            "file": "docs/options.md",
+            "scope": "documentation on options usage"
+          },
+          {
+            "file": "docs/arguments.md",
+            "scope": "documentation on arguments usage"
+          }
+        ],
+        "id": "c1",
+        "name": "Command line interface definition and composition",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.94,
+        "evidence": [
+          {
+            "file": "src/click/types.py",
+            "scope": "implementation of ParamType subclasses (INT, STRING, BOOL, etc.)"
+          },
+          {
+            "file": "src/click/parser.py",
+            "scope": "option and argument parsing logic"
+          },
+          {
+            "file": "docs/parameter-types.md",
+            "scope": "describes built-in and custom parameter types"
+          },
+          {
+            "file": "tests/test_types.py",
+            "scope": "unit tests for type conversion and validation"
+          },
+          {
+            "file": "tests/test_options.py",
+            "scope": "tests for option parsing behavior"
+          },
+          {
+            "file": "tests/test_arguments.py",
+            "scope": "tests for argument parsing"
+          }
+        ],
+        "id": "c2",
+        "name": "Parameter parsing, types and validation",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.93,
+        "evidence": [
+          {
+            "file": "src/click/shell_completion.py",
+            "scope": "core completion script generation for bash, zsh, fish"
+          },
+          {
+            "file": "docs/shell-completion.md",
+            "scope": "documentation on enabling completion"
+          },
+          {
+            "file": "examples/completion/completion.py",
+            "scope": "example demonstrating completion setup"
+          },
+          {
+            "file": "tests/test_shell_completion.py",
+            "scope": "tests verifying completion output"
+          }
+        ],
+        "id": "c3",
+        "name": "Shell completion generation",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.92,
+        "evidence": [
+          {
+            "file": "src/click/testing.py",
+            "scope": "CliRunner and isolated filesystem for testing commands"
+          },
+          {
+            "file": "docs/testing.md",
+            "scope": "guidance on testing Click applications"
+          },
+          {
+            "file": "tests/test_testing.py",
+            "scope": "tests of the testing utilities themselves"
+          },
+          {
+            "file": "tests/test_utils/test_echo.py",
+            "scope": "tests for echo function used in CLI testing"
+          },
+          {
+            "file": "tests/test_utils/test_prompt.py",
+            "scope": "tests for prompt mocking in tests"
+          }
+        ],
+        "id": "c4",
+        "name": "CLI testing utilities",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.91,
+        "evidence": [
+          {
+            "file": "src/click/termui.py",
+            "scope": "prompt, confirm, progressbar functions"
+          },
+          {
+            "file": "src/click/_termui_impl.py",
+            "scope": "platform\u2011specific terminal UI implementation"
+          },
+          {
+            "file": "src/click/utils.py",
+            "scope": "contains prompt and confirm implementations"
+          },
+          {
+            "file": "docs/prompts.md",
+            "scope": "documentation of prompt and confirm usage"
+          },
+          {
+            "file": "docs/handling-files.md",
+            "scope": "covers file\u2011related prompts and editors"
+          },
+          {
+            "file": "examples/termui/termui.py",
+            "scope": "example showing prompts and progress bars"
+          },
+          {
+            "file": "tests/test_termui.py",
+            "scope": "tests for termui functions"
+          },
+          {
+            "file": "tests/test_utils/test_confirm.py",
+            "scope": "unit tests for confirm"
+          },
+          {
+            "file": "tests/test_utils/test_prompt.py",
+            "scope": "unit tests for prompt"
+          },
+          {
+            "file": "tests/typing/typing_progressbar.py",
+            "scope": "tests for progress bar typing"
+          }
+        ],
+        "id": "c5",
+        "name": "User interaction prompts and progress display",
+        "ontology_type": "TOOL",
+        "requirements": []
+      }
+    ],
+    "raw_candidate_count": 5,
+    "repository": "/REPO/gold-click",
+    "schema": "hurcules.capability-analysis",
+    "validation_errors": []
+  },
+  "gold_id": "click",
+  "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+  "survivors": [
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "src/click/core.py",
+          "scope": "defines Command, Group, Context classes for building CLI"
+        },
+        {
+          "file": "src/click/decorators.py",
+          "scope": "provides @command, @group, @option, @argument decorators"
+        },
+        {
+          "file": "examples/complex/complex/cli.py",
+          "scope": "entry point showing composed commands and groups"
+        },
+        {
+          "file": "docs/commands.md",
+          "scope": "documentation on defining commands and groups"
+        },
+        {
+          "file": "docs/options.md",
+          "scope": "documentation on options usage"
+        },
+        {
+          "file": "docs/arguments.md",
+          "scope": "documentation on arguments usage"
+        }
+      ],
+      "id": "c1",
+      "name": "Command line interface definition and composition",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.94,
+      "evidence": [
+        {
+          "file": "src/click/types.py",
+          "scope": "implementation of ParamType subclasses (INT, STRING, BOOL, etc.)"
+        },
+        {
+          "file": "src/click/parser.py",
+          "scope": "option and argument parsing logic"
+        },
+        {
+          "file": "docs/parameter-types.md",
+          "scope": "describes built-in and custom parameter types"
+        },
+        {
+          "file": "tests/test_types.py",
+          "scope": "unit tests for type conversion and validation"
+        },
+        {
+          "file": "tests/test_options.py",
+          "scope": "tests for option parsing behavior"
+        },
+        {
+          "file": "tests/test_arguments.py",
+          "scope": "tests for argument parsing"
+        }
+      ],
+      "id": "c2",
+      "name": "Parameter parsing, types and validation",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.93,
+      "evidence": [
+        {
+          "file": "src/click/shell_completion.py",
+          "scope": "core completion script generation for bash, zsh, fish"
+        },
+        {
+          "file": "docs/shell-completion.md",
+          "scope": "documentation on enabling completion"
+        },
+        {
+          "file": "examples/completion/completion.py",
+          "scope": "example demonstrating completion setup"
+        },
+        {
+          "file": "tests/test_shell_completion.py",
+          "scope": "tests verifying completion output"
+        }
+      ],
+      "id": "c3",
+      "name": "Shell completion generation",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.92,
+      "evidence": [
+        {
+          "file": "src/click/testing.py",
+          "scope": "CliRunner and isolated filesystem for testing commands"
+        },
+        {
+          "file": "docs/testing.md",
+          "scope": "guidance on testing Click applications"
+        },
+        {
+          "file": "tests/test_testing.py",
+          "scope": "tests of the testing utilities themselves"
+        },
+        {
+          "file": "tests/test_utils/test_echo.py",
+          "scope": "tests for echo function used in CLI testing"
+        },
+        {
+          "file": "tests/test_utils/test_prompt.py",
+          "scope": "tests for prompt mocking in tests"
+        }
+      ],
+      "id": "c4",
+      "name": "CLI testing utilities",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.91,
+      "evidence": [
+        {
+          "file": "src/click/termui.py",
+          "scope": "prompt, confirm, progressbar functions"
+        },
+        {
+          "file": "src/click/_termui_impl.py",
+          "scope": "platform\u2011specific terminal UI implementation"
+        },
+        {
+          "file": "src/click/utils.py",
+          "scope": "contains prompt and confirm implementations"
+        },
+        {
+          "file": "docs/prompts.md",
+          "scope": "documentation of prompt and confirm usage"
+        },
+        {
+          "file": "docs/handling-files.md",
+          "scope": "covers file\u2011related prompts and editors"
+        },
+        {
+          "file": "examples/termui/termui.py",
+          "scope": "example showing prompts and progress bars"
+        },
+        {
+          "file": "tests/test_termui.py",
+          "scope": "tests for termui functions"
+        },
+        {
+          "file": "tests/test_utils/test_confirm.py",
+          "scope": "unit tests for confirm"
+        },
+        {
+          "file": "tests/test_utils/test_prompt.py",
+          "scope": "unit tests for prompt"
+        },
+        {
+          "file": "tests/typing/typing_progressbar.py",
+          "scope": "tests for progress bar typing"
+        }
+      ],
+      "id": "c5",
+      "name": "User interaction prompts and progress display",
+      "ontology_type": "TOOL",
+      "requirements": []
+    }
+  ]
+}

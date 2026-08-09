@@ -1,0 +1,20 @@
+{
+  "gold_id": "awesome-graph-eng",
+  "matches": [
+    {
+      "analyst": null,
+      "gold": "ag1",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "ag2",
+      "matched": false
+    },
+    {
+      "analyst": "c1",
+      "gold": "ag3",
+      "matched": true
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+[
+  {
+    "confidence": 0.96,
+    "evidence": [
+      {
+        "file": "src/main.rs",
+        "scope": "defines the main function and program entry point"
+      },
+      {
+        "file": "src/cli.rs",
+        "scope": "implements command-line argument parsing and configuration"
+      }
+    ],
+    "id": "c1",
+    "members": [
+      "c1"
+    ],
+    "name": "fd executable",
+    "ontology_type": "TOOL",
+    "requirements": []
+  },
+  {
+    "confidence": 0.9,
+    "evidence": [
+      {
+        "file": "contrib/completion/_fd",
+        "scope": "zsh completion script for fd"
+      },
+      {
+        "file": "contrib/completion/_fdfind",
+        "scope": "alternative zsh completion script"
+      },
+      {
+        "file": "contrib/completion/fdfind.bash",
+        "scope": "bash completion script for fd"
+      },
+      {
+        "file": "contrib/completion/fdfind.fish",
+        "scope": "fish completion script for fd"
+      }
+    ],
+    "id": "c10",
+    "members": [
+      "c10"
+    ],
+    "name": "shell completion scripts",
+    "ontology_type": "ADAPTER",
+    "requirements": []
+  },
+  {
+    "confidence": 0.95,
+    "evidence": [
+      {
+        "file": "src/walk.rs",
+        "scope": "provides WalkIter and directory walking logic"
+      },
+      {
+        "file": "src/filesystem.rs",
+        "scope": "implements FileTree and filesystem abstraction for traversal"
+      },
+      {
+        "file": "src/filetypes.rs",
+        "scope": "defines FileType enum and matching logic for type filters"
+      }
+    ],
+    "id": "c2",
+    "members": [
+      "c2",
+      "c3"
+    ],
+    "name": "file system traversal",
+    "ontology_type": "SKILL",
+    "requirements": []
+  },
+  {
+    "confidence": 0.94,
+    "evidence": [
+      {
+        "file": "src/filter/size.rs",
+        "scope": "implements SizeFilter for filtering by file size"
+      },
+      {
+        "file": "src/filter/time.rs",
+        "scope": "implements TimeFilter for filtering by modification/access time"
+      },
+      {
+        "file": "src/filter/owner.rs",
+        "scope": "implements OwnerFilter for filtering by file owner/user"
+      }
+    ],
+    "id": "c4",
+    "members": [
+      "c4",
+      "c5",
+      "c6"
+    ],
+    "name": "owner filtering",
+    "ontology_type": "SKILL",
+    "requirements": []
+  },
+  {
+    "confidence": 0.93,
+    "evidence": [
+      {
+        "file": "src/regex_helper.rs",
+        "scope": "provides RegexHelper for compiling and matching regular expressions"
+      },
+      {
+        "file": "src/filter/mod.rs",
+        "scope": "uses regex helpers for name-based filtering"
+      }
+    ],
+    "id": "c7",
+    "members": [
+      "c7"
+    ],
+    "name": "regex pattern matching",
+    "ontology_type": "SKILL",
+    "requirements": []
+  },
+  {
+    "confidence": 0.93,
+    "evidence": [
+      {
+        "file": "src/output.rs",
+        "scope": "handles printing of search results with color and layout"
+      },
+      {
+        "file": "src/fmt/mod.rs",
+        "scope": "implements formatting traits for different output styles"
+      }
+    ],
+    "id": "c8",
+    "members": [
+      "c8"
+    ],
+    "name": "output formatting and coloring",
+    "ontology_type": "SKILL",
+    "requirements": []
+  },
+  {
+    "confidence": 0.92,
+    "evidence": [
+      {
+        "file": "src/hyperlink.rs",
+        "scope": "detects terminal hyperlink support and formats output with links"
+      }
+    ],
+    "id": "c9",
+    "members": [
+      "c9"
+    ],
+    "name": "hyperlink support",
+    "ontology_type": "SKILL",
+    "requirements": []
+  }
+]

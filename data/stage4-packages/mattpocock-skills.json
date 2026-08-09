@@ -1,0 +1,81 @@
+{
+  "compiled_from": "stage3-analysis",
+  "errors": [],
+  "gold_id": "mattpocock-skills",
+  "ok": true,
+  "package": {
+    "capabilities": [],
+    "compiler_version": "1.0.0",
+    "dependency_manifests": [
+      "package.json"
+    ],
+    "permissions_summary": [],
+    "provenance": {
+      "file_count": 149,
+      "languages": [
+        "javascript",
+        "json",
+        "markdown",
+        "shell",
+        "yaml"
+      ],
+      "repository": "/REPO/gold-mattpocock-skills"
+    },
+    "registry": {
+      "status": "candidate"
+    },
+    "schema": "hurcules.capability-package-v1",
+    "security": {
+      "execution_denied_by_default": true,
+      "hostile_by_default": true,
+      "risk_flags": [
+        {
+          "file": ".github/workflows/release.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "CHANGELOG.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/engineering/codebase-design.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/engineering/diagnosing-bugs.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/engineering/wizard.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "docs/productivity/handoff.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/engineering/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/engineering/ask-matt/SKILL.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/engineering/wizard/SKILL.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "skills/engineering/wizard/template.sh",
+          "reason": "secret-reference"
+        }
+      ],
+      "secret_file_locations": []
+    }
+  },
+  "warnings": []
+}

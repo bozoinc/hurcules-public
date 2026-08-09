@@ -1,0 +1,219 @@
+[
+  {
+    "confidence": 0.95,
+    "evidence": [
+      {
+        "file": "mem0/client/main.py",
+        "scope": "Main entry point for Python memory client"
+      },
+      {
+        "file": "mem0/memory/main.py",
+        "scope": "Core memory operations implementation"
+      },
+      {
+        "file": "mem0-ts/src/client/index.ts",
+        "scope": "TypeScript memory client export"
+      },
+      {
+        "file": "mem0-ts/src/oss/src/index.ts",
+        "scope": "Open-source SDK core module"
+      },
+      {
+        "file": "mem0-ts/src/oss/src/memory/index.ts",
+        "scope": "Memory CRUD functions"
+      },
+      {
+        "file": "mem0-ts/src/oss/src/storage/index.ts",
+        "scope": "Storage abstraction layer"
+      }
+    ],
+    "id": "c1",
+    "members": [
+      "c1"
+    ],
+    "name": "Core Memory SDK",
+    "ontology_type": "TOOL",
+    "requirements": []
+  },
+  {
+    "confidence": 0.95,
+    "evidence": [
+      {
+        "file": "cli/node/src/index.ts",
+        "scope": "Node.js CLI entry point"
+      },
+      {
+        "file": "cli/node/package.json",
+        "scope": "Node CLI package definition"
+      },
+      {
+        "file": "cli/python/src/mem0_cli/app.py",
+        "scope": "Python CLI application"
+      },
+      {
+        "file": "cli/python/pyproject.toml",
+        "scope": "Python CLI project configuration"
+      },
+      {
+        "file": "cli/node/tests/cli-integration.test.ts",
+        "scope": "CLI integration tests"
+      },
+      {
+        "file": "cli/python/tests/test_cli_integration.py",
+        "scope": "Python CLI integration tests"
+      }
+    ],
+    "id": "c2",
+    "members": [
+      "c2"
+    ],
+    "name": "Command-Line Interface (CLI)",
+    "ontology_type": "TOOL",
+    "requirements": []
+  },
+  {
+    "confidence": 0.95,
+    "evidence": [
+      {
+        "file": "openmemory/api/main.py",
+        "scope": "FastAPI application entry point"
+      },
+      {
+        "file": "server/main.py",
+        "scope": "Alternative API server entry point"
+      },
+      {
+        "file": "openmemory/api/requirements.txt",
+        "scope": "API dependencies"
+      },
+      {
+        "file": "server/requirements.txt",
+        "scope": "Server dependencies"
+      },
+      {
+        "file": "docs/api-reference/memory/add-memories.mdx",
+        "scope": "API endpoint documentation for adding memories"
+      },
+      {
+        "file": "docs/api-reference/memory/search-memories.mdx",
+        "scope": "API endpoint documentation for searching memories"
+      }
+    ],
+    "id": "c3",
+    "members": [
+      "c3"
+    ],
+    "name": "REST API Server",
+    "ontology_type": "TOOL",
+    "requirements": []
+  },
+  {
+    "confidence": 0.95,
+    "evidence": [
+      {
+        "file": "openmemory/ui/package.json",
+        "scope": "UI package definition"
+      },
+      {
+        "file": "server/dashboard/package.json",
+        "scope": "Dashboard package definition"
+      },
+      {
+        "file": "server/dashboard/src/constants/index.ts",
+        "scope": "UI constants and API endpoints"
+      },
+      {
+        "file": "openmemory/ui/app/apps/[appId]/components/MemoryCard.tsx",
+        "scope": "Memory card UI component"
+      },
+      {
+        "file": "openmemory/ui/app/memory/[id]/components/RelatedMemories.tsx",
+        "scope": "Related memories UI component"
+      }
+    ],
+    "id": "c4",
+    "members": [
+      "c4"
+    ],
+    "name": "Dashboard Web UI",
+    "ontology_type": "TOOL",
+    "requirements": []
+  },
+  {
+    "confidence": 0.95,
+    "evidence": [
+      {
+        "file": "integrations/vercel-ai-sdk/src/index.ts",
+        "scope": "Vercel AI SDK integration entry point"
+      },
+      {
+        "file": "integrations/vercel-ai-sdk/package.json",
+        "scope": "Vercel integration package"
+      },
+      {
+        "file": "mem0-ts/src/community/src/integrations/langchain/index.ts",
+        "scope": "LangChain integration module"
+      },
+      {
+        "file": "integrations/mem0-plugin/skills/mem0/README.md",
+        "scope": "Mem0 plugin skill documentation"
+      },
+      {
+        "file": "docs/integrations/vercel-ai-sdk.mdx",
+        "scope": "Vercel AI SDK integration guide"
+      },
+      {
+        "file": "integrations/openclaw/index.ts",
+        "scope": "OpenClaw integration entry point"
+      },
+      {
+        "file": "integrations/pi-agent-plugin/src/index.ts",
+        "scope": "Pi Agent plugin entry point"
+      },
+      {
+        "file": "mem0/configs/vector_stores/pgvector.py",
+        "scope": "Vector store configuration for PGVector"
+      },
+      {
+        "file": "mem0/configs/vector_stores/qdrant.py",
+        "scope": "Vector store configuration for Qdrant"
+      },
+      {
+        "file": "mem0/llms/openai.py",
+        "scope": "OpenAI LLM implementation"
+      },
+      {
+        "file": "mem0/llms/anthropic.py",
+        "scope": "Anthropic LLM implementation"
+      },
+      {
+        "file": "mem0/reranker/cohere_reranker.py",
+        "scope": "Cohere reranker implementation"
+      },
+      {
+        "file": "docs/components/vectordbs/dbs/pgvector.mdx",
+        "scope": "PGVector vector store documentation"
+      },
+      {
+        "file": "docs/components/embedders/models/openai.mdx",
+        "scope": "OpenAI embedder documentation"
+      },
+      {
+        "file": "docs/components/llms/models/openai.mdx",
+        "scope": "OpenAI LLM documentation"
+      },
+      {
+        "file": "docs/components/rerankers/models/cohere.mdx",
+        "scope": "Cohere reranker documentation"
+      }
+    ],
+    "id": "c5",
+    "members": [
+      "c5",
+      "c6"
+    ],
+    "name": "Pluggable AI Component Architecture",
+    "ontology_type": "TOOL",
+    "requirements": []
+  }
+]

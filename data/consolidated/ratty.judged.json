@@ -1,0 +1,15 @@
+{
+  "gold_id": "ratty",
+  "matches": [
+    {
+      "analyst": "c2",
+      "gold": "rt1",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "rt2",
+      "matched": false
+    }
+  ]
+}

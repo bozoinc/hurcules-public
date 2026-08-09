@@ -1,0 +1,511 @@
+{
+  "analyst": {
+    "analyst_version": "1.0.0",
+    "capabilities": [
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "index.js",
+            "scope": "exports createApplication function"
+          },
+          {
+            "file": "lib/application.js",
+            "scope": "defines Application class core server logic"
+          },
+          {
+            "file": "lib/express.js",
+            "scope": "factory method to create express app"
+          }
+        ],
+        "id": "c1",
+        "name": "HTTP Server Framework",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "node"
+        ]
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "examples/multi-router/index.js",
+            "scope": "demonstrates mounting multiple routers"
+          },
+          {
+            "file": "examples/route-map/index.js",
+            "scope": "shows route mapping usage"
+          },
+          {
+            "file": "examples/route-separation/index.js",
+            "scope": "illustrates route separation pattern"
+          },
+          {
+            "file": "test/Route.js",
+            "scope": "unit tests for Route handling"
+          },
+          {
+            "file": "test/Router.js",
+            "scope": "unit tests for Router functionality"
+          }
+        ],
+        "id": "c2",
+        "name": "Routing System",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "node"
+        ]
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "lib/application.js",
+            "scope": "implements app.use() middleware registration"
+          },
+          {
+            "file": "examples/route-middleware/index.js",
+            "scope": "example of route\u2011level middleware"
+          },
+          {
+            "file": "test/app.use.js",
+            "scope": "tests for app.use middleware registration"
+          },
+          {
+            "file": "test/middleware.basic.js",
+            "scope": "basic middleware behavior tests"
+          }
+        ],
+        "id": "c3",
+        "name": "Middleware Pipeline",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "node"
+        ]
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "lib/request.js",
+            "scope": "defines enhanced request object"
+          },
+          {
+            "file": "lib/response.js",
+            "scope": "defines enhanced response object"
+          },
+          {
+            "file": "test/app.request.js",
+            "scope": "tests for request properties and methods"
+          },
+          {
+            "file": "test/app.response.js",
+            "scope": "tests for response properties and methods"
+          },
+          {
+            "file": "test/res.cookie.js",
+            "scope": "cookie setting on response"
+          },
+          {
+            "file": "test/res.clearCookie.js",
+            "scope": "cookie clearing on response"
+          }
+        ],
+        "id": "c4",
+        "name": "Request/Response Abstraction",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "node"
+        ]
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "examples/static-files/index.js",
+            "scope": "uses express.static middleware to serve files"
+          },
+          {
+            "file": "test/express.static.js",
+            "scope": "tests for static file serving behavior"
+          }
+        ],
+        "id": "c5",
+        "name": "Static File Serving",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "node"
+        ]
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "lib/view.js",
+            "scope": "view rendering infrastructure"
+          },
+          {
+            "file": "examples/ejs/index.js",
+            "scope": "example using EJS template engine"
+          },
+          {
+            "file": "examples/view-constructor/index.js",
+            "scope": "custom view constructor usage"
+          },
+          {
+            "file": "test/app.engine.js",
+            "scope": "tests for template engine registration"
+          },
+          {
+            "file": "test/app.render.js",
+            "scope": "tests for render method"
+          }
+        ],
+        "id": "c6",
+        "name": "Template Rendering",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "node"
+        ]
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "examples/cookie-sessions/index.js",
+            "scope": "cookie\u2011based session middleware example"
+          },
+          {
+            "file": "examples/cookies/index.js",
+            "scope": "plain cookie parsing/setting example"
+          },
+          {
+            "file": "examples/session/index.js",
+            "scope": "session middleware usage"
+          },
+          {
+            "file": "examples/session/redis.js",
+            "scope": "session store backed by Redis"
+          },
+          {
+            "file": "test/req.signedCookies.js",
+            "scope": "signed cookie parsing tests"
+          },
+          {
+            "file": "test/res.cookie.js",
+            "scope": "cookie setting tests"
+          },
+          {
+            "file": "test/res.clearCookie.js",
+            "scope": "cookie clearing tests"
+          }
+        ],
+        "id": "c7",
+        "name": "Session & Cookie Management",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "node"
+        ]
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "examples/content-negotiation/index.js",
+            "scope": "demonstrates req.accepts and format negotiation"
+          },
+          {
+            "file": "examples/params/index.js",
+            "scope": "shows route parameter and query string handling"
+          },
+          {
+            "file": "test/req.accepts.js",
+            "scope": "tests for content\u2011negotiation accepts methods"
+          },
+          {
+            "file": "test/req.query.js",
+            "scope": "tests for query string parsing"
+          },
+          {
+            "file": "test/express.urlencoded.js",
+            "scope": "tests for urlencoded body parser"
+          },
+          {
+            "file": "test/express.json.js",
+            "scope": "tests for JSON body parser"
+          },
+          {
+            "file": "test/express.raw.js",
+            "scope": "tests for raw body parser"
+          },
+          {
+            "file": "test/express.text.js",
+            "scope": "tests for text body parser"
+          }
+        ],
+        "id": "c8",
+        "name": "Content Negotiation & Parameter Parsing",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "node"
+        ]
+      }
+    ],
+    "raw_candidate_count": 8,
+    "repository": "/REPO/gold-express",
+    "schema": "hurcules.capability-analysis",
+    "validation_errors": []
+  },
+  "gold_id": "express",
+  "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+  "survivors": [
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "index.js",
+          "scope": "exports createApplication function"
+        },
+        {
+          "file": "lib/application.js",
+          "scope": "defines Application class core server logic"
+        },
+        {
+          "file": "lib/express.js",
+          "scope": "factory method to create express app"
+        }
+      ],
+      "id": "c1",
+      "name": "HTTP Server Framework",
+      "ontology_type": "TOOL",
+      "requirements": [
+        "node"
+      ]
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "examples/multi-router/index.js",
+          "scope": "demonstrates mounting multiple routers"
+        },
+        {
+          "file": "examples/route-map/index.js",
+          "scope": "shows route mapping usage"
+        },
+        {
+          "file": "examples/route-separation/index.js",
+          "scope": "illustrates route separation pattern"
+        },
+        {
+          "file": "test/Route.js",
+          "scope": "unit tests for Route handling"
+        },
+        {
+          "file": "test/Router.js",
+          "scope": "unit tests for Router functionality"
+        }
+      ],
+      "id": "c2",
+      "name": "Routing System",
+      "ontology_type": "TOOL",
+      "requirements": [
+        "node"
+      ]
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "lib/application.js",
+          "scope": "implements app.use() middleware registration"
+        },
+        {
+          "file": "examples/route-middleware/index.js",
+          "scope": "example of route\u2011level middleware"
+        },
+        {
+          "file": "test/app.use.js",
+          "scope": "tests for app.use middleware registration"
+        },
+        {
+          "file": "test/middleware.basic.js",
+          "scope": "basic middleware behavior tests"
+        }
+      ],
+      "id": "c3",
+      "name": "Middleware Pipeline",
+      "ontology_type": "TOOL",
+      "requirements": [
+        "node"
+      ]
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "lib/request.js",
+          "scope": "defines enhanced request object"
+        },
+        {
+          "file": "lib/response.js",
+          "scope": "defines enhanced response object"
+        },
+        {
+          "file": "test/app.request.js",
+          "scope": "tests for request properties and methods"
+        },
+        {
+          "file": "test/app.response.js",
+          "scope": "tests for response properties and methods"
+        },
+        {
+          "file": "test/res.cookie.js",
+          "scope": "cookie setting on response"
+        },
+        {
+          "file": "test/res.clearCookie.js",
+          "scope": "cookie clearing on response"
+        }
+      ],
+      "id": "c4",
+      "name": "Request/Response Abstraction",
+      "ontology_type": "TOOL",
+      "requirements": [
+        "node"
+      ]
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "examples/static-files/index.js",
+          "scope": "uses express.static middleware to serve files"
+        },
+        {
+          "file": "test/express.static.js",
+          "scope": "tests for static file serving behavior"
+        }
+      ],
+      "id": "c5",
+      "name": "Static File Serving",
+      "ontology_type": "TOOL",
+      "requirements": [
+        "node"
+      ]
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "lib/view.js",
+          "scope": "view rendering infrastructure"
+        },
+        {
+          "file": "examples/ejs/index.js",
+          "scope": "example using EJS template engine"
+        },
+        {
+          "file": "examples/view-constructor/index.js",
+          "scope": "custom view constructor usage"
+        },
+        {
+          "file": "test/app.engine.js",
+          "scope": "tests for template engine registration"
+        },
+        {
+          "file": "test/app.render.js",
+          "scope": "tests for render method"
+        }
+      ],
+      "id": "c6",
+      "name": "Template Rendering",
+      "ontology_type": "TOOL",
+      "requirements": [
+        "node"
+      ]
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "examples/cookie-sessions/index.js",
+          "scope": "cookie\u2011based session middleware example"
+        },
+        {
+          "file": "examples/cookies/index.js",
+          "scope": "plain cookie parsing/setting example"
+        },
+        {
+          "file": "examples/session/index.js",
+          "scope": "session middleware usage"
+        },
+        {
+          "file": "examples/session/redis.js",
+          "scope": "session store backed by Redis"
+        },
+        {
+          "file": "test/req.signedCookies.js",
+          "scope": "signed cookie parsing tests"
+        },
+        {
+          "file": "test/res.cookie.js",
+          "scope": "cookie setting tests"
+        },
+        {
+          "file": "test/res.clearCookie.js",
+          "scope": "cookie clearing tests"
+        }
+      ],
+      "id": "c7",
+      "name": "Session & Cookie Management",
+      "ontology_type": "TOOL",
+      "requirements": [
+        "node"
+      ]
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "examples/content-negotiation/index.js",
+          "scope": "demonstrates req.accepts and format negotiation"
+        },
+        {
+          "file": "examples/params/index.js",
+          "scope": "shows route parameter and query string handling"
+        },
+        {
+          "file": "test/req.accepts.js",
+          "scope": "tests for content\u2011negotiation accepts methods"
+        },
+        {
+          "file": "test/req.query.js",
+          "scope": "tests for query string parsing"
+        },
+        {
+          "file": "test/express.urlencoded.js",
+          "scope": "tests for urlencoded body parser"
+        },
+        {
+          "file": "test/express.json.js",
+          "scope": "tests for JSON body parser"
+        },
+        {
+          "file": "test/express.raw.js",
+          "scope": "tests for raw body parser"
+        },
+        {
+          "file": "test/express.text.js",
+          "scope": "tests for text body parser"
+        }
+      ],
+      "id": "c8",
+      "name": "Content Negotiation & Parameter Parsing",
+      "ontology_type": "TOOL",
+      "requirements": [
+        "node"
+      ]
+    }
+  ]
+}

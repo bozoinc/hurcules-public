@@ -1,0 +1,275 @@
+{
+  "analyst": {
+    "analyst_version": "1.0.0",
+    "capabilities": [
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "src/stats.rs",
+            "scope": "implements line, blank, and comment counting logic"
+          },
+          {
+            "file": "src/lib.rs",
+            "scope": "exposes public statistics functions for library use"
+          },
+          {
+            "file": "src/main.rs",
+            "scope": "entry point that invokes statistics collection"
+          }
+        ],
+        "id": "c1",
+        "name": "Code statistics collection",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "src/language/languages.rs",
+            "scope": "loads language definitions and provides language lookup"
+          },
+          {
+            "file": "languages.json",
+            "scope": "contains definitions for dozens of programming languages"
+          },
+          {
+            "file": "src/language/syntax.rs",
+            "scope": "defines syntax rules used for language detection"
+          }
+        ],
+        "id": "c2",
+        "name": "Multi-language support and detection",
+        "ontology_type": "KNOWLEDGE PACK",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "src/cli.rs",
+            "scope": "defines command-line arguments, subcommands, and options"
+          },
+          {
+            "file": "src/cli_utils.rs",
+            "scope": "provides helper functions for CLI parsing and output"
+          },
+          {
+            "file": "src/main.rs",
+            "scope": "parses CLI input and dispatches to appropriate actions"
+          }
+        ],
+        "id": "c3",
+        "name": "Command-line interface",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "src/lib.rs",
+            "scope": "exposes public functions and types for external crates"
+          },
+          {
+            "file": "src/language/mod.rs",
+            "scope": "re-exports language detection modules for library consumers"
+          },
+          {
+            "file": "src/config.rs",
+            "scope": "provides configurable options usable by library users"
+          }
+        ],
+        "id": "c4",
+        "name": "Library API for embedding",
+        "ontology_type": "ADAPTER",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "fuzz/Cargo.toml",
+            "scope": "configures fuzz dependencies and targets"
+          },
+          {
+            "file": "fuzz/fuzz_targets/parse_from_slice.rs",
+            "scope": "fuzz target exercising parsing from a slice"
+          },
+          {
+            "file": "fuzz/fuzz_targets/parse_from_slice_panic.rs",
+            "scope": "fuzz target checking for panics during parsing"
+          },
+          {
+            "file": "fuzz/fuzz_targets/parse_from_slice_total.rs",
+            "scope": "fuzz target measuring total parsing throughput"
+          }
+        ],
+        "id": "c5",
+        "name": "Fuzz testing of parsers",
+        "ontology_type": "EVALUATOR",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "tests/accuracy.rs",
+            "scope": "runs correctness checks against a large corpus of sample files"
+          },
+          {
+            "file": "benchmark.sh",
+            "scope": "script that benchmarks performance across various inputs"
+          },
+          {
+            "file": "ci/test.bash",
+            "scope": "CI script that invokes test suite and validation"
+          }
+        ],
+        "id": "c6",
+        "name": "Accuracy testing and benchmarking",
+        "ontology_type": "EVALUATOR",
+        "requirements": []
+      }
+    ],
+    "raw_candidate_count": 6,
+    "repository": "/REPO/gold-tokei",
+    "schema": "hurcules.capability-analysis",
+    "validation_errors": []
+  },
+  "gold_id": "tokei",
+  "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+  "survivors": [
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "src/stats.rs",
+          "scope": "implements line, blank, and comment counting logic"
+        },
+        {
+          "file": "src/lib.rs",
+          "scope": "exposes public statistics functions for library use"
+        },
+        {
+          "file": "src/main.rs",
+          "scope": "entry point that invokes statistics collection"
+        }
+      ],
+      "id": "c1",
+      "name": "Code statistics collection",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "src/language/languages.rs",
+          "scope": "loads language definitions and provides language lookup"
+        },
+        {
+          "file": "languages.json",
+          "scope": "contains definitions for dozens of programming languages"
+        },
+        {
+          "file": "src/language/syntax.rs",
+          "scope": "defines syntax rules used for language detection"
+        }
+      ],
+      "id": "c2",
+      "name": "Multi-language support and detection",
+      "ontology_type": "KNOWLEDGE PACK",
+      "requirements": []
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "src/cli.rs",
+          "scope": "defines command-line arguments, subcommands, and options"
+        },
+        {
+          "file": "src/cli_utils.rs",
+          "scope": "provides helper functions for CLI parsing and output"
+        },
+        {
+          "file": "src/main.rs",
+          "scope": "parses CLI input and dispatches to appropriate actions"
+        }
+      ],
+      "id": "c3",
+      "name": "Command-line interface",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "file": "src/lib.rs",
+          "scope": "exposes public functions and types for external crates"
+        },
+        {
+          "file": "src/language/mod.rs",
+          "scope": "re-exports language detection modules for library consumers"
+        },
+        {
+          "file": "src/config.rs",
+          "scope": "provides configurable options usable by library users"
+        }
+      ],
+      "id": "c4",
+      "name": "Library API for embedding",
+      "ontology_type": "ADAPTER",
+      "requirements": []
+    },
+    {
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "fuzz/Cargo.toml",
+          "scope": "configures fuzz dependencies and targets"
+        },
+        {
+          "file": "fuzz/fuzz_targets/parse_from_slice.rs",
+          "scope": "fuzz target exercising parsing from a slice"
+        },
+        {
+          "file": "fuzz/fuzz_targets/parse_from_slice_panic.rs",
+          "scope": "fuzz target checking for panics during parsing"
+        },
+        {
+          "file": "fuzz/fuzz_targets/parse_from_slice_total.rs",
+          "scope": "fuzz target measuring total parsing throughput"
+        }
+      ],
+      "id": "c5",
+      "name": "Fuzz testing of parsers",
+      "ontology_type": "EVALUATOR",
+      "requirements": []
+    },
+    {
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "tests/accuracy.rs",
+          "scope": "runs correctness checks against a large corpus of sample files"
+        },
+        {
+          "file": "benchmark.sh",
+          "scope": "script that benchmarks performance across various inputs"
+        },
+        {
+          "file": "ci/test.bash",
+          "scope": "CI script that invokes test suite and validation"
+        }
+      ],
+      "id": "c6",
+      "name": "Accuracy testing and benchmarking",
+      "ontology_type": "EVALUATOR",
+      "requirements": []
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+gold_case_id: pytest
+reviewer: the product owner + Hermes
+status: HUMAN-VERIFIED-GOLD
+date: 2026-08-05
+
+# Gold-Standard: pytest (pytest-dev/pytest)
+# HURCULES Stage 1 - Gold case #8 (excellent-tests / test-framework category)
+
+provenance:
+  repository: pytest-dev/pytest
+  commit_sha: 9072c4b7bb0832f6d752520a762469babe7a0c44
+  version: 9.x (pyproject; target py310-313)
+  license: MIT (LICENSE)
+  languages: [Python]
+  runtime: Python 3.10+
+
+purpose: |
+  pytest is a mature full-featured Python testing framework. It makes building
+  simple and scalable tests easy, from unit to functional integration tests,
+  with fixtures, parametrize, assertions, and plugins.
+
+architecture_map: |
+  Python package: src/_pytest/ (main.py runner, python.py test collection,
+  core.py fixtures/hooks, config, assertion rewriting), tests/ (exhaustive),
+  docs/. MIT license, active/established.
+
+capabilities:
+  - id: p1
+    name: Test collection + execution runner
+    ontology_type: WORKFLOW
+    evidence:
+      - file: src/_pytest/main.py
+        scope: pytest.main, session, runtestprotocol
+      - file: src/_pytest/python.py
+        scope: test collection from modules/classes/functions
+    confidence: 0.95
+    requirements: [python]
+  - id: p2
+    name: Fixture system (setup/teardown, scopes)
+    ontology_type: WORKFLOW
+    evidence:
+      - file: src/_pytest/fixtures.py
+        scope: fixture definition/request/resolution
+    confidence: 0.93
+    requirements: []
+  - id: p3
+    name: Assertion rewriting + parametrize
+    ontology_type: TOOL
+    evidence:
+      - file: src/_pytest/assertion
+        scope: assertion introspection
+      - file: src/_pytest/python.py
+        scope: parametrize marker
+    confidence: 0.92
+    requirements: []
+  - id: p4
+    name: Plugin/exit mechanisms
+    ontology_type: ADAPTER
+    evidence:
+      - file: src/_pytest/config/__init__.py
+        scope: plugin registration
+    confidence: 0.88
+    requirements: []
+
+dependencies_permissions:
+  dependencies: [pluggy, iniconfig, packaging, pygments]
+  permissions:
+    filesystem: as-tests-declare
+    network: none-by-default
+    shell: subprocess-if-tests-use
+  security_posture: runs user code (tests) - trust boundary is the test author
+
+non_capabilities:
+  - not-a-mock-library (uses unittest.mock)
+  - not-a-coverage-tool (uses pytest-cov plugin)
+
+risks_findings:
+  - executes arbitrary test code - only run trusted suites
+  - plugin ecosystem widens surface
+
+evaluation_plan: |
+  Parity: non-technical user writes + runs a parametrized test with the pytest
+  template. Checks: pass/fail, fixture use, assertion failure message quality.

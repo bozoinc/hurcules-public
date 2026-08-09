@@ -1,0 +1,681 @@
+{
+  "archon": {
+    "clone": "~/projects/Archon",
+    "docs": 80,
+    "entry_points": [
+      "packages/adapters/src/chat/slack/index.ts",
+      "packages/adapters/src/chat/telegram/index.ts",
+      "packages/adapters/src/community/chat/discord/index.ts",
+      "packages/adapters/src/community/forge/gitea/index.ts",
+      "packages/adapters/src/community/forge/gitlab/index.ts",
+      "packages/adapters/src/forge/github/index.ts",
+      "packages/adapters/src/index.ts",
+      "packages/core/src/config/index.ts",
+      "packages/core/src/credentials/index.ts",
+      "packages/core/src/db/adapters/index.ts",
+      "packages/core/src/db/index.ts",
+      "packages/core/src/github-auth/index.ts",
+      "packages/core/src/index.ts",
+      "packages/core/src/operations/index.ts",
+      "packages/core/src/schemas/index.ts",
+      "packages/core/src/types/index.ts",
+      "packages/core/src/workflows/index.ts",
+      "packages/git/src/index.ts",
+      "packages/isolation/src/index.ts",
+      "packages/paths/src/index.ts",
+      "packages/providers/src/claude/index.ts",
+      "packages/providers/src/codex/index.ts",
+      "packages/providers/src/community/copilot/index.ts",
+      "packages/providers/src/community/opencode/index.ts",
+      "packages/providers/src/community/pi/index.ts",
+      "packages/providers/src/index.ts",
+      "packages/server/src/auth/index.ts",
+      "packages/server/src/index.ts",
+      "packages/web/src/experiments/console/builder/fixtures/index.ts",
+      "packages/web/src/experiments/console/builder/flow/index.ts",
+      "packages/web/src/experiments/console/builder/model/index.ts",
+      "packages/web/src/experiments/console/builder/types/index.ts",
+      "packages/web/src/experiments/console/builder/validation/index.ts",
+      "packages/web/src/experiments/console/builder/variants/index.ts",
+      "packages/web/src/experiments/console/builder/yaml/index.ts",
+      "packages/web/src/experiments/console/skills/index.ts",
+      "packages/workflows/src/schemas/index.ts"
+    ],
+    "file_count": 1351,
+    "languages": 12,
+    "licenses": [
+      "LICENSE"
+    ],
+    "manifests": [
+      "auth-service/package.json",
+      "package.json",
+      "packages/adapters/package.json",
+      "packages/cli/package.json",
+      "packages/core/package.json",
+      "packages/docs-web/package.json",
+      "packages/git/package.json",
+      "packages/isolation/package.json",
+      "packages/paths/package.json",
+      "packages/providers/package.json",
+      "packages/server/package.json",
+      "packages/web/package.json",
+      "packages/workflows/package.json"
+    ],
+    "risk_flags": 286,
+    "secret_locations": [],
+    "tests": 23
+  },
+  "awesome-graph-eng": {
+    "clone": "~/projects/gold-awesome-graph-eng",
+    "docs": 40,
+    "entry_points": [],
+    "file_count": 90,
+    "languages": 9,
+    "licenses": [
+      "LICENSE"
+    ],
+    "manifests": [],
+    "risk_flags": 12,
+    "secret_locations": [],
+    "tests": 0
+  },
+  "bat": {
+    "clone": "~/projects/gold-bat",
+    "docs": 14,
+    "entry_points": [
+      "src/bin/bat/main.rs",
+      "tests/syntax-tests/highlighted/Go/main.go",
+      "tests/syntax-tests/source/Go/main.go"
+    ],
+    "file_count": 909,
+    "languages": 28,
+    "licenses": [
+      "LICENSE-MIT",
+      "tests/syntax-tests/source/Ada/LICENSE.md",
+      "tests/syntax-tests/source/Batch/LICENSE.md",
+      "tests/syntax-tests/source/CSV/LICENSE.md",
+      "tests/syntax-tests/source/Cabal/LICENSE.md",
+      "tests/syntax-tests/source/CoffeeScript/LICENSE.md",
+      "tests/syntax-tests/source/DotENV/LICENSE.md",
+      "tests/syntax-tests/source/Elixir/LICENSE.md",
+      "tests/syntax-tests/source/Elm/LICENSE.md",
+      "tests/syntax-tests/source/F#/LICENSE.md",
+      "tests/syntax-tests/source/Fortran (Fixed Form)/LICENSE.md",
+      "tests/syntax-tests/source/Fortran (Modern)/LICENSE.md",
+      "tests/syntax-tests/source/Git Config/LICENSE.md",
+      "tests/syntax-tests/source/Git Ignore/LICENSE.md",
+      "tests/syntax-tests/source/Go/LICENSE.md",
+      "tests/syntax-tests/source/Graphviz DOT/LICENSE.md",
+      "tests/syntax-tests/source/Groff/LICENSE.md",
+      "tests/syntax-tests/source/Idris2/LICENSE.md",
+      "tests/syntax-tests/source/JQ/LICENSE.md",
+      "tests/syntax-tests/source/Java Server Page (JSP)/LICENSE.md",
+      "tests/syntax-tests/source/Lean/LICENSE.md",
+      "tests/syntax-tests/source/Lisp/LICENSE.md",
+      "tests/syntax-tests/source/LiveScript/LICENSE.md",
+      "tests/syntax-tests/source/MATLAB/LICENSE.md",
+      "tests/syntax-tests/source/Makefile/LICENSE.md",
+      "tests/syntax-tests/source/NAnt Build File/LICENSE.md",
+      "tests/syntax-tests/source/Ninja/LICENSE.md",
+      "tests/syntax-tests/source/Puppet/LICENSE.md",
+      "tests/syntax-tests/source/Rego/LICENSE.md",
+      "tests/syntax-tests/source/Robot Framework/LICENSE.md",
+      "tests/syntax-tests/source/Scala/LICENSE.md",
+      "tests/syntax-tests/source/Solidity/LICENSE.md",
+      "tests/syntax-tests/source/Stylus/LICENSE.md",
+      "tests/syntax-tests/source/Svelte/LICENSE.md",
+      "tests/syntax-tests/source/TypeScript/LICENSE.md",
+      "tests/syntax-tests/source/TypeScriptReact/LICENSE.md",
+      "tests/syntax-tests/source/Verilog/LICENSE.md",
+      "tests/syntax-tests/source/Vyper/LICENSE.md",
+      "tests/syntax-tests/source/WGSL/LICENSE.md",
+      "tests/syntax-tests/source/XAML/LICENSE.md",
+      "tests/syntax-tests/source/dash/LICENSE.md",
+      "tests/syntax-tests/source/jsonnet/LICENSE.md",
+      "tests/syntax-tests/source/varlink/LICENSE.md"
+    ],
+    "manifests": [
+      "tests/syntax-tests/highlighted/Go/go.mod",
+      "tests/syntax-tests/highlighted/Requirements.txt/requirements.txt",
+      "tests/syntax-tests/source/Go/go.mod",
+      "tests/syntax-tests/source/Requirements.txt/requirements.txt"
+    ],
+    "risk_flags": 8,
+    "secret_locations": [
+      "tests/syntax-tests/highlighted/DotENV/.env",
+      "tests/syntax-tests/source/DotENV/.env"
+    ],
+    "tests": 680
+  },
+  "claimgap": {
+    "clone": "~/projects/gold-claimgap5",
+    "docs": 1,
+    "entry_points": [],
+    "file_count": 38,
+    "languages": 3,
+    "licenses": [
+      "LICENSE"
+    ],
+    "manifests": [
+      "requirements.txt"
+    ],
+    "risk_flags": 3,
+    "secret_locations": [],
+    "tests": 8
+  },
+  "click": {
+    "clone": "~/projects/gold-click",
+    "docs": 53,
+    "entry_points": [
+      "examples/complex/complex/cli.py"
+    ],
+    "file_count": 165,
+    "languages": 6,
+    "licenses": [
+      "LICENSE.txt",
+      "docs/license.md"
+    ],
+    "manifests": [
+      "examples/aliases/pyproject.toml",
+      "examples/colors/pyproject.toml",
+      "examples/completion/pyproject.toml",
+      "examples/complex/pyproject.toml",
+      "examples/imagepipe/pyproject.toml",
+      "examples/inout/pyproject.toml",
+      "examples/naval/pyproject.toml",
+      "examples/repo/pyproject.toml",
+      "examples/termui/pyproject.toml",
+      "examples/validation/pyproject.toml",
+      "pyproject.toml"
+    ],
+    "risk_flags": 14,
+    "secret_locations": [],
+    "tests": 46
+  },
+  "express": {
+    "clone": "~/projects/gold-express",
+    "docs": 2,
+    "entry_points": [
+      "examples/auth/index.js",
+      "examples/content-negotiation/index.js",
+      "examples/cookie-sessions/index.js",
+      "examples/cookies/index.js",
+      "examples/downloads/index.js",
+      "examples/ejs/index.js",
+      "examples/error-pages/index.js",
+      "examples/error/index.js",
+      "examples/hello-world/index.js",
+      "examples/markdown/index.js",
+      "examples/multi-router/index.js",
+      "examples/mvc/controllers/main/index.js",
+      "examples/mvc/controllers/pet/index.js",
+      "examples/mvc/controllers/user-pet/index.js",
+      "examples/mvc/controllers/user/index.js",
+      "examples/mvc/index.js",
+      "examples/online/index.js",
+      "examples/params/index.js",
+      "examples/resource/index.js",
+      "examples/route-map/index.js",
+      "examples/route-middleware/index.js",
+      "examples/route-separation/index.js",
+      "examples/search/index.js",
+      "examples/session/index.js",
+      "examples/static-files/index.js",
+      "examples/vhost/index.js",
+      "examples/view-constructor/index.js",
+      "examples/view-locals/index.js",
+      "examples/web-service/index.js",
+      "index.js"
+    ],
+    "file_count": 213,
+    "languages": 6,
+    "licenses": [
+      "LICENSE"
+    ],
+    "manifests": [
+      "package.json"
+    ],
+    "risk_flags": 14,
+    "secret_locations": [],
+    "tests": 112
+  },
+  "fd": {
+    "clone": "~/projects/gold-fd",
+    "docs": 9,
+    "entry_points": [
+      "src/main.rs"
+    ],
+    "file_count": 59,
+    "languages": 5,
+    "licenses": [
+      "LICENSE-MIT"
+    ],
+    "manifests": [],
+    "risk_flags": 2,
+    "secret_locations": [],
+    "tests": 2
+  },
+  "hexyl": {
+    "clone": "~/projects/gold-hexyl",
+    "docs": 3,
+    "entry_points": [
+      "src/main.rs"
+    ],
+    "file_count": 22,
+    "languages": 4,
+    "licenses": [
+      "LICENSE-MIT"
+    ],
+    "manifests": [],
+    "risk_flags": 1,
+    "secret_locations": [],
+    "tests": 5
+  },
+  "jq": {
+    "clone": "~/projects/gold-jq",
+    "docs": 35,
+    "entry_points": [],
+    "file_count": 427,
+    "languages": 10,
+    "licenses": [
+      "COPYING"
+    ],
+    "manifests": [],
+    "risk_flags": 1,
+    "secret_locations": [],
+    "tests": 49
+  },
+  "mattpocock-skills": {
+    "clone": "~/projects/gold-mattpocock-skills",
+    "docs": 32,
+    "entry_points": [],
+    "file_count": 149,
+    "languages": 5,
+    "licenses": [
+      "LICENSE"
+    ],
+    "manifests": [
+      "package.json"
+    ],
+    "risk_flags": 11,
+    "secret_locations": [],
+    "tests": 0
+  },
+  "mem0": {
+    "clone": "~/projects/mem0",
+    "docs": 307,
+    "entry_points": [
+      "cli/node/src/backend/index.ts",
+      "cli/node/src/index.ts",
+      "cli/python/src/mem0_cli/__main__.py",
+      "cli/python/src/mem0_cli/app.py",
+      "examples/openai-inbuilt-tools/index.js",
+      "integrations/openclaw/backend/index.ts",
+      "integrations/openclaw/index.ts",
+      "integrations/openclaw/tools/index.ts",
+      "integrations/pi-agent-plugin/src/capture/index.ts",
+      "integrations/pi-agent-plugin/src/config/index.ts",
+      "integrations/pi-agent-plugin/src/dream/index.ts",
+      "integrations/pi-agent-plugin/src/index.ts",
+      "integrations/vercel-ai-sdk/src/index.ts",
+      "mem0-ts/src/client/index.ts",
+      "mem0-ts/src/community/src/index.ts",
+      "mem0-ts/src/community/src/integrations/langchain/index.ts",
+      "mem0-ts/src/oss/examples/vector-stores/index.ts",
+      "mem0-ts/src/oss/src/index.ts",
+      "mem0-ts/src/oss/src/memory/index.ts",
+      "mem0-ts/src/oss/src/prompts/index.ts",
+      "mem0-ts/src/oss/src/storage/index.ts",
+      "mem0-ts/src/oss/src/types/index.ts",
+      "mem0/client/main.py",
+      "mem0/memory/main.py",
+      "mem0/proxy/main.py",
+      "openmemory/api/main.py",
+      "server/dashboard/src/constants/index.ts",
+      "server/main.py"
+    ],
+    "file_count": 1679,
+    "languages": 10,
+    "licenses": [
+      "LICENSE",
+      "integrations/mem0-plugin/.opencode-plugin/LICENSE",
+      "integrations/mem0-plugin/skills/mem0/LICENSE",
+      "integrations/openclaw/LICENSE",
+      "integrations/pi-agent-plugin/LICENSE",
+      "skills/mem0-cli/LICENSE",
+      "skills/mem0-integrate/LICENSE",
+      "skills/mem0-oss-to-platform/LICENSE",
+      "skills/mem0-test-integration/LICENSE",
+      "skills/mem0-vercel-ai-sdk/LICENSE",
+      "skills/mem0/LICENSE"
+    ],
+    "manifests": [
+      "cli/node/package.json",
+      "cli/python/pyproject.toml",
+      "examples/mem0-demo/package.json",
+      "examples/multimodal-demo/package.json",
+      "examples/openai-inbuilt-tools/package.json",
+      "examples/vercel-ai-sdk-chat-app/package.json",
+      "examples/yt-assistant-chrome/package.json",
+      "integrations/mem0-plugin/.opencode-plugin/package.json",
+      "integrations/mem0-plugin/requirements.txt",
+      "integrations/openclaw/package.json",
+      "integrations/pi-agent-plugin/package.json",
+      "integrations/vercel-ai-sdk/package.json",
+      "mem0-ts/package.json",
+      "mem0-ts/src/community/package.json",
+      "mem0-ts/src/oss/package.json",
+      "mem0/memory/setup.py",
+      "openmemory/api/requirements.txt",
+      "openmemory/ui/package.json",
+      "pyproject.toml",
+      "server/dashboard/package.json",
+      "server/requirements.txt"
+    ],
+    "risk_flags": 564,
+    "secret_locations": [
+      "server/.env"
+    ],
+    "tests": 228
+  },
+  "navi": {
+    "clone": "~/projects/gold-navi",
+    "docs": 24,
+    "entry_points": [
+      "src/bin/main.rs"
+    ],
+    "file_count": 119,
+    "languages": 5,
+    "licenses": [
+      "LICENSE"
+    ],
+    "manifests": [],
+    "risk_flags": 2,
+    "secret_locations": [],
+    "tests": 16
+  },
+  "nolicense": {
+    "clone": "~/projects/gold-nolicense",
+    "docs": 1,
+    "entry_points": [],
+    "file_count": 10,
+    "languages": 3,
+    "licenses": [],
+    "manifests": [
+      "pyproject.toml"
+    ],
+    "risk_flags": 2,
+    "secret_locations": [],
+    "tests": 0
+  },
+  "prettier": {
+    "clone": "~/projects/gold-prettier",
+    "docs": 32,
+    "entry_points": [
+      "index.js",
+      "packages/plugin-hermes/index.js",
+      "packages/plugin-oxc/index.js",
+      "packages/plugin-yuku/index.js",
+      "scripts/release/steps/index.js",
+      "scripts/tools/bundle-test/index.js",
+      "scripts/tools/eslint-plugin-prettier-internal-rules/index.js",
+      "scripts/utilities/index.js",
+      "src/cli/index.js",
+      "src/config/editorconfig/index.js",
+      "src/config/prettier-config/index.js",
+      "src/document/builders/index.js",
+      "src/document/index.js",
+      "src/document/utilities/index.js",
+      "src/experimental-cli/index.js",
+      "src/index.js",
+      "src/language-css/index.js",
+      "src/language-css/massage-ast/index.js",
+      "src/language-css/utilities/index.js",
+      "src/language-graphql/index.js",
+      "src/language-graphql/massage-ast/index.js",
+      "src/language-handlebars/index.js",
+      "src/language-handlebars/massage-ast/index.js",
+      "src/language-html/index.js",
+      "src/language-html/massage-ast/index.js",
+      "src/language-html/utilities/index.js",
+      "src/language-js/embed/index.js",
+      "src/language-js/index.js",
+      "src/language-js/location/index.js",
+      "src/language-js/massage-ast/index.js",
+      "src/language-js/parse/index.js",
+      "src/language-js/parse/postprocess/index.js",
+      "src/language-js/print/index.js",
+      "src/language-json/index.js",
+      "src/language-json/massage-ast/index.js",
+      "src/language-json/print/index.js",
+      "src/language-markdown/index.js",
+      "src/language-markdown/massage-ast/index.js",
+      "src/language-markdown/parse/index.js",
+      "src/language-markdown/print/index.js",
+      "src/language-yaml/index.js",
+      "src/language-yaml/massage-ast/index.js",
+      "src/main/front-matter/index.js",
+      "src/main/plugins/index.js",
+      "src/universal/index.js",
+      "tests/config/format-test/index.js",
+      "tests/config/prettier-plugins/prettier-plugin-dummy-toml/index.js",
+      "tests/config/prettier-plugins/prettier-plugin-uppercase-rocks/index.js",
+      "tests/dts/unit/cases/index.ts",
+      "tests/format/flow/flow-repo/config_module_system_node_resolve_dirname/custom_resolve_dir/testproj/index.js",
+      "tests/format/flow/flow-repo/config_module_system_node_resolve_dirname/custom_resolve_dir/testproj2/index.js",
+      "tests/format/flow/flow-repo/config_module_system_node_resolve_dirname/subdir/custom_resolve_dir/testproj2/index.js",
+      "tests/format/flow/flow-repo/declaration_files_haste/ws/index.js",
+      "tests/format/flow/flow-repo/declaration_files_incremental_haste/ws/index.js",
+      "tests/format/flow/flow-repo/declaration_files_incremental_haste_name_reducers/index.js",
+      "tests/format/flow/flow-repo/haste_name_reducers_defaults/index.js",
+      "tests/format/flow/flow-repo/haste_use_name_reducers/index.js",
+      "tests/format/flow/flow-repo/incremental_haste_blacklist/index.js",
+      "tests/format/flow/flow-repo/incremental_haste_name_reducers_duplicate/index.js",
+      "tests/format/flow/flow-repo/module_not_found_errors/src/index.js",
+      "tests/format/flow/flow-repo/node_haste/ws/index.js",
+      "tests/format/flow/flow-repo/node_modules_with_symlinks/root/symlink_lib/index.js",
+      "tests/format/flow/flow-repo/node_modules_with_symlinks/symlink_lib_outside_root/index.js",
+      "tests/format/flow/flow-repo/node_tests/json_file/package2/index.js",
+      "tests/format/typescript/assert/index.ts",
+      "tests/integration/cli/config/$schema/index.js",
+      "tests/integration/cli/config/external-config/cjs-package/index.js",
+      "tests/integration/cli/config/external-config/esm-file/index.js",
+      "tests/integration/cli/config/external-config/esm-package-forbids-require/index.js",
+      "tests/integration/cli/config/external-config/esm-package-with-tla/index.js",
+      "tests/integration/cli/config/external-config/esm-package/index.js",
+      "tests/integration/cli/infer-plugins-ext-dir-with-default-options/src/index.js",
+      "tests/integration/cli/infer-plugins-ext-dir-with-overrides-and-default-options/src/index.js"
+    ],
+    "file_count": 9267,
+    "languages": 9,
+    "licenses": [
+      "LICENSE"
+    ],
+    "manifests": [
+      "package.json",
+      "packages/plugin-hermes/package.json",
+      "packages/plugin-oxc/package.json",
+      "packages/plugin-yuku/package.json",
+      "scripts/release/package.json",
+      "scripts/tools/bundle-test/package.json",
+      "scripts/tools/eslint-plugin-prettier-internal-rules/package.json",
+      "tests/config/prettier-plugins/prettier-plugin-async-printer/package.json",
+      "tests/config/prettier-plugins/prettier-plugin-dummy-toml/package.json",
+      "tests/config/prettier-plugins/prettier-plugin-missing-comments/package.json",
+      "tests/config/prettier-plugins/prettier-plugin-uppercase-rocks/package.json",
+      "tests/integration/cli/cache/package.json",
+      "tests/integration/cli/config-external-config-syntax-error/package.json",
+      "tests/integration/cli/config/external-config/cjs-package/package.json",
+      "tests/integration/cli/config/external-config/esm-file/package.json",
+      "tests/integration/cli/config/external-config/esm-package-forbids-require/package.json",
+      "tests/integration/cli/config/external-config/esm-package-with-tla/package.json",
+      "tests/integration/cli/config/external-config/esm-package/package.json",
+      "tests/integration/cli/config/package/package.json",
+      "tests/integration/cli/config/rc-cjs/prettier-config-cjs-in-type-commonjs/package.json",
+      "tests/integration/cli/config/rc-cjs/prettier-config-cjs-in-type-module/package.json",
+      "tests/integration/cli/config/rc-cjs/prettier-config-cjs-in-type-none/package.json",
+      "tests/integration/cli/config/rc-cjs/prettierrc-cjs-in-type-commonjs/package.json",
+      "tests/integration/cli/config/rc-cjs/prettierrc-cjs-in-type-module/package.json",
+      "tests/integration/cli/config/rc-cjs/prettierrc-cjs-in-type-none/package.json",
+      "tests/integration/cli/config/rc-js/cjs-prettier-config-js-in-type-commonjs/package.json",
+      "tests/integration/cli/config/rc-js/cjs-prettier-config-js-in-type-module/package.json",
+      "tests/integration/cli/config/rc-js/cjs-prettier-config-js-in-type-none/package.json",
+      "tests/integration/cli/config/rc-js/cjs-prettierrc-js-in-type-commonjs/package.json",
+      "tests/integration/cli/config/rc-js/cjs-prettierrc-js-in-type-module/package.json",
+      "tests/integration/cli/config/rc-js/cjs-prettierrc-js-in-type-none/package.json",
+      "tests/integration/cli/config/rc-js/mjs-prettier-config-js-in-type-commonjs/package.json",
+      "tests/integration/cli/config/rc-js/mjs-prettier-config-js-in-type-module/package.json",
+      "tests/integration/cli/config/rc-js/mjs-prettier-config-js-in-type-none/package.json",
+      "tests/integration/cli/config/rc-js/mjs-prettierrc-js-in-type-commonjs/package.json",
+      "tests/integration/cli/config/rc-js/mjs-prettierrc-js-in-type-module/package.json",
+      "tests/integration/cli/config/rc-js/mjs-prettierrc-js-in-type-none/package.json",
+      "tests/integration/cli/config/rc-mjs/prettier-config-mjs-in-type-commonjs/package.json",
+      "tests/integration/cli/config/rc-mjs/prettier-config-mjs-in-type-module/package.json",
+      "tests/integration/cli/config/rc-mjs/prettier-config-mjs-in-type-none/package.json",
+      "tests/integration/cli/config/rc-mjs/prettierrc-mjs-in-type-commonjs/package.json",
+      "tests/integration/cli/config/rc-mjs/prettierrc-mjs-in-type-module/package.json",
+      "tests/integration/cli/config/rc-mjs/prettierrc-mjs-in-type-none/package.json",
+      "website/package.json"
+    ],
+    "risk_flags": 17,
+    "secret_locations": [],
+    "tests": 8260
+  },
+  "pytest": {
+    "clone": "~/projects/gold-pytest",
+    "docs": 316,
+    "entry_points": [
+      "src/_pytest/main.py",
+      "src/pytest/__main__.py",
+      "testing/example_scripts/doctest/main_py/__main__.py"
+    ],
+    "file_count": 660,
+    "languages": 8,
+    "licenses": [
+      "LICENSE"
+    ],
+    "manifests": [
+      "doc/en/requirements.txt",
+      "pyproject.toml",
+      "testing/plugins_integration/requirements.txt"
+    ],
+    "risk_flags": 59,
+    "secret_locations": [],
+    "tests": 121
+  },
+  "ratty": {
+    "clone": "~/projects/gold-ratty",
+    "docs": 3,
+    "entry_points": [
+      "src/main.rs"
+    ],
+    "file_count": 88,
+    "languages": 7,
+    "licenses": [
+      "LICENSE"
+    ],
+    "manifests": [],
+    "risk_flags": 3,
+    "secret_locations": [],
+    "tests": 0
+  },
+  "ripgrep": {
+    "clone": "~/projects/gold-ripgrep",
+    "docs": 24,
+    "entry_points": [
+      "crates/core/main.rs"
+    ],
+    "file_count": 236,
+    "languages": 7,
+    "licenses": [
+      "COPYING",
+      "LICENSE-MIT",
+      "crates/cli/LICENSE-MIT",
+      "crates/globset/COPYING",
+      "crates/globset/LICENSE-MIT",
+      "crates/grep/COPYING",
+      "crates/grep/LICENSE-MIT",
+      "crates/ignore/COPYING",
+      "crates/ignore/LICENSE-MIT",
+      "crates/index/LICENSE-MIT",
+      "crates/matcher/LICENSE-MIT",
+      "crates/pcre2/LICENSE-MIT",
+      "crates/printer/LICENSE-MIT",
+      "crates/regex/LICENSE-MIT",
+      "crates/searcher/LICENSE-MIT"
+    ],
+    "manifests": [],
+    "risk_flags": 2,
+    "secret_locations": [],
+    "tests": 29
+  },
+  "suspicious": {
+    "clone": "~/projects/gold-suspicious",
+    "docs": 66,
+    "entry_points": [],
+    "file_count": 451,
+    "languages": 10,
+    "licenses": [
+      "LICENSE"
+    ],
+    "manifests": [],
+    "risk_flags": 51,
+    "secret_locations": [],
+    "tests": 0
+  },
+  "tokei": {
+    "clone": "~/projects/gold-tokei",
+    "docs": 2,
+    "entry_points": [
+      "src/main.rs"
+    ],
+    "file_count": 261,
+    "languages": 20,
+    "licenses": [],
+    "manifests": [],
+    "risk_flags": 4,
+    "secret_locations": [],
+    "tests": 208
+  },
+  "yq": {
+    "clone": "~/projects/gold-yq",
+    "docs": 8,
+    "entry_points": [
+      "yq/__main__.py",
+      "yq/tomlq/__main__.py",
+      "yq/xq/__main__.py"
+    ],
+    "file_count": 35,
+    "languages": 6,
+    "licenses": [
+      "LICENSE"
+    ],
+    "manifests": [
+      "pyproject.toml"
+    ],
+    "risk_flags": 3,
+    "secret_locations": [],
+    "tests": 4
+  },
+  "zx": {
+    "clone": "~/projects/gold-zx",
+    "docs": 34,
+    "entry_points": [
+      "docs/.vitepress/theme/index.js",
+      "src/index.ts"
+    ],
+    "file_count": 147,
+    "languages": 7,
+    "licenses": [
+      "LICENSE"
+    ],
+    "manifests": [
+      "package.json",
+      "test/fixtures/js-project/package.json",
+      "test/fixtures/ts-project/package.json"
+    ],
+    "risk_flags": 7,
+    "secret_locations": [],
+    "tests": 45
+  }
+}

@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: HURCULES Project Docs
+    url: https://github.com/bozoinc/hurcules/blob/main/README.md
+    about: Read GOAL.md, SUB-GOALS.md, QIR.md and AGENT-MAP.md before filing.

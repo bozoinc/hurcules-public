@@ -1,0 +1,65 @@
+gold_case_id: hexyl
+reviewer: the product owner + Hermes
+status: HUMAN-VERIFIED-GOLD
+date: 2026-08-05
+
+# Gold-Standard: hexyl (sharkdp/hexyl)
+# HURCULES Stage 1 - Gold case #18 (command-line-tool category)
+
+provenance:
+  repository: sharkdp/hexyl
+  commit_sha: 6ecc29b9c8c84d08a7e860f7f69c22b113b480ea
+  version: 0.17.0 (Cargo.toml)
+  license: Apache-2.0 / MIT dual (LICENSE-APACHE)
+  languages: [Rust]
+  runtime: compiled Rust binary
+
+purpose: |
+  hexyl is a simple hex viewer for the terminal: byte-by-byte hexdump with
+  colored ASCII/hex output, position markers, and optional piped input.
+
+architecture_map: |
+  Rust project: src/ (main.rs entry, lib.rs, input.rs stdin handling, colors.rs
+  output coloring), Cargo.toml. Apache/MIT dual.
+
+capabilities:
+  - id: h1
+    name: Hexdump rendering (hex + ASCII + colors)
+    ontology_type: TOOL
+    evidence:
+      - file: src/lib.rs
+        scope: hexdump layout/rendering
+      - file: src/colors.rs
+        scope: colored output
+    confidence: 0.92
+    requirements: []
+  - id: h2
+    name: File + stdin input handling
+    ontology_type: TOOL
+    evidence:
+      - file: src/input.rs
+        scope: input sources
+      - file: src/main.rs
+        scope: CLI entry
+    confidence: 0.88
+    requirements: []
+
+dependencies_permissions:
+  dependencies: [ansi-term, rayon-optional]
+  permissions:
+    filesystem: read-files
+    network: none
+    shell: none
+  security_posture: reads bytes, renders only; no execution
+
+non_capabilities:
+  - not-a-binary-editor
+  - not-a-disassembler
+
+risks_findings:
+  - read-only tool; very low risk
+  - ANSI output in hostile terminal sequences - display only
+
+evaluation_plan: |
+  Parity: non-technical user hex-dumps a binary via the template. Checks:
+  hex+ASCII shown, colored, exit 0.

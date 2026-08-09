@@ -1,0 +1,25 @@
+{
+  "gold_id": "express",
+  "matches": [
+    {
+      "analyst": null,
+      "gold": "HTTP server + application factory",
+      "matched": false
+    },
+    {
+      "analyst": "Routing and middleware system",
+      "gold": "Routing (methods, params, handlers)",
+      "matched": true
+    },
+    {
+      "analyst": "Routing and middleware system",
+      "gold": "Middleware pipeline",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "Response handling + static serving",
+      "matched": false
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "analyst": {
+    "analyst_version": "1.0.0",
+    "capabilities": [
+      {
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "file": "index.js",
+            "scope": "main entry point of the formatter"
+          },
+          {
+            "file": "src/cli/index.js",
+            "scope": "command line interface for formatting files"
+          },
+          {
+            "file": "src/language-js/index.js",
+            "scope": "JavaScript language parser and printer implementation"
+          }
+        ],
+        "id": "c1",
+        "name": "Code Formatter",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "file": "packages/plugin-hermes/index.js",
+            "scope": "plugin entry point for Hermes language support"
+          },
+          {
+            "file": "packages/plugin-oxc/index.js",
+            "scope": "plugin entry point for OXC language support"
+          },
+          {
+            "file": "packages/plugin-yuku/index.js",
+            "scope": "plugin entry point for Yuku language support"
+          }
+        ],
+        "id": "c2",
+        "name": "Plugin System",
+        "ontology_type": "ADAPTER",
+        "requirements": []
+      },
+      {
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "file": "scripts/release/steps/index.js",
+            "scope": "release process automation script"
+          },
+          {
+            "file": "scripts/release/tests/publish-to-npm.test.js",
+            "scope": "test for npm publishing step in release workflow"
+          },
+          {
+            "file": "scripts/release/tests/validate-new-version.test.js",
+            "scope": "test for version validation in release workflow"
+          }
+        ],
+        "id": "c3",
+        "name": "Release Workflow",
+        "ontology_type": "WORKFLOW",
+        "requirements": []
+      },
+      {
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "file": "tests/integration/__tests__/format.js",
+            "scope": "integration test suite for formatter behavior"
+          },
+          {
+            "file": "tests/unit/doc-printer.js",
+            "scope": "unit test for document printer functionality"
+          },
+          {
+            "file": "tests/format/.prettierrc",
+            "scope": "configuration file used in test environment"
+          }
+        ],
+        "id": "c4",
+        "name": "Test Suite",
+        "ontology_type": "EVALUATOR",
+        "requirements": []
+      },
+      {
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "file": "README.md",
+            "scope": "primary user and contributor documentation"
+          },
+          {
+            "file": "docs/cli.md",
+            "scope": "detailed documentation for command-line interface"
+          },
+          {
+            "file": "docs/options.md",
+            "scope": "comprehensive reference for formatter options"
+          }
+        ],
+        "id": "c5",
+        "name": "Documentation",
+        "ontology_type": "KNOWLEDGE PACK",
+        "requirements": []
+      }
+    ],
+    "raw_candidate_count": 5,
+    "repository": "/REPO/gold-prettier",
+    "schema": "hurcules.capability-analysis",
+    "validation_errors": []
+  },
+  "gold_id": "prettier",
+  "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+  "survivors": [
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "file": "index.js",
+          "scope": "main entry point of the formatter"
+        },
+        {
+          "file": "src/cli/index.js",
+          "scope": "command line interface for formatting files"
+        },
+        {
+          "file": "src/language-js/index.js",
+          "scope": "JavaScript language parser and printer implementation"
+        }
+      ],
+      "id": "c1",
+      "name": "Code Formatter",
+      "ontology_type": "TOOL",
+      "requirements": []
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "file": "scripts/release/steps/index.js",
+          "scope": "release process automation script"
+        },
+        {
+          "file": "scripts/release/tests/publish-to-npm.test.js",
+          "scope": "test for npm publishing step in release workflow"
+        },
+        {
+          "file": "scripts/release/tests/validate-new-version.test.js",
+          "scope": "test for version validation in release workflow"
+        }
+      ],
+      "id": "c3",
+      "name": "Release Workflow",
+      "ontology_type": "WORKFLOW",
+      "requirements": []
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "file": "tests/integration/__tests__/format.js",
+          "scope": "integration test suite for formatter behavior"
+        },
+        {
+          "file": "tests/unit/doc-printer.js",
+          "scope": "unit test for document printer functionality"
+        },
+        {
+          "file": "tests/format/.prettierrc",
+          "scope": "configuration file used in test environment"
+        }
+      ],
+      "id": "c4",
+      "name": "Test Suite",
+      "ontology_type": "EVALUATOR",
+      "requirements": []
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "file": "README.md",
+          "scope": "primary user and contributor documentation"
+        },
+        {
+          "file": "docs/cli.md",
+          "scope": "detailed documentation for command-line interface"
+        },
+        {
+          "file": "docs/options.md",
+          "scope": "comprehensive reference for formatter options"
+        }
+      ],
+      "id": "c5",
+      "name": "Documentation",
+      "ontology_type": "KNOWLEDGE PACK",
+      "requirements": []
+    }
+  ]
+}

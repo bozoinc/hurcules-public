@@ -1,0 +1,132 @@
+gold_case_id: archon
+reviewer: the product owner + Hermes
+status: HUMAN-VERIFIED-GOLD
+date: 2026-08-05
+
+# Gold-Standard: Archon (coleam00/Archon)
+# HURCULES Stage 1 — Gold case #1
+
+provenance:
+  repository: coleam00/Archon
+  commit_sha: cbeab968bacb0a6fefb65f3fef1d1415302b32f5
+  local_clone: ~/projects/Archon
+  version: 0.7.1
+  license: MIT (Copyright (c) 2025-2026 Cole Medin) — permissive, safe to adapt
+  languages: [TypeScript, MDX, shell]
+  runtime: Bun (Node-compatible) + PostgreSQL/SQLite
+
+purpose: |
+  Archon is a workflow engine for AI coding agents. Define development processes as
+  YAML workflows (plan → implement → validate → review → PR) run deterministically
+  and repeatably across projects. "What Dockerfiles did for infrastructure and
+  GitHub Actions did for CI/CD, Archon does for AI coding workflows." (README.md)
+  A remote agentic coding platform controlling AI coding assistants from Slack,
+  Telegram, and GitHub (AGENTS.md).
+
+architecture_map: |
+  Monorepo (Bun workspaces) with 11 packages:
+  - packages/core — workflow operations, isolation ops (core/src/operations/)
+  - packages/workflows — DAG workflow engine (dag-executor.ts 8409 lines; schemas/dag-node.ts 1156)
+  - packages/providers — agent provider registry (claude, codex, community, mcp)
+  - packages/isolation — sandbox backends (container, worktree), PKCE/oauth
+  - packages/git — git repo + worktree management (repo.ts, worktree.ts 398 lines)
+  - packages/adapters — platform adapters (chat, forge, community)
+  - packages/cli — entry point (cli.ts)
+  - packages/server, packages/web, packages/docs-web, packages/paths
+
+capabilities:
+  - id: c1
+    name: YAML Workflow Engine (DAG)
+    ontology_type: WORKFLOW
+    evidence:
+      - file: packages/workflows/src/schemas/dag-node.ts
+        scope: loop/loop_group/interactive/context node schema
+      - file: packages/workflows/src/dag-executor.ts
+        scope: DAG execution runtime
+      - file: packages/workflows/src/loader.ts
+        scope: parse + validate DAG structure
+    confidence: 0.95
+    requirements: [bun, agent-provider-credentials]
+  - id: c2
+    name: Multi-Agent Provider Registry
+    ontology_type: ADAPTER
+    evidence:
+      - file: packages/providers/src/registry.ts
+        scope: registerBuiltinProviders / registerCommunityProviders
+      - file: packages/providers/src/claude
+        scope: Claude provider
+      - file: packages/providers/src/codex
+        scope: Codex provider
+      - file: packages/providers/src/community
+        scope: opencode, pi, copilot community providers
+    confidence: 0.92
+    requirements: [per-provider-api-keys]
+  - id: c3
+    name: Sandboxed Execution / Isolation
+    ontology_type: POLICY
+    evidence:
+      - file: packages/isolation/src/factory.ts
+        scope: isolation factory
+      - file: packages/isolation/src/backends/container.ts
+        scope: container backend
+      - file: packages/isolation/src/providers/worktree.ts
+        scope: git worktree provider
+    confidence: 0.90
+    requirements: [git, optional-docker]
+  - id: c4
+    name: Deterministic Workflow Validation
+    ontology_type: EVALUATOR
+    evidence:
+      - file: packages/workflows/src/loader.ts
+        scope: parseWorkflow, validateDagStructure
+      - file: packages/workflows/src/schemas
+        scope: zod schema rejection of invalid workflows
+    confidence: 0.93
+    requirements: []
+  - id: c5
+    name: Cross-Platform Adapters
+    ontology_type: ADAPTER
+    evidence:
+      - file: packages/adapters/src/chat
+        scope: chat adapter
+      - file: packages/adapters/src/forge
+        scope: forge adapter
+      - file: packages/adapters/src/community
+        scope: community adapters
+    confidence: 0.88
+    requirements: []
+  - id: c6
+    name: Human Approval Gates in Workflows
+    ontology_type: POLICY
+    evidence:
+      - file: packages/workflows/src/schemas/loop.ts
+        scope: interactive + gate_message loop control
+    confidence: 0.90
+    requirements: []
+
+dependencies_permissions:
+  dependencies: ["@anthropic-ai/claude-agent-sdk", "@opencode-ai/sdk", "bun", "optional-docker"]
+  permissions:
+    filesystem: repo-read-write-in-worktrees
+    network: upstream-llm-apis
+    shell: bash-nodes
+    git: branch-and-worktree-ops
+  security_posture: repositories not auto-trusted; real sandbox boundary (isolation), not system-prompt promise
+
+non_capabilities:
+  - not-a-general-chatbot
+  - not-a-model-itself
+  - v0.7.1-does-not-auto-spawn-production-agents-at-scale
+  - not-a-full-CI-system
+
+risks_findings:
+  - bash nodes execute from workflows — MUST run in sandbox/worktree; untrusted workflow YAML could be dangerous
+  - provider credentials (claude/codex keys) are powerful — scope per workflow
+  - container isolation requires Docker present
+
+evaluation_plan: |
+  Parity test (D2/D6): a non-technical user, using only HURCULES' Archon capability
+  template, defines a YAML workflow and runs it end-to-end producing a valid
+  DAG-executed result — as well as an engineer using Archon directly.
+  Checks: workflow loads (loader validation=100%), executes (dag-executor),
+  isolation active (worktree), human approval gate honored.

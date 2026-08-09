@@ -1,0 +1,25 @@
+{
+  "gold_id": "click",
+  "matches": [
+    {
+      "analyst": "Command line interface definition and composition",
+      "gold": "ck1",
+      "matched": true
+    },
+    {
+      "analyst": "Parameter parsing, types and validation",
+      "gold": "ck2",
+      "matched": true
+    },
+    {
+      "analyst": "CLI testing utilities",
+      "gold": "ck3",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "ck4",
+      "matched": false
+    }
+  ]
+}

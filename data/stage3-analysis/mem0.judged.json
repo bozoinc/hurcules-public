@@ -1,0 +1,45 @@
+{
+  "gold_id": "mem0",
+  "matches": [
+    {
+      "analyst": "OpenMemory Platform API",
+      "gold": "Memory CRUD (add/search/get_all/update/delete/reset)",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "Pluggable LLM provider layer (18 providers)",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "Pluggable embedding provider layer (14 providers)",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "Pluggable vector store layer (25 stores)",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "LLM-based fact extraction with infer flag",
+      "matched": false
+    },
+    {
+      "analyst": "Self-Hosted Server API",
+      "gold": "Self-hosted FastAPI server + dashboard",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "Semantic deduplication by hash",
+      "matched": false
+    },
+    {
+      "analyst": "mem0-plugin Integration",
+      "gold": "Agent/editor integrations (MCP + plugins)",
+      "matched": true
+    }
+  ]
+}

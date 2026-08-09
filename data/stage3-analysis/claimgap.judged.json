@@ -1,0 +1,20 @@
+{
+  "gold_id": "claimgap",
+  "matches": [
+    {
+      "analyst": null,
+      "gold": "Multi-agent ReAct harness on LangGraph/LangChain",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "Agent/tool creation by prompt (the self-evolving mechanism)",
+      "matched": false
+    },
+    {
+      "analyst": null,
+      "gold": "Tool suite for research, file and shell ops",
+      "matched": false
+    }
+  ]
+}

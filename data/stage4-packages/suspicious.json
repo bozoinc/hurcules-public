@@ -1,0 +1,314 @@
+{
+  "compiled_from": "stage3-analysis",
+  "errors": [],
+  "gold_id": "suspicious",
+  "ok": true,
+  "package": {
+    "capabilities": [
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "File Inclusion/Files/LFI2RCE.py",
+            "scope": "Python script that generates LFI to RCE payloads"
+          },
+          {
+            "file": "File Inclusion/Files/phpinfolfi.py",
+            "scope": "PHP script leveraging LFI via phpinfo for exploitation"
+          },
+          {
+            "file": "Insecure Deserialization/Files/node-serialize.js",
+            "scope": "Node.js deserialization exploit script"
+          },
+          {
+            "file": "Upload Insecure Files/Configuration Python __init__.py/python-generate-init.py",
+            "scope": "Python script to generate malicious __init__.py files for backdoor"
+          },
+          {
+            "file": "Upload Insecure Files/Picture Metadata/Build_image_to_LFI.py",
+            "scope": "Python script to embed LFI payloads in image metadata"
+          },
+          {
+            "file": "Web Sockets/Files/ws-harness.py",
+            "scope": "Python WebSocket harness for testing websocket vulnerabilities"
+          },
+          {
+            "file": "Server Side Request Forgery/Files/ip.py",
+            "scope": "Python script to test SSRF via IP retrieval"
+          }
+        ],
+        "id": "c1",
+        "name": "Exploit Payload Generation",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "python",
+          "nodejs"
+        ]
+      },
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "README.md",
+            "scope": "Main repository overview of vulnerability categories"
+          },
+          {
+            "file": "API Key Leaks/README.md",
+            "scope": "Documentation on API key leak vulnerabilities and exploitation"
+          },
+          {
+            "file": "SQL Injection/README.md",
+            "scope": "Comprehensive guide on SQL injection techniques"
+          },
+          {
+            "file": "XSS Injection/README.md",
+            "scope": "Documentation on XSS attack vectors and bypass methods"
+          },
+          {
+            "file": "Server Side Template Injection/README.md",
+            "scope": "Details on SSTI exploitation across languages"
+          }
+        ],
+        "id": "c2",
+        "name": "Vulnerability Knowledge Base",
+        "ontology_type": "KNOWLEDGE PACK",
+        "requirements": []
+      }
+    ],
+    "compiler_version": "1.0.0",
+    "dependency_manifests": [],
+    "permissions_summary": [],
+    "provenance": {
+      "file_count": 451,
+      "languages": [
+        "css",
+        "html",
+        "javascript",
+        "json",
+        "markdown",
+        "php",
+        "python",
+        "ruby",
+        "shell",
+        "yaml"
+      ],
+      "repository": "/REPO/gold-suspicious"
+    },
+    "registry": {
+      "status": "candidate"
+    },
+    "schema": "hurcules.capability-package-v1",
+    "security": {
+      "execution_denied_by_default": true,
+      "hostile_by_default": true,
+      "risk_flags": [
+        {
+          "file": ".github/hopla_config.json",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": ".github/hopla_config.json",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".github/hopla_config.json",
+          "reason": "shell-exec"
+        },
+        {
+          "file": ".github/hopla_config.json",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "API Key Leaks/IIS-Machine-Keys.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "API Key Leaks/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "CSS Injection/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "CVE Exploits/Log4Shell.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "Directory Traversal/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "File Inclusion/LFI-to-RCE.md",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "GraphQL Injection/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "Insecure Deserialization/Files/node-serialize.js",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "Insecure Deserialization/Java.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "Insecure Deserialization/Node.md",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "Insecure Deserialization/PHP.md",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "Insecure Deserialization/PHP.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "Insecure Deserialization/Python.md",
+          "reason": "shell-exec"
+        },
+        {
+          "file": "Insecure Deserialization/Python.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "Insecure Randomness/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "Insecure Source Code Management/Git.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "Insecure Source Code Management/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "JSON Web Token/README.md",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "JSON Web Token/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "Java RMI/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "Methodology and Resources/Cloud - AWS Pentest.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "Methodology and Resources/Source Code Management.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "Prompt Injection/README.md",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "Prompt Injection/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "Prototype Pollution/README.md",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "Reverse Proxy Misconfigurations/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "SQL Injection/MSSQL Injection.md",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "SQL Injection/OracleSQL Injection.md",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "Server Side Include Injection/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "Server Side Request Forgery/SSRF-Cloud-Instances.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "Server Side Template Injection/Java.md",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "Server Side Template Injection/JavaScript.md",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "Server Side Template Injection/Python.md",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "Server Side Template Injection/Python.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "Server Side Template Injection/Python.md",
+          "reason": "shell-exec"
+        },
+        {
+          "file": "Server Side Template Injection/Python.md",
+          "reason": "subprocess-usage"
+        },
+        {
+          "file": "Upload Insecure Files/Configuration Python __init__.py/python-generate-init.py",
+          "reason": "shell-exec"
+        },
+        {
+          "file": "XS-Leak/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "XSLT Injection/README.md",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "XSLT Injection/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "XSS Injection/1 - XSS Filter Bypass.md",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "XSS Injection/2 - XSS Polyglot.md",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "XSS Injection/5 - XSS in Angular.md",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "XSS Injection/README.md",
+          "reason": "dynamic-execution"
+        },
+        {
+          "file": "XSS Injection/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "XXE Injection/README.md",
+          "reason": "secret-reference"
+        },
+        {
+          "file": "_LEARNING_AND_SOCIALS/YOUTUBE.md",
+          "reason": "secret-reference"
+        }
+      ],
+      "secret_file_locations": []
+    }
+  },
+  "warnings": []
+}

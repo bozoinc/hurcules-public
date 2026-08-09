@@ -1,0 +1,20 @@
+{
+  "gold_id": "bat",
+  "matches": [
+    {
+      "analyst": "c1",
+      "gold": "b1",
+      "matched": true
+    },
+    {
+      "analyst": null,
+      "gold": "b2",
+      "matched": false
+    },
+    {
+      "analyst": "c3",
+      "gold": "b3",
+      "matched": true
+    }
+  ]
+}

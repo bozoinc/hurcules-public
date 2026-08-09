@@ -1,0 +1,170 @@
+{
+  "b20cd5b2-3b2": {
+    "approved_at": "2026-08-05T21:07:57+00:00",
+    "approved_by": "the product owner",
+    "capabilities": [
+      {
+        "confidence": 0.95,
+        "id": "c1",
+        "name": "GitHub Adapter",
+        "ontology_type": "ADAPTER"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c10",
+        "name": "OpenCode Provider (Community)",
+        "ontology_type": "ADAPTER"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c11",
+        "name": "Pi Provider (Community)",
+        "ontology_type": "ADAPTER"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c12",
+        "name": "Workflow Executor Engine",
+        "ontology_type": "TOOL"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c13",
+        "name": "Workflow Definition System",
+        "ontology_type": "WORKFLOW"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c14",
+        "name": "Command Line Interface (CLI)",
+        "ontology_type": "TOOL"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c15",
+        "name": "HTTP API Server",
+        "ontology_type": "TOOL"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c16",
+        "name": "Web Interface (React Application)",
+        "ontology_type": "TOOL"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c17",
+        "name": "Git Operations Library",
+        "ontology_type": "TOOL"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c18",
+        "name": "Isolation System (Worktrees & Containers)",
+        "ontology_type": "TOOL"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c19",
+        "name": "Path Handling Utilities",
+        "ontology_type": "TOOL"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c2",
+        "name": "Slack Adapter",
+        "ontology_type": "ADAPTER"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c20",
+        "name": "Core Services (Database, Credentials)",
+        "ontology_type": "TOOL"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c21",
+        "name": "Documentation Website",
+        "ontology_type": "TOOL"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c22",
+        "name": "Claude Agent Templates",
+        "ontology_type": "AGENT TEMPLATE"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c23",
+        "name": "GitHub Agent Templates",
+        "ontology_type": "AGENT TEMPLATE"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c24",
+        "name": "Claude Skills System",
+        "ontology_type": "SKILL"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c25",
+        "name": "Workflow Validation System",
+        "ontology_type": "EVALUATOR"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c26",
+        "name": "Archon Command Definitions",
+        "ontology_type": "TOOL"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c3",
+        "name": "Telegram Adapter",
+        "ontology_type": "ADAPTER"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c4",
+        "name": "Discord Adapter (Community)",
+        "ontology_type": "ADAPTER"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c5",
+        "name": "Gitea Forge Adapter",
+        "ontology_type": "ADAPTER"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c6",
+        "name": "GitLab Forge Adapter",
+        "ontology_type": "ADAPTER"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c7",
+        "name": "Claude Provider",
+        "ontology_type": "ADAPTER"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c8",
+        "name": "Codex Provider",
+        "ontology_type": "ADAPTER"
+      },
+      {
+        "confidence": 0.95,
+        "id": "c9",
+        "name": "Copilot Provider (Community)",
+        "ontology_type": "ADAPTER"
+      }
+    ],
+    "capability_count": 26,
+    "entry_id": "b20cd5b2-3b2",
+    "eval": {},
+    "pkg_id": "/REPO/Archon",
+    "registered_at": "2026-08-05T21:07:57+00:00",
+    "status": "approved"
+  }
+}

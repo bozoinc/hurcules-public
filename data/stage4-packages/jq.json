@@ -1,0 +1,271 @@
+{
+  "compiled_from": "stage3-analysis",
+  "errors": [],
+  "gold_id": "jq",
+  "ok": true,
+  "package": {
+    "capabilities": [
+      {
+        "confidence": 0.95,
+        "evidence": [
+          {
+            "file": "src/main.c",
+            "scope": "main function implementing command-line interface"
+          },
+          {
+            "file": "src/jq.h",
+            "scope": "public API for the jq command-line tool"
+          },
+          {
+            "file": "tests/jq.test",
+            "scope": "test cases invoking jq as a command-line utility"
+          }
+        ],
+        "id": "c1",
+        "name": "Command-line JSON processor",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "C compiler",
+          "make"
+        ]
+      },
+      {
+        "confidence": 0.96,
+        "evidence": [
+          {
+            "file": "src/jv.c",
+            "scope": "core JSON value representation and manipulation"
+          },
+          {
+            "file": "src/jv.h",
+            "scope": "header exposing JSON library API"
+          },
+          {
+            "file": "src/jv_parse.c",
+            "scope": "JSON parsing implementation"
+          },
+          {
+            "file": "src/jv_print.c",
+            "scope": "JSON serialization implementation"
+          }
+        ],
+        "id": "c2",
+        "name": "JSON parsing and generation library",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "C compiler"
+        ]
+      },
+      {
+        "confidence": 0.97,
+        "evidence": [
+          {
+            "file": "src/builtin.c",
+            "scope": "implementation of builtin jq functions"
+          },
+          {
+            "file": "src/builtin.jq",
+            "scope": "definition of builtin functions in jq language"
+          },
+          {
+            "file": "src/bytecode.c",
+            "scope": "bytecode generation and execution for jq programs"
+          },
+          {
+            "file": "src/compile.c",
+            "scope": "compilation of jq source to bytecode"
+          },
+          {
+            "file": "src/execute.c",
+            "scope": "execution engine for jq bytecode"
+          }
+        ],
+        "id": "c3",
+        "name": "JSON query language interpreter",
+        "ontology_type": "SKILL",
+        "requirements": [
+          "C compiler"
+        ]
+      },
+      {
+        "confidence": 0.94,
+        "evidence": [
+          {
+            "file": "configure.ac",
+            "scope": "autoconf input for generating configure script"
+          },
+          {
+            "file": "Makefile.am",
+            "scope": "automake input for generating Makefile.in"
+          },
+          {
+            "file": "scripts/version",
+            "scope": "script to compute project version"
+          },
+          {
+            "file": "scripts/crosscompile",
+            "scope": "helper script for cross-compilation builds"
+          }
+        ],
+        "id": "c4",
+        "name": "Build automation workflow",
+        "ontology_type": "WORKFLOW",
+        "requirements": [
+          "autotools",
+          "make",
+          "C compiler"
+        ]
+      },
+      {
+        "confidence": 0.92,
+        "evidence": [
+          {
+            "file": "docs/build_manpage.py",
+            "scope": "Python script generating man page from source"
+          },
+          {
+            "file": "docs/build_mantests.py",
+            "scope": "Python script generating man test pages"
+          },
+          {
+            "file": "docs/build_website.py",
+            "scope": "Python script building the website"
+          },
+          {
+            "file": "docs/templates/manual.html.j2",
+            "scope": "Jinja2 template for manual pages"
+          },
+          {
+            "file": "docs/content/manual/manual.yml",
+            "scope": "YAML content source for manual"
+          }
+        ],
+        "id": "c5",
+        "name": "Documentation generation workflow",
+        "ontology_type": "WORKFLOW",
+        "requirements": [
+          "python3",
+          "jinja2"
+        ]
+      },
+      {
+        "confidence": 0.93,
+        "evidence": [
+          {
+            "file": "tests/jq.test",
+            "scope": "functional test suite for jq"
+          },
+          {
+            "file": "tests/jq_fuzz_parse.c",
+            "scope": "fuzz target for JSON parsing"
+          },
+          {
+            "file": "tests/jq_fuzz_execute.cpp",
+            "scope": "fuzz target for jq execution"
+          },
+          {
+            "file": "tests/shtest",
+            "scope": "shell test runner script"
+          },
+          {
+            "file": "tests/setup",
+            "scope": "test environment setup script"
+          }
+        ],
+        "id": "c6",
+        "name": "Testing harness",
+        "ontology_type": "EVALUATOR",
+        "requirements": [
+          "make",
+          "C compiler",
+          "python3"
+        ]
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "compile-ios.sh",
+            "scope": "shell script for building jq for iOS"
+          },
+          {
+            "file": "scripts/crosscompile",
+            "scope": "generic cross-compilation helper script"
+          }
+        ],
+        "id": "c7",
+        "name": "Cross-compilation tool",
+        "ontology_type": "TOOL",
+        "requirements": [
+          "C compiler",
+          "make"
+        ]
+      },
+      {
+        "confidence": 0.98,
+        "evidence": [
+          {
+            "file": "SECURITY.md",
+            "scope": "project security reporting and handling guidelines"
+          }
+        ],
+        "id": "c8",
+        "name": "Security policy",
+        "ontology_type": "POLICY",
+        "requirements": []
+      },
+      {
+        "confidence": 0.99,
+        "evidence": [
+          {
+            "file": "COPYING",
+            "scope": "full text of the MIT license"
+          },
+          {
+            "file": "AUTHORS",
+            "scope": "list of contributors and attribution"
+          }
+        ],
+        "id": "c9",
+        "name": "License and attribution knowledge pack",
+        "ontology_type": "KNOWLEDGE PACK",
+        "requirements": []
+      }
+    ],
+    "compiler_version": "1.0.0",
+    "dependency_manifests": [],
+    "permissions_summary": [],
+    "provenance": {
+      "file_count": 427,
+      "languages": [
+        "c",
+        "c++",
+        "css",
+        "html",
+        "javascript",
+        "json",
+        "markdown",
+        "python",
+        "shell",
+        "yaml"
+      ],
+      "repository": "/REPO/gold-jq"
+    },
+    "registry": {
+      "status": "candidate"
+    },
+    "schema": "hurcules.capability-package-v1",
+    "security": {
+      "execution_denied_by_default": true,
+      "hostile_by_default": true,
+      "risk_flags": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "reason": "secret-reference"
+        }
+      ],
+      "secret_file_locations": []
+    }
+  },
+  "warnings": []
+}

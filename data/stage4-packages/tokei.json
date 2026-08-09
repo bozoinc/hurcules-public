@@ -1,0 +1,229 @@
+{
+  "compiled_from": "stage3-analysis",
+  "errors": [],
+  "gold_id": "tokei",
+  "ok": true,
+  "package": {
+    "capabilities": [
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "src/main.rs",
+            "scope": "defines main function and program entry point"
+          },
+          {
+            "file": "src/cli.rs",
+            "scope": "contains command-line argument parsing and subcommand handling"
+          }
+        ],
+        "id": "c1",
+        "name": "Command-line interface for code statistics",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "tests/accuracy.rs",
+            "scope": "contains test cases that verify counting accuracy across many languages"
+          }
+        ],
+        "id": "c10",
+        "name": "Accuracy evaluation suite",
+        "ontology_type": "EVALUATOR",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "src/language/languages.rs",
+            "scope": "defines language metadata and mapping"
+          },
+          {
+            "file": "src/language/syntax.rs",
+            "scope": "implements syntax-based language detection logic"
+          },
+          {
+            "file": "languages.json",
+            "scope": "contains language definitions used by detection"
+          }
+        ],
+        "id": "c2",
+        "name": "Programming language detection",
+        "ontology_type": "SKILL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "src/stats.rs",
+            "scope": "calculates lines of code, comments, blanks, and complexity metrics"
+          }
+        ],
+        "id": "c3",
+        "name": "Code statistics generation",
+        "ontology_type": "SKILL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": "src/input.rs",
+            "scope": "reads files, handles stdin, and implements ignore rules"
+          }
+        ],
+        "id": "c4",
+        "name": "File input handling",
+        "ontology_type": "SKILL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.85,
+        "evidence": [
+          {
+            "file": "fuzz/Cargo.toml",
+            "scope": "configures fuzz targets and dependencies"
+          },
+          {
+            "file": "fuzz/fuzz_targets/parse_from_slice.rs",
+            "scope": "implements a fuzz target exercising the parse-from-slice API"
+          }
+        ],
+        "id": "c5",
+        "name": "Fuzz testing harness for parser",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.85,
+        "evidence": [
+          {
+            "file": "src/language/embedding.rs",
+            "scope": "detects and processes embedded languages within host files"
+          }
+        ],
+        "id": "c6",
+        "name": "Embedded language detection",
+        "ontology_type": "SKILL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "file": "build.rs",
+            "scope": "generates language-related source files during the build process"
+          }
+        ],
+        "id": "c7",
+        "name": "Build-time language data generation",
+        "ontology_type": "TOOL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.85,
+        "evidence": [
+          {
+            "file": "src/config.rs",
+            "scope": "parses and applies user configuration from TOML files"
+          },
+          {
+            "file": "tokei.example.toml",
+            "scope": "provides an example configuration file format"
+          }
+        ],
+        "id": "c8",
+        "name": "Configuration management",
+        "ontology_type": "SKILL",
+        "requirements": []
+      },
+      {
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "file": ".github/workflows/mean_bean_ci.yml",
+            "scope": "defines CI build and test steps"
+          },
+          {
+            "file": ".github/workflows/mean_bean_deploy.yml",
+            "scope": "defines deployment steps"
+          },
+          {
+            "file": ".github/workflows/publish_image.yaml",
+            "scope": "defines container image publishing steps"
+          },
+          {
+            "file": ".github/workflows/release-plz.yaml",
+            "scope": "defines automated release steps"
+          }
+        ],
+        "id": "c9",
+        "name": "Continuous integration workflow",
+        "ontology_type": "WORKFLOW",
+        "requirements": []
+      }
+    ],
+    "compiler_version": "1.0.0",
+    "dependency_manifests": [],
+    "permissions_summary": [],
+    "provenance": {
+      "file_count": 261,
+      "languages": [
+        "c",
+        "c#",
+        "c++",
+        "clojure",
+        "go",
+        "html",
+        "java",
+        "javascript",
+        "json",
+        "markdown",
+        "php",
+        "python",
+        "ruby",
+        "rust",
+        "shell",
+        "sql",
+        "swift",
+        "toml",
+        "typescript",
+        "yaml"
+      ],
+      "repository": "/REPO/gold-tokei"
+    },
+    "registry": {
+      "status": "candidate"
+    },
+    "schema": "hurcules.capability-package-v1",
+    "security": {
+      "execution_denied_by_default": true,
+      "hostile_by_default": true,
+      "risk_flags": [
+        {
+          "file": ".github/workflows/mean_bean_ci.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".github/workflows/mean_bean_deploy.yml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".github/workflows/publish_image.yaml",
+          "reason": "secret-reference"
+        },
+        {
+          "file": ".github/workflows/release-plz.yaml",
+          "reason": "secret-reference"
+        }
+      ],
+      "secret_file_locations": []
+    }
+  },
+  "warnings": []
+}
