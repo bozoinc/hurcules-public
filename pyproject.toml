@@ -16,4 +16,6 @@ hurcules = "hurcules.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-exclude = ["**/LICENSE-COMMERCIAL.md"]
+
+[tool.setuptools]
+license-files = []
