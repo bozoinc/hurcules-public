@@ -8,6 +8,7 @@ version = "0.7.0"
 description = "Given ONE public GitHub repository URL, HURCULES produces a structured, evidence-backed, human-reviewable repository report and a candidate Hermes capability package."
 readme = "README.md"
 requires-python = ">=3.10"
+license = {text = "MIT"}
 dependencies = ["PyYAML>=6"]
 
 [project.scripts]
@@ -15,3 +16,4 @@ hurcules = "hurcules.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+exclude = ["**/LICENSE-COMMERCIAL.md"]
