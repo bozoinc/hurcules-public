@@ -1,0 +1,17 @@
+Date,Channel,Piece,URL,Views,Upvotes,Comments,Referral_Traffic,Stars_From_Content,External_PRs,Notes
+2026-08-20,Dev.to,SBOM-for-Agents,,,,,,,,,Pending: paste content/sbom-for-agents-devto.md, cross-link with Loops
+2026-08-20,Dev.to,Loops-vs-Graphs,,,,,,,,,Pending: paste content/loops-vs-graphs-devto.md, cross-link with SBOM
+2026-08-20,Hacker News,SBOM-for-Agents,,,,,,,,,Submit Dev.to URL 8-10 AM PST, title: "SBOM-for-Agents: The Missing Trust Layer for Agent Supply Chains"
+2026-08-20,Twitter/X,SBOM-for-Agents,,,,,,,,,Post thread from marketing/twitter_threads.md (Thread 1)
+2026-08-21,Lobste.rs,SBOM-for-Agents,,,,,,,,,Submit Dev.to URL, tags: ai, security, software-engineering
+2026-08-21,LinkedIn,SBOM-for-Agents,,,,,,,,,Post enterprise version from marketing/linkedin_posts.md (Post 1)
+2026-08-22,Hacker News,Loops-vs-Graphs,,,,,,,,,Submit Dev.to URL 8-10 AM PST, title: "Loops vs Graphs: Why Agent Architecture Needs Both"
+2026-08-22,Twitter/X,Loops-vs-Graphs,,,,,,,,,Post thread from marketing/twitter_threads.md (Thread 2)
+2026-08-23,Lobste.rs,Loops-vs-Graphs,,,,,,,,,Submit Dev.to URL, tags: ai, architecture, software-engineering
+2026-08-23,LinkedIn,Loops-vs-Graphs,,,,,,,,,Post architecture version from marketing/linkedin_posts.md (Post 2)
+2026-08-24,Reddit,SBOM-for-Agents,,,,,,,,,Post to r/MachineLearning, r/ExperiencedDevs from marketing/reddit_templates.md
+2026-08-24,Reddit,Loops-vs-Graphs,,,,,,,,,Post to r/LangChain, r/LocalLLaMA from marketing/reddit_templates.md
+2026-08-24,Discord,SBOM-for-Agents,,,,,,,,,Post to LangChain #showcase, CrewAI #projects, HuggingFace #agents, AI Engineer #projects
+2026-08-24,Discord,Loops-vs-Graphs,,,,,,,,,Post to same communities with framework-specific variants
+2026-08-27,Medium,SBOM-for-Agents,,,,,,,,,Republish with canonical URL to GitHub
+2026-08-27,Medium,Loops-vs-Graphs,,,,,,,,,Republish with canonical URL to GitHub
